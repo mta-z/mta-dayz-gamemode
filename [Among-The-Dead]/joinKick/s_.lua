@@ -1,7 +1,7 @@
  function playerConnect (playerNick, playerIP, playerUsername, playerSerial, playerVersionNumber)
  local players =getPlayerCount ( )
     if players >=40 then 
-    cancelEvent(true,"Этот сервер переполнен, но у нас есть ещё 2 сервера: Among the dead №2 и Among the dead №3") 
+    cancelEvent(true,"This server is full, but we have 2 more servers: Among the dead No. 2 and Among the dead No. 3") 
     end
 end
   
