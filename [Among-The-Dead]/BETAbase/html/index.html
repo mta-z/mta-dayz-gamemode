@@ -1,0 +1,313 @@
+﻿<body onload="insertBases()">
+<head>
+<* = call(getResourceFromName("ajax"),"start", getResourceName(getThisResource()) ) *>
+</head>
+
+<style>
+body{
+margin: 0;
+background: #555555;
+color: #ddd;
+}
+#header{
+height: 23px;
+background: #555555;
+color: #FFFFFF;
+padding: 7px;
+
+}
+
+td{
+text-align: center;
+padding: 5px 10px;
+}
+
+th{
+padding: 10px 20px;
+}
+tr  {
+background: #292929;
+}
+
+tr a {
+font-size: 20px;
+}
+#data{
+margin-bottom: 50px;
+}
+td input[type='text'] {
+outline:none;
+border: none;
+background-color: #292929;
+color: #ddd;
+}
+td input[type='button'] {
+outline:none;
+color: #ddd;
+background-color: #444;
+border: 1px solid #111;
+}
+td input[type='button']:active {
+color: #000;
+background-color: #383838;
+border: 1px solid #797979;
+}
+.base  {
+position: absolute;
+
+border: 1px solid #000;
+
+}
+
+
+input[type='date']{
+    background-color: #292929;
+    color: #ddd;
+    border: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+<script>
+
+function loadBaseIINFO(val) {
+
+
+				if(val.value!="0"){
+document.getElementById("preloader").innerHTML="<img style='margin: 5px; width: 30px;' src='html/preloader.gif'>";
+document.getElementById("data").getElementsByTagName("TABLE")[0].getElementsByTagName("TBODY")[1].innerHTML="";				
+				document.getElementById("data").getElementsByTagName("TABLE")[0].getElementsByTagName("TBODY")[0].getElementsByTagName("TR")[0].getElementsByTagName("TH")[0].innerHTML=val.options[val.selectedIndex].innerHTML;
+			getValues (val.value, 
+					function ( returnv,returnb,onePass,carCount ) { 
+				var table = document.getElementById("data").getElementsByTagName("TABLE")[0].getElementsByTagName("TBODY")[1].innerHTML=returnv;
+				document.getElementById("preloader").innerHTML="";
+				document.getElementById("carCount").innerHTML="Кол-во тс: "+carCount
+				}
+				);
+			}
+			}
+
+function getCopyData(){
+showhide()
+document.getElementById("copyData").select()
+var valueSel = document.getElementsByTagName("select")[0];
+var val = valueSel.options[valueSel.selectedIndex];
+			getValues (val.value, 
+					function ( returnv,returnb,onePass ) { 
+				document.getElementById("copyData").innerHTML =val.innerHTML
+				document.getElementById("copyData").innerHTML += returnb
+				if(val.value=="base1" || val.value=="base2" || val.value=="base12" || val.value=="base15" || val.value=="base19" || val.value=="base20"){
+				var baseCarMAX=20 
+				}else if(val.value=="base21" || val.value=="base22" || val.value=="base23" || val.value=="base24"){
+				var baseCarMAX=5
+				}else{
+				var baseCarMAX=10
+				}
+				document.getElementById("copyData").innerHTML += '\r\nВ этой базе можно хранить максимум '+baseCarMAX+' тс\r\n\
+В базе нельзя хранить одинаковые тс\r\n\
+Если в базе будут одинаковые тс - я забираю базу\r\n\
+Остальные правила пользования базой читай в логин панели на вкладке "Правила"\r\n\
+\r\n\
+Пример бинда пароля на кнопку:\r\n\
+bind кнопка пароль\r\n\
+Например\r\n\
+bind num_1 '+onePass+'\r\n\
+\r\n\
+В F8 консоль\r\n\
+Тогда база будет открываться на кнопку 1(справа)\r\n\
+По такому же принципу можно забиндить и остальные пароли\r\n\r\n\
+Ворота/Крыша базы закрывается автоматически через 20 сек после открытия.\r\n\
+Если база находится на крыше - лифт автоматически поднимается/опускается во время открытия/закрытия ворот.'
+				document.getElementById("copyData").select()
+		
+				
+				}
+				);
+
+
+}			
+	
+
+	
+			
+function setNewValue(val){
+var valueSel = document.getElementsByTagName("select")[0];
+var newValue = document.getElementById(val.getAttribute('title')).value;
+	setValues (val.getAttribute('title'),valueSel.options[valueSel.selectedIndex].value,newValue, 
+					function ( returnv ) { 
+				alert(returnv)
+				}
+				);
+}			
+	
+
+function getCarSize(){
+var valueSel = document.getElementsByTagName("select")[0];
+
+	getCars (valueSel.options[valueSel.selectedIndex].value, 
+					function ( returnv ) { 
+				alert(returnv)
+				}
+				);
+}	
+
+function blowVh(){
+var blowOK = confirm("Взорвать все ТС?")
+if(blowOK){
+var valueSel = document.getElementsByTagName("select")[0];
+
+	destroyAllCar (valueSel.options[valueSel.selectedIndex].value, 
+					function ( returnv ) { 
+				alert(returnv)
+				}
+				);
+}
+}	
+
+
+
+	function insertBases(){
+	
+	 getBasesData(false,function ( returnv ) { 
+				
+				var bases = document.getElementsByClassName("base").length
+for(var i =0; bases>i;i++){
+if (returnv[i][2] =="ADMIN"){
+
+document.getElementsByClassName("base")[i].style.backgroundColor="#009E0E"
+}else{
+
+document.getElementsByClassName("base")[i].style.backgroundColor="#FF0202"
+
+}
+
+}
+				
+				})
+	}
+
+	function showhide(){
+	var spoler = document.getElementById("show")
+	if (spoler.innerHTML=="Показать"){
+	spoler.innerHTML="Скрыть"
+	document.getElementById("copyData").style.display="block"
+	}else{
+	spoler.innerHTML="Показать"
+	document.getElementById("copyData").style.display="none"
+	}
+	}
+
+function getTents(){
+var valueSel = document.getElementsByTagName("select")[0];
+var val = valueSel.options[valueSel.selectedIndex];
+getTentCountWeb (val.value, 
+					function ( returnv ) { 
+				alert(returnv)
+				}
+				);
+}
+
+function removeTentsAll(){
+var valueSel = document.getElementsByTagName("select")[0];
+var val = valueSel.options[valueSel.selectedIndex];
+var removeOK = confirm("Удалить все палатки?")
+if (removeOK){
+removeTentsWeb (val.value, 
+					function ( returnv ) { 
+				alert(returnv)
+				}
+				);
+}
+}
+</script>
+
+<center>
+<div id="header">
+<select id="dropdown" style="margin-bottom: 100px;" name="dropdown" onchange="loadBaseIINFO(this);">
+<option value="0">Выбери базу</option>
+<option value="base0">База #1</option>
+<option value="base1">База #2</option>
+<option value="base2">База #3</option>
+<option value="base3">База #4</option>
+<option value="base4">База #5</option>
+<option value="base5">База #6</option>
+<option value="base6">База #7</option>
+<option value="base7">База #8</option>
+<option value="base8">База #9</option>
+<option value="base9">База #10</option>
+<option value="base10">База #11</option>
+<option value="base11">База #12</option>
+<option value="base12">База #13</option>
+<option value="base13">База #14</option>
+<option value="base14">База #15</option>
+<option value="base15">База #16</option>
+<option value="base16">База #17</option>
+<option value="base17">База #18</option>
+<option value="base18">База #19</option>
+<option value="base19">База #20</option>
+<option value="base20">База #21</option>
+<option value="base21">База #22</option>
+<option value="base22">База #23</option>
+<option value="base23">База #24</option>
+<option value="base24">База #25</option>
+</select>
+</div>
+<div id="data">
+<button id="carCount" onclick="getCarSize()">Кол-во тс</button>
+<button onclick="blowVh()">Взорвать тс</button>
+<button onclick="getTents()">Кол-во палаток</button>
+<button onclick="removeTentsAll()">Удалить все палатки</button>
+<button onclick="getCopyData()">Копировать данные</button>
+
+<div id="preloader"></div>
+<table>
+<tbody><tr><th>Выбери базу</th><th>Данные</th><th>Изменить</th></tr></tbody>					
+<tbody></tbody>
+</table>
+<a id="show" style="color: #fff;" onclick="showhide()" href="#">Показать</a><br>
+<textarea style="display:none; resize: none; margin: 2px 0px 0px; width: 535px; height: 366px;" id="copyData"> </textarea>
+</div>
+<img  style="width: 100%;" src="html/radar.jpg"></img>
+
+<div class="base" name="1" onclick="" style="display:block; height: 12px;width: 18px;  margin-left: 166px;margin-top: -643px;font-size:10px;  background-color: rgb(255, 2, 2); " >1</div>
+<div class="base" name="2" onclick="" style="display:block;   height: 18px; width: 27px; margin-left: 344px; margin-top: -394px; background-color: rgb(255, 2, 2); ">2</div>
+<div class="base" name="3" onclick="" style="display:block; height: 19px;  width: 32px;  margin-left: 829px; margin-top: -718px; background-color: rgb(255, 2, 2); ">3</div>
+<div class="base" name="4" onclick="" style="display:block;   height: 12px; width: 12px;  margin-left: 114px; margin-top: -750px; font-size:10px; background-color: rgb(255, 2, 2);">4</div>
+<div class="base" name="5" onclick="" style="display:block;height: 13px;width: 12px;   margin-left: 1015px; margin-top: -795px; font-size:10px; background-color: rgb(255, 2, 2);">5</div>
+<div class="base" name="6" onclick="" style="display:block;height: 12px;width: 15px;   margin-left: 1030px;  margin-top: -774px; font-size:10px;background-color: rgb(255, 2, 2); ">6</div>
+<div class="base" name="7" onclick="" style="display:block;height: 12px;width: 12px;    margin-left: 248px; margin-top: -777px; font-size:10px;background-color: rgb(255, 2, 2); ">7</div>
+<div class="base" name="8" onclick="" style="display:block;height: 14px;width: 12px;    margin-left: 1033px; margin-top: -1029px;font-size:10px;background-color: rgb(255, 2, 2); ">8</div>
+<div class="base" name="9" onclick="" style="display:block;height: 12px;width: 17px;    margin-left: 897px; margin-top: -240px;font-size:10px; background-color: rgb(255, 2, 2);">9</div>
+<div class="base" name="10" onclick="" style="display:block;height: 12px;width: 18px;    margin-left: 166px; margin-top: -679px;font-size:10px; background-color: rgb(255, 2, 2);">10</div>
+<div class="base" name="11" onclick="" style="display:block;height: 12px;width: 15px;    margin-left: 997px;margin-top: -1044px;font-size:10px; background-color: rgb(255, 2, 2);">11</div>
+<div class="base" name="12" onclick="" style="display:block;height: 14px;width: 13px;  margin-left: 229px; margin-top: -705px;font-size:10px; background-color: rgb(255, 2, 2);">12</div>
+<div class="base" name="13" onclick="" style="display: block; height: 17px; width: 32px;   margin-left: 280px;margin-top: -653px;  background-color: rgb(255, 2, 2); ">13</div>
+<div class="base" name="14" onclick="" style="display:block;height: 12px;width: 16px;    margin-left: 988px; margin-top: -950px;font-size:10px; background-color: rgb(255, 2, 2);">14</div>
+<div class="base" name="15" onclick="" style="display:block;height: 12px;width: 16px;    margin-left: 143px;margin-top: -792px;font-size:10px;background-color: rgb(255, 2, 2); ">15</div>
+<div class="base" name="16" onclick="" style="display:block;height: 14px;width: 15px;    margin-left: 554px; margin-top: -518px;font-size:10px; background-color: rgb(255, 2, 2);">16</div>
+<div class="base" name="17" onclick="" style="display:block;height: 12px;width: 13px;  margin-left: 847px;  margin-top: -922px;font-size:10px; background-color: rgb(255, 2, 2);">17</div>
+<div class="base" name="18" onclick="" style="display:block;height: 12px;width: 13px;    margin-left: 828px; margin-top: -922px;font-size:10px; background-color: rgb(255, 2, 2);">18</div>
+<div class="base" name="19" onclick="" style="display:block;height: 12px;width: 15px;  margin-left: 814px;  margin-top: -903px;font-size:10px; background-color: rgb(255, 2, 2);">19</div>
+<div class="base" name="20" onclick="" style="display:block;  height: 19px; width: 28px;    margin-left: 870px; margin-top: -718px; background-color: rgb(255, 2, 2);">20</div>
+<div class="base" name="21" onclick="" style="display:block;height: 17px; width: 26px; margin-left: 586px; margin-top: -1038px;; background-color: rgb(255, 2, 2);">21</div>
+<div class="base" name="22" onclick="" style="display:block;height: 11px;width: 12px;margin-left: 1093px;margin-top: -1089px;font-size: 9px;background-color: rgb(255, 2, 2);">22</div>
+<div class="base" name="23" onclick="" style="display:block;height: 11px;width: 15px;margin-left: 822px;margin-top: -1112px;font-size: 9px;background-color: rgb(255, 2, 2);">23</div>
+<div class="base" name="24" onclick="" style="display:block;height: 10px;width: 15px;margin-left: 38px;margin-top: -814px;font-size: 9px;background-color: rgb(255, 2, 2);">24</div>
+<div class="base" name="25" onclick="" style="display:block;height: 11px;width: 12px;margin-left: 1016px;margin-top: -202px;font-size: 9px;background-color: rgb(255, 2, 2);">25</div>
+
+
+
+
+</center>
+</body>

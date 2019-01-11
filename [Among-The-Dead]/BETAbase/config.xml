@@ -1,0 +1,211 @@
+<bases>
+    <base0>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>E1IA12d626OP</OP>
+        <CL>E1IA12d626CL</CL>
+        <vOP>E1IA12d626vOP</vOP>
+        <vCL>E1IA12d626vCL</vCL>
+    </base0>
+    
+    <base1>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>8e214YxKg8OP</OP>
+        <CL>8e214YxKg8CL</CL>
+        <vOP>8e214YxKg8vOP</vOP>
+        <vCL>8e214YxKg8vCL</vCL>
+    </base1>
+    
+    <base2>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>4cZHPd8z42OP</OP>
+        <CL>4cZHPd8z42CL</CL>
+        <vOP>4cZHPd8z42vOP</vOP>
+        <vCL>4cZHPd8z42vCL</vCL>
+    </base2>
+    
+    <base3>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>YTH6lBtH5UOP</OP>
+        <CL>YTH6lBtH5UCL</CL>
+    </base3>
+    
+    <base4>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>uXKt6TT7V5OP</OP>
+        <CL>uXKt6TT7V5CL</CL>
+        <vOP>uXKt6TT7V5vOP</vOP>
+        <vCL>uXKt6TT7V5vCL</vCL>
+    </base4>
+    
+    <base5>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>mnHzl3y5RzOP</OP>
+        <CL>mnHzl3y5RzCL</CL>
+    </base5>
+    
+    <base6>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>k6uegFJQhnOP</OP>
+        <CL>k6uegFJQhnCL</CL>
+        <vOP>k6uegFJQhnvOP</vOP>
+        <vCL>k6uegFJQhnvCL</vCL>
+    </base6>
+    
+    <base7>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>xdLNB53g9wOP</OP>
+        <CL>xdLNB53g9wCL</CL>
+    </base7>
+    
+    <base8>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>CJB3W40Bx1OP</OP>
+        <CL>CJB3W40Bx1CL</CL>
+        <vOP>CJB3W40Bx1vOP</vOP>
+        <vCL>CJB3W40Bx1vCL</vCL>
+    </base8>
+    
+    <base9>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>6L41d7nR67OP</OP>
+        <CL>6L41d7nR67CL</CL>
+    </base9>
+    
+    <base10>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>kZISwnc49IOP</OP>
+        <CL>kZISwnc49ICL</CL>
+        <vOP>kZISwnc49IvOP</vOP>
+        <vCL>kZISwnc49IvCL</vCL>
+    </base10>
+    
+    <base11>
+        <DATE>2018-10-01</DATE>
+        <GANG>The_DX</GANG>
+        <OP>Awce30lAWbOP</OP>
+        <CL>Awce30lAWbCL</CL>
+        <vOP>Awce30lAWbvOP</vOP>
+        <vCL>Awce30lAWbvCL</vCL>
+    </base11>
+    
+    <base12>
+        <DATE></DATE>
+        <GANG>The_REDs</GANG>
+        <OP>hg23g3gh3hOP</OP>
+        <CL>hg23g3gh3hCL</CL>
+        <vOP>hg23g3gh3hVOP</vOP>
+        <vCL>hg23g3gh3hVCL</vCL>
+    </base12>
+    
+    <base13>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>Ket0nxO9i4OP</OP>
+        <CL>Ket0nxO9i4CL</CL>
+        <vOP>Ket0nxO9i4vOP</vOP>
+        <vCL>Ket0nxO9i4vCL</vCL>
+    </base13>
+    
+    <base14>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>oMCn32NAB1OP</OP>
+        <CL>oMCn32NAB1CL</CL>
+        <vOP>oMCn32NAB1vOP</vOP>
+        <vCL>oMCn32NAB1vCL</vCL>
+    </base14>
+    
+    <base15>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>Vd1fg6ZB6GOP</OP>
+        <CL>Vd1fg6ZB6GCL</CL>
+        <vOP>Vd1fg6ZB6GvOP</vOP>
+        <vCL>Vd1fg6ZB6GvCL</vCL>
+    </base15>
+    
+    <base16>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>uuevaJyWziOP</OP>
+        <CL>uuevaJyWziCL</CL>
+        <vOP>uuevaJyWzivOP</vOP>
+        <vCL>uuevaJyWzivCL</vCL>
+    </base16>
+    
+    <base17>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>YlruBMVCwbOP</OP>
+        <CL>YlruBMVCwbCL</CL>
+        <vOP>YlruBMVCwbvOP</vOP>
+        <vCL>YlruBMVCwbvCL</vCL>
+    </base17>
+    
+    <base18>
+        <DATE>2018-10-29</DATE>
+        <GANG>FOX&quot;s</GANG>
+        <OP>dw28NKtPvTOP</OP>
+        <CL>dw28NKtPvTCL</CL>
+        <vOP>dw28NKtPvTvOP</vOP>
+        <vCL>dw28NKtPvTvCL</vCL>
+    </base18>
+    
+    <base19>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>a0V9kN4393OP</OP>
+        <CL>a0V9kN4393CL</CL>
+        <vOP>a0V9kN4393vOP</vOP>
+        <vCL>a0V9kN4393vCL</vCL>
+    </base19>
+    
+    <base20>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>V3O6K0onmqOP</OP>
+        <CL>V3O6K0onmqCL</CL>
+        <vOP>V3O6K0onmqvOP</vOP>
+        <vCL>V3O6K0onmqvCL</vCL>
+    </base20>
+    
+    <base21>
+        <DATE>пустая чистая</DATE>
+        <GANG>ADMIN</GANG>
+        <OP>Ts1SCu26SmOP</OP>
+        <CL>Ts1SCu26SmCL</CL>
+    </base21>
+    
+    <base22>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>f2uXV8G33eOP</OP>
+        <CL>f2uXV8G33eCL</CL>
+    </base22>
+    
+    <base23>
+        <DATE></DATE>
+        <GANG>ADMIN</GANG>
+        <OP>88eu664OwZOP</OP>
+        <CL>88eu664OwZCL</CL>
+    </base23>
+    
+    <base24>
+        <DATE>2018-10-05</DATE>
+        <GANG>Sy4ki</GANG>
+        <OP>0aBI9opR78OP</OP>
+        <CL>0aBI9opR78CL</CL>
+    </base24>
+    
+</bases>

@@ -1,0 +1,21 @@
+<meta>
+	<info author="ATD" name="newGrpupSystemATD" type="script"/>
+
+
+	<script src="date.lua" type="server"/>
+	<script src="s_.lua" type="server"/>
+	<script src="c_.lua" type="client" cache="false"/>
+	
+	<file src="b50.png" type="client" />
+	<file src="b100.png" type="client" />
+	
+	<file src="prgsBar.full.png" type="client" />
+	<file src="prgsBar.nil.png" type="client" />	
+	<file src="prgsBar.false.png" type="client" />
+	
+	<file src="plus.png" type="client" />
+	<file src="plus.hover.png" type="client" />
+	<file src="plus.false.png" type="client" />
+	
+	
+</meta>

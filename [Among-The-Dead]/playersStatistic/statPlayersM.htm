@@ -1,0 +1,130 @@
+﻿
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/exporting.js"></script>
+
+<div id="container2" style="width:100%;height:100%"></div>
+<br/>
+
+<script>
+
+
+
+var chart2 =Highcharts.chart('container2', {
+    title: {
+        text: 'Статистика по месяцам'
+    },
+    xAxis: {
+        categories: []
+    },
+
+    series: [{
+        type: 'column',
+        name: 'Новых игроков',
+        data: []
+    }, {
+        type: 'column',
+        name: 'Уникальных игроков',
+        data: []
+    }, {
+        type: 'column',
+        name: 'Среднее время игры',
+        data: []
+    }, {
+        type: 'spline',
+        name: 'Всего подключений',
+        data: []
+    }]
+});
+
+
+</script>
+
+<script>
+
+<*
+
+
+
+local playersStatistic = executeSQLQuery("SELECT * FROM `playersStatistic` WHERE `date` > datetime('now', '-1 month') ORDER BY substr(date,7)||substr(date,1,2)||substr(date,4,2)" )
+
+
+local tabMM = {}
+for i,stat in pairs(playersStatistic) do 	
+local mm   = string.match(stat.date, '^.....(..)...')
+local con  = stat.connects or 0 
+local unc  = stat.newPlayers or 0 
+local newp = stat.uniquePlayers or 0 
+local upt  = stat.uniquePlayersTime or 0
+
+
+local mins  = 0
+if newp ==0 then upt = 0;  newp =-1 end
+local mins  = upt/newp
+
+	if tabMM[mm] then
+	
+	tabMM[mm]['connects'] = tabMM[mm]['connects']+con
+	tabMM[mm]['newPlayers'] = tabMM[mm]['newPlayers']+unc
+	tabMM[mm]['uniquePlayers'] = tabMM[mm]['uniquePlayers']+newp
+	tabMM[mm]['uniquePlayersTimeA'] = tabMM[mm]['uniquePlayersTimeA']+mins
+	
+	
+	else
+	tabMM[mm] ={}
+	tabMM[mm]['connects'] = con 
+	tabMM[mm]['newPlayers'] = unc 
+	tabMM[mm]['uniquePlayers'] = newp 
+	tabMM[mm]['uniquePlayersTimeA'] = mins 
+	
+	end
+	
+	--iprint(tabMM)
+end
+
+local dates = "";
+local connects = "";
+local newPlayers = "";
+local uniquePlayers = "";
+local uniquePlayersTimeA = "";
+for i,stat in pairs(tabMM) do 	
+	dates = dates.."'"..i.."',"
+
+	for i,stat in pairs(tabMM[i]) do 	
+	
+		if i == "connects" then
+		connects = connects..""..stat..","
+		end
+		
+		if i == "newPlayers" then
+		newPlayers = newPlayers..""..stat..","
+		end
+		
+		if i == "uniquePlayers" then
+		uniquePlayers = uniquePlayers..""..stat..","
+		end
+		
+		if i == "uniquePlayersTimeA" then
+		uniquePlayersTimeA = uniquePlayersTimeA..""..stat..","
+		end
+		
+	end
+
+end
+
+
+httpWrite("var playersStatisticDate = ["..dates.."];\r\n")
+httpWrite("var playersStatisticConnects = ["..connects.."];\r\n")
+httpWrite("var playersStatisticNewPlayers = ["..newPlayers.."];\r\n")
+httpWrite("var playersStatisticUniquePlayers = ["..uniquePlayers.."];\r\n")
+httpWrite("var playersStatisticUniquePlayersTimeAverage = ["..uniquePlayersTimeA.."];\r\n")
+
+
+*>
+
+chart2.update({xAxis: {categories: playersStatisticDate}});
+chart2.update({series: [{data: playersStatisticNewPlayers},{data:playersStatisticUniquePlayers},{data:playersStatisticUniquePlayersTimeAverage},{data:playersStatisticConnects}]});	
+
+
+</script>

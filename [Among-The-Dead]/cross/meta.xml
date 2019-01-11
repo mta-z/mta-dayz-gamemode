@@ -1,0 +1,16 @@
+<meta>
+	<info author="MTA" />
+
+	<script src="client.lua" type="client"  cache="false" />
+
+
+	<file src="images/aim_m24.png" />
+	<file src="images/aim_svdcamo.png" />
+	<file src="images/aim_bcc.png" />
+	<file src="images/aim_ksvk.png" />
+	<file src="images/aim_m107.png" />
+	<file src="images/aim_cz550.png" />
+	<file src="images/binoculars.png" />
+	<file src="images/crossBackground.png" />
+		<file src="images/vss.png" />
+</meta>

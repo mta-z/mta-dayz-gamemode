@@ -1,0 +1,21 @@
+﻿<meta> 
+	<info author="OlweUJ" type="misc" name="Bases" showInResourceBrowser="true" description="Base panel" />
+	
+<script src="bases.lua" type="server" /> 
+<script src="baseTimer.lua" type="server" /> 
+<script src="client.lua" type="client"  cache="false" /> 
+<config src="config.xml" type="server"/>
+
+<html src="html/index.html" default="true" />
+<html src="html/radar.jpg" raw="true" />
+<html src="html/preloader.gif" raw="true" />
+<export function="getValues" http="true" />
+<export function="setValues" http="true" />
+
+<export function="getCars" http="true" />
+<export function="destroyAllCar" http="true" />
+<export function="removeTentsWeb" http="true" />
+<export function="getTentCountWeb" http="true" />
+
+<export function='getBasesData' http='true' /> 
+</meta> 

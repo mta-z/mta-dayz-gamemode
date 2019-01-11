@@ -1,0 +1,77 @@
+﻿
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/exporting.js"></script>
+
+<div id="container" style="width:100%;height:100%"></div>
+
+<script>
+var chart = Highcharts.chart('container', {
+
+    title: {
+        text: 'Разрешения экранов'
+    },
+
+    subtitle: {
+        text: 'Учитывается каждый вход'
+    },
+
+    xAxis: {
+         categories: []
+    },
+    yAxis: {
+        title: {
+            text: 'Количество подключений'
+        },
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name} <b>{point.y}</b>'
+    },
+
+    series: [{
+		name:"Количество подключений",
+        type: 'column',
+        colorByPoint: true,
+        data: [],
+        showInLegend: false
+    }]
+
+});
+
+</script>
+
+
+<script>
+
+<*
+
+
+httpWrite("var screens = [")
+local screens = executeSQLQuery("SELECT * FROM `screenResolution` WHERE `count` >2000" )
+
+for i,screen in pairs(screens) do 
+		
+	httpWrite("'"..screen.screen.."',")
+
+		end
+
+httpWrite("];\r\n")
+httpWrite("var counts = [")	
+for i,screen in pairs(screens) do 
+		
+	httpWrite(""..screen.count..",")
+
+		end	
+httpWrite("];\r\n")
+
+*>
+chart.update({xAxis: {categories: screens}});
+chart.update({series: {data: counts}});
+
+</script>

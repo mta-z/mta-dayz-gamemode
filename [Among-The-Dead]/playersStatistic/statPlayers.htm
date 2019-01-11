@@ -1,0 +1,180 @@
+﻿
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/exporting.js"></script>
+
+<div id="container2" style="width:100%;height:100%"></div>
+<br/>
+<br/>
+<div id="container3" style="width:100%;height:100%"></div>
+
+
+<script>
+var chart2 = Highcharts.chart('container2', {
+    chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Статистика по игрокам'
+    },
+    subtitle: {
+        text: 'Учитывается каждое подключение/Вход в аккаунт'
+    },
+    xAxis: {
+         categories: []
+    },
+    yAxis: {
+        title: {
+            text: 'Количество подключений'
+        },
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name} <b>{point.y:,.0f}</b><br/>'
+    }, 
+	plotOptions: {
+        area: {
+            marker: {
+                enabled: false,
+                symbol: 'circle',
+                radius: 1,
+                states: {
+                    hover: {
+                        enabled: true
+                    }
+                }
+            }
+        }
+    },
+
+    series: [{
+        name: 'Всего подключений',
+        data: []
+    }, {
+        name: 'Подключений новых игроков',
+        data: []
+    },{
+        name: 'Уникальные игроки',
+        data: []
+    }]
+});
+</script>
+
+<script>
+var chart3 = Highcharts.chart('container3', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Время игры уникальных игроков'
+    },
+    xAxis: {
+         categories: []
+    },
+    yAxis: {
+        title: {
+            text: 'Время игры в минутах'
+        },
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name} <b>{point.y:,.0f}</b><br/>'
+    }, 
+	plotOptions: {
+        area: {
+            marker: {
+                enabled: false,
+                symbol: 'circle',
+                radius: 1,
+                states: {
+                    hover: {
+                        enabled: true
+                    }
+                }
+            }
+        }
+    },
+
+    series: [{
+        name: 'Общее время игры',
+        data: []
+    }, {
+        name: 'Среднее время игры',
+        data: []
+    },{
+        name: 'Уникальные игроки',
+        data: []
+    }]
+});
+</script>
+<script>
+
+<*
+
+
+
+local playersStatistic = executeSQLQuery("SELECT * FROM `playersStatistic` WHERE `date` > datetime('now', '-1 month') ORDER BY substr(date,7)||substr(date,1,2)||substr(date,4,2)" )
+
+httpWrite("var playersStatisticDate = [")
+for i,stat in pairs(playersStatistic) do 	
+	httpWrite("'"..stat.date.."',")
+end
+httpWrite("];\r\n")	
+
+	
+httpWrite("var playersStatisticConnects = [")
+for i,stat in pairs(playersStatistic) do 	
+	httpWrite(""..stat.connects..",")
+end
+httpWrite("];\r\n")		
+
+httpWrite("var playersStatisticNewPlayers = [")
+for i,stat in pairs(playersStatistic) do 	
+	httpWrite(""..stat.newPlayers..",")
+end
+httpWrite("];\r\n")	
+
+httpWrite("var playersStatisticUniquePlayers = [")
+for i,stat in pairs(playersStatistic) do 	
+	httpWrite(""..stat.uniquePlayers..",")
+end
+httpWrite("];\r\n")
+
+
+httpWrite("var playersStatisticUniquePlayersTimeAverage = [")
+for i,stat in pairs(playersStatistic) do 
+local upt = stat.uniquePlayersTime or 0
+local up = stat.uniquePlayers or 0
+local mins  = 0
+if up ==0 then upt = 0;  up =-1 end
+local mins  = upt/up
+
+outputDebugString(mins)
+httpWrite(""..mins..",")
+end
+httpWrite("];\r\n")	
+
+httpWrite("var playersStatisticUniquePlayersTimeAll = [")
+for i,stat in pairs(playersStatistic) do 
+httpWrite(""..stat.uniquePlayersTime..",")
+end
+httpWrite("];\r\n")
+
+*>
+
+chart2.update({xAxis: {categories: playersStatisticDate}});
+chart2.update({series: [{data: playersStatisticConnects},{data:playersStatisticNewPlayers},{data:playersStatisticUniquePlayers}]});	
+
+chart3.update({xAxis: {categories: playersStatisticDate}});
+chart3.update({series: [{data: playersStatisticUniquePlayersTimeAll},{data:playersStatisticUniquePlayersTimeAverage},{data:playersStatisticUniquePlayers}]});	
+
+</script>

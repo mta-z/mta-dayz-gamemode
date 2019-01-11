@@ -1,0 +1,8 @@
+<meta>
+	<info author="ATD" />
+	<script src="weather.lua" type="client" cache="false" />
+	<script src="blackwhite_c.lua" type="client" cache="false" />
+	
+<file src="imagequality.fx" type="client" />
+
+</meta>

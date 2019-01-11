@@ -1,0 +1,9 @@
+<meta>
+	<info name="Hitmarker [7rust-Dev]" type="script" author="7rust ~ Lucke" version="0.5.0" />
+
+	
+	<script src="hit_c.lua" type="client" />
+	
+	<file src="hitmarker.png" />
+
+</meta>

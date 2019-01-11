@@ -1,0 +1,265 @@
+<meta>
+    <info author="|LT|Marwin" description="DayZ MTA Version" version="a5.5.6" type="gamemode" />
+	
+	<!-- Clock -->
+	<script src="editor_server.lua" type="server" />
+    <script src="editor_client.lua" type="client" cache="false" />
+	
+	<script src="hudComponent/c.settings.lua" type="client" cache="false"  />
+	
+	
+	
+	<script src="clock.lua" type="client" cache="false" />
+	<file src="clock.xml" type="client" />
+	
+	<file src="images/clock.png" type="client"/>
+	<file src="images/clock2.png" type="client"/>
+	<file src="images/clock_d.png" type="client"/>
+	<file src="images/whyzerbig.png" type="client"/>
+	<file src="images/redPix.png" type="client"/>
+	<file src="images/whyzermin.png" type="client" />
+	<file src="images/whyzerseconds.png" type="client" />
+	<file src="images/headerScore.png" type="client" />
+	<file src="images/screen.png" type="client"/>
+<!--
+	<file src="images/x2.png" type="client"/>
+	<file src="images/x3.png" type="client"/>
+	<file src="images/x4.png" type="client"/>
+	<file src="images/x5.png" type="client"/>
+-->
+	<file src="images/items.png" type="client" />
+
+<script src="antirelog.lua" type="server" />
+<script src="antirelog_c.lua" type="client" cache="false" />
+<script src="dayzsettings_s.lua" type="server" />
+<script src="dayzsettings_c.lua" type="client" cache="false"  />
+
+<script src="s.admin.lua" type="server" />
+<script src="c.admin.lua" type="client" cache="false" />
+
+
+
+<script src="s.carMechanic.lua" type="server" />
+<script src="c.carMechanic.lua" type="client" cache="false" />
+
+   
+
+	 
+    <script src="pickups.lua" type="server" />
+    <script src="spawn.lua" type="server" />
+    <script src="vehicle_spawns.lua" type="server" />
+    <script src="survivorSystem.lua" type="server" />
+    <script src="zombies.lua" type="server" />
+
+    <script src="login.lua" type="server" />
+    <script src="tools/jq_server.lua" type="server" />
+    <script src="menu_client.lua" type="client" cache="false"/>
+    <script src="inventory.lua" type="client" cache="false"/>
+    <script src="survivorSystem_client.lua" type="client" cache="false"/>
+    <script src="tools/jq_client.lua" type="client"  />
+    <script src="textlib.lua" type="client" />
+	<script src="vkey.lua" type="client" cache="false" />
+
+    <file src="images/scrollmenu_1.png" />
+	<file src="images/scrollmenu_2.png" />
+    <file src="images/white.png" />
+    <file src="images/dayzicons/brokenbone.png" />
+	<file src="images/dayzicons/blood/0.png" />
+	<file src="images/dayzicons/blood/100.png" />
+	<file src="images/dayzicons/drink/0.png" />
+	<file src="images/dayzicons/drink/100.png" />	
+	<file src="images/dayzicons/eat/0.png" />
+	<file src="images/dayzicons/eat/100.png" />
+	<file src="images/dayzicons/temperature/0.png" />
+	<file src="images/dayzicons/temperature/38.png" /> 
+	<file src="images/dayzicons/bandit/0.png" />
+	<file src="images/dayzicons/bandit/2500.png" />
+	<file src="images/dayzicons/bandit/3500.png" />
+	<file src="images/dayzicons/bandit/5000.png" /> 
+	<file src="images/dayzicons/bandit/-2500.png" /> 
+	<file src="images/dayzicons/bandit/-1000.png" />
+	<file src="images/dayzicons/helmet.png" />
+	<file src="images/dayzicons/armor.png" />
+	<file src="images/dayzicons/medic.png" />
+	<file src="images/dayzicons/bio.png" />
+	
+	<file src="images/playerScore.png" />
+	
+
+    <file src="sounds/mgroan1.ogg" />
+    <file src="sounds/mgroan2.ogg" />
+    <file src="sounds/mgroan3.ogg" />
+    <file src="sounds/mgroan4.ogg" />
+    <file src="sounds/mgroan5.ogg" />
+    <file src="sounds/mgroan6.ogg" />
+    <file src="sounds/mgroan7.ogg" />
+    <file src="sounds/mgroan8.ogg" />
+    <file src="sounds/mgroan9.ogg" />
+    <file src="sounds/mgroan10.ogg" />
+	<file src="sounds/hit1.mp3" />
+	<file src="sounds/hit2.mp3" />
+	<file src="sounds/hit3.mp3" />
+
+	
+<file src="ogg/action_open_backpack_0.ogg" />
+<file src="ogg/action_open_backpack_1.ogg" />
+<file src="ogg/action_open_backpack_2.ogg" />
+<file src="ogg/action_open_backpack_3.ogg" />
+<file src="ogg/action_open_backpack_4.ogg" />
+
+<file src="ogg/action_eat_0.ogg" />
+<file src="ogg/action_eat_1.ogg" />
+<file src="ogg/action_eat_2.ogg" />
+<file src="ogg/action_eat_3.ogg" />
+
+<file src="ogg/inv_eat_can_open_0.ogg" />
+
+<file src="ogg/action_fillwater_0.ogg" />
+
+
+<file src="ogg/action_tentpack_0.ogg" />
+<file src="ogg/action_tentunpack_0.ogg" />
+
+
+
+<file src="ogg/bandage_0.ogg" />
+<file src="ogg/bandage_1.ogg" />
+<file src="ogg/bandage_2.ogg" />
+<file src="ogg/bandage_3.ogg" />
+
+<file src="ogg/action_soda_0.ogg" />
+<file src="ogg/action_soda_1.ogg" />
+<file src="ogg/action_soda_2.ogg" />
+
+<file src="ogg/action_drink_0.ogg" />
+
+<file src="ogg/painkiller_0.ogg" />
+<file src="ogg/painkiller_1.ogg" />
+<file src="ogg/painkiller_2.ogg" />
+<file src="ogg/painkiller_3.ogg" />
+
+<file src="ogg/morphine_0.ogg" />
+
+<file src="ogg/bloodbag_0.ogg" />
+
+<file src="ogg/inv_medkit_0.ogg" />
+
+<file src="ogg/action_repair_0.ogg" />
+<file src="ogg/action_repair_1.ogg" />
+<file src="ogg/action_repair_2.ogg" />
+
+<file src="ogg/inv_IN_0.ogg" />
+<file src="ogg/inv_OUT_0.ogg" />
+
+<file src="ogg/bullet_hit_pain_1.ogg" />
+<file src="ogg/bullet_hit_pain_2.ogg" />
+<file src="ogg/bullet_hit_pain_3.ogg" />	
+
+<file src="ogg/die0.ogg" />
+<file src="ogg/die1.ogg" />
+<file src="ogg/die2.ogg" />
+<file src="ogg/die3.ogg" />
+<file src="ogg/die4.ogg" />
+<file src="ogg/die5.ogg" />
+<file src="ogg/die6.ogg" />
+<file src="ogg/die7.ogg" />
+<file src="ogg/die8.ogg" />
+<file src="ogg/die9.ogg" />
+<file src="ogg/die10.ogg" />
+<file src="ogg/die11.ogg" />
+<file src="ogg/die12.ogg" />
+<file src="ogg/die13.ogg" />
+<file src="ogg/die14.ogg" />
+<file src="ogg/die15.ogg" />
+<file src="ogg/die16.ogg" />
+<file src="ogg/die17.ogg" />
+<file src="ogg/die18.ogg" />
+
+	
+<file src="ogg/em1_humming1.ogg" />
+<file src="ogg/em1_humming2.ogg" />
+<file src="ogg/em1_humming3.ogg" />
+<file src="ogg/em1_humming4.ogg" />
+
+<script src="c.exchange.lua" type="client" cache="false" />
+<script src="s.exchange.lua" type="server" />
+
+    <script src="bone_attach/bone_attach.lua" />
+    <script src="bone_attach/bone_attach_c.lua" type="client" />
+    <script src="bone_attach/attach_func.lua" />
+    <script src="bone_attach/attach_func.lua" type="client" />
+    <script src="bone_attach/bone_pos_rot.lua" type="client" />
+	
+	
+	<!--  HUD-->
+	<script src="hudComponent/c.ammoHud.lua" type="client" cache="false" />
+	<script src="hudComponent/c.dinamicIcons.lua" type="client" cache="false" />
+	<script src="hudComponent/c.debugMonitor.lua" type="client" cache="false" />
+	<script src="hudComponent/s.HudComponentVisibleOnStart.lua" type="server" />
+	<script src="hudComponent/c.groupDistance.lua" type="client" cache="false" />
+	
+	<file src="images/vehHud/hudWin1.png" />
+	<file src="images/vehHud/hudWin2.png" />
+	<file src="images/vehHud/hudWin3.png" />
+	<file src="images/vehHud/hudFuell1.png" />
+	<file src="images/vehHud/hudFuellPolosa.png" />
+	<script src="hudComponent/c.vehHud.lua" type="client" cache="false" />
+	<script src="hudComponent/c.vehRepair.lua" type="client" cache="false" />
+	
+	
+	<file src="hudComponent/spawner/img/DeadText.png" type="client"/>
+	<file src="hudComponent/spawner/img/LSpoint.png" type="client"/>
+	<file src="hudComponent/spawner/img/Tpoint.png" type="client"/>
+	<file src="hudComponent/spawner/img/LVpoint.png" type="client"/>
+	<file src="hudComponent/spawner/img/SFpoint.png" type="client"/>
+	<file src="hudComponent/spawner/img/pixel.png" type="client"/>
+	<file src="hudComponent/spawner/img/b50.png" type="client"/>
+	<file src="hudComponent/spawner/img/LS.png" type="client"/>
+	<file src="hudComponent/spawner/img/LSt.png" type="client"/>
+	<file src="hudComponent/spawner/img/SF.png" type="client"/>
+	<file src="hudComponent/spawner/img/SFt.png" type="client"/>
+	<file src="hudComponent/spawner/img/LV.png" type="client"/>
+	<file src="hudComponent/spawner/img/LVt.png" type="client"/>
+	<script src="hudComponent/spawner/c.spawner.lua" type="client" cache="false" />
+	
+	<file src="hudComponent/aim/texreplace.fx" type="client" />
+	
+	<script src="hudComponent/aim/c.aim.lua" type="client" cache="false" />
+	
+	
+	<file src="hudComponent/aim/img/1.png" type="client" />
+	<file src="hudComponent/aim/img/2.png" type="client" />
+	<file src="hudComponent/aim/img/3.png" type="client" />
+	<file src="hudComponent/aim/img/4.png" type="client" />
+	<file src="hudComponent/aim/img/5.png" type="client" />
+	<file src="hudComponent/aim/img/6.png" type="client" />
+	<file src="hudComponent/aim/img/7.png" type="client" />
+	<file src="hudComponent/aim/img/8.png" type="client" />
+	<file src="hudComponent/aim/img/9.png" type="client" />
+	<file src="hudComponent/aim/img/10.png" type="client" />
+	<file src="hudComponent/aim/img/11.png" type="client" />
+	<file src="hudComponent/aim/img/12.png" type="client" />
+	<file src="hudComponent/aim/img/13.png" type="client" />
+	<file src="hudComponent/aim/img/14.png" type="client" />
+	<file src="hudComponent/aim/img/15.png" type="client" />
+	<file src="hudComponent/aim/img/16.png" type="client" />
+	<file src="hudComponent/aim/img/17.png" type="client" />
+	<file src="hudComponent/aim/img/18.png" type="client" />
+	<file src="hudComponent/aim/img/19.png" type="client" />
+	<file src="hudComponent/aim/img/20.png" type="client" />
+	<file src="hudComponent/aim/img/21.png" type="client" />
+	<export function="getPlayerCurrentSlots" type="client"/>
+	<export function="setIconsSize" type="client"/>
+	<export function="setInvSize" type="client"/>
+	
+	<export function="setValueSettings" type="client"/>
+	<export function="getSettingsJson" type="client"/>
+	<export function="getSettingsValue" type="client"/>
+	
+	<export function="setHideRadar" type="client"/>
+	<export function="selectAIM" type="client"/>
+	<export function="setGroupDistance" type="client"/>
+	
+	
+	<download_priority_group> 0 </download_priority_group>
+</meta>

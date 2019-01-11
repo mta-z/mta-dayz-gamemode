@@ -1,0 +1,14 @@
+<meta>
+	<info author="ATD" name="botsATD" version="1.0" type="script" />
+	
+	
+	<script src="bone_attach/bone_attach.lua" />
+    <script src="bone_attach/bone_attach_c.lua" type="client" />
+    <script src="bone_attach/attach_func.lua" />
+    <script src="bone_attach/attach_func.lua" type="client" />
+    <script src="bone_attach/bone_pos_rot.lua" type="client" />
+	
+	<script src="bots_client.lua" type="client" cache="false" />
+	<script src="bots_server.lua" />
+	
+</meta>

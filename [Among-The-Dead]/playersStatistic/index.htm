@@ -1,0 +1,61 @@
+﻿
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/exporting.js"></script>
+
+<div id="container"></div>
+
+<script>
+var chart = Highcharts.chart('container', {
+
+    title: {
+        text: 'Разрешения экранов'
+    },
+
+    subtitle: {
+        text: 'Учитывается каждый вход'
+    },
+
+    xAxis: {
+        categories: []
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: [],
+        showInLegend: false
+    }]
+
+});
+
+</script>
+
+<script>
+
+<*
+
+
+httpWrite("var screens = [")
+local screens = executeSQLQuery("SELECT * FROM `screenResolution` " )
+
+for i,screen in pairs(screens) do 
+		
+	httpWrite("'"..screen.screen.."',")
+
+		end
+
+httpWrite("];\r\n")
+httpWrite("var counts = [")	
+for i,screen in pairs(screens) do 
+		
+	httpWrite(""..screen.count..",")
+
+		end	
+httpWrite("];")
+*>
+chart.update({xAxis: {categories: screens}});
+chart.update({series: {data: counts}});
+	
+</script>

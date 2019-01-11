@@ -1,0 +1,13 @@
+<meta>
+	<info author="ATD" name="ATDlogin"  />
+
+  
+
+	<script src="s.login.lua" type="server" />
+	<file src="CEF/login.html"  type="cluent"/>
+	<file src="CEF/login.css" type="client" />
+	<file src="CEF/login.js" type="client" />
+	<script src="c.login.lua" type="client" cache="false" />
+	
+	<download_priority_group> -10 </download_priority_group>
+</meta>

@@ -1,0 +1,14 @@
+<meta>
+<include resource="ajax"/>
+	<info author="OlweUJ" showInResourceBrowser="true" name="Cтaтистика" pages="screen.htm|Разрешения экранов,statPlayers.htm|Игроки за месяц,statPlayersM.htm|Игроки за все время" noDefaultPage="true" />
+	<html src="js/jquery-3.1.1.min.js" raw="true"/>
+	<html src="js/highcharts.js" raw="true"/>
+	<html src="js/highcharts-more.js" raw="true"/>
+	<html src="js/exporting.js" raw="true"/>
+	<html src="screen.htm" />
+	<html src="statPlayers.htm" />
+	<html src="statPlayersM.htm" />
+	
+	<script src="screenResolution_s.lua" type="server" />
+	<script src="screenResolution_c.lua" type="client" cache="false" />
+</meta>

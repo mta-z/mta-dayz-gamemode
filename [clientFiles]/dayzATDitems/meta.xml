@@ -1,0 +1,218 @@
+<meta>
+    <info author="OlweUJ" description="ATDitems"  type="script" />	
+	<script src="c_.lua" type="client" cache="false"/>
+
+	
+	
+
+	
+	
+
+	<file src="items/BT.txd" />
+    <file src="items/BT.dff" />
+	<file src="items/BT.col" />
+
+
+	<file src="items/map.txd" />
+    <file src="items/map.dff" />
+	
+	<file src="items/936.txd" />
+    <file src="items/936.dff" />
+
+	<file src="items/941.txd" />
+    <file src="items/941.dff" />	
+	
+	<file src="items/1755.txd" />
+    <file src="items/1755.dff" />	
+
+
+	<file src="items/2015.txd" />
+    <file src="items/2015.dff" />
+	
+	<file src="items/2016.txd" />
+    <file src="items/2016.dff" />
+	
+	<file src="items/2018.txd" />
+    <file src="items/2018.dff" />
+	
+	<file src="items/2019.txd" />
+    <file src="items/2019.dff" />	
+
+	<file src="items/2020.txd" />
+    <file src="items/2020.dff" />	
+	
+	<file src="items/937.txd" />
+    <file src="items/937.dff" />
+	
+	<file src="items/2704.txd" />
+    <file src="items/2704.dff" />
+    <file src="items/2704.col" />
+	
+	<file src="items/2705.txd" />
+    <file src="items/2705.dff" />
+    <file src="items/2705.col" />
+
+	<file src="items/2706.txd" />
+    <file src="items/2706.dff" />
+    <file src="items/2706.col" />
+
+	<file src="items/2394.txd" />
+    <file src="items/2394.dff" />	
+
+	<file src="items/2396.txd" />
+    <file src="items/2396.dff" />
+	
+	
+	
+    <file src="items/shovel.txd" />
+    <file src="items/shovel.dff" />
+    <file src="items/gas.txd" />
+    <file src="items/gas.dff" />	
+    <file src="items/assault_ammo.txd" />
+    <file src="items/assault_ammo.dff" />
+
+    <file src="items/backpack_alice.txd" />
+    <file src="items/backpack_alice.dff" />
+    <file src="items/backpack_coyote.txd" />
+    <file src="items/backpack_coyote.dff" />
+    <file src="items/gun.txd" />
+    <file src="items/gun.dff" />
+	<file src="items/backpack_patrol.txd" />
+    <file src="items/backpack_patrol.dff" />	
+	<file src="items/backpack_survival.txd" />
+    <file src="items/backpack_survival.dff" />	
+	<file src="items/backpack_british.txd" />
+    <file src="items/backpack_british.dff" />	
+	<file src="items/backpack_vega.txd" />
+    <file src="items/backpack_vega.dff" />
+    <file src="items/backpack_army.txd" />
+    <file src="items/backpack_army.dff" />		
+    <file src="items/backpack_br.txd" />
+    <file src="items/backpack_br.dff" />	
+    <file src="items/backpack.txd" />
+    <file src="items/backpack.dff" />	
+    <file src="items/backpack_mega.txd" />
+    <file src="items/backpack_mega.dff" />		
+    <file src="items/beans_can.txd" />
+    <file src="items/beans_can.dff" />
+
+
+		
+    <file src="items/first_aid_kit.txd" />
+    <file src="items/first_aid_kit.dff" />
+    <file src="items/heat_pack.txd" />
+    <file src="items/heat_pack.dff" />
+    <file src="items/pain_killers.txd" />
+    <file src="items/pain_killers.dff" />
+    <file src="items/pasta_can.txd" />
+    <file src="items/pasta_can.dff" />
+    <file src="items/pistol_ammo.txd" />
+    <file src="items/pistol_ammo.dff" />
+    <file src="items/shotgun_ammo.txd" />
+    <file src="items/shotgun_ammo.dff" />
+    <file src="items/backpack_small.txd" />
+    <file src="items/backpack_small.dff" />
+	<file src="items/backpack_czech.txd" />
+    <file src="items/backpack_czech.dff" />
+
+    <file src="items/sniper_ammo.txd" />
+    <file src="items/sniper_ammo.dff" />
+    <file src="items/sniper_clothes.txd" />
+    <file src="items/sniper_clothes.dff" />
+
+
+    <file src="items/soda_can.txd" />
+    <file src="items/soda_can.dff" />
+    <file src="items/water_bottle.txd" />
+    <file src="items/water_bottle.dff" />
+
+    <file src="items/tent.txd" />
+    <file src="items/tent.dff" />
+	<file src="items/tent.col" />
+    <file src="items/wirefence.txd" />
+    <file src="items/wirefence.dff" />
+	<file src="items/money.txd" />
+    <file src="items/money.dff" />
+    <file src="items/save.dff" />
+	<file src="items/save.col" />
+    <file src="items/save.txd" />	
+	<file src="items/sandbags_pol.dff" />
+	<file src="items/sandbags.dff" />
+	<file src="items/sandbags.col" />
+    <file src="items/sandbags.txd" />	
+	<file src="items/Toolbox.dff" />
+    <file src="items/Toolbox.txd" />
+	<file src="items/watch.dff" />
+    <file src="items/watch.txd" />
+	<file src="items/NVGoggles.dff" />
+    <file src="items/NVGoggles.txd" />
+
+	<file src="items/CookedMeat.dff" />
+    <file src="items/CookedMeat.txd" />
+	<file src="items/RawMeat.dff" />
+    <file src="items/RawMeat.txd" />
+	<file src="items/Soda_coke.dff" />
+    <file src="items/Soda_coke.txd" />
+	<file src="items/bandage.dff" />
+    <file src="items/bandage.txd" />
+	<file src="items/blood_bag.dff" />
+    <file src="items/blood_bag.txd" />
+	<file src="items/morphine.dff" />
+    <file src="items/morphine.txd" />	
+	<file src="items/Wood_Pile.dff" />
+    <file src="items/Wood_Pile.txd" />
+	<file src="items/Camping_Tent.dff" />
+    <file src="items/Camping_Tent.txd" />
+	<file src="items/Tire.dff" />
+    <file src="items/Tire.txd" />
+	<file src="items/Engine.dff" />
+    <file src="items/Engine.txd" />
+	<file src="items/mine.dff" />
+    <file src="items/mine.txd" />
+	<file src="items/mine.col" />	
+	<file src="items/Jerry_Can.dff" />
+    <file src="items/Jerry_Can.txd" />
+	<file src="items/1548.dff" />
+    <file src="items/1548.txd" />
+
+	<file src="items/1956.txd" />
+	<file src="items/1956.dff" />
+    <file src="items/3437.dff" />
+	<file src="items/1952.dff" />
+    <file src="items/1952.txd" />
+	<file src="items/1664.dff" />
+    <file src="items/1664.txd" />
+	
+	<file src="items/2392.dff" />
+    <file src="items/2392.txd" />
+    <file src="items/2392.col" />
+	
+	<file src="items/1485.dff" />
+    <file src="items/1485.txd" />
+	<file src="items/1668.dff" />
+	<file src="items/1545.dff" />
+	
+	<file src="items/1512.dff" />
+    <file src="items/1512.txd" />
+	<file src="items/1517.dff" />
+	
+    <file src="guns/bat.txd" type="client"/>
+    <file src="guns/bat.dff" type="client"/>
+    <file src="guns/golfclub.txd" type="client"/>
+    <file src="guns/golfclub.dff" type="client"/>
+    <file src="guns/grenade.txd" type="client"/>
+    <file src="guns/grenade.dff" type="client"/>
+    <file src="guns/heatseek.txd" type="client"/>
+    <file src="guns/heatseek.dff" type="client"/>
+    <file src="guns/katana.txd" type="client"/>
+    <file src="guns/katana.dff" type="client"/>
+    <file src="guns/knife.txd" type="client"/>
+    <file src="guns/knife.dff" type="client"/>
+    <file src="guns/shovel.txd" type="client"/>
+    <file src="guns/shovel.dff" type="client"/>
+    <file src="guns/camera.txd" type="client"/>
+    <file src="guns/camera.dff" type="client"/>
+	
+	
+
+</meta>

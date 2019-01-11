@@ -1,0 +1,59 @@
+﻿
+<html>
+
+	<head>
+		﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+		<link rel="stylesheet" type="text/css" href="css/style.css" /> <!-- http://mta/keysHelp/CEF/css/style.css-->
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> <!-- http://mta/keysHelp/CEF/js/jquery-3.2.1.min.js-->
+		<script type="text/javascript" src="js/script.js"></script> <!-- http://mta/keysHelp/CEF/js/script.js-->
+	</head>
+
+	<body>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	
+ $("#logo").animate({   
+						opacity: 1
+		}, 5000);
+});
+
+function scrollTo(name){
+$('html,body').animate({
+        scrollTop: $("[name = '"+name+"']").offset().top},
+        'slow');
+}
+function loadPages(title,page){
+console.log(title)
+
+	$("#preloader").show();
+	$("#load").hide();
+	$("#load").load(page,{},function(){ 
+	$("#preloader").hide();
+	$("#load").fadeIn();
+	if (title=="Настройки"){loadSettings()}
+	});
+
+}
+
+</script>		
+		<section>
+		
+			<center><img style="width: 30px;height: 30px;margin: 50px;" id="preloader" src="img/preloader.gif"><center>
+			
+					<div style="width:100%;" id="load">
+				
+					</div>
+					
+				
+	
+
+			</div> 
+			
+		</section>	
+
+
+		
+	</body>
+	
+</html>

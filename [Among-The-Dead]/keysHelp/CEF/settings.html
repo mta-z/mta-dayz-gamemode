@@ -1,0 +1,93 @@
+﻿<center>
+<div id="settings">
+	<div class="spoiler-title ">
+	<span onclick="spoiler(this)">Интерфейс</span>
+		<hr/>
+		<div class="spoiler-body">
+		<span>Размер радара</span>
+		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
+		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="0"> <label class="radioL">Очень маленький</label>
+		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="1"> <label class="radioL">Маленький</label>
+		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="2"> <label class="radioL">Нормальный</label>
+		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="3"> <label class="radioL">Большой</label>
+		</div>
+		<div class="spoiler-body">
+		<span>Размер иконок</span>
+		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
+		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="small"> <label class="radioL">Маленькие</label>
+		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="standart"> <label class="radioL">Нормальные</label>
+		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="big"> <label class="radioL">Большие</label>
+		</div>
+		<div class="spoiler-body">
+		<span>Чат</span>
+		<input name="chatShow" class="chatShow" type="radio" onclick="setSetting('selectShowChat',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
+		<input name="chatShow" class="chatShow" type="radio" onclick="setSetting('selectShowChat',this)" value="1"> <label class="radioL">Показать</label>
+		</div>
+		<div class="spoiler-body">
+		<span>Размер инвентаря</span>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.5"> <label class="radioL">50%</label>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.6"> <label class="radioL">60%</label>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.7"> <label class="radioL">70%</label>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.8"> <label class="radioL">80%</label>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.9"> <label class="radioL">90%</label>
+		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="1"> <label class="radioL">100%</label>
+		</div>
+		<div class="spoiler-body">
+		<span>Прицел</span>
+			<div id="prcl">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/1.png"  class="aim" name="1" onclick="selectPrcl(1,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/2.png"  class="aim" name="2" onclick="selectPrcl(2,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/3.png"  class="aim" name="3" onclick="selectPrcl(3,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/4.png"  class="aim" name="4" onclick="selectPrcl(4,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/5.png"  class="aim" name="5" onclick="selectPrcl(5,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/6.png"  class="aim" name="6" onclick="selectPrcl(6,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/7.png"  class="aim" name="7" onclick="selectPrcl(7,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/8.png"  class="aim" name="8" onclick="selectPrcl(8,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/9.png"  class="aim" name="9" onclick="selectPrcl(9,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/10.png" class="aim" name="10" onclick="selectPrcl(10,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/11.png" class="aim" name="11" onclick="selectPrcl(11,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/12.png" class="aim" name="12" onclick="selectPrcl(12,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/13.png" class="aim" name="13" onclick="selectPrcl(13,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/14.png" class="aim" name="14" onclick="selectPrcl(14,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/15.png" class="aim" name="15" onclick="selectPrcl(15,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/16.png" class="aim" name="16" onclick="selectPrcl(16,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/17.png" class="aim" name="17" onclick="selectPrcl(17,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/18.png" class="aim" name="18" onclick="selectPrcl(18,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/19.png" class="aim" name="19" onclick="selectPrcl(19,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/20.png" class="aim" name="20" onclick="selectPrcl(20,this)">
+			<img src="http://mta/DayZATD/hudComponent/aim/img/21.png" class="aim" name="21" onclick="selectPrcl(21,this)">
+			</div>
+		</div>
+		<div class="spoiler-body">
+		<span>Дистанция до союзников</span>
+			<div id="groupDistance">
+			<input name="groupDistance" class="groupDistance" type="radio" onclick="setSetting('setGroupDistance',this)" checked value="0"> <label class="radioL">Скрыть</label>
+			<input name="groupDistance" class="groupDistance" type="radio" onclick="setSetting('setGroupDistance',this)" value="1"> <label class="radioL">Показать</label>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="spoiler-title ">
+	<span onclick="spoiler(this)">Мир</span>
+		<hr/>
+		<div class="spoiler-body">
+		<span>Качество текстур</span>
+		<div id="warn" style="display:none;padding:10px;color:#fff;">Перезайдите для применения этой настройки!</div>
+		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="noShow"> <label class="radioL">Не использовать</label>
+		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="low"> <label class="radioL">Низкое</label>
+		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="normal"> <label class="radioL">Среднее</label>
+		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="max"> <label class="radioL">Высокое</label>
+		</div>
+		<!--
+		<div class="spoiler-body">
+		<span>Звуки окружения</span>
+		<input name="worldSound" type="checkbox" onclick="WorldSound(this)" value="0"> <label class="radioL">Пение птиц</label>
+		<input name="worldSound" type="checkbox" onclick="WorldSound(this)" value="0"> <label class="radioL">Фоновая музыка</label>
+		</div>
+	-->
+	</div>
+	
+	
+</div>
+</center>

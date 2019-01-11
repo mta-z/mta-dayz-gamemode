@@ -1,0 +1,27 @@
+<meta>
+	<info author="ATD" name="progressATD" type="script"/>
+
+  
+	<!--Main script files, keep them in that order or it may break-->
+	
+	<script src="s_.lua" type="server"/>
+	<script src="c_.lua" type="client" cache="false"/>
+
+
+	<!--Images-->
+	
+
+	<file src="font.ttf"/>
+	<file src="font2.ttf"/>
+	<file src="ATDr.ttf"/>
+	<file src="black.png"/>
+	<file src="gray.png"/>
+	
+		<file src="prgsBar.nil.png"/>
+			<file src="prgsBar.full.png"/>
+		<file src="plus.png"/>
+			<file src="minus.png"/>
+			<file src="plus.hover.png"/>
+			<file src="minus.hover.png"/>
+	
+</meta>

@@ -1,0 +1,30 @@
+<meta>
+	<info name="Shader snow ground" author="ccw" version="0.0.3" type="script" />
+	<min_mta_version client="1.1.0" server="1.1.0" />
+
+	<script src="c_snow_ground.lua" type="client" cache="false" />
+	<script src="misc.lua" type="client" cache="false" />
+	<script src="icefill.lua" type="client" cache="false"/>
+	
+	<file src="textures/blend/blend.dayzatd" type="client" />
+	<file src="textures/other/noise.dayzatd" type="client" />
+	<file src="textures/other/real_tile.dayzatd" type="client" />
+
+	
+	<file src="textures/single/single.dayzatd" type="client" />
+	<file src="textures/single/singleLOD.dayzatd" type="client" />
+
+	<file src="textures/single/trottile.dayzatd" type="client" />
+	<file src="textures/single/trottileLOD.dayzatd" type="client" />
+	
+	
+	
+	<file src="shaders/blend.fx" type="client" />
+	<file src="shaders/mta-helper.fx" type="client" />
+	<file src="shaders/shader.fx" type="client" />
+	<file src="shaders/shaderalphablend.fx" type="client" />
+	<file src="shaders/snow.fx" type="client" />
+	<file src="shaders/tex_matrix.fx" type="client" />
+	
+	
+</meta>

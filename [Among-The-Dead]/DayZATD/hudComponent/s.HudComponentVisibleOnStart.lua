@@ -1,0 +1,17 @@
+function hudChanger ()
+	setPlayerHudComponentVisible ( source, "ammo", false )
+    setPlayerHudComponentVisible ( source, "area_name", false )
+    setPlayerHudComponentVisible ( source, "armour", false )	
+    setPlayerHudComponentVisible ( source, "breath", false )
+    setPlayerHudComponentVisible ( source, "clock", false )
+	setPlayerHudComponentVisible ( source, "ammo", false )
+    setPlayerHudComponentVisible ( source, "health", false )
+    setPlayerHudComponentVisible ( source, "money", false )	
+    setPlayerHudComponentVisible ( source, "radar", false )
+    setPlayerHudComponentVisible ( source, "vehicle_name", false )
+    setPlayerHudComponentVisible ( source, "radio", false )
+    setPlayerHudComponentVisible ( source, "weapon", false )
+    setPlayerHudComponentVisible ( source, "wanted", false )	
+end
+
+addEventHandler ( "onPlayerJoin", getRootElement(), hudChanger )

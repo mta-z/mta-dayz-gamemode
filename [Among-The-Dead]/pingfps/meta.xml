@@ -1,0 +1,5 @@
+<meta>
+	<info author="Bc" name="Bc FPS and PING Hud" type="misc" version="1.0.0" />
+	<script src="client.lua" type="client" />
+
+</meta>

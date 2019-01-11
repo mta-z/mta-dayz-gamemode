@@ -1,0 +1,7 @@
+<meta>
+
+	<script src="logger.lua" type="server" />
+	
+	<export function="setLog" type="server"/>
+</meta>
+

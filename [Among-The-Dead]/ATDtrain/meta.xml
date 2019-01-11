@@ -1,0 +1,8 @@
+<meta>   
+	<info author="ATD" name="ATD TRAIN"></info>
+
+	<script src="train-s.lua" type="server"></script>
+	<script src="train-c.lua" type="client" cache="false" ></script>
+	<file src="horn_1.wav" type="client" />
+	<file src="horn_2.wav" type="client" />
+</meta>

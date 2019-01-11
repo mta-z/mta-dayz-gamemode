@@ -1,0 +1,56 @@
+<meta>
+	<info author="ATD" name="ATDZombie" version="1.0" type="script" />
+	<script src="zombie_server.lua" />
+	<script src="zombie_client.lua" type="client" cache="false" />
+	
+	 <file src="ogg/attack_0.ogg" />
+	 <file src="ogg/attack_1.ogg" />
+	  <file src="ogg/attack_2.ogg" />
+	   <file src="ogg/attack_3.ogg" />
+	    <file src="ogg/attack_4.ogg" />
+		 <file src="ogg/attack_5.ogg" />
+		  <file src="ogg/attack_6.ogg" />
+		   <file src="ogg/attack_7.ogg" />
+		    <file src="ogg/attack_8.ogg" />
+			 <file src="ogg/attack_9.ogg" />
+			  <file src="ogg/attack_10.ogg" />
+			   <file src="ogg/attack_11.ogg" />
+			    <file src="ogg/attack_12.ogg" />
+	<file src="ogg/chase_0.ogg" />
+	<file src="ogg/chase_1.ogg" />
+	 <file src="ogg/chase_2.ogg" />
+	  <file src="ogg/chase_3.ogg" />
+	   <file src="ogg/chase_4.ogg" />
+	    <file src="ogg/chase_5.ogg" />
+		 <file src="ogg/chase_6.ogg" />
+		  <file src="ogg/chase_7.ogg" />
+		   <file src="ogg/chase_8.ogg" />
+		    <file src="ogg/chase_9.ogg" />
+			 <file src="ogg/chase_10.ogg" />
+			  <file src="ogg/chase_11.ogg" />
+			   <file src="ogg/chase_12.ogg" />
+
+	<file src="ogg/idle_0.ogg" />
+	<file src="ogg/idle_1.ogg" />
+	 <file src="ogg/idle_2.ogg" />
+	  <file src="ogg/idle_3.ogg" />
+	   <file src="ogg/idle_4.ogg" />
+	    <file src="ogg/idle_5.ogg" />
+		 <file src="ogg/idle_6.ogg" />
+		  <file src="ogg/idle_7.ogg" />
+		   <file src="ogg/idle_8.ogg" />
+		    <file src="ogg/idle_9.ogg" />
+			 <file src="ogg/idle_10.ogg" />
+			  <file src="ogg/idle_11.ogg" />
+			   <file src="ogg/idle_12.ogg" />
+			    <file src="ogg/idle_13.ogg" />
+				 <file src="ogg/idle_14.ogg" />
+				  <file src="ogg/idle_15.ogg" />
+				   <file src="ogg/idle_16.ogg" />
+				    <file src="ogg/idle_17.ogg" />
+					 <file src="ogg/idle_18.ogg" />
+					  <file src="ogg/idle_19.ogg" />
+
+	<export function="createZombie" type="server"/>
+	<export function="createZombiePlayer" type="server"/>
+</meta>

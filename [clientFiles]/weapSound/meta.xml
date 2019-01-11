@@ -1,0 +1,35 @@
+<meta>
+	<info author="ATD" />
+	<script src="weapon_sounds_client.lua" type="client" cache="false" />
+	
+	<file src="sounds/AK74.wav" />
+	<file src="sounds/AK74u.wav" />
+	<file src="sounds/AK107.wav" />
+	<file src="sounds/AS50.ogg" />
+	<file src="sounds/DMR.ogg" />
+	<file src="sounds/FNscar.wav" />
+	<file src="sounds/G17.wav" />
+	<file src="sounds/G36.wav" />
+	<file src="sounds/G36CSD.wav" />
+	<file src="sounds/Lee.wav" />
+	<file src="sounds/M9.wav" />
+	<file src="sounds/M9SD.wav" />
+	<file src="sounds/M24.wav" />
+	<file src="sounds/M107.wav" />
+	<file src="sounds/M240.wav" />
+	<file src="sounds/M249.wav" />
+	<file src="sounds/M1014.wav" />
+	<file src="sounds/M1911.wav" />
+	<file src="sounds/MK48.wav" />
+	<file src="sounds/PKP.ogg" />
+	<file src="sounds/REMINGTON.ogg" />
+	<file src="sounds/REVOLVER.ogg" />
+	<file src="sounds/SAIGA.wav" />
+	<file src="sounds/SVD.ogg" />
+	<file src="sounds/VSS_1.wav" />
+	<file src="sounds/VSS_2.wav" />
+	<file src="sounds/M4A1_1.wav" />
+	<file src="sounds/M4A1_2.wav" />
+	<file src="sounds/M4A1SD.wav" />
+	<file src="sounds/MP5.wav" />
+</meta>

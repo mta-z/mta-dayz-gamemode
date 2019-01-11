@@ -1,0 +1,5 @@
+<meta>
+   <info author="EnternalEnvy" description="FastRun" version="0.2" type="script" />
+   <script src="EnternalEnvy_CFastRun.lua" type="client" cache="false"/>
+   <script src="EnternalEnvy_SFastRun.lua" type="server"/>
+</meta>

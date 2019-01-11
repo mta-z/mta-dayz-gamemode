@@ -1,0 +1,29 @@
+<meta>
+	<info name="Rectangle minimap" author="Jayceon" version="1.0.61" type="script" />
+	<download_priority_group> 1 </download_priority_group>
+	<script src="sourceG.lua" type="client" cache="false" />
+	<script src="sourceC.lua" type="client" cache="false" />
+	
+	<file src="files/images/map.jpg" />
+	<file src="files/images/arrow.png" />
+	
+	<file src="files/images/blips/0.png" />
+	<file src="files/images/blips/42.png" />
+	<file src="files/images/blips/55.png" />
+	<file src="files/images/blips/19.png" />
+	<file src="files/images/blips/20.png" />
+	<file src="files/images/blips/target.png" />
+	
+	<file src="files/fonts/icons.ttf" />
+	
+	<export function="getMinimapState" type="client" />
+	<export function="getBigmapState" type="client" />
+	<export function="setState" type="client" />
+	<export function="radarSiz" type="client" />
+	<export function="getSquareFromMapPosition" type="client" />
+	
+	
+	
+	
+	<min_mta_version client="1.3.5" server="1.3.0-9.04134" />
+</meta>

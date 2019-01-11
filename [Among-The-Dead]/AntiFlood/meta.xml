@@ -1,0 +1,10 @@
+<meta>
+	<info author='50p' version='1.1' name='Anti-Flood' type='script' />
+	<script src='anti_flood.lua' />
+	<settings>
+		<setting name='*differenceBetweenMessages_ms' friendlyname='Time difference between messages' value='[1000]' desc='Amout of time (in milliseconds) that player has, to send specified amount of messages.' group='General' />
+		<setting name='*messagesNumber' friendlyname='Number of messages' value='[2]' desc='Amount of messages that player can send in specified amount of time.' group='General' />
+		<setting name="*mutePlayers" friendlyname="Mute players" value="true" accept="true,false" desc="Specifies if you want to mute players for flooding." group="Mute" />
+		<setting name="*muteTime" friendlyname="Time of player being muted" value="[40]" desc="Amount of time that player will be muted for. This setting is ignored if 'Mute players' setting is set to 'false'" group="Mute" />
+	</settings>
+</meta>

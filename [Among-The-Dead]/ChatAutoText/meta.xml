@@ -1,0 +1,5 @@
+<meta>
+	<info author="Johnson_Scofield" version="1.0.0" type="misc" name="Auto Infobox" description="Infobox in Chatbox" />
+	
+	<script src="news.lua" type="server" />
+</meta>

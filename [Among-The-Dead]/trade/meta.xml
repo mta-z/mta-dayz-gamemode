@@ -1,0 +1,6 @@
+<meta> 
+<info type="script" name="TradeSystemATD" author="AmongTheDead" version="1.0.0" />  
+<script src="trade_s.lua" type="server" />
+<script src="trade_c.lua" type="client"  cache="false" /> 
+<file src="scrollmenu_1.png"/>
+</meta> 

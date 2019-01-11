@@ -1,0 +1,12 @@
+<meta>
+	<info author="ATD" />
+	<script src="score.lua" type="client" cache="false" />
+	
+	<file src="whitepix.png" type="client" />
+	
+	<file src="playerScore.png" type="client" />
+	<file src="pixel.png" type="client" />
+	<file src="headerScore.png" type="client" />
+	<file src="playersScore.png" type="client" />
+
+</meta>

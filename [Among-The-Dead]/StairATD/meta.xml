@@ -1,0 +1,12 @@
+<meta>
+
+	
+	
+	<script src="client.lua" type="client" cache="false" />
+	<script src="c.lua" type="client" cache="false" />
+	<script src="s.lua" type="server"  />
+	 
+	 	<file src="lestnica.dff" type="client" />
+	<file src="lestnica.txd" type="client" />
+	 <file src="lestnica.col" type="client" />
+</meta>

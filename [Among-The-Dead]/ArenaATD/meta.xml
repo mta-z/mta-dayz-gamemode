@@ -1,0 +1,6 @@
+<meta> 
+<info type="script" name="ArenaATD" author="AmongTheDead" version="1.0.0" />  
+<script src="s_.lua" type="server" />
+<script src="c_.lua" type="client"  cache="false" /> 
+
+</meta> 

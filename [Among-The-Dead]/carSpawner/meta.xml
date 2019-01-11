@@ -1,0 +1,6 @@
+<meta>
+    <info author="ATD" version="1.0" type="script" name="CarSpawnerATD"/>
+    <script src="CarSpawner.lua" type="server" />
+	
+	<export function="CarSpawner" http="true" />
+</meta>

@@ -1,0 +1,7 @@
+<meta>
+    <script src="s_.lua" />
+	<export function='getBanans' http='true' /> 
+	<export function='getMutes' http='true' /> 
+	<export function='loginCheck' http='true' /> 
+	<export function='getBestPlayers' http='true' /> 
+</meta>

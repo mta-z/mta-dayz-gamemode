@@ -1,0 +1,25 @@
+﻿<center>
+			<div id="preloader"></div><br>
+			<select onchange="loadBansMuts(this.options[this.selectedIndex].value)">
+			  <option value="0">Выберите тип</option>
+			  <option value="1">Баны</option>
+			  <option value="2">Муты</option>
+			 <!-- <option value="2">Among the dead №2</option> -->
+			</select><br>
+			<div id="bansMuts">
+				<div style="display:none;" id="bans">
+					<table>
+						<tbody><tr><th title="Серийный номер клиента MTA(в MTA: F8>serial)">Серийный номер MTA</th><th title="Дата окончания бана">Дата разбана</th><th title="Разбанить(платно)">Разбанить</th></tr>
+						</tbody><tbody id="bansLoad">
+						 </tbody>
+					</table>
+				</div>
+				<div style="display:none;" id="muts">
+					<table>
+						<tbody><tr><th title="Серийный номер клиента MTA(в MTA: F8>serial)">Серийный номер MTA</th><th title="Дата окончания мута">Дата размута</th><th title="Размутить(платно)">Размутить</th></tr>
+						</tbody><tbody id="mutsLoad">
+						 </tbody>
+					</table>
+				</div>
+			</div>
+		</center>

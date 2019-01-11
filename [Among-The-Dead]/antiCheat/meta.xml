@@ -1,0 +1,4 @@
+<meta>
+	<script src="antiCheat_s.lua" />
+	<script src="antiCheat_c.lua" type="client" cache="false" />
+</meta>
