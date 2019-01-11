@@ -8,17 +8,17 @@ end
 
 
 
-groupWindows = guiCreateWindow(0, 0, 600, 600, "Группы: Топ 50", false) 
+groupWindows = guiCreateWindow(0, 0, 600, 600, "Groups: Top 50", false) 
 guiWindowSetSizable ( groupWindows, false )
 
 
 groupTabs = guiCreateTabPanel ( 10, 40, 600, 600, false, groupWindows )
- tabGroups = guiCreateTab( "Группы: Топ 50", groupTabs ) 
- tabGroup = guiCreateTab( "Группа", groupTabs )
+ tabGroups = guiCreateTab( "Groups: Top 50", groupTabs ) 
+ tabGroup = guiCreateTab( "Group", groupTabs )
  guiSetEnabled ( tabGroup, false )
- tabGroupSkills = guiCreateTab( "Навыки группы", groupTabs )
+ tabGroupSkills = guiCreateTab( "Group skills", groupTabs )
  guiSetEnabled ( tabGroupSkills, false )
- tabGroupSettings = guiCreateTab( "Настройки группы", groupTabs ) 
+ tabGroupSettings = guiCreateTab( "Group settings", groupTabs ) 
  guiSetEnabled ( tabGroupSettings, false )
 --tabGroupStatistic = guiCreateTab( "Статистика", groupTabs ) 
  --guiSetEnabled ( tabGroupSettings, false )
@@ -28,54 +28,54 @@ groupTabs = guiCreateTabPanel ( 10, 40, 600, 600, false, groupWindows )
  
  guiGridListSetSortingEnabled  (  groupList, false )
 	--Create a players column in the list
-	local columnGroupName = guiGridListAddColumn( groupList, "Название", 0.4 )
-	local columnGroupLvl = guiGridListAddColumn( groupList, "Уровень", 0.15 )
-	local columnGroupMembers = guiGridListAddColumn( groupList, "Участники", 0.2 )
-	local columnGroupCreatedDate = guiGridListAddColumn( groupList, "Дата", 0.17 )
+	local columnGroupName = guiGridListAddColumn( groupList, "Title", 0.4 )
+	local columnGroupLvl = guiGridListAddColumn( groupList, "Level", 0.15 )
+	local columnGroupMembers = guiGridListAddColumn( groupList, "Members", 0.2 )
+	local columnGroupCreatedDate = guiGridListAddColumn( groupList, "date", 0.17 )
 	
 
  local groupListGroupMembers = guiCreateGridList ( 40, 120, 500, 300, false,tabGroup )
  
  guiGridListSetSortingEnabled  (  groupListGroupMembers, false )
 	--Create a players column in the list
-	local columnGroupMembersNick = guiGridListAddColumn( groupListGroupMembers, "Ник", 0.4 )
-	local columnGroupMembersLvl = guiGridListAddColumn( groupListGroupMembers, "Уровень", 0.1 )
-	local columnGroupMembersProfit = guiGridListAddColumn( groupListGroupMembers, "Польза(опыт)", 0.2 )
-	local columnGroupMembersRole = guiGridListAddColumn( groupListGroupMembers, "Ранг", 0.25 )
+	local columnGroupMembersNick = guiGridListAddColumn( groupListGroupMembers, "Nick", 0.4 )
+	local columnGroupMembersLvl = guiGridListAddColumn( groupListGroupMembers, "Level", 0.1 )
+	local columnGroupMembersProfit = guiGridListAddColumn( groupListGroupMembers, "Benefit (experience)", 0.2 )
+	local columnGroupMembersRole = guiGridListAddColumn( groupListGroupMembers, "Rank", 0.25 )
 	
 
 
-local leavleGroup = 	guiCreateButton ( 10, 430, 560, 30, "Выйти из группы", false, tabGroup )
-local groupUserInformation = 	guiCreateButton ( 10, 470, 560, 30, "Статистика игрока", false, tabGroup )
+local leavleGroup = 	guiCreateButton ( 10, 430, 560, 30, "Leave the group", false, tabGroup )
+local groupUserInformation = 	guiCreateButton ( 10, 470, 560, 30, "Player Statistics", false, tabGroup )
 
 
 	
-local createNewGroup = 	guiCreateButton ( 10, 430, 560, 30, "Создать группу", false, tabGroups )
+local createNewGroup = 	guiCreateButton ( 10, 430, 560, 30, "To create a group", false, tabGroups )
 
 
 
 
-local groupInviteClient = guiCreateWindow(0, 0, 300, 250, "Подтвердите ваше вступление в группу", false) 
+local groupInviteClient = guiCreateWindow(0, 0, 300, 250, "Confirm your group membership.", false) 
 guiWindowSetSizable ( groupInviteClient, false )
 guiSetVisible(groupInviteClient,false)
 centerWindow(groupInviteClient)
-local groupInviteText = guiCreateLabel(10, 50, 300, 300,"1234567890123456789012\nпригласил вас в группу\n1234567890",false,groupInviteClient)
+local groupInviteText = guiCreateLabel(10, 50, 300, 300,"1234567890123456789012\ninvited you to the group Confirm your entry into the group\n1234567890",false,groupInviteClient)
 guiSetFont (groupInviteText , "default-bold-small" )
 guiLabelSetHorizontalAlign ( groupInviteText, "center" )
 
 --guiSetSize ( groupInviteText, 100, 100, false )
 
 --\n Лидер группы:1234567890123456789012\nУровень группы:123
-local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Информация о группе:1234567890", false, groupInviteClient )
-local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "Подтвердить", false, groupInviteClient )
-local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Отклонить", false, groupInviteClient )
+local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Group Information:1234567890", false, groupInviteClient )
+local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "Confirm", false, groupInviteClient )
+local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Reject", false, groupInviteClient )
 
 
 
 
 
 
-playerStatisticWin = guiCreateWindow(0, 25, 400, 500, "Статистика игрока", false) 
+playerStatisticWin = guiCreateWindow(0, 25, 400, 500, "Player Statistics", false) 
 
 guiWindowSetSizable ( playerStatisticWin, false )
 centerWindow(playerStatisticWin)
@@ -100,59 +100,59 @@ function setLineText(typeLine,id,text)
 guiSetText(headline[typeLine..""..id.."_t"],text)
 end
 
-addLineToWin("progress",1,"Свободно очков навыков:","-",10,400,playerStatisticWin)
-addLineToWin("progress",2,"Потрачено очков навыков:","-",10,400,playerStatisticWin)
-addLineToWin("progress",3,"Уровень:","-",10,400,playerStatisticWin)
-addLineToWin("progress",4,"Опыт:","-",10,400,playerStatisticWin)
-addLineToWin("progress",5,"Опыт следующего уровня:","-",10,400,playerStatisticWin)
-addLineToWin("progress",6,"Максимум убито зомби за один раз:","-",10,400,playerStatisticWin)
-addLineToWin("progress",7,"Максимум убито игроков за один раз:","-",10,400,playerStatisticWin)
-addLineToWin("progress",8,"Максимум убито мародёров за один раз:","-",10,400,playerStatisticWin)
-addLineToWin("progress",9,"Максимум прожито за один раз:","-",10,400,playerStatisticWin)
-addLineToWin("progress",10,"Убито зомби за всё время игры:","-",10,400,playerStatisticWin)
-addLineToWin("progress",11,"Убито игроков за всё время игры:","-",10,400,playerStatisticWin)
-addLineToWin("progress",12,"Убито мародёров за всё время игры:","-",10,400,playerStatisticWin)
-addLineToWin("progress",13,"Прожито за всё время игры:","-",10,400,playerStatisticWin)
-addLineToWin("progress",14,"Штурмовик:","/",10,400,playerStatisticWin)
-addLineToWin("progress",15,"Медик:","/",10,400,playerStatisticWin)
-addLineToWin("progress",16,"Снайпер:","/",10,400,playerStatisticWin)
-addLineToWin("progress",17,"Инженер:","/",10,400,playerStatisticWin)
-addLineToWin("progress",18,"Экономист:","/",10,400,playerStatisticWin)
-addLineToWin("progress",19,"Джаггернаут:","/",10,400,playerStatisticWin)
-addLineToWin("progress",20,"Боец:","/",10,400,playerStatisticWin)
-addLineToWin("progress",21,"Автомеханик:","/",10,400,playerStatisticWin)
+addLineToWin("progress",1,"Free skill points:","-",10,400,playerStatisticWin)
+addLineToWin("progress",2,"Skill points spent:","-",10,400,playerStatisticWin)
+addLineToWin("progress",3,"Level:","-",10,400,playerStatisticWin)
+addLineToWin("progress",4,"Experience:","-",10,400,playerStatisticWin)
+addLineToWin("progress",5,"Experience the next level:","-",10,400,playerStatisticWin)
+addLineToWin("progress",6,"Maximum killed zombies at a time:","-",10,400,playerStatisticWin)
+addLineToWin("progress",7,"Maximum players killed at one time:","-",10,400,playerStatisticWin)
+addLineToWin("progress",8,"Maximum killed marauders at once:","-",10,400,playerStatisticWin)
+addLineToWin("progress",9,"Maximum lived at one time:","-",10,400,playerStatisticWin)
+addLineToWin("progress",10,"Zombies killed during the entire game.:","-",10,400,playerStatisticWin)
+addLineToWin("progress",11,"Players killed during the entire game.:","-",10,400,playerStatisticWin)
+addLineToWin("progress",12,"Killed marauders for all the time of the game:","-",10,400,playerStatisticWin)
+addLineToWin("progress",13,"Lived throughout the game:","-",10,400,playerStatisticWin)
+addLineToWin("progress",14,"Stormtrooper:","/",10,400,playerStatisticWin)
+addLineToWin("progress",15,"Medic:","/",10,400,playerStatisticWin)
+addLineToWin("progress",16,"Sniper:","/",10,400,playerStatisticWin)
+addLineToWin("progress",17,"Engineer:","/",10,400,playerStatisticWin)
+addLineToWin("progress",18,"Economist:","/",10,400,playerStatisticWin)
+addLineToWin("progress",19,"Juggernaut:","/",10,400,playerStatisticWin)
+addLineToWin("progress",20,"Fighter:","/",10,400,playerStatisticWin)
+addLineToWin("progress",21,"Mechanic:","/",10,400,playerStatisticWin)
 
-addLineToWin("groupInfo",1,"Название группы:","-",0,600,tabGroup)
-addLineToWin("groupInfo",2,"Участники группы:","/",0,600,tabGroup)
-addLineToWin("groupInfo",3,"Дата создания группы:","0.0.0",0,600,tabGroup)
+addLineToWin("groupInfo",1,"Group name:","-",0,600,tabGroup)
+addLineToWin("groupInfo",2,"Members of the group:","/",0,600,tabGroup)
+addLineToWin("groupInfo",3,"Group Creation Date:","0.0.0",0,600,tabGroup)
 addLineToWin("groupInfo",4,"Уровень группы:","-",0,600,tabGroup)
 
 
 
 
-getGroupInfoWin = guiCreateWindow(0, 0, 600, 620, "Информация о группе:", false) 
+getGroupInfoWin = guiCreateWindow(0, 0, 600, 620, "Group Information:", false) 
 guiWindowSetSizable ( getGroupInfoWin, false )
 guiSetVisible(getGroupInfoWin,false)
 
-addLineToWin("groupInfo2",1,"Название группы:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",2,"Участники группы:","/",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",3,"Дата создания группы:","0.0.0",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",4,"Уровень группы:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",5,"Опыт:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",6,"Опыт следующего уровня:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",7,"Свободно очков навыков:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",8,"Потрачено очков навыков:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",9,"Полезные связи:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",10,"Легкая броня транспорта:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",11,"Групповое расширение:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",12,"Боевая подготовка:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",13,"Следы взлома:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",1,"Group Information...:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",2,"Members of the group:","/",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",3,"Group Creation Date:","0.0.0",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",4,"Group level:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",5,"Experience:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",6,"Experience the next level:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",7,"Free skill points:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",8,"Skill points spent:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",9,"Useful links:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",10,"Light armor transport:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",11,"Group extension:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",12,"Combat training:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",13,"Traces of hacking:","-/10",5,600,getGroupInfoWin)
 
 
-local closePlayerStatisticWin =	guiCreateButton ( 20, 500-45 , 360, 30, "Закрыть", false, playerStatisticWin )
+local closePlayerStatisticWin =	guiCreateButton ( 20, 500-45 , 360, 30, "Close", false, playerStatisticWin )
 
 
-local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Информация о группе", false, tabGroups )
+local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Group Information", false, tabGroups )
 	guiSetEnabled ( getGroupInfo, false )
 	
 
@@ -160,14 +160,14 @@ local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Информация �
  
  guiGridListSetSortingEnabled  (  groupListGroupMembersInfo, false )
 	--Create a players column in the list
-	local columnGroupMembersNickInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Ник", 0.4 )
-	local columnGroupMembersLvlInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Уровень", 0.1 )
-	local columnGroupMembersProfitInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Польза(опыт)", 0.2 )
-	local columnGroupMembersRoleInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Ранг", 0.25 )
+	local columnGroupMembersNickInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Nick", 0.4 )
+	local columnGroupMembersLvlInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Level", 0.1 )
+	local columnGroupMembersProfitInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Benefit (experience)", 0.2 )
+	local columnGroupMembersRoleInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Rank", 0.25 )
 	
-local groupMemberStatistic = 	guiCreateButton ( 20, 540, 560, 30, "Статистика игрока", false, getGroupInfoWin )
+local groupMemberStatistic = 	guiCreateButton ( 20, 540, 560, 30, "Player Statistics", false, getGroupInfoWin )
 guiSetEnabled ( groupMemberStatistic, false )
-local closegetGroupInfoWin =	guiCreateButton ( 20, 580, 560, 30, "Закрыть", false, getGroupInfoWin )
+local closegetGroupInfoWin =	guiCreateButton ( 20, 580, 560, 30, "Close", false, getGroupInfoWin )
 guiSetEnabled ( getGroupInfo, true )
 
 addEventHandler ( "onClientGUIClick", closePlayerStatisticWin, function()
@@ -188,7 +188,7 @@ addEventHandler ( "onClientGUIClick", groupMemberStatistic, function()
  local row, col = guiGridListGetSelectedItem( groupListGroupMembersInfo )
   local stm = guiGridListGetItemText(groupListGroupMembersInfo,row, col)
   if stm~="" and stm~=nil then
-  guiSetText(playerStatisticWin,"Статистика игрока:"..stm)
+  guiSetText(playerStatisticWin,"Player Statistics:"..stm)
   guiSetEnabled ( groupMemberStatistic, false )
   local player = getPlayerFromName(stm)
   if player then
@@ -207,7 +207,7 @@ centerWindow (getGroupInfoWin)
 addEventHandler ( "onClientGUIClick", getGroupInfo, function()
  local row, col = guiGridListGetSelectedItem( groupList )
   local stm = guiGridListGetItemText(groupList,row, col)
-  guiSetText(getGroupInfoWin,"Информация о группе:"..stm)
+  guiSetText(getGroupInfoWin,"Group Information:"..stm)
 triggerServerEvent("getGroupInfo", getLocalPlayer(), tostring(stm),getLocalPlayer(),2) 
 guiSetVisible(getGroupInfoWin,true)
 guiSetEnabled ( getGroupInfo, false )
@@ -215,7 +215,7 @@ guiMoveToBack( groupWindows )
 end, false )
 
 addEventHandler ( "onClientGUIClick", closegetGroupInfoWin, function()
- guiSetText(groupMemberStatistic,"Статистика игрока")
+ guiSetText(groupMemberStatistic,"Player Statistics")
 guiSetVisible(getGroupInfoWin,false)
 guiSetEnabled ( getGroupInfo, true )
 guiSetEnabled(groupInviteClientINFOGROUP,true) 
@@ -237,12 +237,12 @@ end, false )
 if stm == "" or stm == false then
 stm =""
 guiSetEnabled ( groupMemberStatistic, false )
-guiSetText(groupMemberStatistic,"Статистика игрока"..stm)
+guiSetText(groupMemberStatistic,"Player Statistics"..stm)
 else
 stm = ":"..stm
 guiSetEnabled ( groupMemberStatistic, true )
 end
- guiSetText(groupMemberStatistic,"Статистика игрока"..stm)
+ guiSetText(groupMemberStatistic,"Player Statistics"..stm)
   end, false )
 
   
@@ -269,7 +269,7 @@ local playerNick = getPlayerName(groupMember.player)
  
  guiGridListSetItemColor ( groupListGroupMembersInfo, row, columnGroupMembersNickInfo, 255, 255, 0  )
 	
-	if groupMember.userRole == "Новичок" then
+	if groupMember.userRole == "Newbie" then
 	guiGridListSetItemText(groupListGroupMembersInfo, row, columnGroupMembersProfitInfo,"-" , false, true)
 	else
 	local playerProfit = getElementData(groupMember.player,"groupProfit") or 0
@@ -286,7 +286,7 @@ local playerNick = getPlayerName(groupMember.player)
  
  guiGridListSetItemText(groupListGroupMembersInfo, row, columnGroupMembersNickInfo,tostring(groupMember.userNick) , false, false)
   
-	if groupMember.userRole == "Новичок" then
+	if groupMember.userRole == "Newbie" then
 	guiGridListSetItemText(groupListGroupMembersInfo, row, columnGroupMembersProfitInfo,"-" , false, true)
 	else
 	guiGridListSetItemText(groupListGroupMembersInfo, row, columnGroupMembersProfitInfo,tonumber(groupMember.userProfit) , false, true)
@@ -444,7 +444,7 @@ local inviteOwner = getElementData(getLocalPlayer(),"groupInviteOwner",false) or
 if inviteOwner and isElement(inviteOwner) then
 triggerServerEvent("invitePlayerCancel", getLocalPlayer(), inviteGroup,inviteOwner) 
 end
-outputChatBox("#FFFFFFПриглашение в группу: #FFFF00"..inviteGroup.." #FFFFFFбыло отклонено",255,255,255,true)
+outputChatBox("#FFFFFFInvitation to the group: #FFFF00"..inviteGroup.." #FFFFFFwas rejected",255,255,255,true)
 setElementData(getLocalPlayer(),"groupInvite",false)
 setElementData(getLocalPlayer(),"groupInviteOwner",false)
 setElementData(getLocalPlayer(),"groupInviteOwnerSTATUS",false)
@@ -474,16 +474,16 @@ end
 end, false )
 
 function onPlayerInvite(groupOwner,groupName,groupLVL)
-outputChatBox("#FF0000"..getPlayerName(groupOwner).." #FFFFFFприглашает вас в группу: #FFFF00"..groupName,255,255,255,true)
-outputChatBox("#FFFFFFНажмите F1 чтобы ответить на приглашение",255,255,255,true)
-guiSetText(groupInviteText,getPlayerName(groupOwner).."\nпригласил вас в группу\n"..groupName)
-guiSetText(groupInviteClientINFOGROUP,"Информация о группе:"..groupName)
+outputChatBox("#FF0000"..getPlayerName(groupOwner).." #FFFFFFinvites you to the group: #FFFF00"..groupName,255,255,255,true)
+outputChatBox("#FFFFFFPress F1 to respond to the invitation.",255,255,255,true)
+guiSetText(groupInviteText,getPlayerName(groupOwner).."\ninvited you to a group\n"..groupName)
+guiSetText(groupInviteClientINFOGROUP,"Group Information:"..groupName)
 
 if not inviteTimer then
 inviteTimer= setTimer(function()
 local groupInvite = getElementData(getLocalPlayer(),"groupInvite",false) or false
 if groupInvite then
-outputChatBox("#FFFFFFПриглашение в группу: #FFFF00"..groupInvite.." #FFFFFFбыло отклонено автоматически по причине: Истекло время ответа",255,255,255,true)
+outputChatBox("#FFFFFFGroup Information......: #FFFF00"..groupInvite.." #FFFFFFwas rejected automatically by reason: Response time expired",255,255,255,true)
 
 local inviteOwner = getElementData(getLocalPlayer(),"groupInviteOwner",false) or false
 if inviteOwner and isElement(inviteOwner) then
@@ -510,25 +510,25 @@ addEventHandler("onPlayerInvite", getLocalPlayer(), onPlayerInvite)
 
 
 	
-local newGroupWindows = guiCreateWindow(0, 0, 300, 340, "Создание группы", false) 
+local newGroupWindows = guiCreateWindow(0, 0, 300, 340, "Group creation", false) 
 guiWindowSetSizable ( newGroupWindows, false )
 
 local groupsStatus = {
-"Враждебная",
-"Нейтральная",
-"Дружественная"
+"Hostile",
+"Neutral",
+"Friendly"
 }
 
-local helpCreateGroup = guiCreateLabel ( 0, 60, 300, 200, "Название группы может состоять только из букв\nанглийского алфавита,\nцифр и символов _ [ ] { } ( )", false, newGroupWindows )
+local helpCreateGroup = guiCreateLabel ( 0, 60, 300, 200, "The group name can consist only of letters.\nEnglish alphabet\nnumbers and symbols _ [ ] { } ( )", false, newGroupWindows )
 guiLabelSetHorizontalAlign ( helpCreateGroup, "center" )
 --guiLabelSetColor (helpCreateGroup, 200, 0, 0 )
 
-local editBoxGroup = guiCreateEdit ( 50, 165, 200, 40, "Новая группа", false, newGroupWindows )
+local editBoxGroup = guiCreateEdit ( 50, 165, 200, 40, "A new group", false, newGroupWindows )
 guiEditSetMaxLength ( editBoxGroup,12 )
 
 
-local createGroup = 	guiCreateButton ( 50, 240, 200, 30, "Создать группу", false, newGroupWindows )
-local cancelGroup = 	guiCreateButton ( 50, 280, 200, 30, "Отмена", false, newGroupWindows )
+local createGroup = 	guiCreateButton ( 50, 240, 200, 30, "To create a group", false, newGroupWindows )
+local cancelGroup = 	guiCreateButton ( 50, 280, 200, 30, "Cancel", false, newGroupWindows )
 guiSetVisible(newGroupWindows,false)
 
 addEventHandler ( "onClientGUIClick", cancelGroup, function() 
@@ -553,7 +553,7 @@ addEventHandler ( "onClientGUIClick", groupUserInformation, function()
  local row, col = guiGridListGetSelectedItem( groupListGroupMembers )
   local stm = guiGridListGetItemText(groupListGroupMembers,row, col)
   if stm~="" and stm~=nil then
-  guiSetText(playerStatisticWin,"Статистика игрока:"..stm)
+  guiSetText(playerStatisticWin,"Player Statistics:"..stm)
   guiSetEnabled ( groupUserInformation, false )
   local player = getPlayerFromName(stm)
   if player then
@@ -575,11 +575,11 @@ end, false )
 -- , `SKILL_EXP` , `clicks` , `clicksOFF` , `groupExp` 
 
 
-addLineToWin("groupProgress",1,"Уровень группы:","-",0,600,tabGroupSkills)
-addLineToWin("groupProgress",2,"Свободно очков навыков:","-",0,600,tabGroupSkills)
-addLineToWin("groupProgress",3,"Потрачено очков навыков:","-",0,600,tabGroupSkills)
-addLineToWin("groupProgress",4,"Опыт:","-",0,600,tabGroupSkills)
-addLineToWin("groupProgress",5,"Опыт следующего уровня:","-",0,600,tabGroupSkills)
+addLineToWin("groupProgress",1,"Group level:","-",0,600,tabGroupSkills)
+addLineToWin("groupProgress",2,"Free skill points:","-",0,600,tabGroupSkills)
+addLineToWin("groupProgress",3,"Skill points spent:","-",0,600,tabGroupSkills)
+addLineToWin("groupProgress",4,"Experience:","-",0,600,tabGroupSkills)
+addLineToWin("groupProgress",5,"Experience the next level:","-",0,600,tabGroupSkills)
 
 
 
@@ -608,7 +608,7 @@ function addSkill(skillName)
 	local groupClicks = getElementData(getLocalPlayer(),"GROUP.CLICKS") or 0
 	
     if groupClicks <=0 then 
-	outputChatBox("Недостаточно очков навыков!")
+	outputChatBox("Not enough skill points!")
 	return
 	end
 	
@@ -728,15 +728,15 @@ else
  
 end
 
-createSkill("SKILL_MAXMEMBERS",180,20,"ГРУППОВОЕ РАСШИРЕНИЕ","Максимальное кол-во участников группы +",1,"",tabGroupSkills)
+createSkill("SKILL_MAXMEMBERS",180,20,"GROUP EXPANSION","Максимальное кол-во участников группы +",1,"",tabGroupSkills)
 
-createSkill("SKILL_ARMORTS",180+70,20,"ЛЕГКАЯ БРОНЯ ТРАНСПОРТА","Получаемый урон ТС -",2.5,"%",tabGroupSkills)
+createSkill("SKILL_ARMORTS",180+70,20,"LIGHT TRANSPORT BOOKING","Damage taken by the vehicle -",2.5,"%",tabGroupSkills)
 
-createSkill("SKILL_CARTRADE",250+70,20,"ПОЛЕЗНЫЕ СВЯЗИ","Цена покупки ТС -",5,"%",tabGroupSkills)
+createSkill("SKILL_CARTRADE",250+70,20,"USEFUL LINKS","Purchase price of the vehicle -",5,"%",tabGroupSkills)
 
-createSkill("SKILL_EXP",320+70,20,"БОЕВАЯ ПОДГОТОВКА","Получаемый опыт группы +",3,"%",tabGroupSkills)
+createSkill("SKILL_EXP",320+70,20,"COMBAT TRAINING","Group experience +",3,"%",tabGroupSkills)
 
-createSkill("SKILL_HACK",390+70,20,"СЛЕДЫ ВЗЛОМА","Вероятность взлома сейфа+",2,"%",tabGroupSkills)
+createSkill("SKILL_HACK",390+70,20,"Hacks","The probability of breaking the safe +",2,"%",tabGroupSkills)
 
 
 
@@ -923,21 +923,21 @@ addEventHandler("setSKILLSinfo", getLocalPlayer(), setSKILLSinfo)
  
  guiGridListSetSortingEnabled  (  groupListGroupMembersSettings, false )
 	--Create a players column in the list
-	local columnGroupMembersNickSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Ник", 0.4 )
-	local columnGroupMembersLvlSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Уровень", 0.1 )
-	local columnGroupMembersProfitSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Польза(опыт)", 0.2 )
-	local columnGroupMembersRoleSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Ранг", 0.25 )
+	local columnGroupMembersNickSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Nick", 0.4 )
+	local columnGroupMembersLvlSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Level", 0.1 )
+	local columnGroupMembersProfitSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Benefit (experience)", 0.2 )
+	local columnGroupMembersRoleSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Rank", 0.25 )
 
 
-local setUserStatusGroup = 	guiCreateButton ( 10, 350, 560, 30, "Назначить Ранг", false, tabGroupSettings )	
-local deleteUserGroup = 	guiCreateButton ( 10, 390, 560, 30, "Выгнать", false, tabGroupSettings )
-local inviteNewPlayers = 	guiCreateButton ( 10, 430, 560, 30, "Пригласить новых участников", false, tabGroupSettings )
-local removeGroup = 	guiCreateButton ( 10, 470, 560, 30, "Удалить группу", false, tabGroupSettings )
+local setUserStatusGroup = 	guiCreateButton ( 10, 350, 560, 30, "Assign Rank", false, tabGroupSettings )	
+local deleteUserGroup = 	guiCreateButton ( 10, 390, 560, 30, "Expel", false, tabGroupSettings )
+local inviteNewPlayers = 	guiCreateButton ( 10, 430, 560, 30, "Invite new members", false, tabGroupSettings )
+local removeGroup = 	guiCreateButton ( 10, 470, 560, 30, "Delete group", false, tabGroupSettings )
 
-local inviteNewPlayersWin = guiCreateWindow(0, 0, 600, 440, "Пригласить новых участников", false) 
-local sendInviteToPlayer = 	guiCreateButton ( 20, 350, 560, 30, "Пригласить", false, inviteNewPlayersWin )	
+local inviteNewPlayersWin = guiCreateWindow(0, 0, 600, 440, "Invite new members", false) 
+local sendInviteToPlayer = 	guiCreateButton ( 20, 350, 560, 30, "To invite", false, inviteNewPlayersWin )	
  guiSetEnabled ( sendInviteToPlayer, false )
-local closeinviteNewPlayersWin = 	guiCreateButton ( 20, 390, 560, 30, "Закрыть", false, inviteNewPlayersWin )
+local closeinviteNewPlayersWin = 	guiCreateButton ( 20, 390, 560, 30, "Close", false, inviteNewPlayersWin )
 centerWindow(inviteNewPlayersWin)
 guiSetVisible(inviteNewPlayersWin,false)
 
@@ -946,10 +946,10 @@ guiSetVisible(inviteNewPlayersWin,false)
  
  guiGridListSetSortingEnabled  (  inviteNewPlayersGrid, false )
 	--Create a players column in the list
-	local inviteNewPlayersColNICK = guiGridListAddColumn( inviteNewPlayersGrid, "Ник", 0.4 )
-	local inviteNewPlayersColLVL = guiGridListAddColumn( inviteNewPlayersGrid, "Уровень", 0.15 )
-	local inviteNewPlayersColMURDERS = guiGridListAddColumn( inviteNewPlayersGrid, "Мародёрства", 0.2 )
-	local inviteNewPlayersColALIVETIME = guiGridListAddColumn( inviteNewPlayersGrid, "Прожито", 0.2 )
+	local inviteNewPlayersColNICK = guiGridListAddColumn( inviteNewPlayersGrid, "Nick", 0.4 )
+	local inviteNewPlayersColLVL = guiGridListAddColumn( inviteNewPlayersGrid, "Level", 0.15 )
+	local inviteNewPlayersColMURDERS = guiGridListAddColumn( inviteNewPlayersGrid, "Looting", 0.2 )
+	local inviteNewPlayersColALIVETIME = guiGridListAddColumn( inviteNewPlayersGrid, "Lived", 0.2 )
 
 
 	
@@ -981,11 +981,11 @@ addEventHandler ( "onClientGUIClick", inviteNewPlayersGrid, function()
  local row, col = guiGridListGetSelectedItem( inviteNewPlayersGrid )
   local stm = guiGridListGetItemText(inviteNewPlayersGrid,row, col)
   if stm~="" and stm~=nil then
-  guiSetText(sendInviteToPlayer,"Пригласить:"..stm)
+  guiSetText(sendInviteToPlayer,"To invite:"..stm)
   guiSetEnabled ( sendInviteToPlayer, true )
   else
   guiSetEnabled ( sendInviteToPlayer, false )
-  guiSetText(sendInviteToPlayer,"Пригласить")
+  guiSetText(sendInviteToPlayer,"To invite")
   end
 end, false )
  
@@ -1022,7 +1022,7 @@ guiSetEnabled ( inviteNewPlayers, false )
 guiSetEnabled ( removeGroup, false )
 
 guiSetEnabled(sendInviteToPlayer,false)
-guiSetText(sendInviteToPlayer,"Пригласить")
+guiSetText(sendInviteToPlayer,"To invite")
 guiSetVisible(inviteNewPlayersWin,true)
 guiMoveToBack( groupWindows )
 
@@ -1035,30 +1035,30 @@ addEventHandler ( "onClientGUIClick", inviteNewPlayers,refreshPlayersOnInviteLis
  
  
 local userStatusTable = {
-{"Заместитель","MODER"},
-{"Участник","PARTY"},
-{"Новичок","BEGGINER"},
+{"Deputy","MODER"},
+{"Participant","PARTY"},
+{"Newbie","BEGGINER"},
 }
 
-local setStatusWin = guiCreateWindow(0, 0, 300, 200, "Назначить ранг", false) 
+local setStatusWin = guiCreateWindow(0, 0, 300, 200, "Assign rank", false) 
 
 
   
 guiWindowSetSizable ( setStatusWin, false )
 
-local statusText = guiCreateLabel(0, 40, 300, 150,"Выберите ранг для игрока",false,setStatusWin)
+local statusText = guiCreateLabel(0, 40, 300, 150,"Choose a rank for a player",false,setStatusWin)
 guiLabelSetHorizontalAlign (statusText,"center")
 
-local userStatus = guiCreateComboBox  (  50, 80, 200, 80, "Ранг игрока", false, setStatusWin )
+local userStatus = guiCreateComboBox  (  50, 80, 200, 80, "Player rank", false, setStatusWin )
 local playerStatus = getElementData(getLocalPlayer(),"groupUserStatus")
 for index, status in ipairs ( userStatusTable ) do 
-	if playerStatus=="MODER" and status[1]=="Заместитель" then 
+	if playerStatus=="MODER" and status[1]=="Deputy" then 
 	else
 	guiComboBoxAddItem ( userStatus, status[1] ) 
 	end
 	end
-local setStatusUserOK = 	guiCreateButton ( 0, 160, 135, 30, "Ок", false, setStatusWin )
-local setStatusUserCANCEL = 	guiCreateButton ( 155, 160, 150, 30, "Отмена", false, setStatusWin )
+local setStatusUserOK = 	guiCreateButton ( 0, 160, 135, 30, "OK", false, setStatusWin )
+local setStatusUserCANCEL = 	guiCreateButton ( 155, 160, 150, 30, "Cancel", false, setStatusWin )
 addEventHandler ( "onClientGUIClick", setStatusUserCANCEL, function() guiSetVisible(setStatusWin,false) end, false )
 centerWindow(setStatusWin)
 guiSetVisible(setStatusWin,false)
@@ -1066,8 +1066,8 @@ guiSetVisible(setStatusWin,false)
 addEventHandler ( "onClientGUIClick", setUserStatusGroup, function() 
  local row, col = guiGridListGetSelectedItem( groupListGroupMembersSettings )
   local nickPlayer = guiGridListGetItemText(groupListGroupMembersSettings,row, col)
-guiSetText(statusText,"Выберите ранг для игрока:\n"..nickPlayer)
-guiSetText(setStatusWin,"Назначить ранг:"..nickPlayer)
+guiSetText(statusText,"Choose a rank for a player:\n"..nickPlayer)
+guiSetText(setStatusWin,"Assign rank:"..nickPlayer)
  guiMoveToBack( groupWindows ) guiSetVisible(setStatusWin,true) end, false )
 
 
@@ -1085,7 +1085,7 @@ if status =="OWNER" or status =="MODER"  then
 local newGroupStatus = guiComboBoxGetSelected(userStatus)
 local thisStatus = guiComboBoxGetItemText(userStatus, newGroupStatus)
 if thisStatus ==playerStatusInGroup then
-outputChatBox("Этот игрок уже имеет выбранный статус!")
+outputChatBox("This player already has the selected status!")
 return
 end
 if status =="MODER" then
@@ -1111,8 +1111,8 @@ function IFWindow(header,text,returnFunc)
 guiWindowSetSizable ( newGroupIF, false )
 local IFWinText = guiCreateLabel(0, 60, 300, 150,"",false,newGroupIF)
 guiLabelSetHorizontalAlign (IFWinText,"center")
-local IFOkButt = 	guiCreateButton ( 0, 160, 135, 30, "Ок", false, newGroupIF )
-local IFOkCancelButt = 	guiCreateButton ( 155, 160, 150, 30, "Отмена", false, newGroupIF )
+local IFOkButt = 	guiCreateButton ( 0, 160, 135, 30, "OK", false, newGroupIF )
+local IFOkCancelButt = 	guiCreateButton ( 155, 160, 150, 30, "Cancel", false, newGroupIF )
 
 if header then
 guiSetText(newGroupIF,header)
@@ -1140,7 +1140,7 @@ end
 
 
 
-addEventHandler ( "onClientGUIClick", removeGroup, function() IFWindow("Удалить группу","Вы действительно хотите\n удалить группу?","removeGroupFunc") end, false )
+addEventHandler ( "onClientGUIClick", removeGroup, function() IFWindow("Delete group","Do you really want\n delete group?","removeGroupFunc") end, false )
 
 
 
@@ -1152,7 +1152,7 @@ if isOwner=="OWNER" or isOwner=="MODER"   then
  local row, col = guiGridListGetSelectedItem( groupListGroupMembersSettings )
   local nickPlayer = guiGridListGetItemText(groupListGroupMembersSettings,row, col)
   local playerRanq = guiGridListGetItemText(groupListGroupMembersSettings,row, 4)
-  if playerRanq == "Основатель" then return end
+  if playerRanq == "Founder" then return end
   local userAcc = guiGridListGetItemData ( groupListGroupMembersSettings, row, 1)
 triggerServerEvent("removePlayerOnGroup", getLocalPlayer(), getLocalPlayer(), userAcc,nickPlayer,group)
 else
@@ -1166,7 +1166,7 @@ end
 addEventHandler ( "onClientGUIClick", deleteUserGroup, function() 
   local row, col = guiGridListGetSelectedItem( groupListGroupMembersSettings )
   local stm = guiGridListGetItemText(groupListGroupMembersSettings,row, col)
-IFWindow("Удалить группу","Вы действительно хотите\n выгнать "..stm.." из группы?","deleteUserGroupFunc")
+IFWindow("Delete group","Do you really want\n drive out"..stm.." from the group?","deleteUserGroupFunc")
 
  end, false )
 
@@ -1183,24 +1183,24 @@ local newGroupName = guiGetText(editBoxGroup)
 if string.len (newGroupName) >4  then
 
 else
-outputChatBox("Название новой группы должно быть длинее 4х символов")
+outputChatBox("The name of the new group must be longer than 4 characters.")
 return
 end
 
 
 if not string.find(newGroupName," ") then
 else
-outputChatBox("Название новой группы не должно содержать пробелов")
+outputChatBox("The name of the new group should not contain spaces.")
 return
 end
 
 local newOwnerInGroup =  getElementData(localPlayer,"group") or false
 if newOwnerInGroup then
-outputChatBox("Вы не можете создать новую группу так, как вы уже находитесь в  другой группе: "..newOwnerInGroup)
+outputChatBox("You cannot create a new group as you are already in another group: "..newOwnerInGroup)
 return
 end
 
-triggerServerEvent("createGroup", getLocalPlayer(), getLocalPlayer(), newGroupName, "Нейтральная")
+triggerServerEvent("createGroup", getLocalPlayer(), getLocalPlayer(), newGroupName, "Neutral")
 
  
 end
@@ -1213,11 +1213,11 @@ function groupRemoved()
 
 
  guiSetEnabled ( tabGroup, false )
- guiSetText(tabGroup,"Группа")
+ guiSetText(tabGroup,"Group")
  guiSetEnabled ( tabGroupSkills, false )
-  guiSetText(tabGroupSkills,"Навыки группы")
+  guiSetText(tabGroupSkills,"Group skills")
  guiSetEnabled ( tabGroupSettings, false )
-  guiSetText(tabGroupSettings,"Настройки группы")
+  guiSetText(tabGroupSettings,"Group settings")
   
   guiSetEnabled ( removeGroup, false )
   guiSetEnabled ( createNewGroup, true )
@@ -1235,7 +1235,7 @@ guiSetVisible(newGroupWindows,false)
 guiSetEnabled ( createNewGroup, false )
  guiSetEnabled ( removeGroup, true )
  guiSetEnabled ( tabGroup, true )
- --guiSetText(tabGroup,"Группа:"..newGroupName)
+ --guiSetText(tabGroup,"Group:"..newGroupName)
  guiSetEnabled ( tabGroupSkills, true )
   --guiSetText(tabGroupSkills,"Навыки:"..newGroupName)
  guiSetEnabled ( tabGroupSettings, true )
@@ -1260,13 +1260,13 @@ local playerInGroup =  getElementData(localPlayer,"group") or false
 if playerInGroup then
 triggerServerEvent("leavleGroup", getLocalPlayer(), getLocalPlayer(), playerInGroup)
 else
-outputChatBox("ERROR: Выход из группы невозможен")
+outputChatBox("ERROR: Exit from group is not possible")
 end
  
 --triggerServerEvent("getGroupInfo", getLocalPlayer(), tostring(playerInGroup),getLocalPlayer(),1)
   
 end
-addEventHandler ( "onClientGUIClick", leavleGroup, function() IFWindow("Покинуть группу","Вы действительно хотите\n покинуть группу?","leavleGroupFunc") end, false )
+addEventHandler ( "onClientGUIClick", leavleGroup, function() IFWindow("Leave the group","Do you really want\n leave the group?","leavleGroupFunc") end, false )
 
 
 
@@ -1326,7 +1326,7 @@ local playerNick = getPlayerName(groupMember.player)
  guiGridListSetItemText(groupListGroupMembers, row, columnGroupMembersNick,tostring(playerNick) , false, false)
  guiGridListSetItemColor ( groupListGroupMembers, row, columnGroupMembersNick, 255, 255, 0  )
  
- if groupMember.userRole == "Новичок" then
+ if groupMember.userRole == "Newbie" then
 	guiGridListSetItemText(groupListGroupMembers, row, columnGroupMembersProfit,"-" , false, true)
 	else
 	local playerProfit = getElementData(groupMember.player,"groupProfit") or 0
@@ -1345,7 +1345,7 @@ local playerLvl = getElementData(groupMember.player,"playerlvl") or 0
  
  guiGridListSetItemText(groupListGroupMembers, row, columnGroupMembersNick,tostring(groupMember.userNick) , false, false)
  
-	if groupMember.userRole == "Новичок" then
+	if groupMember.userRole == "Newbie" then
 	guiGridListSetItemText(groupListGroupMembers, row, columnGroupMembersProfit,"-" , false, true)
 	else
 	 guiGridListSetItemText(groupListGroupMembers, row, columnGroupMembersProfit,tonumber(groupMember.userProfit) , false, true)
@@ -1362,7 +1362,6 @@ local playerLvl = getElementData(groupMember.player,"playerlvl") or 0
 	
 
 	
-
 end
 	
 
@@ -1407,7 +1406,7 @@ if groupMember.player then
 local playerNick = getPlayerName(groupMember.player)
  guiGridListSetItemText(groupListGroupMembersSettings, row, columnGroupMembersNickSettings,tostring(playerNick) , false, false)
  guiGridListSetItemColor ( groupListGroupMembersSettings, row, columnGroupMembersNickSettings, 255, 255, 0  )
- if groupMember.userRole=="Новичок" then
+ if groupMember.userRole=="Newbie" then
  guiGridListSetItemText(groupListGroupMembersSettings, row, columnGroupMembersProfitSettings,"-" , false, true)
  else
  local playerProfit = getElementData(groupMember.player,"groupProfit") or 0
@@ -1423,7 +1422,7 @@ local playerLvl = getElementData(groupMember.player,"playerlvl") or 0
  
  guiGridListSetItemText(groupListGroupMembersSettings, row, columnGroupMembersNickSettings,tostring(groupMember.userNick) , false, false)
  guiGridListSetItemData ( groupListGroupMembersSettings, row, columnGroupMembersNickSettings, tostring(groupMember.userAccount) )
- if groupMember.userRole=="Новичок" then
+ if groupMember.userRole=="Newbie" then
  guiGridListSetItemText(groupListGroupMembersSettings, row, columnGroupMembersProfitSettings,"-" , false, true)
  else
  guiGridListSetItemText(groupListGroupMembersSettings, row, columnGroupMembersProfitSettings,math.floor(tonumber(groupMember.userProfit)) , false, true)
@@ -1446,9 +1445,9 @@ end
 	
 
 guiSetEnabled ( deleteUserGroup, false )
-	guiSetText(deleteUserGroup,"Выгнать")
+	guiSetText(deleteUserGroup,"Expel")
 	guiSetEnabled ( setUserStatusGroup, false )
-	guiSetText(setUserStatusGroup,"Назначить ранг")	
+	guiSetText(setUserStatusGroup,"Assign rank")	
 
 end
 
@@ -1476,11 +1475,11 @@ local tabText = guiGetText(selectedTab)
 		setTimer(function() getGroupTimerTab = false end,15000,1)
 		end
 guiSetEnabled ( getGroupInfo, false )
-guiSetText(getGroupInfo,"Информация о группе")
+guiSetText(getGroupInfo,"Group Information")
 	elseif selectedTab == tabGroup then
 	
 	guiSetEnabled ( groupUserInformation, false )
-guiSetText(groupUserInformation,"Статистика игрока")
+guiSetText(groupUserInformation,"Player Statistics")
 	guiSetEnabled ( leavleGroup, true )
 
 	
@@ -1505,9 +1504,9 @@ guiSetText(groupUserInformation,"Статистика игрока")
 	elseif selectedTab == tabGroupSettings then
 	triggerServerEvent("getGroupInfoSettings", getLocalPlayer(), tostring(playerGroup),getLocalPlayer())
 	guiSetEnabled ( deleteUserGroup, false )
-	guiSetText(deleteUserGroup,"Выгнать")
+	guiSetText(deleteUserGroup,"Expel")
 	guiSetEnabled ( setUserStatusGroup, false )
-	guiSetText(setUserStatusGroup,"Назначить ранг")
+	guiSetText(setUserStatusGroup,"Assign rank")
 	if playerGroupStatus=="MODER" then
 	guiSetEnabled ( removeGroup, false )
 	end
@@ -1548,7 +1547,7 @@ else
 stm = ":"..stm
 guiSetEnabled ( getGroupInfo, true )
 end
- guiSetText(getGroupInfo,"Информация о группе"..stm)
+ guiSetText(getGroupInfo,"Group Information"..stm)
   end, false )
  
  
@@ -1570,7 +1569,7 @@ else
 stm = ":"..stm
 guiSetEnabled ( groupUserInformation, true )
 end
- guiSetText(groupUserInformation,"Статистика игрока"..stm)
+ guiSetText(groupUserInformation,"Player Statistics"..stm)
   end, false )
  
  
@@ -1599,28 +1598,28 @@ stm = ":"..stm
 guiSetEnabled ( deleteUserGroup, true )
 guiSetEnabled ( setUserStatusGroup, true )
 
-if playergroupStatus =="MODER" and stm2=="Заместитель" or  stm2=="Основатель" then
+if playergroupStatus =="MODER" and stm2=="Deputy" or  stm2=="Founder" then
 	guiSetEnabled ( deleteUserGroup, false )
-	guiSetText(deleteUserGroup,"Выгнать")
+	guiSetText(deleteUserGroup,"Expel")
 	guiSetEnabled ( setUserStatusGroup, false )
-	guiSetText(setUserStatusGroup,"Назначить ранг")
+	guiSetText(setUserStatusGroup,"Assign rank")
 end 
 
 else
 guiSetEnabled ( deleteUserGroup, false )
-guiSetText(deleteUserGroup,"Выгнать")
+guiSetText(deleteUserGroup,"Expel")
 guiSetEnabled ( setUserStatusGroup, false )
-guiSetText(setUserStatusGroup,"Назначить ранг")
+guiSetText(setUserStatusGroup,"Assign rank")
 
 end
 end
 
 if getPlayerName(getLocalPlayer()) ~= playerName   then
-	guiSetText(deleteUserGroup,"Выгнать"..stm)
-	guiSetText(setUserStatusGroup,"Назначить ранг"..stm)
-if playergroupStatus =="MODER" and stm2=="Заместитель" or  stm2=="Основатель" then
-	guiSetText(deleteUserGroup,"Выгнать")
-	guiSetText(setUserStatusGroup,"Назначить ранг")
+	guiSetText(deleteUserGroup,"Expel"..stm)
+	guiSetText(setUserStatusGroup,"Assign rank"..stm)
+if playergroupStatus =="MODER" and stm2=="Deputy" or  stm2=="Founder" then
+	guiSetText(deleteUserGroup,"Expel")
+	guiSetText(setUserStatusGroup,"Assign rank")
 
 end
  end
@@ -1644,7 +1643,7 @@ return
 end
 	
 guiSetEnabled ( getGroupInfo, false )
-guiSetText(getGroupInfo,"Информация о группе")
+guiSetText(getGroupInfo,"Group Information")
 
 
 
@@ -1653,7 +1652,7 @@ guiSetText(getGroupInfo,"Информация о группе")
 	if playergroup then
 	
 	 guiSetEnabled ( tabGroup, true )
- --guiSetText(tabGroup,"Группа:"..playergroup)
+ --guiSetText(tabGroup,"Group:"..playergroup)
  guiSetEnabled ( tabGroupSkills, true )
  -- guiSetText(tabGroupSkills,"Навыки:"..playergroup)
   
@@ -1681,11 +1680,11 @@ end
 	else
 	
 	 guiSetEnabled ( tabGroup, false )
- guiSetText(tabGroup,"Группа")
+ guiSetText(tabGroup,"Group")
  guiSetEnabled ( tabGroupSkills, false )
-  guiSetText(tabGroupSkills,"Навыки группы")
+  guiSetText(tabGroupSkills,"Group skills")
    guiSetEnabled ( tabGroupSettings, false )
-  guiSetText(tabGroupSettings,"Настройки группы")
+  guiSetText(tabGroupSettings,"Group settings")
 	end
 	
 	
