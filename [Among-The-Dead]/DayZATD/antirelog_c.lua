@@ -24,7 +24,7 @@ function showAntirelog ()
 if timer then
 	local ms, mm, ss = getTimerDetails ( timer )
 
-	local antirelogText = "Антирелог: "..math.ceil((ms/1000)).." сек"
+	local antirelogText = "Antirelog: "..math.ceil((ms/1000))..""
 	
 	local antirelogTextW = dxGetTextWidth ( antirelogText, 1.4, "sans" )
 	local attTextW = dxGetTextWidth ( attName, 1.4, "sans" )

@@ -60,7 +60,7 @@ addEventHandler( 'onPlayerQuit', root,
 	local realTick = getTickCount ()
 	if lastKillPlayerTime then
 	local ticks = realTick-lastKillPlayerTime
-	if ticks<60000 then -- 1 минута не прошла и последний убитый = тот же человек = отменить
+	if ticks<60000 then -- 1 the moment passed and the last victim = same person = cancel
 	outputDebugString("ANTIRELOG: abort player kill "..getPlayerName(source).." left: "..ticks.."ms")
 	return
 	end
@@ -87,7 +87,7 @@ addEventHandler( 'onPlayerQuit', root,
         local time = getRealTime();
         local hours = time.hour;
         local minutes = time.minute;
-        setElementData( pedCol, "deadreason", getPlayerName(source).."  Он мертв. Причина смерти: Антирелог. Время смерти: "..hours..":"..minutes.." часов." );
+        setElementData( pedCol, "deadreason", getPlayerName(source).."  He's dead. Cause of death: Antirelog. Time of death: "..hours..":"..minutes.." hours." );
         
       for i,data in ipairs(lootData) do
 			local plusData = getElementData(source,data[1]) or 0

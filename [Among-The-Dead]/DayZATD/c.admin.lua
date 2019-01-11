@@ -3,14 +3,14 @@
 
 
 local giveElements ={
-"Оружие",
-"Патроны",
-"Еда/Вода",
-"Прочее",
-"Инструменты",
-"Данные игрока",
-"Транспорт на сервере",
-"Другой транспорт"
+"Weapon",
+"Ammo",
+"Food/Drinks",
+"Others",
+"Toolbelt",
+"Player Data",
+"Vehicles",
+"Others Vehicles"
 }
 
 local playerDatass= {
@@ -66,19 +66,19 @@ guiWindowSetSizable ( myWindow, false )
 centerWindow(myWindow)
 guiSetVisible ( myWindow, false )
 local tabs = guiCreateTabPanel ( 10, 20, 800, 500, false, myWindow )
-local targ = guiCreateTab( "Выдать предмет", tabs )
-local sess = guiCreateTab( "Палатки/Сейфы", tabs )
-local playersTab = guiCreateTab( "Игроки", tabs )
-local cars = guiCreateTab( "Транспорт", tabs )
-local groups = guiCreateTab( "Группы", tabs )
-local map = guiCreateTab( "Карта", tabs )
+local targ = guiCreateTab( "Give", tabs )
+local sess = guiCreateTab( "Tents/Safes", tabs )
+local playersTab = guiCreateTab( "Players", tabs )
+local cars = guiCreateTab( "Vehicles", tabs )
+local groups = guiCreateTab( "Groups", tabs )
+local map = guiCreateTab( "Map", tabs )
 
 local players= guiCreateGridList(10, 10, 250, 430, false, targ)
-local playersCol = guiGridListAddColumn( players, "Игрок", 0.90 )
+local playersCol = guiGridListAddColumn( players, "Player", 0.90 )
 guiGridListSetSortingEnabled(players,false)
  
 
-local category = guiCreateComboBox(270, 10, 500, 150, "-- Выберите категорию --", false, targ)
+local category = guiCreateComboBox(270, 10, 500, 150, "-- Selected category --", false, targ)
 guiSetProperty(category, "InheritsAlpha", "False") 
 for key, value in pairs (giveElements) do
 	guiComboBoxAddItem(category, value)	
@@ -89,7 +89,7 @@ local itemVes= guiGridListAddColumn( items, "", 0.20 )
 guiGridListSetSortingEnabled(items,false)
 
 local quantity = guiCreateEdit(270+250-110, 390, 100, 40, "1", false,targ)
-local give = guiCreateButton(270+250, 390, 100, 40, "Выдать", false, targ)
+local give = guiCreateButton(270+250, 390, 100, 40, "Give", false, targ)
 
 	guiSetFont(give, "default-bold-small")
 	guiSetProperty(give, "NormalTextColour", "FFAAAAAA")
@@ -102,13 +102,13 @@ function addItems(tableItems,col,two)
 		for id, item in ipairs(tableItems) do
 			local row = guiGridListAddRow ( items )
 	
-			if col =="Транспорт на сервере" then
+			if col =="Vehicles" then
 				local realName = GetRealVehicleName(item[1])
 				if realName then
 					guiGridListSetItemText ( items, row, itemColum,realName, false, false )
 					guiGridListSetItemText ( items, row, itemVes,item[1], false, false )
 				end
-			elseif col =="Другой транспорт" then
+			elseif col =="Others Vehicles" then
 			
 				local realName = GetRealVehicleName(item[1])
 				if not realName then
@@ -131,24 +131,24 @@ addEventHandler("onClientGUIComboBoxAccepted", category,
 	function()
 		guiGridListClear(items)	
 		local text = guiComboBoxGetItemText(category, guiComboBoxGetSelected(category))
-		if text =="Оружие" then 
-		addItems(inventoryItems["Weapons"]["Primary Weapon"],"Основное оружие","Вес:")
-		addItems(inventoryItems["Weapons"]["Secondary Weapon"],"Дополнительное оружие","Вес:")
-		addItems(inventoryItems["Weapons"]["Specially Weapon"],"Специальное оружие","Вес:")
-		elseif text =="Патроны" then
-		addItems(inventoryItems["Ammo"],"Боеприпасы","Вес:") 
-		elseif text =="Еда/Вода" then
-		addItems(inventoryItems["Food"],"Еда/Вода","Вес:")
-		elseif text =="Прочее" then
-		addItems(inventoryItems["Items"],"Прочее","Вес:") 
-		elseif text =="Инструменты" then
-		addItems(inventoryItems["Toolbelt"],"Инструменты","Вес:") 
-		elseif text=="Данные игрока" then
-		addItems(playerDatass,"Данные игрока")  
-		elseif text=="Транспорт на сервере" then
-		addItems(vehicleAddonsInfo,"Транспорт на сервере")   
-		elseif text=="Другой транспорт" then
-		addItems(vehicleAddonsInfo,"Другой транспорт") 
+		if text =="Weapon" then 
+		addItems(inventoryItems["Weapons"]["Primary Weapon"],"Primary weapon","Slot:")
+		addItems(inventoryItems["Weapons"]["Secondary Weapon"],"Secondary Weapon","Slot:")
+		addItems(inventoryItems["Weapons"]["Specially Weapon"],"Specially Weapon","Slot:")
+		elseif text =="Ammo" then
+		addItems(inventoryItems["Ammo"],"Боеприпасы","Slot:") 
+		elseif text =="Food/Drinks" then
+		addItems(inventoryItems["Food"],"Food/Drinks","Slot:")
+		elseif text =="Others" then
+		addItems(inventoryItems["Items"],"Others","Slot:") 
+		elseif text =="Toolbelt" then
+		addItems(inventoryItems["Toolbelt"],"Toolbelt","Slot:") 
+		elseif text=="Player Data" then
+		addItems(playerDatass,"Player Data")  
+		elseif text=="Vehicles" then
+		addItems(vehicleAddonsInfo,"Vehicles")   
+		elseif text=="Others Vehicles" then
+		addItems(vehicleAddonsInfo,"Others Vehicles") 
 		end
 		
 	end )	
@@ -159,17 +159,17 @@ addEventHandler("onClientGUIComboBoxAccepted", category,
 		local item =  guiGridListGetItemText(items, guiGridListGetSelectedItem(items), 1)
 		local text = guiComboBoxGetItemText(category, guiComboBoxGetSelected(category))
 	if getPlayerFromName(playerName) and item~="" and playerName~="" then
-		if text == "Транспорт на сервере" then
+		if text == "Vehicles" then
 		local carId = guiGridListGetItemText(items, guiGridListGetSelectedItem(items), 2) 
 		triggerServerEvent("onGive",  localPlayer, playerName, tonumber(carId), 1,true)
-		elseif text == "Другой транспорт" then
+		elseif text == "Others Vehicles" then
 		local carId = guiGridListGetItemText(items, guiGridListGetSelectedItem(items), 2) 
 		triggerServerEvent("onGive",  localPlayer, playerName, tonumber(carId), 1,true)
 		else
 		triggerServerEvent("onGive",  localPlayer, playerName, item, guiGetText(quantity),false)
 		end
 	else
-	outputChatBox("Игрок вышел или поменял ник",255,0,0)
+	outputChatBox("The player left or changed nickname",255,0,0)
 	end
 	end, false);
 	
@@ -186,7 +186,7 @@ local tentsLootCOL= guiGridListAddColumn( tentsLoot, "", 0.50 )
 local tentsLootQUA= guiGridListAddColumn( tentsLoot, "", 0.40 )	
 guiGridListSetSortingEnabled(tentsLoot,false)
 
-local teleport = guiCreateButton(320, 400, 450, 40, "Телепорт", false, sess)
+local teleport = guiCreateButton(320, 400, 450, 40, "Teleport", false, sess)
 
 	guiSetFont(teleport, "default-bold-small")
 	guiSetProperty(teleport, "NormalTextColour", "FFAAAAAA")
@@ -199,7 +199,7 @@ local teleport = guiCreateButton(320, 400, 450, 40, "Телепорт", false, s
 	if col then
 	triggerServerEvent("adminTeleport",  localPlayer, col)
 	else
-	outputChatBox("Выберите сейф или палатку",255,0,0)
+	outputChatBox("Choose a safe or tent",255,0,0)
 	end
 	end, false);	
 	
@@ -214,7 +214,7 @@ function getTentLoot(tableGlobal,value,col)
 		local elementsInTent= getElementData(col,item[1],false) or false
 		if elementsInTent then
 			guiGridListSetItemText ( tentsLoot, row, itemColum,item[1], false, false )
-			guiGridListSetItemText ( tentsLoot, row, itemVes,"Кол-во: "..elementsInTent, false, false )
+			guiGridListSetItemText ( tentsLoot, row, itemVes,"Number: "..elementsInTent, false, false )
 		end
 
 		end
@@ -237,7 +237,7 @@ if isElement(col) then
 local nick=getElementData(col,"PlayerNick") or false
 if nick then
 local row = guiGridListAddRow ( tentsLoot )
-guiGridListSetItemText ( tentsLoot, row, itemColum,"Ник: "..nick, true, false )
+guiGridListSetItemText ( tentsLoot, row, itemColum,"Nick: "..nick, true, false )
 end	
 local serial=getElementData(col,"PlayerSerial") or false
 if serial then
@@ -247,16 +247,16 @@ end
 local pass=getElementData(col,"pass") or false
 if pass then
 local row = guiGridListAddRow ( tentsLoot )
-guiGridListSetItemText ( tentsLoot, row, itemColum,"Пароль: "..pass, true, false )
+guiGridListSetItemText ( tentsLoot, row, itemColum,"Password: "..pass, true, false )
 end		
 			
-getTentLoot(inventoryItems["Weapons"]["Primary Weapon"],"Основное оружие",col)
-getTentLoot(inventoryItems["Weapons"]["Secondary Weapon"],"Дополнительное оружие",col)
-getTentLoot(inventoryItems["Weapons"]["Specially Weapon"],"Специальное оружие",col)
+getTentLoot(inventoryItems["Weapons"]["Primary Weapon"],"Primary weapon",col)
+getTentLoot(inventoryItems["Weapons"]["Secondary Weapon"],"Secondary Weapon",col)
+getTentLoot(inventoryItems["Weapons"]["Specially Weapon"],"Specially Weapon",col)
 getTentLoot(inventoryItems["Ammo"],"Боеприпасы",col) 
-getTentLoot(inventoryItems["Food"],"Еда/Вода",col)
-getTentLoot(inventoryItems["Items"],"Прочее",col) 
-getTentLoot(inventoryItems["Toolbelt"],"Инструменты",col)
+getTentLoot(inventoryItems["Food"],"Food/Drinks",col)
+getTentLoot(inventoryItems["Items"],"Others",col) 
+getTentLoot(inventoryItems["Toolbelt"],"Toolbelt",col)
 end
 end		
 end
@@ -265,7 +265,7 @@ addEventHandler( "onClientGUIClick", tents,onSelectTent , false )
 
 
 local allPlayers= guiCreateGridList(10, 10, 250, 430, false, playersTab)
-local allPlayersPlayer = guiGridListAddColumn( allPlayers, "Игрок", 0.9 )
+local allPlayersPlayer = guiGridListAddColumn( allPlayers, "Player", 0.9 )
 guiGridListSetSortingEnabled(allPlayers,false)
  
 
@@ -303,16 +303,16 @@ local player = guiGridListGetItemData ( allPlayers, row, col )
 
 if isElement(player) then
 
-getPlayerLoot(playerDatass,"Данные Игрока",player)		
-getPlayerLoot(inventoryItems["Weapons"]["Primary Weapon"],"Основное оружие",player)
-getPlayerLoot(inventoryItems["Weapons"]["Secondary Weapon"],"Дополнительное оружие",player)
-getPlayerLoot(inventoryItems["Weapons"]["Specially Weapon"],"Специальное оружие",player)
+getPlayerLoot(playerDatass,"Player Data",player)		
+getPlayerLoot(inventoryItems["Weapons"]["Primary Weapon"],"Primary weapon",player)
+getPlayerLoot(inventoryItems["Weapons"]["Secondary Weapon"],"Secondary Weapon",player)
+getPlayerLoot(inventoryItems["Weapons"]["Specially Weapon"],"Specially Weapon",player)
 getPlayerLoot(inventoryItems["Ammo"],"Боеприпасы",player) 
-getPlayerLoot(inventoryItems["Food"],"Еда/Вода",player)
-getPlayerLoot(inventoryItems["Items"],"Прочее",player) 
-getPlayerLoot(inventoryItems["Toolbelt"],"Инструменты",player)
+getPlayerLoot(inventoryItems["Food"],"Food/Drinks",player)
+getPlayerLoot(inventoryItems["Items"],"Others",player) 
+getPlayerLoot(inventoryItems["Toolbelt"],"Toolbelt",player)
 else
-outputChatBox("Игрок вышел или сменил ник. Обновите вкладку",255,0,0)
+outputChatBox("Player released or replaced the one. Refresh the tab",255,0,0)
 end
 end		
 end
@@ -320,16 +320,16 @@ addEventHandler( "onClientGUIClick", allPlayers,onSelectPlayers , false )
 	
 	
 local allCars= guiCreateGridList(10, 10, 760, 380, false, cars)
-local allCarsNAME = guiGridListAddColumn( allCars, "Название", 0.3 )
-local allCarsTRADE = guiGridListAddColumn( allCars, "Удаляется", 0.1 )
-local allCarsINZZ = guiGridListAddColumn( allCars, "В зз", 0.1 )
-local allCarsINBASE = guiGridListAddColumn( allCars, "В базе", 0.1 )
-local allCarsINMOD = guiGridListAddColumn( allCars, "С названием", 0.1 )
-local allCarsOWNER = guiGridListAddColumn( allCars, "Владелец", 0.2 )
+local allCarsNAME = guiGridListAddColumn( allCars, "Name", 0.3 )
+local allCarsTRADE = guiGridListAddColumn( allCars, "Withdraw", 0.1 )
+local allCarsINZZ = guiGridListAddColumn( allCars, "In ZZ", 0.1 )
+local allCarsINBASE = guiGridListAddColumn( allCars, "In the database", 0.1 )
+local allCarsINMOD = guiGridListAddColumn( allCars, "With the name", 0.1 )
+local allCarsOWNER = guiGridListAddColumn( allCars, "Owner", 0.2 )
 guiGridListSetSortingEnabled(allCars,false)
 
 
-local carBlow = guiCreateButton(10, 400, 760, 40, "Взорвать", false, cars)
+local carBlow = guiCreateButton(10, 400, 760, 40, "Blow up", false, cars)
 
 	guiSetFont(carBlow, "default-bold-small")
 	guiSetProperty(carBlow, "NormalTextColour", "FFAAAAAA")
@@ -346,7 +346,7 @@ if isElement(car) then
 triggerServerEvent("adminCarBlow",  localPlayer, car)
 
 else
-outputChatBox("Нет такой машины",255,0,0)
+outputChatBox("No such machine",255,0,0)
 end
 end
 	end, false);	
@@ -366,7 +366,7 @@ if isElement(car) then
 triggerServerEvent("adminTeleport",  localPlayer, car)
 
 else
-outputChatBox("Нет такой машины",255,0,0)
+outputChatBox("No such machine",255,0,0)
 end
 end		
 end
@@ -374,23 +374,23 @@ addEventHandler( "onClientGUIDoubleClick", allCars,onSelectCar , false )
  
  
 local allGroups= guiCreateGridList(10, 10, 300, 430, false, groups)
-local allGroupsName= guiGridListAddColumn( allGroups, "Название", 0.4 )
-local allGroupsLVL= guiGridListAddColumn( allGroups, "Уровень", 0.15 )
-local allGroupsMemmers= guiGridListAddColumn( allGroups, "Участники", 0.15 )
-local allGroupsCreateDate= guiGridListAddColumn( allGroups, "Дата создания", 0.2 )
+local allGroupsName= guiGridListAddColumn( allGroups, "Name", 0.4 )
+local allGroupsLVL= guiGridListAddColumn( allGroups, "Level", 0.15 )
+local allGroupsMemmers= guiGridListAddColumn( allGroups, "Participants", 0.15 )
+local allGroupsCreateDate= guiGridListAddColumn( allGroups, "Creation Date", 0.2 )
 guiGridListSetSortingEnabled(allGroups,false)
  
 
 
 local playersInGroup= guiCreateGridList(320, 10, 450, 350, false, groups)
-local playersInGroupName= guiGridListAddColumn( playersInGroup, "Ник", 0.4 )
-local playersInGroupLVL= guiGridListAddColumn( playersInGroup, "Уровень", 0.15 )
-local playersInGroupRanq= guiGridListAddColumn( playersInGroup, "Ранг", 0.18 )	
-local playersInGroupAccount= guiGridListAddColumn( playersInGroup, "Аккаунт", 0.2 )	
+local playersInGroupName= guiGridListAddColumn( playersInGroup, "Nick", 0.4 )
+local playersInGroupLVL= guiGridListAddColumn( playersInGroup, "Level", 0.15 )
+local playersInGroupRanq= guiGridListAddColumn( playersInGroup, "Rank", 0.18 )	
+local playersInGroupAccount= guiGridListAddColumn( playersInGroup, "Account", 0.2 )	
 guiGridListSetSortingEnabled(playersInGroup,false) 
 
 --local playerKick = guiCreateButton(320, 370, 450, 30, "Выгнать", false, groups)
-local removeGroup = guiCreateButton(320, 370, 450, 50, "Удалить группу", false, groups)
+local removeGroup = guiCreateButton(320, 370, 450, 50, "Delete Group", false, groups)
 --guiSetEnabled(playerKick,false)
 guiSetEnabled(removeGroup,false)
 
@@ -401,13 +401,13 @@ guiSetEnabled(removeGroup,false)
 
 
 
-local adminMap = guiCreateCheckBox ( 100, 50, 200, 20, "Телепорт по карте", false, false, map )
+local adminMap = guiCreateCheckBox ( 100, 50, 200, 20, "Teleport around the map", false, false, map )
 addEventHandler ( "onClientGUIClick", adminMap, function ( comboBox ) setAdminFunc(adminMap) end,false)
-local adminShowTents = guiCreateCheckBox ( 100, 100, 200, 20, "Показывать палатки рядом", false, false, map )
+local adminShowTents = guiCreateCheckBox ( 100, 100, 200, 20, "Show tents nearby", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowTents, function ( comboBox ) setAdminFunc(adminShowTents) end,false)
-local adminShowPlayers = guiCreateCheckBox ( 100, 150, 200, 20, "Показывать игроков рядом", false, false, map )
+local adminShowPlayers = guiCreateCheckBox ( 100, 150, 200, 20, "Show players side", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowPlayers, function ( comboBox ) setAdminFunc(adminShowPlayers) end,false)
-local adminShowCars = guiCreateCheckBox ( 100, 200, 200, 20, "Показывать машины рядом", false, false, map )
+local adminShowCars = guiCreateCheckBox ( 100, 200, 200, 20, "Show the description", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowCars, function ( comboBox ) setAdminFunc(adminShowCars) end,false)
 
 
@@ -443,14 +443,14 @@ function onSelectGroup( btn )
 
 if selectedGroup or row then
 guiGridListClear ( playersInGroup )
-guiSetText(removeGroup,"Удалить группу")
+guiSetText(removeGroup,"Delete Group")
 guiSetEnabled(removeGroup,false)
 end
 
 if selectedGroup~="" then
 triggerServerEvent("loadGroupPlayers",localPlayer,tostring(selectedGroup))
 guiSetEnabled(removeGroup,true)
-guiSetText(removeGroup,"Удалить группу: "..selectedGroup)
+guiSetText(removeGroup,"Delete group: "..selectedGroup)
 end
 end
 addEventHandler( "onClientGUIClick", allGroups,onSelectGroup , false )
@@ -461,9 +461,9 @@ function loadPlayers(membersTable)
 		
 		
 		--[[
-local playersInGroupName= guiGridListAddColumn( playerLoot, "Ник", 0.50 )
-local playersInGroupLVL= guiGridListAddColumn( playerLoot, "Уровень", 0.40 )
-local playersInGroupRanq= guiGridListAddColumn( playerLoot, "Ранг", 0.40 )	
+local playersInGroupName= guiGridListAddColumn( playerLoot, "Nick", 0.50 )
+local playersInGroupLVL= guiGridListAddColumn( playerLoot, "Level", 0.40 )
+local playersInGroupRanq= guiGridListAddColumn( playerLoot, "Rank", 0.40 )	
 (`groupName` TEXT, `userProfit` INT, `userLvl` INT, `userRole` TEXT, `userNick` TEXT, `userAccount` TEXT)
 ]]
 			if player.player then
@@ -514,22 +514,22 @@ addEventHandler( "onClientGUIClick", removeGroup,adminRemoveGroup , false )
 			if isSave then 
 			local PlayerNick = getElementData(col,"PlayerNick") or false
 			local row = guiGridListAddRow ( tents )
-					guiGridListSetItemText ( tents, row, tentsCOL,"Сейф", false, false )
-					guiGridListSetItemText ( tents, row, tentsPASS,"Владелец:"..PlayerNick, true, false )
+					guiGridListSetItemText ( tents, row, tentsCOL,"Safe", false, false )
+					guiGridListSetItemText ( tents, row, tentsPASS,"Owner:"..PlayerNick, true, false )
 					guiGridListSetItemData ( tents, row, tentsCOL, col )
 			end
 			if isTent and not isBitTent and not isSave  then 
 			local PlayerNick = getElementData(col,"PlayerNick") or false
 			local row = guiGridListAddRow ( tents )
-					guiGridListSetItemText ( tents, row, tentsCOL,"Палатка", false, false )
-					guiGridListSetItemText ( tents, row, tentsPASS,"Владелец:"..PlayerNick, true, false )
+					guiGridListSetItemText ( tents, row, tentsCOL,"Tent", false, false )
+					guiGridListSetItemText ( tents, row, tentsPASS,"Owner:"..PlayerNick, true, false )
 					guiGridListSetItemData ( tents, row, tentsCOL, col )
 			end
 			if isBitTent then 
 			local PlayerNick = getElementData(col,"PlayerNick") or false
 			local row = guiGridListAddRow ( tents )
-					guiGridListSetItemText ( tents, row, tentsCOL,"Б. палатка", false, false )
-					guiGridListSetItemText ( tents, row, tentsPASS,"Владелец:"..PlayerNick, true, false )
+					guiGridListSetItemText ( tents, row, tentsCOL,"Big tent", false, false )
+					guiGridListSetItemText ( tents, row, tentsPASS,"Owner:"..PlayerNick, true, false )
 					guiGridListSetItemData ( tents, row, tentsCOL, col )
 			end
 			
@@ -552,17 +552,17 @@ addEventHandler( "onClientGUIClick", removeGroup,adminRemoveGroup , false )
 						local carName = GetRealVehicleName(carId) or getVehicleNameFromModel(carId)
 						local carCol = getElementData(car,"parent") 
 						local NOCARSPAWN = getElementData(carCol,"NOCARSPAWN") or false
-						local playerCar = "Нет" 
-						if NOCARSPAWN then  playerCar="Да" end
+						local playerCar = "No" 
+						if NOCARSPAWN then  playerCar="Yes" end
 						local CarInZZ = getElementData(car,"CarInZZ") or false
-						local CarInZZE = "Нет"
-						if CarInZZ then  CarInZZE="Да"  end
+						local CarInZZE = "No"
+						if CarInZZ then  CarInZZE="Yes"  end
 						local CarInBase = getElementData(car,"CarInBase") or false
-						local CarInBaseE = "Нет"
-						if CarInBase then CarInBaseE="Да"  end
+						local CarInBaseE = "No"
+						if CarInBase then CarInBaseE="Yes"  end
 						local CarInMod = GetRealVehicleName(carId) or false
-						local CarInModE = "Нет"
-						if CarInMod then CarInModE="Да"  end
+						local CarInModE = "No"
+						if CarInMod then CarInModE="Yes"  end
 						local CarOwner = getElementData(car,"owner") or false
 						local CarOwnerE = "--"
 						if CarOwner then CarOwnerE=CarOwner  end
@@ -579,7 +579,7 @@ addEventHandler( "onClientGUIClick", removeGroup,adminRemoveGroup , false )
 			end
 		
 		elseif selectedTab==groups then
-		guiSetText(removeGroup,"Удалить группу")
+		guiSetText(removeGroup,"Delete Group")
 		guiSetEnabled(removeGroup,false)
 		guiGridListClear(allGroups)
 		guiGridListClear(playersInGroup)
