@@ -22,7 +22,7 @@ local carMechanicGarages = {
 
 
 local mechPed = createPed ( 264, 660.998046875,-552.1328125,16.3359375,90,false) 
-	setElementData(mechPed,"pedName","Автомеханик")
+	setElementData(mechPed,"pedName","Mechanic")
 	setElementData(mechPed,"trader",true,false)
 	setElementFrozen  ( mechPed, true )
 	
@@ -64,7 +64,7 @@ end
 	}
 
 	
-local mechWin = guiCreateWindow ( 0,0, 400, 400, "Автомеханик", false )	
+local mechWin = guiCreateWindow ( 0,0, 400, 400, "Mechanic", false )	
 	
 local Tooltip = guiCreateStaticImage ( 0.05, 0.73, 0.90, 0.1, "images/playerScore.png", true,mechWin )
 
@@ -96,14 +96,14 @@ end
 	guiSetVisible ( mechWin,false )
 	guiWindowSetSizable ( mechWin, false )
 	
-	local color1Text = guiCreateLabel ( 0, 0.1, 1,  0.5, "Покраска #1", true, mechWin)
+	local color1Text = guiCreateLabel ( 0, 0.1, 1,  0.5, "Painting #1", true, mechWin)
 		guiSetFont ( color1Text, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( color1Text, "center" )
 		
 	local colorOne = guiCreateLabel ( 0, 0.15, 1,  0.06, "█████████████████", true, mechWin)
 		guiLabelSetHorizontalAlign ( colorOne, "center" )
 		
-	local color2Text = guiCreateLabel ( 0, 0.25, 1,  0.5, "Покраска #2", true, mechWin)
+	local color2Text = guiCreateLabel ( 0, 0.25, 1,  0.5, "Painting #2", true, mechWin)
 		guiSetFont ( color2Text, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( color2Text, "center" )
 		
@@ -111,27 +111,27 @@ end
 		guiLabelSetHorizontalAlign ( colorTwo, "center" )
 	
 	
-	local engineText = guiCreateLabel ( 0, 0.45, 1,  0.5, "Двигатель", true, mechWin)
+	local engineText = guiCreateLabel ( 0, 0.45, 1,  0.5, "Engine", true, mechWin)
 		guiSetFont ( engineText, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( engineText, "center" )
 		
 		local enginePanel    =	guiCreateLabel ( 0, 0.5, 1, 1, "", true, mechWin )
-			local engineSpeed    =	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Скорость", true, enginePanel )
-			local engineStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Стандарт", true, enginePanel )
-			local engineEconom   = 	guiCreateRadioButton (  0.6, 0,  0.3,  0.05, "Экономичность", true, enginePanel )
+			local engineSpeed    =	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Speed", true, enginePanel )
+			local engineStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Standard", true, enginePanel )
+			local engineEconom   = 	guiCreateRadioButton (  0.6, 0,  0.3,  0.05, "Efficiency", true, enginePanel )
 	
-	local susText = guiCreateLabel ( 0, 0.6, 1,  0.5, "Подвеска", true, mechWin)
+	local susText = guiCreateLabel ( 0, 0.6, 1,  0.5, "Suspension", true, mechWin)
 		guiSetFont ( susText, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( susText, "center" )
 		
 		local susPanel = guiCreateLabel ( 0, 0.65, 1, 1, "", true, mechWin )
-			local susLow      = 	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Низкая", true, susPanel )
-			local susStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Стандарт", true, susPanel )
-			local susHigh	  = 	guiCreateRadioButton (  0.6, 0,  0.2,  0.05, "Высокая", true, susPanel )
+			local susLow      = 	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Low", true, susPanel )
+			local susStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Standard", true, susPanel )
+			local susHigh	  = 	guiCreateRadioButton (  0.6, 0,  0.2,  0.05, "High", true, susPanel )
 	
 	
-	local saveCarSettingsBtn = guiCreateButton ( 0.05, 0.85,  0.40,  0.1, "Ок", true, mechWin )
-	local closeMechWinBtn = guiCreateButton ( 0.55, 0.85,  0.40,  0.1, "Закрыть", true, mechWin )
+	local saveCarSettingsBtn = guiCreateButton ( 0.05, 0.85,  0.40,  0.1, "OK", true, mechWin )
+	local closeMechWinBtn = guiCreateButton ( 0.55, 0.85,  0.40,  0.1, "Close", true, mechWin )
 	
 	
 	
@@ -176,20 +176,20 @@ end
 			end
 			
 			if price>0 then
-				guiSetText ( saveCarSettingsBtn, "Купить за: "..price )
+				guiSetText ( saveCarSettingsBtn, "Buy for: "..price )
 				
 				else
-				guiSetText ( saveCarSettingsBtn, "Ок" )
+				guiSetText ( saveCarSettingsBtn, "OK" )
 				end
 			
 				if buy then
 				
 				if price>0 then
-					local money = getElementData(localPlayer,"Деньги") or 0
+					local money = getElementData(localPlayer,"Money") or 0
 					if money>=price then
-						setElementData(localPlayer,"Деньги",money-price)
+						setElementData(localPlayer,"Money",money-price)
 					else
-						outputChatBox("Не хватает денег")
+						outputChatBox("Not enough money")
 						 return
 					end
 				end
@@ -203,7 +203,7 @@ end
 						
 					triggerServerEvent ( "setCarSettings", veh,settings )	
 						
-					outputChatBox("Настройки транспорта сохранены")
+					outputChatBox("Vehicle settings saved")
 					
 				
 					guiSetVisible ( mechWin,false )
@@ -214,20 +214,21 @@ end
 		end
 	end
 	
-	addEventHandler( "onClientMouseEnter", engineSpeed,function() showToolTip("Максимальная скорость: +50%\nРасход топлива: +50%","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineSpeed,function() showToolTip("Maximum speed: +50%\nFuel consumption: +50%","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineSpeed, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", engineStandart,function() showToolTip("Максимальная скорость: Стандарт\nРасход топлива: Стандарт","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineStandart,function() showToolTip("Maximum speed: Standard\nFuel consumption: Standard","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineStandart, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", engineEconom,function() showToolTip("Максимальная скорость: -30%\nРасход топлива: -50%","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineEconom,function() showToolTip("Maximum speed: -30%\nFuel consumption: -50%","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineEconom, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", colorOne,function() showToolTip("Основной цвет\nНажмите чтобы изменить","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", colorOne,function() showToolTip("Main color\nClick to change","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", colorOne, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", colorTwo,function() showToolTip("Вторичный цвет\nНажмите чтобы изменить","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", colorTwo,function() showToolTip("Secondary color\nClick to change","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", colorTwo, hideToolTip ,false)
+	
 	
 	addEventHandler ( "onClientGUIClick", susLow, function() getPrice(false) end, false )
 	addEventHandler ( "onClientGUIClick", susStandart, function() getPrice(false) end, false )
@@ -332,7 +333,7 @@ function getCarSettings(veh)
 		end
 	end
 	
-	guiSetText ( saveCarSettingsBtn, "Ок" )
+	guiSetText ( saveCarSettingsBtn, "OK" )
 	local settingsSus = getElementData(veh,"settings.suspension") or "standart"
 	if settingsSus=="standart" then
 		guiRadioButtonSetSelected ( susStandart, true )
@@ -372,7 +373,7 @@ function openMechWin(key, keyState,type)
 	end
 	
 	if getVehicleType (veh) ~="Automobile" then 
-	outputChatBox("Это транспортное средство нельзя настроить.")
+	outputChatBox("This vehicle cannot be configured.")
 	return
 	end
 	
