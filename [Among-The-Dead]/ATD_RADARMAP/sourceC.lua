@@ -104,7 +104,7 @@ end
 
 
 
-local zoneNameMiniMap = "Загрузка..."
+local zoneNameMiniMap = "Loading..."
 local playerX, playerY, playerZ = 0, 0, 0;
 local mapOffsetX, mapOffsetY, mapIsMoving = 0, 0, false;
 
@@ -132,7 +132,7 @@ addEventHandler('onClientKey', root,
 					Minimap.IsVisible = true;
 					mapOffsetX, mapOffsetY, mapIsMoving = 0, 0, false;
 			end
-			outputChatBox("У вас нет карты!");
+			outputChatBox("You have no card!");
 			return end
 				cancelEvent();
 				Bigmap.IsVisible = not Bigmap.IsVisible;
@@ -374,26 +374,26 @@ if (not Minimap.IsVisible and Bigmap.IsVisible) then
 				
 				
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20), 20, 20, tocolor(255, 0, 0, 150));
-				dxDrawText("—   Красная зона", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Red zone", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+30), 20, 20, tocolor(0, 255, 0, 150));
-				dxDrawText("—   Зеленая зона", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Green Zone", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 		
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*2)), 20, 20, tocolor(0, 0, 255, 150));
-				dxDrawText("—   Зона рыбалки", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*2)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Fishing area", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*2)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*3)), 20,20, 'files/images/arrow.png', 0, 0, 0, tocolor(255, 255, 255, 255));
-				dxDrawText("—   Игрок", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*3)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Player", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*3)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*4)), 20,20, 'files/images/blips/0.png', 0, 0, 0, tocolor(255, 255, 0, 255));
-				dxDrawText("—   Участник группы", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*4)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Group member", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*4)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*5)), 20,20, 'files/images/blips/19.png', 0, 0, 0, tocolor(255, 0, 0, 255));
-				dxDrawText("—   GPS маяк", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*5)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   GPS beacon", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*5)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*6)), 20,20, 'files/images/blips/20.png', 0, 0, 0, tocolor(255, 255, 255, 255));
-				dxDrawText("—   Арена", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*6)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Arena", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*6)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				end
 			else
 				dxDrawRectangle(Bigmap.PosX, Bigmap.PosY, Bigmap.Width, Bigmap.Height, tocolor(0, 0, 0, 150));

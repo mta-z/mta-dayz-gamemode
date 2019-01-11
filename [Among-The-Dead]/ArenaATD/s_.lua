@@ -56,7 +56,7 @@ spawnArea = createColTube ( 625.78576660156,-606.81744384766,0, 100, 30)
 function jailZoneLeave ( thePlayer )
    if getElementType ( thePlayer ) == "player" then 
 	   if getElementData(thePlayer,"partyArena") then
-		  outputChatBox ( "Вернитесь к организатору боя до начала боя или ваша заявка будет автоматически отменена!", thePlayer )
+		  outputChatBox ( "Return to the battle organizer before the battle begins, or your application will be automatically canceled!", thePlayer )
 	   end
    end
 end
@@ -106,13 +106,13 @@ end
 
 function spawnLastHIRO(player)
 local xl,xy,xz=629.93194580078,-603.71264648438,16.3359375
-local money = getElementData(player,"Деньги")
-local myStavka = getElementData(player,"myStavka")
-setElementData(player,"Деньги",money+(GLOBALMONEY-myStavka))
+local money = getElementData(player,"Money")
+local myStavka = getElementData(player,"mustavka")
+setElementData(player,"Money",money+(GLOBALMONEY-myStavka))
 setElementData(player,"partyArena",false)
 setElementData(player,"inArena",false)
-outputChatBox("Поздравляем!!",player)
-outputChatBox(getPlayerName(player).." выиграл бои на арене и забрал банк в размере: "..(GLOBALMONEY-myStavka))
+outputChatBox("Congratulations!!",player)
+outputChatBox(getPlayerName(player).." won battles in the arena and took the bank in the amount of: "..(GLOBALMONEY-myStavka))
 GLOBALMONEY=0
 spawnPlayer ( player, xl,xy,xz, 0, getElementModel(player) or 170 )
 end
