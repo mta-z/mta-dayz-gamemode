@@ -12,11 +12,11 @@ local exchangeWindows =guiCreateStaticImage ( 0.15, 0.28, 0.7, 0.8,  "images/scr
 -- inventoryWindows = guiCreateStaticImage(0.25,0.25,0.5,0.5,"images/scrollmenu_1.png",true)
 guiSetAlpha(exchangeWindows,0.7)
 
-headlineExchange["loot"] = guiCreateLabel(0.06, 0.05, 0.34, 0.09,"Обмен",true,exchangeWindows)
+headlineExchange["loot"] = guiCreateLabel(0.06, 0.05, 0.34, 0.09,"Exchange",true,exchangeWindows)
 guiLabelSetHorizontalAlign (headlineExchange["loot"],"center")
 guiSetFont (headlineExchange["loot"], "default-bold-small" )
 
-headlineExchange["inventory"] = guiCreateLabel(0.60, 0.05, 0.34, 0.09,"Инвентарь",true,exchangeWindows)
+headlineExchange["inventory"] = guiCreateLabel(0.60, 0.05, 0.34, 0.09,"Inventory",true,exchangeWindows)
 guiLabelSetHorizontalAlign (headlineExchange["inventory"],"center")
 guiSetFont (headlineExchange["inventory"], "default-bold-small" )
 
@@ -50,7 +50,7 @@ buttonItemsExchange["inventorySpeed"] = guiCreateButton(0.53, 0.11, 0.04, 0.13, 
 local substrateSlots = guiCreateStaticImage ( 0.57, 0.955, 0.39, 0.032,  "images/redPix.png",true,exchangeWindows )
 substrateSlotsTop = guiCreateStaticImage ( 0, 0, 0.39, 1,  "images/redPix.png",true,substrateSlots )
 guiSetAlpha(substrateSlots,0.5)
-headlineExchange["slots"] = guiCreateLabel(0.62, 0.95, 0.29, 0.04,"Вес:",true,exchangeWindows)
+headlineExchange["slots"] = guiCreateLabel(0.62, 0.95, 0.29, 0.04,"Slots:",true,exchangeWindows)
 guiLabelSetHorizontalAlign (headlineExchange["slots"],"center")
 guiLabelSetVerticalAlign (headlineExchange["slots"],"center")
 guiSetFont (headlineExchange["slots"], "default-bold-small" )
@@ -66,8 +66,8 @@ guiSetFont (headline["slots_loot"], "default-bold-small" )
 ]]
 
 
-buttonItemsExchange["exchangeOk"] = guiCreateButton(0.03, 0.87, 0.43, 0.05, "Подтвердить", true,exchangeWindows)
-buttonItemsExchange["exchangeCancel"] = guiCreateButton(0.03, 0.93, 0.43, 0.05, "Отменить", true,exchangeWindows)
+buttonItemsExchange["exchangeOk"] = guiCreateButton(0.03, 0.87, 0.43, 0.05, "OK", true,exchangeWindows)
+buttonItemsExchange["exchangeCancel"] = guiCreateButton(0.03, 0.93, 0.43, 0.05, "Cancel", true,exchangeWindows)
 
 addEventHandler ( "onClientGUIClick", buttonItemsExchange["exchangeOk"], function() 
 local exchange = getElementData(localPlayer,"exchange") or false
@@ -111,12 +111,12 @@ guiSetVisible(exchangeWindows,false)
 
 
 
-local excAccept = guiCreateWindow(0, 0, 350, 150, "Подтверждение обмена", false)
-local excAcceptText = guiCreateLabel(0, 30, 350, 100,"12345678901234567890123\n\nПредложил вам обмен",false,excAccept)
+local excAccept = guiCreateWindow(0, 0, 350, 150, "Exchange Accept", false)
+local excAcceptText = guiCreateLabel(0, 30, 350, 100,"12345678901234567890123\n\nOffered you an exchange",false,excAccept)
 guiLabelSetHorizontalAlign (excAcceptText,"center")
 
-local excAcceptOK = guiCreateButton(0.1, 0.7, 0.3, 0.7, "Согласиться", true,excAccept)
-local excAcceptCancel = guiCreateButton(0.6, 0.7, 0.3, 0.7, "Отказаться", true,excAccept)
+local excAcceptOK = guiCreateButton(0.1, 0.7, 0.3, 0.7, "Accept", true,excAccept)
+local excAcceptCancel = guiCreateButton(0.6, 0.7, 0.3, 0.7, "Cancel", true,excAccept)
 
 addEventHandler ( "onClientGUIClick", excAcceptOK, function() 
 
@@ -135,13 +135,13 @@ local offerExc = getElementData(localPlayer,"offerExc") or false
 guiSetVisible(excAccept,false)
 
 if offerExc then 
-	guiGridListSetColumnTitle( gridlistItemsExchange["loot"], 1, getPlayerName(localPlayer).." предложил:")
-	guiGridListSetColumnTitle( gridlistItemsExchange["loot2"], 1, getPlayerName(offerExc).." предложил:" )
+	guiGridListSetColumnTitle( gridlistItemsExchange["loot"], 1, getPlayerName(localPlayer).." requested:")
+	guiGridListSetColumnTitle( gridlistItemsExchange["loot2"], 1, getPlayerName(offerExc).." requested:" )
 
 
 	triggerServerEvent("offerExcOK",localPlayer,offerExc)
 
-	outputChatBox("#FFFF00Вы согласились на обмен",255,255,255,true)
+	outputChatBox("#FFFF00You agreed to an exchange.",255,255,255,true)
 	setTimer(function()
 
 		guiSetVisible(exchangeWindows,true)
@@ -162,8 +162,8 @@ outputChatBox("offerExcRemoteOK")
 
 	setTimer(function()
 	
-		guiGridListSetColumnTitle( gridlistItemsExchange["loot"], 1, getPlayerName(localPlayer).." предложил:")
-		guiGridListSetColumnTitle( gridlistItemsExchange["loot2"], 1, getPlayerName(player).." предложил:" )
+		guiGridListSetColumnTitle( gridlistItemsExchange["loot"], 1, getPlayerName(localPlayer).." requested:")
+		guiGridListSetColumnTitle( gridlistItemsExchange["loot2"], 1, getPlayerName(player).." requested:" )
 
 		guiSetVisible(exchangeWindows,true)
 		showCursor(true)
@@ -213,7 +213,7 @@ function showAcceptExc()
 local offerExc = getElementData(localPlayer,"offerExc") or false
 
 if offerExc and isElement(offerExc) and getElementType(offerExc) =="player" then 
-guiSetText(excAcceptText,getPlayerName(offerExc).."\n\nПредложил вам обмен")
+guiSetText(excAcceptText,getPlayerName(offerExc).."\n\nOffered you an exchange")
 guiSetVisible(excAccept,true)
 showCursor(true)
 end
@@ -229,13 +229,13 @@ local cancelBtnFlood = false
 function inventoryLootToExc(all)
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Обмен", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Exchange", "Ping exceeds the norm!", 255, 22, 0 )
 return
 end
 
 if gameplayVariables["checkBTNFLOOD"] then
 if cancelBtnFlood then
-startRollMessage2("Обмен", "Не нажимайте слишком часто!", 255, 0, 0 )
+startRollMessage2("Exchange", "Do not press too often!", 255, 0, 0 )
 return
 end
 cancelBtnFlood = true
@@ -285,41 +285,41 @@ local plus = 1
 
 	
 	if itemName=="Одежда: Бандит 1ур" or itemName=="Одежда: Бандит 2ур" or itemName=="Одежда: Бандит 3ур" or itemName=="Одежда: Бандит 4ур" or itemName=="Одежда: Бандит 5ур" or itemName=="Одежда: Герой"  then
-		triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять!",255,22,0)
+		triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be exchanged!",255,22,0)
 		return
 	end
 
 	if getElementData(localPlayer,"backPackUsed") == itemName then
 		if getElementData(localPlayer,itemName) <= 1 or all then
-			triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять используемый рюкзак!",255,22,0)
+			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be exchanged used backpack!",255,22,0)
 			return
 		end
 	end
 
 	if itemName =="GPS маяк" and getElementData(localPlayer,"GPSpharos")  then
 		if getElementData(localPlayer,itemName) <= 1 or all then
-			triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять активированный маяк!",255,22,0)
+			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Activated beacon cannot be exchanged!",255,22,0)
 			return
 		end
 	end
 
 	if getElementData(localPlayer,"clotType_1") == itemName then
 		if getElementData(localPlayer,itemName) <= 1 or all then
-			triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять используемую вещь!",255,22,0)
+			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be to exchange used thing!",255,22,0)
 			return
 		end
 	end
 
 	if getElementData(localPlayer,"clotType_2") == itemName then
 		if getElementData(localPlayer,itemName) <= 1 or all then
-			triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять используемую вещь!",255,22,0)
+			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be to exchange used thing!",255,22,0)
 			return
 		end
 	end
 	
 	if getElementData(localPlayer,"currentweapon_1") == itemName or getElementData(localPlayer,"currentweapon_2") == itemName or getElementData(localPlayer,"currentweapon_3") == itemName then
 		if getElementData(localPlayer,itemName) <= 1 or all then
-			triggerEvent ("displayClientInfo", localPlayer,"Обмен","Нельзя обменять используемую вещь!",255,22,0)
+			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be to exchange used thing!",255,22,0)
 			return
 		end
 	end
@@ -490,7 +490,7 @@ if ( gridLootCol ) then
 	
 	if playerAccept and remoteAccept then
 	
-	outputChatBox("СОГЛАСНЫ ОБА - ОБМЕН")
+	outputChatBox("BOTH AGREE - THE EXCHANGE")
 	guiSetVisible(exchangeWindows,false)
 	showCursor(false)
 	triggerServerEvent("exchangeCompleted",localPlayer)
@@ -523,7 +523,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
 			--guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"ITEMS", false, false )
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Основное оружие", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Primary Weapon", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Primary Weapon"]) do
 		local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -540,7 +540,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 				local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Дополнительное оружие", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Secondary Weapon", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Secondary Weapon"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -556,7 +556,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Специальное оружие", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Specially Weapon", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Specially Weapon"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -572,7 +572,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] ) 
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Боеприпасы", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Ammo", true, false )
 		for id, item in ipairs(inventoryItems["Ammo"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -582,7 +582,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Еда/Вода", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Food/Drinks", true, false )
 		for id, item in ipairs(inventoryItems["Food"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -592,7 +592,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Прочее", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Items", true, false )
 		for id, item in ipairs(inventoryItems["Items"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -616,7 +616,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItemsExchange["inventory"] )
-			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Инструменты", true, false )
+			guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],"Toolbelt", true, false )
 		for id, item in ipairs(inventoryItems["Toolbelt"]) do
 			local lootAmout =  (getElementData(localPlayer,item[1]) or 0 ) - (getElementData(exchangeLoot,item[1]) or 0 ) or 0
 			if   lootAmout >= 1 then
@@ -642,7 +642,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 		local maxSlots = getPlayerMaxAviableSlots()
 		local maxSlotsReal = maxSlots+math.floor((enginerSlots+attackerSlots)*0.2)
 		setProgressBar("slots",curSlots,maxSlotsReal)
-		guiSetText(headlineExchange["slots"],"Вес: "..curSlots.."/"..maxSlots.."+"..math.floor((enginerSlots+attackerSlots)*0.2).."")
+		guiSetText(headlineExchange["slots"],"Slots: "..curSlots.."/"..maxSlots.."+"..math.floor((enginerSlots+attackerSlots)*0.2).."")
 	end
 end
 
