@@ -330,7 +330,7 @@ return param;
 end
 
 
--- #1 база аппле там где спавнится кловер на крыше в сф -- пустая
+-- #1 Base da maçã onde o trevo desova no telhado do SF - vazio
 baseCol1 = createColCuboid (-2130.3286132813,337.6530456543,60.8, 107.5, 42.5, 20.5 )
 setElementData(baseCol1,"antivhod",{-2130.3286132813,337.6530456543,60.8, 107.5, 42.5, 20.5})
 --createRadarArea ( -2130.3286132813,337.6530456543,107.5, 42.5, 0, 0, 0, 255 )
@@ -467,7 +467,7 @@ if isTimer(base2_CloseTimer2) then killTimer(base2_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base2")),base2_vCL)
 ---------------------------------------------------------------------------------------------------------------------
--- #4 новая база в сф рядом с красной зоной которую строил бублик2 - пустая
+-- #4 nova base em sf próximo à zona vermelha que bagel2 estava construindo - vazio
 baseCol4 = createColCuboid (-2374.3623046875,882.64031982422,87, 39.5, 66.5, 20.5 )
 setElementData(baseCol4,"antivhod",{-2374.3623046875,882.64031982422,87, 39.5, 66.5, 20.5 })
 --createRadarArea ( -2374.3623046875,882.64031982422,39.5, 66.5, 0, 0, 0, 255 )
@@ -496,7 +496,7 @@ if isTimer(base3_CloseTimer1) then killTimer(base3_CloseTimer1) end
 end
 addCommandHandler(tostring(getXml("CL","base3")),base3_CL)
 ---------------------------------------------------------------------------------------------------------------------------
--- #5 первый раз 1к -- возле пирамиды на низком, желтом здании -- пустая
+-- #5 primeira vez 1k - perto da pirâmide em um prédio baixo e amarelo - vazio
 baseCol5 = createColCuboid (2369.5854492188,1086.4232177734,27.5, 35.5, 93.5, 20.5 )
 setElementData(baseCol5,"antivhod",{2369.5854492188,1086.4232177734,27.5, 35.5, 93.5, 20.5 })
 --createRadarArea ( 2369.5854492188,1086.4232177734,35.5, 93.5, 0, 0, 0, 255 )
@@ -543,7 +543,7 @@ if isTimer(base4_CloseTimer2) then killTimer(base4_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base4")),base4_vCL)
 -------------------------------------------------------------------------------------------------------------------------
--- #6 лв длинная - пустая
+-- #6 lv long - vazio
 baseCol6 = createColCuboid (2437.6950683594,1027.5922851563,51, 78.5, 35.5, 20.5 )
 setElementData(baseCol6,"antivhod",{2437.6950683594,1027.5922851563,51, 78.5, 35.5, 20.5})
 --createRadarArea (2437.6950683594,1027.5922851563, 78.5, 35.5, 0, 0, 0, 255 )
@@ -572,7 +572,7 @@ if isTimer(base5_CloseTimer1) then killTimer(base5_CloseTimer1) end
 end
 addCommandHandler(tostring(getXml("CL","base5")),base5_CL)
 ------------------------------------------------------------------------------------------------------------------------------
--- #7 Самая 1 база на сервере! в СФ  Houston -- 20 августа 
+-- #7 A própria base do servidor! em SF Houston - 20 de agosto
 baseCol7 = createColCuboid (-1661.3146972656,1007.0494384766,63, 36.5, 70.5, 20.5 )
 setElementData(baseCol7,"antivhod",{-1661.3146972656,1007.0494384766,63, 36.5, 70.5, 20.5})
 --createRadarArea (-1661.3146972656,1007.0494384766, 36.5, 70.5, 0, 0, 0, 255 )
@@ -619,7 +619,7 @@ if isTimer(base6_CloseTimer2) then killTimer(base6_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base6")),base6_vCL)
 -------------------------------------------------------------------------------------------------------------------------------
--- #8 бывшая база чемодана в лв -  22 августа
+-- #8 antiga base de mala em lv - 22 de agosto
 baseCol8 = createColCuboid (2437.4299316406,2243.2204589844,85, 50.5, 88.5, 20.5 )
 setElementData(baseCol8,"antivhod",{2437.4299316406,2243.2204589844,85, 50.5, 88.5, 20.5})
 --createRadarArea (2437.4299316406,2243.2204589844, 50.5, 88.5, 0, 0, 0, 255 )
@@ -648,7 +648,7 @@ if isTimer(base7_CloseTimer1) then killTimer(base7_CloseTimer1) end
 end
 addCommandHandler(tostring(getXml("CL","base7")),base7_CL)
 -----------------------------------------------------------------------------------------------------------------------------------
--- #9 база в лc наемники -- 30 июля
+-- #9 base em ls mercenários - 30 de julho
 baseCol9 = createColCuboid (1743.5679931641,-1809.7482910156,46, 67.5, 68.5, 20.5 )
 setElementData(baseCol9,"antivhod",{1743.5679931641,-1809.7482910156,46, 67.5, 68.5, 20.5 })
 --createRadarArea (1743.5679931641,-1809.7482910156,  67.5, 68.5, 0, 0, 0, 255 )
@@ -695,7 +695,7 @@ if isTimer(base8_CloseTimer2) then killTimer(base8_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base8")),base8_vCL)
 ------------------------------------------------------------------------------------------------------------------------------
--- #10 sabse база в сф старая зевса -- пустая
+-- #10 base sabse em sf old zeus - vazio
 baseCol10 = createColCuboid (-2129.5356445313,513.20361328125,72, 114.5, 41.5, 20.5 )
 setElementData(baseCol10,"antivhod",{-2129.5356445313,513.20361328125,72, 114.5, 41.5, 20.5})
 --createRadarArea (-2129.5356445313,513.20361328125,  114.5, 41.5, 0, 0, 0, 255 )
@@ -723,7 +723,7 @@ if isTimer(base9_CloseTimer1) then killTimer(base9_CloseTimer1) end
 end
 addCommandHandler(tostring(getXml("CL","base9")),base9_CL)
 -------------------------------------------------------------------------------------------------------------------------------
--- #11 самая первая база макавели  - 15 августа
+-- #11 a primeira base de Makaveli - 15 de agosto
 baseCol11 = createColCuboid (2389.5961914063,2441.8666992188,63, 54.5, 58.5, 20.5 )
 setElementData(baseCol11,"antivhod",{2389.5961914063,2441.8666992188,63, 54.5, 58.5, 20.5})
 --createRadarArea (2389.5961914063,2441.8666992188,  54.5, 58.5, 0, 0, 0, 255 )
@@ -770,7 +770,7 @@ if isTimer(base10_CloseTimer2) then killTimer(base10_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base10")),base10_vCL)
 ---------------------------------------------------------------------------------------------------------------------------------
--- #12 Xitman -- пустая
+-- #12 Xitman - vazio
 baseCol12 = createColCuboid (-1884.4450683594,619.31781005859,74.5, 50, 97.5, 20.5 )
 setElementData(baseCol12,"antivhod",{-1884.4450683594,619.31781005859,74.5, 50, 97.5, 20.5})
 --createRadarArea (-1884.4450683594,619.31781005859,  50, 97.5, 0, 0, 0, 255 )
@@ -817,7 +817,7 @@ if isTimer(base11_CloseTimer2) then killTimer(base11_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base11")),base11_vCL)
 --------------------------------------------------------------------------------------------------------------------------------------
--- #13 база на крыше возле авио -- 16 августа
+-- #13 Base na cobertura perto de Avio - 16 de agosto
 baseCol13 = createColCuboid (-1571.4389648438,282.84655761719,47, 100.5, 71.5, 20.5 )
 baseCol13_1 = createColCuboid (-1505,336.10067749023,28, 137, 105, 25 )
 setElementData(baseCol13,"antivhod",{-1571.4389648438,282.84655761719,47, 100.5, 71.5, 20.5})
@@ -862,25 +862,25 @@ addCommandHandler(tostring(getXml("CL","base12")),base12_CL)
 
 local base12_CloseTimer2 = false
 function base12_vOP()
-moveObject (vert112131311,10000,-1567.5,349.79998779297,66.400001525879)-- Открыть ворота для ветра 
-moveObject (vert212131311,10000,-1500.3000488281,334.29998779297,66.400001525879)-- Открыть ворота для ветра2
-moveObject (vop2O,10000,-1405.7998046875,353.599609375,56)-- Открыть ворота для ветра 2
-moveObject (vop21O,10000,-1446.2001953125,354.599609375,56)-- Открыть ворота для ветра 2
+moveObject (vert112131311,10000,-1567.5,349.79998779297,66.400001525879)-- Abra o portão para o vento
+moveObject (vert212131311,10000,-1500.3000488281,334.29998779297,66.400001525879)-- Abra o portão para o vento 2
+moveObject (vop2O,10000,-1405.7998046875,353.599609375,56)-- Abra o portão para o vento 2
+moveObject (vop21O,10000,-1446.2001953125,354.599609375,56)-- Abra o portão para o vento 2
 if isTimer(base12_CloseTimer2) then killTimer(base12_CloseTimer2) end
 base12_CloseTimer2 = setTimer(base12_vCL,30000,1)
 end 
 addCommandHandler(tostring(getXml("vOP","base12")),base12_vOP)
 
 function base12_vCL() 
-moveObject (vert112131311,10000,-1533.6999511719,349.20001220703,66.400001525879)-- Открыть ворота для ветра 
-moveObject (vert212131311,10000,-1534,334.39999389648,66.400001525879)-- Открыть ворота для ветра2
-moveObject (vop2O,10000,-1418.7998046875,353.900390625,56)-- Открыть ворота для ветра 2
-moveObject (vop21O,10000,-1433,354.2998046875,56)-- Открыть ворота для ветра 2
+moveObject (vert112131311,10000,-1533.6999511719,349.20001220703,66.400001525879)-- Abra o portão para o vento
+moveObject (vert212131311,10000,-1534,334.39999389648,66.400001525879)-- Abra o portão para o vento 2
+moveObject (vop2O,10000,-1418.7998046875,353.900390625,56)-- Abra o portão para o vento 2
+moveObject (vop21O,10000,-1433,354.2998046875,56)-- Abra o portão para o vento 2
 if isTimer(base12_CloseTimer2) then killTimer(base12_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base12")),base12_vCL)
 -----------------------------------------------------------------------------------------------------------------------------------
--- #14 база на крыше парковки возле розовой "ракушки?" -- 12 августа
+-- #14 base no telhado do estacionamento perto da "concha do mar?" - 12 de agosto
 baseCol14 = createColCuboid (2217.8173828125,1920.2504882813,32.5, 80.5, 65.5, 20.5 )
 setElementData(baseCol14,"antivhod",{2217.8173828125,1920.2504882813,32.5, 80.5, 65.5, 20.5})
 --createRadarArea (2217.8173828125,1930.2504882813, 80.5, 55.5, 0, 0, 0, 255 )
@@ -913,21 +913,21 @@ addCommandHandler(tostring(getXml("CL","base13")),base13_CL)
 
 local base13_CloseTimer2 = false
 function base13_vOP()
-moveObject (vert1121313112,10000,2237.1999511719,1973.0999755859,52.299999237061)-- Открыть ворота для ветра 
-moveObject (vert2121313113,10000,2237.1000976563,1939.0999755859,52.299999237061)-- Открыть ворота для ветра2
+moveObject (vert1121313112,10000,2237.1999511719,1973.0999755859,52.299999237061)-- Abra o portão para o vento
+moveObject (vert2121313113,10000,2237.1000976563,1939.0999755859,52.299999237061)-- Abra o portão para o vento 2
 if isTimer(base13_CloseTimer2) then killTimer(base13_CloseTimer2) end
 base13_CloseTimer2 = setTimer(base13_vCL,30000,1)
 end 
 addCommandHandler(tostring(getXml("vOP","base13")),base13_vOP)
 
 function base13_vCL() 
-moveObject (vert1121313112,10000,2237.1999511719,1958.8000488281,52.299999237061)-- Открыть ворота для ветра 
-moveObject (vert2121313113,10000,2237.1999511719,1953.5,52.299999237061)-- Открыть ворота для ветра2
+moveObject (vert1121313112,10000,2237.1999511719,1958.8000488281,52.299999237061)-- Abra o portão para o vento
+moveObject (vert2121313113,10000,2237.1999511719,1953.5,52.299999237061)-- Abra o portão para o vento 2
 if isTimer(base13_CloseTimer2) then killTimer(base13_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base13")),base13_vCL)
 --------------------------------------------------------------------------------------------------------------------------------
--- #15 новая база в сф рядом с красной зоной которую строил бублик == пустая
+-- #15 nova base na esfera próxima à zona vermelha que o donut estava construindo == vazio
 baseCol15 = createColCuboid (-2243.0549316406,1190.7838134766,80, 61, 64, 20.5 )
 setElementData(baseCol15,"antivhod",{-2243.0549316406,1190.7838134766,80, 61, 64, 20.5})
 --createRadarArea (-2243.0549316406,1190.7838134766, 61, 64, 0, 0, 0, 255 )
@@ -974,7 +974,7 @@ if isTimer(base14_CloseTimer2) then killTimer(base14_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base14")),base14_vCL)
 --------------------------------------------------------------------------------------------------------------------------------
--- #16 новая база макавели в деревне на земле - пустая
+-- #16 nova base de makaveli em uma vila no térreo - vazia
 baseCol16 = createColCuboid (-75.803031921387,-395.73297119141,-1, 93.5, 129, 20.5 )
 setElementData(baseCol16,"antivhod",{-75.803031921387,-395.73297119141,-1, 93.5, 129, 20.5})
 --createRadarArea (-75.803031921387,-395.73297119141, 93.5, 129, 0, 0, 0, 255 )
@@ -1018,7 +1018,7 @@ if isTimer(base15_CloseTimer2) then killTimer(base15_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base15")),base15_vCL)
 --------------------------------------------------------------------------------------------------------------------------------
--- #17 новая база на земле в аэро лв счет со стороны больницы1 = 19 августа
+-- #17 nova base no solo na conta aero lv do hospital 1 = 19 de agosto
 baseCol17 = createColCuboid (1474.8153076172,1774.4624023438,4, 70.5, 70.5, 20.5 )
 setElementData(baseCol17,"antivhod",{1474.8153076172,1774.4624023438,4, 70.5, 70.5, 20.5})
 --createRadarArea (1474.8153076172,1774.4624023438, 70.5, 70.5, 0, 0, 0, 255 )
@@ -1062,7 +1062,7 @@ if isTimer(base16_CloseTimer2) then killTimer(base16_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base16")),base16_vCL)
 -------------------------------------------------------------------------------------------------------------------------------
--- #18 новая база на земле в аэро лв счет со стороны больницы2 == пустая
+-- #18 nova base no solo na conta aero lv do hospital2 == vazio
 baseCol18 = createColCuboid (1343.9757568359,1774.0010986328,4, 70.5, 70.5, 20.5 )
 setElementData(baseCol18,"antivhod",{1343.9757568359,1774.0010986328,4, 70.5, 70.5, 20.5})
 --createRadarArea (1343.9757568359,1774.0010986328, 70.5, 70.5, 0, 0, 0, 255 )
@@ -1106,7 +1106,7 @@ if isTimer(base17_CloseTimer2) then killTimer(base17_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base17")),base17_vCL)
 -------------------------------------------------------------------------------------------------------------------------------
--- #19 новая база на земле в аэро лв счет со стороны больницы3 = ПУСТАЯ
+-- #19 nova base no solo na conta aero lv do hospital 3 = VAZIO
 baseCol19 = createColCuboid (1267.1683349609,1587.8924560547,4, 70.5, 70.5, 20.5 )
 setElementData(baseCol19,"antivhod",{1267.1683349609,1587.8924560547,4, 70.5, 70.5, 20.5})
 --createRadarArea (1267.1683349609,1587.8924560547, 70.5, 70.5, 0, 0, 0, 255 )
@@ -1150,7 +1150,7 @@ if isTimer(base18_CloseTimer2) then killTimer(base18_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base18")),base18_vCL)
 ----------------------------------------------------------------------------------------------------------------------------------
--- #20 новый нестандарт возле нестандарта макавели - wm makso == пустая
+-- #20 novo fora do padrão próximo a makaveli fora do padrão - wm makso == vazio
 baseCol20 = createColCuboid ( 1580.2786865234,663.65319824219,-7, 173, 119, 45 )
 setElementData(baseCol20,"antivhod",{1580.2786865234,663.65319824219,-7, 173, 119, 45})
 --createRadarArea (1580.2786865234,663.65319824219, 173, 119, 0, 0, 0, 255 )
@@ -1194,7 +1194,7 @@ if isTimer(base19_CloseTimer2) then killTimer(base19_CloseTimer2) end
 end
 addCommandHandler(tostring(getXml("vCL","base19")),base19_vCL)
 ------------------------------------------------------------------------------------------------------------------------------------
--- #21 база на заброшенном аэро -- 2 августа
+-- #21 base em um avião abandonado - 2 de agosto
 baseCol21 = createColCuboid (166.69613647461,2365.0849609375,4.5, 70.5, 105.5, 40.5 )
 setElementData(baseCol21,"antivhod",{166.69613647461,2365.0849609375,4.5, 70.5, 105.5, 40.5})
 ----createRadarArea (166.69613647461,2365.0849609375,  70.5, 105.5, 0, 0, 0, 255 )
@@ -1262,7 +1262,7 @@ addCommandHandler(tostring(getXml("vCL","base20")),base20_vCL)
 
 
 ------------------------------------------------------------------------------------------------------------------------------
--- #22 Маленькая база возле касс в лв, квадрат Б-24
+-- #22 Pequena base perto da bilheteria no lv, praça B-24
 local smallBase21Antivhod = createColCuboid (2801.7058105469,2665.1105957031,0,35, 32, 20 )
 setElementData(smallBase21Antivhod,"antivhod",{2801.7058105469,2665.1105957031,0,35, 32, 20})
 --createRadarArea (-2129.5356445313,513.20361328125,  114.5, 41.5, 0, 0, 0, 255 )
@@ -1293,7 +1293,7 @@ addCommandHandler(tostring(getXml("CL","base21")),base21_CL)
 
 
 ------------------------------------------------------------------------------------------------------------------------------
--- #23 Маленькая база возле гольф поля в лв, квадрат А-18
+-- #23 Pequena base perto do campo de golfe em lv, quadrado А-18
 local smallBase22Antivhod = createColCuboid (1390.365234375,2829.835937,0, 35, 35, 18 )
 setElementData(smallBase22Antivhod,"antivhod",{1390.365234375,2829.835937,0, 35, 35, 18})
 --createRadarArea (-2129.5356445313,513.20361328125,  114.5, 41.5, 0, 0, 0, 255 )
@@ -1322,7 +1322,7 @@ addCommandHandler(tostring(getXml("CL","base22")),base22_CL)
 
 
 ------------------------------------------------------------------------------------------------------------------------------
--- #24 Маленькая база возле красного моста в сф, квадрат И-1
+-- #24 Base pequena perto da ponte vermelha em sf, quadrado И-1
 local smallBase23Antivhod = createColCuboid (-2761.5751953125,1239.0693359375,-1, 35, 35, 18 )
 setElementData(smallBase23Antivhod,"antivhod",{-2761.5751953125,1239.0693359375,-1, 35, 35, 18})
 --createRadarArea (-2129.5356445313,513.20361328125,  114.5, 41.5, 0, 0, 0, 255 )
@@ -1351,7 +1351,7 @@ addCommandHandler(tostring(getXml("CL","base23")),base23_CL)
 
 
 ------------------------------------------------------------------------------------------------------------------------------
--- #25 Маленькая база возле обучения стрельбе в лс, квадрат Ц-22
+-- #25 Pequena base próxima ao treinamento em HP, quadrada Ц-22
 local smallBase24Antivhod = createColCuboid (2302.6474609375,-2012.844116210,-2.5, 35, 35, 21 )
 setElementData(smallBase24Antivhod,"antivhod",{2302.6474609375,-2012.844116210,-2.5, 35, 35, 21})
 --createRadarArea (2302.6474609375,-2012.844116210,  35,35, 0, 0, 0, 255 )
