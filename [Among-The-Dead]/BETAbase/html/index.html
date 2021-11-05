@@ -92,7 +92,7 @@ document.getElementById("data").getElementsByTagName("TABLE")[0].getElementsByTa
 					function ( returnv,returnb,onePass,carCount ) { 
 				var table = document.getElementById("data").getElementsByTagName("TABLE")[0].getElementsByTagName("TBODY")[1].innerHTML=returnv;
 				document.getElementById("preloader").innerHTML="";
-				document.getElementById("carCount").innerHTML="Кол-во тс: "+carCount
+				document.getElementById("carCount").innerHTML="Quantity in ts: "+carCount
 				}
 				);
 			}
@@ -114,21 +114,21 @@ var val = valueSel.options[valueSel.selectedIndex];
 				}else{
 				var baseCarMAX=10
 				}
-				document.getElementById("copyData").innerHTML += '\r\nВ этой базе можно хранить максимум '+baseCarMAX+' тс\r\n\
-В базе нельзя хранить одинаковые тс\r\n\
-Если в базе будут одинаковые тс - я забираю базу\r\n\
-Остальные правила пользования базой читай в логин панели на вкладке "Правила"\r\n\
+				document.getElementById("copyData").innerHTML += '\r\nThis database can store a maximum of'+baseCarMAX+' тс\r\n\
+You cannot store identical vehicles in the database\r\n\
+If there are identical vehicles in the base, I take the base\r\n\
+Read the rest of the rules for using the database in the login panel on the tab "rules"\r\n\
 \r\n\
-Пример бинда пароля на кнопку:\r\n\
-bind кнопка пароль\r\n\
-Например\r\n\
+Example of a bind password for a button:\r\n\
+bind button password\r\n\
+For example\r\n\
 bind num_1 '+onePass+'\r\n\
 \r\n\
-В F8 консоль\r\n\
-Тогда база будет открываться на кнопку 1(справа)\r\n\
-По такому же принципу можно забиндить и остальные пароли\r\n\r\n\
-Ворота/Крыша базы закрывается автоматически через 20 сек после открытия.\r\n\
-Если база находится на крыше - лифт автоматически поднимается/опускается во время открытия/закрытия ворот.'
+The F8 console\r\n\
+Then the base will open to button 1 (right)\r\n\
+By the same principle, you can bind other passwords.\r\n\r\n\
+The gate /Крыша of the base closes automatically 20 seconds after opening.\r\n\
+If the base is on the roof - the elevator rises automatically/опускается during opening/закрытия gate.'
 				document.getElementById("copyData").select()
 		
 				
@@ -163,7 +163,7 @@ var valueSel = document.getElementsByTagName("select")[0];
 }	
 
 function blowVh(){
-var blowOK = confirm("Взорвать все ТС?")
+var blowOK = confirm("Blow up all vehicles?")
 if(blowOK){
 var valueSel = document.getElementsByTagName("select")[0];
 
@@ -199,11 +199,11 @@ document.getElementsByClassName("base")[i].style.backgroundColor="#FF0202"
 
 	function showhide(){
 	var spoler = document.getElementById("show")
-	if (spoler.innerHTML=="Показать"){
-	spoler.innerHTML="Скрыть"
+	if (spoler.innerHTML=="Show"){
+	spoler.innerHTML="Hide"
 	document.getElementById("copyData").style.display="block"
 	}else{
-	spoler.innerHTML="Показать"
+	spoler.innerHTML="Show"
 	document.getElementById("copyData").style.display="none"
 	}
 	}
@@ -221,7 +221,7 @@ getTentCountWeb (val.value,
 function removeTentsAll(){
 var valueSel = document.getElementsByTagName("select")[0];
 var val = valueSel.options[valueSel.selectedIndex];
-var removeOK = confirm("Удалить все палатки?")
+var removeOK = confirm("Remover todas as tendas?")
 if (removeOK){
 removeTentsWeb (val.value, 
 					function ( returnv ) { 
@@ -264,18 +264,18 @@ removeTentsWeb (val.value,
 </select>
 </div>
 <div id="data">
-<button id="carCount" onclick="getCarSize()">Кол-во тс</button>
-<button onclick="blowVh()">Взорвать тс</button>
-<button onclick="getTents()">Кол-во палаток</button>
-<button onclick="removeTentsAll()">Удалить все палатки</button>
-<button onclick="getCopyData()">Копировать данные</button>
+<button id="carCount" onclick="getCarSize()">Quantidade de carros</button>
+<button onclick="blowVh()">Explodir o carros</button>
+<button onclick="getTents()">Nº de tendas</button>
+<button onclick="removeTentsAll()">Remova todas as tendas</button>
+<button onclick="getCopyData()">Copiar dados</button>
 
 <div id="preloader"></div>
 <table>
-<tbody><tr><th>Выбери базу</th><th>Данные</th><th>Изменить</th></tr></tbody>					
+<tbody><tr><th>Escolha uma base</th><th>Dados</th><th>Mudar</th></tr></tbody>					
 <tbody></tbody>
 </table>
-<a id="show" style="color: #fff;" onclick="showhide()" href="#">Показать</a><br>
+<a id="show" style="color: #fff;" onclick="showhide()" href="#">Mostrar</a><br>
 <textarea style="display:none; resize: none; margin: 2px 0px 0px; width: 535px; height: 366px;" id="copyData"> </textarea>
 </div>
 <img  style="width: 100%;" src="html/radar.jpg"></img>

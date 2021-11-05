@@ -20,24 +20,24 @@ if gangOK ~= "false" then
 
 if  gang ==gangOK  then
 if groupUserStatus and groupUserStatus~="BEGGINER" then
-	outputChatBox("Вы вошли в убежище группы выживших: "..gangOK,hitPlayer)
+	outputChatBox("Você entrou em uma BASE de um grupo: "..gangOK,hitPlayer)
 	exports.logger:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." вошел в базу группы :"..gangOK.."","log")	
 	setElementData(hitPlayer,"inBase",true)
 else
 local skin = getElementModel(hitPlayer) or 170
 	spawnPlayer(hitPlayer,spawnToPos[1], spawnToPos[2],spawnToPos[3],0,skin)
-	outputChatBox("Новичок грyппы не может входить в базy!",hitPlayer)
+	outputChatBox("Um novato do grupo e não pode entrar na base!",hitPlayer)
 
 end
 	else
 	if not isADMIN then
 	local skin = getElementModel(hitPlayer) or 170
 	spawnPlayer(hitPlayer,spawnToPos[1], spawnToPos[2],spawnToPos[3],0,skin)
-	outputChatBox("Вы вошли в убежище группы выживших: "..gangOK.." Вы не из этой группы!",hitPlayer)
+	outputChatBox("Você entrou em uma na base de um grupo de sobreviventes: "..gangOK.." Você não está neste grupo!",hitPlayer)
 	exports.logger:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." из группы "..gang.." попытался войти в базу группы :"..gangOK.."","log")	
 	
 	else
-	outputChatBox("Вы вошли в убежище группы выживших: "..gangOK,hitPlayer)
+	outputChatBox("Você entrou em uma base de um grup : "..gangOK,hitPlayer)
 	setElementData(hitPlayer,"inBase",true)	
 	end
 end

@@ -58,7 +58,7 @@ function checkBaseTimer()
 				local txmlTag = xmlNodeGetName(baseNode);
 				local xmlValue = xmlNodeGetValue(baseNode);
 					if txmlTag =="DATE" then
-					setValues("DATE","base"..i,"пустая чистая")
+					setValues("DATE","base"..i," vazio limpo")
 					elseif txmlTag =="GANG" then
 					setValues("GANG","base"..i,"ADMIN")
 					elseif txmlTag =="OP" then
@@ -74,7 +74,7 @@ function checkBaseTimer()
 				end
 			local carsRemoved = destroyAllCar("base"..i)
 			local removedTents = removeTentsWeb ("base"..i)
-			local debud = "База №"..(i+1).." закончилась и перезаписалась на дате: "..date.." "..removedTents.." Взорвано машин: "..carsRemoved.."\r\n"
+			local debud = "Base №"..(i+1).." terminou e foi substituído na data: "..date.." "..removedTents.." carros explodidos : "..carsRemoved.."\r\n"
 			outputDebugString(debud)
 			exports.logger:setLog(debud,"bases")
 			end

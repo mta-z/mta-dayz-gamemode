@@ -710,7 +710,7 @@ setRadarSize("standart")
 elseif size == 3 then
 setRadarSize("big")
 else
-outputChatBox("Неизвестный размер миникарты")
+outputChatBox("Unknown minimap size")
 end
 end
 addCommandHandler ( "radSize", resizeRadar )
