@@ -1,10 +1,10 @@
 ﻿<center>
 <div id="settings">
 	<div class="spoiler-title ">
-	<span onclick="spoiler(this)">Интерфейс</span>
+	<span onclick="spoiler(this)">Interface</span>
 		<hr/>
 		<div class="spoiler-body">
-		<span>Размер радара</span>
+		<span>Tamanho do radar</span>
 		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
 		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="0"> <label class="radioL">Очень маленький</label>
 		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="1"> <label class="radioL">Маленький</label>
@@ -12,19 +12,19 @@
 		<input name="radarSize" class="radarSize" type="radio" onclick="setSetting('selectRadarSize',this)" value="3"> <label class="radioL">Большой</label>
 		</div>
 		<div class="spoiler-body">
-		<span>Размер иконок</span>
+		<span>Tamanho do ícone</span>
 		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
 		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="small"> <label class="radioL">Маленькие</label>
 		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="standart"> <label class="radioL">Нормальные</label>
 		<input name="iconsSize" class="iconsSize" type="radio" onclick="setSetting('selectIconsSize',this)" value="big"> <label class="radioL">Большие</label>
 		</div>
 		<div class="spoiler-body">
-		<span>Чат</span>
+		<span>Sala de bate-papo</span>
 		<input name="chatShow" class="chatShow" type="radio" onclick="setSetting('selectShowChat',this)" checked value="noShow"> <label class="radioL">Скрыть</label>
 		<input name="chatShow" class="chatShow" type="radio" onclick="setSetting('selectShowChat',this)" value="1"> <label class="radioL">Показать</label>
 		</div>
 		<div class="spoiler-body">
-		<span>Размер инвентаря</span>
+		<span>Tamanho do estoque</span>
 		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.5"> <label class="radioL">50%</label>
 		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.6"> <label class="radioL">60%</label>
 		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="0.7"> <label class="radioL">70%</label>
@@ -33,7 +33,7 @@
 		<input name="invSize" class="invSize" type="radio" onclick="setSetting('selectInvSize',this)" value="1"> <label class="radioL">100%</label>
 		</div>
 		<div class="spoiler-body">
-		<span>Прицел</span>
+		<span>Mirar</span>
 			<div id="prcl">
 			<img src="http://mta/DayZATD/hudComponent/aim/img/1.png"  class="aim" name="1" onclick="selectPrcl(1,this)">
 			<img src="http://mta/DayZATD/hudComponent/aim/img/2.png"  class="aim" name="2" onclick="selectPrcl(2,this)">
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="spoiler-body">
-		<span>Дистанция до союзников</span>
+		<span>Distância para aliados</span>
 			<div id="groupDistance">
 			<input name="groupDistance" class="groupDistance" type="radio" onclick="setSetting('setGroupDistance',this)" checked value="0"> <label class="radioL">Скрыть</label>
 			<input name="groupDistance" class="groupDistance" type="radio" onclick="setSetting('setGroupDistance',this)" value="1"> <label class="radioL">Показать</label>
@@ -69,11 +69,11 @@
 	</div>
 	
 	<div class="spoiler-title ">
-	<span onclick="spoiler(this)">Мир</span>
+	<span onclick="spoiler(this)">Paz</span>
 		<hr/>
 		<div class="spoiler-body">
-		<span>Качество текстур</span>
-		<div id="warn" style="display:none;padding:10px;color:#fff;">Перезайдите для применения этой настройки!</div>
+		<span>Qualidade da textura</span>
+		<div id="warn" style="display:none;padding:10px;color:#fff;">Faça login novamente para aplicar esta configuração!</div>
 		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="noShow"> <label class="radioL">Не использовать</label>
 		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="low"> <label class="radioL">Низкое</label>
 		<input name="worldTextureQ" class="worldTextureQ" type="radio" onclick="setSetting('selectTextureQ',this)" value="normal"> <label class="radioL">Среднее</label>
@@ -81,7 +81,7 @@
 		</div>
 		<!--
 		<div class="spoiler-body">
-		<span>Звуки окружения</span>
+		<span>Sons ambientais</span>
 		<input name="worldSound" type="checkbox" onclick="WorldSound(this)" value="0"> <label class="radioL">Пение птиц</label>
 		<input name="worldSound" type="checkbox" onclick="WorldSound(this)" value="0"> <label class="radioL">Фоновая музыка</label>
 		</div>

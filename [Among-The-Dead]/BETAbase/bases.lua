@@ -99,7 +99,7 @@ carscOUNT =carscOUNT+table.size(vehtable)
 			CarsVar[carName]=false
 			end	
 			end
-	 showCarCount = "Общее количество машин:"..carscOUNT.." "
+	 showCarCount = "Número total de carros:"..carscOUNT.." "
 end
 if countOne then
 return carscOUNT
@@ -116,7 +116,7 @@ else
 	CarsVar[carName] = carCount+1
 	end
 	end
-	 showCarCount = "Общее количество машин:"..table.size(tableVehInBase).." "
+	 showCarCount = "O número total de carros:"..table.size(tableVehInBase).." "
 	 if countOne then
 return table.size(tableVehInBase)
 end
@@ -262,7 +262,7 @@ function removeTentsWeb(base)
 	
 	allTents=nil
 	
-	return "Всего палаток: "..allRemoved.."\r\nУдалено палаток: "..removed
+	return "Total de tendas: "..allRemoved.."\r\nTendas removidas: "..removed
 end
 
 
@@ -315,7 +315,7 @@ function getTentCountWeb(base)
 	
 	allTents=nil
 	
-	return "Палатки: "..tent.."\r\nБольшие палатки: "..bigTent.."\r\nСейфы: "..save
+	return "Tendas: "..tent.."\r\nTendas grandes: "..bigTent.."\r\nCofres: "..save
 end
 
 
@@ -1391,38 +1391,38 @@ for theKey,veh in ipairs(base) do
 local txmlTag = xmlNodeGetName(veh);
 local xmlValue = xmlNodeGetValue(veh);
 if txmlTag =="DATE" then
-baseTable=baseTable.."<tr><td>Дата аренды:</td><td><input type='date' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."\r\nДата окончания аренды:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Data de locação:</td><td><input type='date' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."\r\nData de término do alugueluguel:"..xmlValue.."\r\n"
 elseif txmlTag =="GANG" then
-baseTable=baseTable.."<tr><td>Группа антивхода:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+baseTable=baseTable.."<tr><td>Grupo anti-entrada:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
 if xmlValue =="false" then
-xmlValue="БЕЗ АНТИВХОДА"
+xmlValue="SEM ANTI-WAY"
 end
-copyData=copyData.."Группа антивхода:"..xmlValue.."\r\n"
+copyData=copyData.."Grupo anti-entrada:"..xmlValue.."\r\n"
 elseif txmlTag =="OP" then
-baseTable=baseTable.."<tr><td>Пароль открытия:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль открытия:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Senha de abertura:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Senha de abertura:"..xmlValue.."\r\n"
 onePass =xmlValue
 
 elseif txmlTag =="CL" then
-baseTable=baseTable.."<tr><td>Пароль закрытия:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль закрытия:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Fechar senha:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Fechar senha:"..xmlValue.."\r\n"
 
 elseif txmlTag =="pOP" then
-baseTable=baseTable.."<tr><td>Пароль открытия доп. ворот:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль открытия доп. ворот:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Adicionando senha de abertura. portão:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Adicionando senha de abertura. portão:"..xmlValue.."\r\n"
 
 elseif txmlTag =="pCL" then
-baseTable=baseTable.."<tr><td>Пароль закрытия доп. ворот:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль закрытия доп. ворот:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Fechar adicionar senha. portão:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Fechar adicionar senha. portão:"..xmlValue.."\r\n"
 
 elseif txmlTag =="vOP" then
-baseTable=baseTable.."<tr><td>Пароль открытия крыши:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль открытия крыши:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Senha de abertura do telhado:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.." onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Senha de abertura do telhado:"..xmlValue.."\r\n"
 
 elseif txmlTag =="vCL" then
-baseTable=baseTable.."<tr><td>Пароль закрытия крыши:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.."  onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
-copyData=copyData.."Пароль закрытия крыши:"..xmlValue.."\r\n"
+baseTable=baseTable.."<tr><td>Senha de fechamento do telhado:</td><td><input type='text' id="..txmlTag.." value='"..xmlValue.."'/></td><td><input title="..txmlTag.."  onclick='setNewValue(this)' type='button' value='Готово'/></td></tr>"
+copyData=copyData.."Senha de fechamento do telhado:"..xmlValue.."\r\n"
 
 end
 
