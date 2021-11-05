@@ -356,7 +356,7 @@ end
 	end
 
 	if getElementModel(arg3) ~= 584 and getElementModel(arg3) ~= 591 then
-	if getElementHealth(arg3) < 1000 and getElementHealth(arg3) >= 50 and (getElementData(localPlayer,"Инструменты") or 0) >= 1 then
+	if getElementHealth(arg3) < 1000 and getElementHealth(arg3) >= 50 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Починить ("..arg2..")","repairvehicle")
 	end
@@ -364,7 +364,7 @@ end
 	if getVehicleType (arg3) =="Automobile" then 
 		 local progressMech = getElementData(localPlayer,"progress.automech") or 0
 		
-		 if progressMech==100 and not isVehicleLocked(arg3) and (getElementData(localPlayer,"Инструменты") or 0) >= 1 then
+		 if progressMech==100 and not isVehicleLocked(arg3) and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 			number = number+1
 			createMenuItem(number,"Автомеханик ("..arg2..")","progressAutoMech")
 			
@@ -406,7 +406,7 @@ end
 	
 	local lists = getElementData(localPlayer,"Стальной лист") or 0
 	local listsInCar = getElementData(arg3,"steelList") or 0 
-	if  lists >=1  and (getElementData(localPlayer,"Инструменты") or 0) >= 1 and listsInCar<1000 then
+	if  lists >=1  and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 and listsInCar<1000 then
 	number = number+1
 		createMenuItem(number,"Установить: Стальной лист","steelList")
 		end
@@ -420,7 +420,7 @@ end
 					end
 			end	
 			
-						if (getElementData(localPlayer,"Полная Канистра") or 0) >=1  and not isVehicleLocked(arg3)  then
+						if (getElementData(localPlayer,"Galão de Combútivel Completo") or 0) >=1  and not isVehicleLocked(arg3)  then
 		local maxFuel= getElementData(arg3,"maxfuel") or 0
 	
 		if 	(getElementData(getElementData(arg3,"parent"),"fuel")+20) < tonumber(maxFuel) then
@@ -469,7 +469,7 @@ end
 					return
 					end
 					else
-					if (getElementData(localPlayer,"Инструменты") or 0) >=1 then
+					if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
 						if getElementData(getElementData(arg3,"parent"),"Колесо_inVehicle") >=1 then
 					number = number+1
 					createMenuItem(number,"Снять колесо","nscrewwheel")
@@ -526,24 +526,24 @@ local progressMedik = getElementData(localPlayer,"progress.medik") or 0
 		createMenuItem(number,"Предложить обмен","offerExc")
 	end
 	]]
-	if getElementData(arg2,"bleeding") > 0 and (getElementData(localPlayer,"Бинты") or 0) >= 1 then
+	if getElementData(arg2,"bleeding") > 0 and (getElementData(localPlayer,"Ataduras") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Перевязать","bandage")
 	end	
 	
-	if getElementData(arg2,"blood") < 11900 and (getElementData(localPlayer,"Пакет Крови") or 0) >= 1 then
+	if getElementData(arg2,"blood") < 11900 and (getElementData(localPlayer,"Bolsa de Sangue") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Перелить кровь","giveblood")
 
 	end
 	
-	if getElementData(arg2,"brokenbone") and (getElementData(localPlayer,"Морфий") or 0) >= 1 and progressMedik>=40 then
+	if getElementData(arg2,"brokenbone") and (getElementData(localPlayer,"Morfina") or 0) >= 1 and progressMedik>=40 then
 		number = number+1
-		createMenuItem(number,"Дать: Морфий","givemorph")
+		createMenuItem(number,"Дать: Morfina","givemorph")
 	end
-			if getElementData(arg2,"pain") and (getElementData(localPlayer,"Обезболивающее") or 0) >= 1 and progressMedik>=40 then
+			if getElementData(arg2,"pain") and (getElementData(localPlayer,"Analgésico") or 0) >= 1 and progressMedik>=40 then
 		number = number+1
-		createMenuItem(number,"Дать: Обезболивающее","giveobezb")
+		createMenuItem(number,"Дать: Analgésico","giveobezb")
 	end
 	
 	
@@ -623,10 +623,10 @@ if arg1 == "treepos" then
 end
 
 
-if arg1 == "Колючая Проволка" then
-	if (getElementData(localPlayer,"Инструменты") or 0) >= 1 then
+if arg1 == "Arame Farpado" then
+	if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Разобрать: Колючая Проволка","wirefence")
+		createMenuItem(number,"Разобрать: Arame Farpado","wirefence")
 	end	
 end
 if arg1 == "Мешки с песком" then
@@ -767,10 +767,10 @@ if getElementData(source,"parent") == localPlayer then return end
 		end
 		
 		if getElementData(source,"wirefence") then
-			showClientMenuItem("Колючая Проволка")
+			showClientMenuItem("Arame Farpado")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Разобрать колючую проволку","Требуется: Инструменты",source)
+			setNewbieInfo (true,"Разобрать колючую проволку","Требуется: Caixa de Ferramentas",source)
 			return
 		end
 		if getElementData(source,"sandbags") then
@@ -1584,7 +1584,7 @@ if ( keyState == "down" ) then
 		
 		if itemName == "patrolstation" then
 			setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)-1) --server
-			setElementData(localPlayer,"Полная Канистра",(getElementData(localPlayer,"Полная Канистра") or 0)+1) --server
+			setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)+1) --server
 			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы заправили одну канистру!",22,255,0)
 			disableMenu()
 			return
@@ -2094,7 +2094,7 @@ local whinUser = getElementData(localPlayer,"Колесо") or 0
 local enginVh = getElementData(col,"Мотор_inVehicle")
 local enginUser = getElementData(localPlayer,"Мотор") or 0
 local fuelVh = getElementData(col,"fuel")
-local fuelUser = getElementData(localPlayer,"Полная Канистра") or 0
+local fuelUser = getElementData(localPlayer,"Galão de Combútivel Completo") or 0
 if act == 1 and whinVh >=1  then
 setElementData(col,"Колесо_inVehicle",whinVh-1) --server
 setElementData(localPlayer,"Колесо",whinUser+1) --server
@@ -2109,7 +2109,7 @@ end
 if act == 3  then
 
 setElementData(col,"fuel",fuelVh-20) --server
-setElementData(localPlayer,"Полная Канистра",fuelUser+1) --server
+setElementData(localPlayer,"Galão de Combútivel Completo",fuelUser+1) --server
 setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)-1) --server
 end
 
@@ -2118,7 +2118,7 @@ local maxFuel= getElementData(getElementData(col,"parent"),"maxfuel") or 0
 if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
-	setElementData(localPlayer,"Полная Канистра",(getElementData(localPlayer,"Полная Канистра") or 0)-1) --server
+	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
 	setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)+1) --server
 	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в бак!",0,255,0)
 

@@ -5,7 +5,7 @@ function playerStatsClientSite()
 if getElementData(localPlayer,"logedin") then
 toggleControl ("radar",false) 
 if clockShowState then
-	if  (getElementData(localPlayer,"Часы") or 0) < 1 then
+	if  (getElementData(localPlayer,"Relôgio") or 0) < 1 then
 	removeEventHandler("onClientRender",getRootElement(),renderClock)
 	end
 end
@@ -14,7 +14,7 @@ local radarShowStateByRes =  exports.ATD_RADARMAP:getMinimapState()
 
 	if not hideRadar then
 
-		if (getElementData(localPlayer,"Навигатор") or 0)>= 1  then
+		if (getElementData(localPlayer,"GPS") or 0)>= 1  then
 				if not radarShowStateByRes  then
 					exports.ATD_RADARMAP:setState("show","radar") 
 				end
@@ -34,7 +34,7 @@ hideRadar = state
 end
 
 	function ClockShow()
-		if  (getElementData(localPlayer,"Часы") or 0) >= 1 then
+		if  (getElementData(localPlayer,"Relôgio") or 0) >= 1 then
 			addEventHandler("onClientRender",getRootElement(),renderClock)	
 			clockShowState = true
 		end
@@ -55,7 +55,7 @@ end
 function playerZoom (key,keyState)
 local hour, minutes = getTime()	
 	if key == "n" then
-		if (getElementData(localPlayer,"Прибор Ночного Виденья") or 0) > 0 then
+		if (getElementData(localPlayer,"Ôculos de Visão Noturna") or 0) > 0 then
 			if nightvision then
 				nightvision = false
 				setCameraGoggleEffect("normal")
@@ -70,7 +70,7 @@ local hour, minutes = getTime()
 			end
 		end
 	elseif key == "i" then
-		if (getElementData(localPlayer,"Инфракрасное Виденье") or 0) > 0 then
+		if (getElementData(localPlayer,"Ôculos de Infravermelho") or 0) > 0 then
 			if infaredvision then
 				infaredvision = false
 				setCameraGoggleEffect("normal")

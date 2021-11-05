@@ -108,7 +108,7 @@ end
 
 addCommandHandler ( "tT", function() 
 
-startRollMessage("#FF0000"..getPlayerName(localPlayer).." #FFFFFFпрожил #FF0000"..getElementData(localPlayer,"alivetime").." #FFFFFF минут, но был убит #FF0000"..getPlayerName(localPlayer).." #FFFFFFc помощью: #FFFF00Remington 870 (flashlight) #FFFFFFв районе: #FFFF00Darnt Town[Las Venturas]", 200, 200, 200)
+startRollMessage("#FF0000"..getPlayerName(localPlayer).." #FFFFFFпрожил #FF0000"..getElementData(localPlayer,"alivetime").." #FFFFFF минут, но был убит #FF0000"..getPlayerName(localPlayer).." #FFFFFFc помощью: #FFFF00Remington 870 (Com Lanterna) #FFFFFFв районе: #FFFF00Darnt Town[Las Venturas]", 200, 200, 200)
 end )
 
 addCommandHandler ( "dI", function() 

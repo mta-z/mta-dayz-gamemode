@@ -123,7 +123,7 @@ addEventHandler('onClientKey', root,
 		if (state) then
 			if (key == 'F11') then
 			
-			local maps = getElementData(localPlayer,"Карта") or 0 
+			local maps = getElementData(localPlayer,"Mapa") or 0 
 			if maps<=0 or getElementData(localPlayer,"isDead") then
 			if getBigmapState() then 
 			setState("hide","map")
@@ -132,7 +132,7 @@ addEventHandler('onClientKey', root,
 					Minimap.IsVisible = true;
 					mapOffsetX, mapOffsetY, mapIsMoving = 0, 0, false;
 			end
-			outputChatBox("You have no card!");
+			outputChatBox("Você não tem Mapa!");
 			return end
 				cancelEvent();
 				Bigmap.IsVisible = not Bigmap.IsVisible;
@@ -208,7 +208,7 @@ if (not Minimap.IsVisible and Bigmap.IsVisible) then
 			dxDrawBorder(Bigmap.PosX, Bigmap.PosY, Bigmap.Width, Bigmap.Height, 2, tocolor(0, 0, 0, 200));
 			
 			local absoluteX, absoluteY = 0, 0;
-			local zoneName = 'Unknown';
+			local zoneName = 'Desconhecida';
 			
 			if (getElementInterior(localPlayer) == 0) then
 				if (isCursorShowing()) then
@@ -230,10 +230,10 @@ if (not Minimap.IsVisible and Bigmap.IsVisible) then
 						if (Bigmap.PosX <= absoluteX and Bigmap.PosY <= absoluteY and Bigmap.PosX + Bigmap.Width >= absoluteX and Bigmap.PosY + Bigmap.Height >= absoluteY) then
 							zoneName = getZoneName(mapX, mapY, 0)..""..getSquareFromMapPosition(mapX, mapY);
 						else
-							zoneName = 'Unknown';
+							zoneName = 'Desconhecida';
 						end
 					else
-						zoneName = 'Unknown';
+						zoneName = 'Desconhecida';
 					end
 				else
 					playerX, playerY, playerZ = getElementPosition(localPlayer);
@@ -374,30 +374,30 @@ if (not Minimap.IsVisible and Bigmap.IsVisible) then
 				
 				
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20), 20, 20, tocolor(255, 0, 0, 150));
-				dxDrawText("—   Red zone", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Zona Vermelha", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+30), 20, 20, tocolor(0, 255, 0, 150));
-				dxDrawText("—   Green Zone", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Zona Verde", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 		
 				dxDrawRectangle( (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*2)), 20, 20, tocolor(0, 0, 255, 150));
-				dxDrawText("—   Fishing area", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*2)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Área de Pesca", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*2)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*3)), 20,20, 'files/images/arrow.png', 0, 0, 0, tocolor(255, 255, 255, 255));
-				dxDrawText("—   Player", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*3)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Jogador", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*3)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*4)), 20,20, 'files/images/blips/0.png', 0, 0, 0, tocolor(255, 255, 0, 255));
-				dxDrawText("—   Group member", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*4)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Membro do Grupo", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*4)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*5)), 20,20, 'files/images/blips/19.png', 0, 0, 0, tocolor(255, 0, 0, 255));
-				dxDrawText("—   GPS beacon", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*5)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
+				dxDrawText("—   Baliza GPS.", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*5)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				
 				dxDrawImage(	 (Bigmap.PosX+ Bigmap.Width)-190, (Bigmap.PosY+20+(30*6)), 20,20, 'files/images/blips/20.png', 0, 0, 0, tocolor(255, 255, 255, 255));
 				dxDrawText("—   Arena", (Bigmap.PosX+ Bigmap.Width)-160, (Bigmap.PosY+22+(30*6)), 110, 30, tocolor(255, 255, 255, 255),1, Fonts.Roboto, 'left', 'top');
 				end
 			else
 				dxDrawRectangle(Bigmap.PosX, Bigmap.PosY, Bigmap.Width, Bigmap.Height, tocolor(0, 0, 0, 150));
-				dxDrawText('GPS lost connection...', Bigmap.PosX, Bigmap.PosY + 20, Bigmap.PosX + Bigmap.Width, Bigmap.PosY + 20 + Bigmap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1, Fonts.Roboto, 'center', 'center', false, false, false, true, true);
+				dxDrawText('GPS perdeu a conexão...', Bigmap.PosX, Bigmap.PosY + 20, Bigmap.PosX + Bigmap.Width, Bigmap.PosY + 20 + Bigmap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1, Fonts.Roboto, 'center', 'center', false, false, false, true, true);
 				dxDrawText('', Bigmap.PosX, Bigmap.PosY - 20, Bigmap.PosX + Bigmap.Width, Bigmap.PosY - 20 + Bigmap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1.00, Fonts.Icons, 'center', 'center', false, false, false, true, true);
 				
 				if (Minimap.LostRotation > 360) then
@@ -526,7 +526,7 @@ function renderRadar()
 				end
 			else
 				dxDrawRectangle(Minimap.PosX, Minimap.PosY, Minimap.Width, Minimap.Height, tocolor(0, 0, 0, 150));
-				dxDrawText('GPS lost connection...', Minimap.PosX, Minimap.PosY + 20, Minimap.PosX + Minimap.Width, Minimap.PosY + 20 + Minimap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1, Fonts.Roboto, 'center', 'center', false, false, false, true, true);
+				dxDrawText('GPS conexão perdida...', Minimap.PosX, Minimap.PosY + 20, Minimap.PosX + Minimap.Width, Minimap.PosY + 20 + Minimap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1, Fonts.Roboto, 'center', 'center', false, false, false, true, true);
 				dxDrawText('', Minimap.PosX, Minimap.PosY - 20, Minimap.PosX + Minimap.Width, Minimap.PosY - 20 + Minimap.Height, tocolor(255, 255, 255, 255 * math.abs(getTickCount() % 2000 - 1000) / 1000), 1.00, Fonts.Icons, 'center', 'center', false, false, false, true, true);
 				
 				if (Minimap.LostRotation > 360) then
@@ -688,7 +688,7 @@ function getWorldFromMapPosition(mapX, mapY)
 end
 
 local squareSize = 250
-local ySqChars  = {'А','Б','В','Г','Д','Ж','З','И','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х',"Ц",'Ч','Ш','Я'}
+local ySqChars  = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T',"U",'V','X','Z','W'}
 function getSquareFromMapPosition(worldX,worldY)
 local topLeftWorldX,topLeftWorldY       = -3000,3000
 	local xSq = tonumber(math.floor((worldX-(topLeftWorldX))/squareSize)+1)
@@ -710,7 +710,7 @@ setRadarSize("standart")
 elseif size == 3 then
 setRadarSize("big")
 else
-outputChatBox("Unknown minimap size")
+outputChatBox("Tamanho mínimo desconhecido")
 end
 end
 addCommandHandler ( "radSize", resizeRadar )
@@ -722,8 +722,8 @@ end
 
 
 function setState(state,typeMap,hide)
-local radars = getElementData(localPlayer,"Навигатор") or 0 
-local maps = getElementData(localPlayer,"Карта") or 0 
+local radars = getElementData(localPlayer,"GPS") or 0 
+local maps = getElementData(localPlayer,"Mapa") or 0 
 --outputChatBox("'ATD_RADARMAP:setState "..state.." "..typeMap)
 if state=="show"  then
 	if typeMap=="map" and maps>= 1 then

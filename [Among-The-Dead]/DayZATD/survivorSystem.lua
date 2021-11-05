@@ -200,7 +200,7 @@ elementWeapon[source] = createObject(modelID1,x,y+5,z+50)
 
 setElementParent(elementWeapon[source],playersObjects)
 
-if weapon1 =="ВСС Винторез" or weapon1 =="Gauss" then 
+if weapon1 =="ВСС Vintorez" or weapon1 =="Gauss" then 
 
 attachElementToBone(elementWeapon[source],source,12,0,0,0.05,-3,-92,0) -- я же менял все оружия они были ровные менял -100 на -90
 
@@ -519,11 +519,11 @@ setPedAnimation (playersource,"BOMBER","BOM_Plant",-1,false,false,false,false)
 setElementData(playersource,itemName,getElementData(playersource,itemName)-1) --client
 		
 setTimer( function ()
-	if itemName == "Бинты" then
+	if itemName == "Ataduras" then
 	
 		setElementData(playersource,"bleeding",0) --client
 		setElementData(playersource,itemName,(getElementData(playersource,itemName) or 0)-1) --client
-	elseif itemName == "Аптечка" then
+	elseif itemName == "Kit de Primeiros Socorros" then
 
 		
 				local realBlood = getElementData(playersource,"blood") or 0 
@@ -540,21 +540,21 @@ setTimer( function ()
 	setElementData(playersource,"pain",false) --client
 		setElementData(playersource,"bleeding",0) --client
 		
-	--elseif itemName == "Грелка" then
+	--elseif itemName == "Pacote de Calor" then
 
 	--setElementData(playersource,"cold",false) --client
 	--	setElementData(playersource,"temperature",37) --client
 	--	setElementData(playersource,itemName,getElementData(playersource,itemName)-1) --client
-	elseif itemName == "Обезболивающее" then
+	elseif itemName == "Analgésico" then
 
 		setElementData(playersource,"pain",false) --client
-	elseif itemName == "Морфий" then
+	elseif itemName == "Morfina" then
 
 		setElementData(playersource,"brokenbone",false) --client
-		elseif itemName == "Антибиотики" then
+		elseif itemName == "Antibiótico" then
 
 		setElementData(playersource,"infection",false) --client
-	elseif itemName == "Пакет Крови" then
+	elseif itemName == "Bolsa de Sangue" then
 
 		
 		local realBlood = getElementData(playersource,"blood") or 0 
@@ -580,33 +580,33 @@ setPedAnimation (playersource,"BOMBER","BOM_Plant",-1,false,false,false,false)
 
 setTimer( function ()
 	if itemName == "bandage" then
-	if (getElementData(playersource,"Бинты") or 0) >= 1 then
+	if (getElementData(playersource,"Ataduras") or 0) >= 1 then
 		setElementData(player,"bleeding",0) --client
-		setElementData(playersource,"Бинты",getElementData(playersource,"Бинты")-1) --client
+		setElementData(playersource,"Ataduras",getElementData(playersource,"Ataduras")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Bandage",0,3)
 		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +40",0,200,0,"down",false,true)
 		addPlayerStats (playersource,"humanity",40)
 	end
 	elseif itemName == "giveblood" then
-	if (getElementData(playersource,"Пакет Крови") or 0) >= 1 then
+	if (getElementData(playersource,"Bolsa de Sangue") or 0) >= 1 then
 		addPlayerStats (player,"blood",12000)
-		setElementData(playersource,"Пакет Крови",getElementData(playersource,"Пакет Крови")-1) --client
+		setElementData(playersource,"Bolsa de Sangue",getElementData(playersource,"Bolsa de Sangue")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Bloodbag",0,0)
 		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
 		addPlayerStats (playersource,"humanity",250)
 end
 	elseif itemName == "givemorph" then
-		if (getElementData(playersource,"Морфий") or 0) >= 1 then
+		if (getElementData(playersource,"Morfina") or 0) >= 1 then
 		setElementData(player,"brokenbone",false) --client
-		setElementData(playersource,"Морфий",getElementData(playersource,"Морфий")-1) --client
+		setElementData(playersource,"Morfina",getElementData(playersource,"Morfina")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Morphine",0,0)	
 		addPlayerStats (playersource,"humanity",250)
 		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
 end
 		elseif itemName == "giveobezb" then
-		if (getElementData(playersource,"Обезболивающее") or 0) >= 1 then
+		if (getElementData(playersource,"Analgésico") or 0) >= 1 then
 		setElementData(player,"pain",false) --client
-		setElementData(playersource,"Обезболивающее",getElementData(playersource,"Обезболивающее")-1) --client
+		setElementData(playersource,"Analgésico",getElementData(playersource,"Analgésico")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Painkiller",0,3)
 		addPlayerStats (playersource,"humanity",250)
 		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
@@ -945,7 +945,7 @@ addEventHandler("onPlayerBuildAWireFence",getRootElement(),onPlayerBuildAWireFen
 function removeWirefence (object)
 	local x,y,z = getElementPosition(source)
 	
-	local item,itemString = getItemTablePosition("Колючая Проволка")
+	local item,itemString = getItemTablePosition("Arame Farpado")
 	local itemPickup = createItemPickup(item,x,y,z-0.05,itemString)
 	destroyElement(getElementData(object,"parent"))
 	destroyElement(object)
@@ -1170,7 +1170,7 @@ addEventHandler("removeTent",getRootElement(),removeTent)
 
 function removeSave (object)
 if (getElementData(source,"Лопата") or 0) >= 1  then
-if (getElementData(source,"Инструменты") or 0) >= 1 then
+if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 
 
 	local counter = getElementData(getElementData(object,"parent"),"counterT")
@@ -1401,7 +1401,7 @@ addEventHandler( "onPlayerChat", getRootElement(), showAllChatForAdminChatMessag
 function playerRadioChat(playersource,cmd,...)
 	if cmd == "radiochat" then
 		local msg2 = table.concat({...}, " ")
-		if (getElementData(playersource,"Рация") or 0) <= 0 then outputChatBox(shownInfos["noradio"],playersource) return end
+		if (getElementData(playersource,"Walkie-Talkie") or 0) <= 0 then outputChatBox(shownInfos["noradio"],playersource) return end
         local posX, posY, posZ = getElementPosition( playersource )
         local chatSphere = createColSphere( posX, posY, posZ, chatEadioRadius )
         local nearbyPlayers = getElementsWithinColShape( chatSphere, "player" )
@@ -1412,7 +1412,7 @@ function playerRadioChat(playersource,cmd,...)
 		
 		
         for index, nearbyPlayer in ipairs( nearbyPlayers ) do
-			if (getElementData(nearbyPlayer,"Рация") or 0) > 0 then
+			if (getElementData(nearbyPlayer,"Walkie-Talkie") or 0) > 0 then
 				outputChatBox("[RADIO]"..string.gsub((getPlayerName(playersource).." : "..msg2), '#%x%x%x%x%x%x', ''),nearbyPlayer, 238,238,0,true ) -- Color changed from 60,200,40 to 238,238,0
 			end
         end
@@ -1932,7 +1932,7 @@ local nearbyPlayers = {}
  
 addEventHandler( 'onPlayerVoiceStart', root,
     function()
-	local ration = getElementData(source,"Рация") or 0 
+	local ration = getElementData(source,"Walkie-Talkie") or 0 
 	if ration <=0 then 
 	outputChatBox("У вас нет рации!",source)
 	cancelEvent()

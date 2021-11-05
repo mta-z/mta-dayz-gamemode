@@ -15,24 +15,24 @@ end
 
 
 
-local myWindow = guiCreateWindow ( 0, 0, 300, 450, "Arena Fight", false )  
+local myWindow = guiCreateWindow ( 0, 0, 300, 450, "Luta de arena", false )  
 local regTable= guiCreateGridList(10, 25, 290, 300, false, myWindow)
-local regColumn= guiGridListAddColumn( regTable, "Participant", 0.7 )
-local stavkaColumn= guiGridListAddColumn( regTable, "Rate", 0.2 )
-local regButton = guiCreateButton( 10, 330, 290, 30, "Apply",false,myWindow)
-local unregButton = guiCreateButton( 10, 370, 290, 30, "Cancel the application",false,myWindow)
+local regColumn= guiGridListAddColumn( regTable, "Participante", 0.7 )
+local stavkaColumn= guiGridListAddColumn( regTable, "Avaliar", 0.2 )
+local regButton = guiCreateButton( 10, 330, 290, 30, "Aplicar",false,myWindow)
+local unregButton = guiCreateButton( 10, 370, 290, 30, "Cancelar o aplicativo",false,myWindow)
 guiSetVisible(myWindow, false)
 guiSetAlpha(myWindow,0.7)
 guiWindowSetSizable ( myWindow, false ) 	
-closeWin = guiCreateButton( 10, 410, 290, 30, "Close a window",false,myWindow)
+closeWin = guiCreateButton( 10, 410, 290, 30, "Feche uma janela",false,myWindow)
 guiSetEnabled(unregButton,false)
 centerWindow(myWindow)
 
-local myStavka = guiCreateWindow ( 0, 0, 250, 150, "Rate", false ) 
+local myStavka = guiCreateWindow ( 0, 0, 250, 150, "Avaliar", false ) 
 local myStavkaEdit = guiCreateEdit ( 10, 30, 230, 30, "25000",false,myStavka )
 
 local myStavkaBtnOk = guiCreateButton( 10, 70, 240, 30, "OK",false,myStavka)
-local myStavkaBtnCancel = guiCreateButton( 10, 110, 240, 30, "Cancel",false,myStavka)
+local myStavkaBtnCancel = guiCreateButton( 10, 110, 240, 30, "Cancelar",false,myStavka)
 guiSetVisible(myStavka, false)
 guiSetAlpha(myStavka,0.7)
 guiWindowSetSizable ( myStavka, false )
@@ -47,10 +47,10 @@ addEventHandler ( "onClientGUIClick", myStavkaBtnOk,function()
 local editStavka = tonumber(guiGetText(myStavkaEdit))
 
 if  type(editStavka)~="number" then return end
-if editStavka<25000 then outputChatBox("Minimum bid: 25000") return end
+if editStavka<25000 then outputChatBox("Aposta Minima: 25000") return end
 editStavka = math.ceil(editStavka)
 local playerMoney = getElementData(localPlayer,"Money") or 0
-if playerMoney<editStavka then outputChatBox("Not enough money") guiSetVisible(myStavka, false) return end
+if playerMoney<editStavka then outputChatBox("Dinheiro insuficiente") guiSetVisible(myStavka, false) return end
 
 		guiSetVisible(myStavka, false)
 		triggerServerEvent ("addPlayerInTable", getLocalPlayer(), getLocalPlayer(),editStavka)
@@ -101,7 +101,7 @@ function refreshUserTable(userTable)
 	end
 	if colUsch>=1 then
 	local row = guiGridListAddRow ( regTable )
-	guiGridListSetItemText ( regTable, row, regColumn,"Of the participants: "..colUsch, true, false )
+	guiGridListSetItemText ( regTable, row, regColumn,"Dos participantes: "..colUsch, true, false )
 	guiGridListSetItemText ( regTable, row, stavkaColumn,colStavka, true, false )
 	end
 end

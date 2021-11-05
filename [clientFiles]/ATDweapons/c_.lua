@@ -27,7 +27,7 @@ models = {
 {"guns/Revolver",1900},
 {"guns/M1014",1905},
 {"guns/Remington 870",1909},
-{"guns/Remington 870 (flashlight)",1910},
+{"guns/Remington 870 (Com Lanterna)",1910},
 {"guns/Saiga 12K",1911},
 {"guns/AS50",1915},
 {"guns/CZ550",1916},

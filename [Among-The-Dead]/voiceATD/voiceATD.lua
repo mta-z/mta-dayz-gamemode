@@ -13,7 +13,7 @@ addEventHandler("onClientPlayerVoiceStart",root,function()
 	
 	local gang = getElementData(source,"group") or false
 	local localGang = getElementData(localPlayer,"group") or false	
-	local RaciaPlayer =getElementData(source,"Рация") or false
+	local RaciaPlayer =getElementData(source,"Walkie-Talkie") or false
 	if RaciaPlayer and RaciaPlayer<=0 then
 	if source == localPlayer then
 	outputChatBox("У вас нет рации!")
@@ -106,7 +106,7 @@ local startTop=250
 local ifGPS=300
 function showIcons ()
 local leftPos = 10
-local GPS = getElementData(localPlayer,"Навигатор") or false
+local GPS = getElementData(localPlayer,"GPS") or false
 	if GPS and GPS>=1 then
 	leftPos=ifGPS
 	end

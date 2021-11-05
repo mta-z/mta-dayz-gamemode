@@ -23,7 +23,7 @@
 --{"PKP",5},
 {"M1014",3},
 {"Remington 870",3},
---{"Remington 870 (flashlight)",3},
+--{"Remington 870 (Com Lanterna)",3},
 {"Saiga 12K",3},
 {"AS50",4},
 {"CZ550",4},
@@ -34,7 +34,7 @@
 --{"M24 (desert)",4},
 {"M40A3",4},
 {"SVD Camo",4},
-{"ВСС Винторез",4},
+{"ВСС Vintorez",4},
 {"M4A1",4},
 {"M4A1 SD",4},
 
@@ -60,7 +60,7 @@
 },
 
 ["Specially Weapon"] = {
-{"Парашют",1},
+{"Pára-Quedas",1},
 --{"Слезоточивый газ",1},
 --{"Граната",1},
 {"Бинокль",1}
@@ -124,17 +124,17 @@
 --{"Наживка",1},
 {"Сырая рыба",1},
 
-{"Бинты",1,"Использовать"},
-{"Сигнальный Фаер",1,"Зажечь"},
+{"Ataduras",1,"Использовать"},
+{"Sinal de Fogo",1,"Зажечь"},
 {"Пустая Канистра",2},
-{"Полная Канистра",2},
-{"Аптечка",2,"Использовать"},
---{"Грелка",1,"Использовать"},
-{"Обезболивающее",1,"Использовать"},
-{"Морфий",1,"Использовать"},
-{"Антибиотики",1,"Использовать"},
-{"Пакет Крови",1,"Использовать"},
---{"Колючая Проволка",3,"Поставить колючую проволку"},
+{"Galão de Combútivel Completo",2},
+{"Kit de Primeiros Socorros",2,"Использовать"},
+--{"Pacote de Calor",1,"Использовать"},
+{"Analgésico",1,"Использовать"},
+{"Morfina",1,"Использовать"},
+{"Antibiótico",1,"Использовать"},
+{"Bolsa de Sangue",1,"Использовать"},
+--{"Arame Farpado",3,"Поставить колючую проволку"},
 {"Сырое Мясо",1},
 {"Колесо",2},
 {"Мотор",10},
@@ -178,12 +178,12 @@
 {"Одежда: Герой",1,"Одеться",260},
 
 
-{"Военный шлем 50%",2,"Надеть",{1,50}},
+{"Capacete Militar 50%",2,"Надеть",{1,50}},
 {"Мотошлем 10%",2,"Надеть",{1,10}},
 {"Сварочная маска 10%",1,"Надеть",{1,10}},
 {"Шахтерская каска 5%",1,"Надеть",{1,5}},
-{"Бронешлем 70%",5,"Надеть",{1,70}},
-{"Бронешлем 80%",5,"Надеть",{1,80}},
+{"Capacete Blindado 70%",5,"Надеть",{1,70}},
+{"Capacete Blindado 80%",5,"Надеть",{1,80}},
 {"Бронежилет 20%",10,"Надеть",{2,20}},
 {"Бронежилет 30%",15,"Надеть",{2,30}},
 {"Бронежилет 10%",5,"Надеть",{2,10}},
@@ -195,34 +195,34 @@
 {"Пустая Бутылка",1},
 {"Несъедобный Бургер",1},
 {"Рюкзак САТУРН 20",1,"Экипировать",20},
-{"Рюкзак ШТУРМОВОЙ 40",2,"Экипировать",40},
-{"Рюкзак АБРИС 60",3,"Экипировать",60},
-{"Рюкзак КОММАНДЕР 80",4,"Экипировать",80},
-{"Рюкзак СЛЕДОПЫТ 100",4,"Экипировать",100},
-{"Рюкзак КОЛОРАДО 120",5,"Экипировать",120},
-{"Рюкзак РУССКИЙ 140",6,"Экипировать",140},
+{"Mochila de ASSALTO 40",2,"Экипировать",40},
+{"Mochila de Montanha 60",3,"Экипировать",60},
+{"Mochila do Comandante 80",4,"Экипировать",80},
+{"Mochila de Explorador 100",4,"Экипировать",100},
+{"Mochila do Colorado 120",5,"Экипировать",120},
+{"Mochila Brasileira 140",6,"Экипировать",140},
 {"Рюкзак САМУРАЙ 160",16,"Экипировать",160},
 --{"Рюкзак ВОЕННЫЙ 180",18,"Экипировать",180},
 --{"Рюкзак ФАРАОН 200",20,"Экипировать",200},
 {"Деньги",0.0001},
 {"Сейф",20,"Поставить сейф"},
 {"Мешки с песком",10,"Разложить мешки"},
---{"Мина",5,"Установить мину"},
+--{"Mina",5,"Установить мину"},
 {"Стальной лист",3},
 
 },
 
 ["Toolbelt"] = {
-{"Прибор Ночного Виденья",1},
-{"Инфракрасное Виденье",1},
-{"Карта",1},
-{"Спички",1,"Зажечь Огонь"},
+{"Ôculos de Visão Noturna",1},
+{"Ôculos de Infravermelho",1},
+{"Mapa",1},
+{"Caixa de Fósforo",1,"Зажечь Огонь"},
 {"GPS маяк",1,"Активировать"},
 {"Огниво",2,"Зажечь Огонь"},
-{"Часы",1},
-{"Навигатор",1},
-{"Инструменты",1},
-{"Рация",1},
+{"Relôgio",1},
+{"GPS",1},
+{"Caixa de Ferramentas",1},
+{"Walkie-Talkie",1},
 {"Отмычка",0.005},
 
 },
@@ -697,7 +697,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Инструменты", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Caixa de Ferramentas", true, false )
 		for id, item in ipairs(inventoryItems["Toolbelt"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -811,7 +811,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["loot"] )
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Инструменты", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Caixa de Ferramentas", true, false )
 		for id, item in ipairs(inventoryItems["Toolbelt"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -1102,7 +1102,7 @@ end
 				if itemName == "Колесо" and (getElementData(isPlayerInLoot(),"Колесо_inVehicle") or 0) < needtires  or itemName == "Мотор" and (getElementData(isPlayerInLoot(),"Мотор_inVehicle") or 0)  < needengines then
 					
 					local progressEnginer = getElementData(localPlayer,"progress.enginer") or 0
-					if progressEnginer <20 and (getElementData(localPlayer,"Инструменты") or 0)	<=0 then 
+					if progressEnginer <20 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0)	<=0 then 
 					outputChatBox("У вас нет инструментов") 
 					return 
 					end
@@ -1545,45 +1545,45 @@ local itemName = guiGridListGetItemText ( gridlistItems["inventory"], guiGridLis
 if itemName and itemName~=nil then
 local itemName,itemInfo,itemData = getInventoryInfosForRightClickMenu(itemName)
 	if isCursorShowing() and guiGetVisible(inventoryWindows) and itemInfo then
-		if itemName == "Спички" then
+		if itemName == "Caixa de Fósforo" then
 			if (getElementData(localPlayer,"Дрова") or 0) == 0 then
 				return
 			end
 		end
-		if itemName == "Бинты" then
+		if itemName == "Ataduras" then
 			if (getElementData(localPlayer,"bleeding") or 0) == 0 then
 				return
 			end
 		end	
-		if itemName == "Аптечка" then
+		if itemName == "Kit de Primeiros Socorros" then
 			if getElementData(localPlayer,"blood") > 10500 then
 				return
 			end
 		end	
 		--[[
-		if itemName == "Грелка" then
+		if itemName == "Pacote de Calor" then
 			if getElementData(localPlayer,"temperature") > 35 then
 				return
 			end
 		end	
 		]]
-		if itemName == "Обезболивающее" then
+		if itemName == "Analgésico" then
 			if not getElementData(localPlayer,"pain") then
 				return
 			end
 		end	
-		if itemName == "Морфий" then
+		if itemName == "Morfina" then
 			if not getElementData(localPlayer,"brokenbone") then
 				return
 			end
 		end	
-		if itemName == "Антибиотики" then
+		if itemName == "Antibiótico" then
 			if not getElementData(localPlayer,"infection") then
 				return
 			end
 		end	
 	
-		if itemName == "Пакет Крови" then
+		if itemName == "Bolsa de Sangue" then
 			local progressMedik = getElementData(localPlayer,"progress.medik") or 0
 				if progressMedik <100 then
 				return
@@ -1787,7 +1787,7 @@ local isOnGround = isPedOnGround(localPlayer)
 	if isOnGround then
 		triggerServerEvent("onPlayerBuildAWireFence",localPlayer,itemName)
 		end
-	elseif itemName == "Сигнальный Фаер" then
+	elseif itemName == "Sinal de Fogo" then
 		triggerServerEvent("onPlayerPlaceRoadflare",localPlayer,itemName)	
 	elseif itemInfo == "Зажечь Огонь" then
 if (getElementData(localPlayer,"Дрова") or 0) <=0 then 
@@ -1798,20 +1798,20 @@ end
 	if isOnGround then
 		triggerServerEvent("onPlayerUseMedicObject",localPlayer,itemName)	
 		
-		if itemName == "Бинты" then
+		if itemName == "Ataduras" then
 	triggerEvent("PlaySoundDayZ",localPlayer,"Bandage",0,3)
-			elseif itemName == "Аптечка" then
+			elseif itemName == "Kit de Primeiros Socorros" then
 	triggerEvent("PlaySoundDayZ",localPlayer,"Medkit",0,0)
-		--elseif itemName == "Грелка" then
+		--elseif itemName == "Pacote de Calor" then
 --triggerEvent("PlaySoundDayZ",localPlayer,"Medkit",0,0)	
-		elseif itemName == "Обезболивающее" then
+		elseif itemName == "Analgésico" then
 	triggerEvent("PlaySoundDayZ",localPlayer,"Painkiller",0,3)
-		elseif itemName == "Морфий" then
+		elseif itemName == "Morfina" then
 triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
-		elseif itemName == "Антибиотики" then
+		elseif itemName == "Antibiótico" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 
-		elseif itemName == "Пакет Крови" then
+		elseif itemName == "Bolsa de Sangue" then
 	triggerEvent("PlaySoundDayZ",localPlayer,"Bloodbag",0,0)
 		end
 		end
@@ -1865,261 +1865,261 @@ end
 local clotTable={
 
 
-{288,{{false,false,"Военный шлем 50%"},
+{288,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{286,{{false,false,"Военный шлем 50%"},
+{286,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{285,{{false,false,"Военный шлем 50%"},
+{285,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{284,{{false,false,"Военный шлем 50%"},
+{284,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{283,{{false,false,"Военный шлем 50%"},
+{283,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{282,{{false,false,"Военный шлем 50%"},
+{282,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{281,{{false,false,"Военный шлем 50%"},
+{281,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{276,{{false,false,"Военный шлем 50%"},
+{276,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{280,{{false,false,"Военный шлем 50%"},
+{280,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
 
-{279,{{false,false,"Военный шлем 50%"},
+{279,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0.02,0,0.06,5,-90,5,size =1},
 {3,2020,"Бронежилет 20%", 0, 0.01, -0.54, 0, 0, 95,size=1},
 {3,2396,"Бронежилет 10%",0,0.06,0.07,0,-93,5,size =1}}},
 --[[
-{176,{{1,2394,"Военный шлем 50%",0,0,-0.560,1.5,4.5,94, size = 1,profit=50},
+{176,{{1,2394,"Capacete Militar 50%",0,0,-0.560,1.5,4.5,94, size = 1,profit=50},
 
 {1,1755,"Мотошлем 10%",0,0,-0.640,1.5,3.1,94, size = 1,profit=10},
 {1,2015,"Сварочная маска 10%",0,0,-0.620,0.5,3.1,87, size = 1.090,profit=10},
 {1,2016,"Шахтерская каска 5%",0,0,-0.560,1.6,3.5,94, size = 1.015,profit=5},
-{1,2018,"Бронешлем 70%",0,-0.060,-0.550,0.5,9,88, size = 1.010,profit=70},
-{1,2019,"Бронешлем 80%",0,-0.060,-0.550,0.5,9,88, size = 1,profit=80},
+{1,2018,"Capacete Blindado 70%",0,-0.060,-0.550,0.5,9,88, size = 1.010,profit=70},
+{1,2019,"Capacete Blindado 80%",0,-0.060,-0.550,0.5,9,88, size = 1,profit=80},
 {3,2020,"Бронежилет 20%",0.040,0.030,-0.540,-3,0,97, size = 1,profit=20}}},
 
 ]]
-{278,{{1,2394,"Военный шлем 50%",0,0.09,-0.715,0.9,0,95,size=1.1},
+{278,{{1,2394,"Capacete Militar 50%",0,0.09,-0.715,0.9,0,95,size=1.1},
 {1,1755,"Мотошлем 10%",0,0.09,-0.715,0.9,0,95,size=1},
 {1,2015,"Сварочная маска 10%",0,0.07,-0.63,0.9,0,95,size=1},
 {1,2016,"Шахтерская каска 5%",0,0.1,-0.79,0.9,0,95,size=1.2},
-{1,2018,"Бронешлем 70%",0,0.1,-0.621,0.9,0,95,size=1},
-{1,2019,"Бронешлем 80%",-0.01,0.1,-0.7,0.9,0,95,size=1.1},
+{1,2018,"Capacete Blindado 70%",0,0.1,-0.621,0.9,0,95,size=1},
+{1,2019,"Capacete Blindado 80%",-0.01,0.1,-0.7,0.9,0,95,size=1.1},
 {3,936,"Бронежилет 30%",0.01,-0.01,0.06,0,-90,0,size = 1},
 {3,2020,"Бронежилет 20%",0.05, 0.02, -0.65, -3, 0, 95, size= 1.1},
 {3,2396,"Бронежилет 10%",0,0.08,0.03,0,-90,5,size = 1.1}}},
 
 
-{277,{{1,2394,"Военный шлем 50%",0,-0.01,-0.76,0,0,90,size=1.2},
+{277,{{1,2394,"Capacete Militar 50%",0,-0.01,-0.76,0,0,90,size=1.2},
 {1,1755,"Мотошлем 10%",0,-0.03,-0.78,0,0,95,size=1.1},
 {1,2015,"Сварочная маска 10%",0,-0.03,-0.7,0,0,95,size=1.1},
 {1,2016,"Шахтерская каска 5%",0.005,-0.01,-0.87,0,0,95,size=1.3},
-{1,2018,"Бронешлем 70%",0,-0.007,-0.67,0,0,95,size=1.1},
-{1,2019,"Бронешлем 80%",0,-0.01,-0.66,0,0,95,size=1.1},
+{1,2018,"Capacete Blindado 70%",0,-0.007,-0.67,0,0,95,size=1.1},
+{1,2019,"Capacete Blindado 80%",0,-0.01,-0.66,0,0,95,size=1.1},
 {3,936,"Бронежилет 30%",0,-0.01,0.03,0,-90,0,size=1},
 {3,2020,"Бронежилет 20%",-0,0.02,-0.58,0,0,95,size=1},
 {3,2396,"Бронежилет 10%",-0,0.07,0.04,0,-90,0,size=1}}},
 
 
-{287,{{1,2394,"Военный шлем 50%",0,-0,-0.71,0,0,92,size=1.1},
+{287,{{1,2394,"Capacete Militar 50%",0,-0,-0.71,0,0,92,size=1.1},
 {1,1755,"Мотошлем 10%",0,-0.13,-0.7,0,10,90,size=1},
 {1,2015,"Сварочная маска 10%",0,-0.03,-0.66,0,0,90,size=1},
 {1,2016,"Шахтерская каска 5%",0,-0,-0.8,0,0,90,size=1.2},
-{1,2018,"Бронешлем 70%",0,0.01,-0.69,0,0,90,size=1.1},
-{1,2019,"Бронешлем 80%",0,0.004,-0.69,0,0,90,size=1.1},
+{1,2018,"Capacete Blindado 70%",0,0.01,-0.69,0,0,90,size=1.1},
+{1,2019,"Capacete Blindado 80%",0,0.004,-0.69,0,0,90,size=1.1},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
 
-{259,{{false,false,"Военный шлем 50%"},
+{259,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
 
-{258,{{false,false,"Военный шлем 50%"},
+{258,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
 
-{255,{{false,false,"Военный шлем 50%"},
+{255,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0,-0.01,0.03,0,-90,0,size=0.9},
 {3,2020,"Бронежилет 20%",-0,-0,-0.53,0,0,95,size=0.9},
 {3,2396,"Бронежилет 10%",-0,0.05,0.03,0,-90,0,size=0.9}}},
 
-{249,{{false,false,"Военный шлем 50%"},
+{249,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=0.9},
 {3,2020,"Бронежилет 20%",-0,-0,-0.53,0,0,95,size=0.9},
 {3,2396,"Бронежилет 10%",-0,0.05,0.03,0,-90,0,size=1}}},
 
-{250,{{false,false,"Военный шлем 50%"},
+{250,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
 {3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
 {3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
-{252,{{false,false,"Военный шлем 50%"},
+{252,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
 {3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
 {3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
-{253,{{false,false,"Военный шлем 50%"},
+{253,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
 {3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
 {3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
-{275,{{false,false,"Военный шлем 50%"},
+{275,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{274,{{false,false,"Военный шлем 50%"},
+{274,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{264,{{false,false,"Военный шлем 50%"},
+{264,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{262,{{false,false,"Военный шлем 50%"},
+{262,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{261,{{false,false,"Военный шлем 50%"},
+{261,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
-{260,{{false,false,"Военный шлем 50%"},
+{260,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
-{false,false,"Бронешлем 70%"},
-{false,false,"Бронешлем 80%"},
+{false,false,"Capacete Blindado 70%"},
+{false,false,"Capacete Blindado 80%"},
 {false,false,"Бронежилет 30%"},
 {false,false,"Бронежилет 20%"},
 {false,false,"Бронежилет 10%"}}},
@@ -2255,7 +2255,7 @@ addEventHandler ( "onClientGUIClick", buttonOK,function()
 local passOnSave = guiGetText (editBox)
 if string.len(passOnSave)>1 then
 if tonumber(passOnSave) then
-if (getElementData(localPlayer,"Инструменты") or 0) >=1 then
+if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
 if (getElementData(localPlayer,"Лопата") or 0) >=1 then
 guiSetVisible(saveWindows, false)
 saveWindows=nil

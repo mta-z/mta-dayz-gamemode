@@ -279,7 +279,7 @@ guiLabelSetHorizontalAlign (headline["medikProgress"],"center")
 		elseif i ==30 then
 		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\nВозможность дать морфий и обезболивающее")
+		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\nВозможность дать Morfina и Analgésico")
 		elseif i ==50 then
 		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
 		elseif i ==60 then
@@ -289,7 +289,7 @@ guiLabelSetHorizontalAlign (headline["medikProgress"],"center")
 		elseif i ==80 then
 		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\Аптечка")
+		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\Kit de Primeiros Socorros")
 		elseif i ==100 then
 		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\nВозможность перелить кровь себе")
 		end

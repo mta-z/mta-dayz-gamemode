@@ -23,7 +23,7 @@ end
 
 function onClientColShapeHit( theElement, matchingDimension )
     if ( theElement == getLocalPlayer() ) then  
-        outputChatBox( "Enter /2018 in T chat to receive a gift" )
+        outputChatBox( "Digite /2022 no bate-papo para receber um presente" )
 		setElementData(localPlayer,"InElca",true,false)
     end
 end
@@ -47,7 +47,7 @@ triggerServerEvent("checkSerial", getLocalPlayer(), getLocalPlayer())
 end
 end
 
-addCommandHandler ( "2018", getGift )
+addCommandHandler ( "2022", getGift )
 
 
 

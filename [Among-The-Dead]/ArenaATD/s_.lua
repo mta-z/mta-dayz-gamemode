@@ -46,9 +46,9 @@ end
 local playersItems = {
 {"PKM",1},
 {"PKM mag",200},
-{"Infrared Vision",1},
-{"First aid kit",1},
-{"Bandages",2},
+{"Ôculos de Visão Infravermelho",1},
+{"Kit de Primeiros Socorros",1},
+{"Bandagem",2},
 
 }
 spawnArea = createColTube ( 625.78576660156,-606.81744384766,0, 100, 30)
@@ -56,7 +56,7 @@ spawnArea = createColTube ( 625.78576660156,-606.81744384766,0, 100, 30)
 function jailZoneLeave ( thePlayer )
    if getElementType ( thePlayer ) == "player" then 
 	   if getElementData(thePlayer,"partyArena") then
-		  outputChatBox ( "Return to the battle organizer before the battle begins, or your application will be automatically canceled!", thePlayer )
+		  outputChatBox ( "Retornar ao organizador de batalha antes que a batalha comece, ou sua inscrição será automaticamente cancelada!", thePlayer )
 	   end
    end
 end
@@ -106,13 +106,13 @@ end
 
 function spawnLastHIRO(player)
 local xl,xy,xz=629.93194580078,-603.71264648438,16.3359375
-local money = getElementData(player,"Money")
+local money = getElementData(player,"Dinheiro")
 local myStavka = getElementData(player,"mustavka")
-setElementData(player,"Money",money+(GLOBALMONEY-myStavka))
+setElementData(player,"Dinheiro",money+(GLOBALMONEY-myStavka))
 setElementData(player,"partyArena",false)
 setElementData(player,"inArena",false)
-outputChatBox("Congratulations!!",player)
-outputChatBox(getPlayerName(player).." won battles in the arena and took the bank in the amount of: "..(GLOBALMONEY-myStavka))
+outputChatBox("Parabéns!!",player)
+outputChatBox(getPlayerName(player).." ganhou batalhas na arena e levou o banco na quantidade de: "..(GLOBALMONEY-myStavka))
 GLOBALMONEY=0
 spawnPlayer ( player, xl,xy,xz, 0, getElementModel(player) or 170 )
 end
@@ -167,13 +167,13 @@ function createArena()
 	--1123.1901855469,-2037.1455078125,69.887756347656
 	local pedArena = createPed (261, 625.78576660156,-606.81744384766,16.795509338379,-60.0,false)
 	setElementData(pedArena,"trader",true)
-	setElementData(pedArena,"pedName","Arena Battles Organizer")
+	setElementData(pedArena,"pedName","Arena Organizador de Batalhas.")
 	
 	setElementFrozen  ( pedArena, true )
 	local arenaBlip = createBlip ( 625.78576660156,-606.81744384766,16.795509338379, 20, 2, 255, 0, 0,255)
 	local arenaMarker = createMarker ( 625.78576660156,-606.81744384766,16.795509338379, "cylinder", 1.5, 0, 0, 0, 0 )
 	addEventHandler( "onMarkerHit", arenaMarker, arenaMarkerF )
-	setTimer(preStartMessages,300000,1,"#ffaa00 Attention! #ffffff -The battle will begin in 5 minutes!")
+	setTimer(preStartMessages,300000,1,"#ffaa00 Atenção! #ffffff -A batalha começará em 5 minutos!")
 	setTimer(removeArena,600000,1,arenaBlip,pedArena,arenaMarker)
 
 end
@@ -185,8 +185,8 @@ function addPlayerInTable(player,stavka)
  if not getElementData(player,"partyArena") then
 	table.insert(globalUsersTable,{player,stavka})
 	setElementData(player,"partyArena",true)
-	local money = getElementData(player,"Деньги")
-	setElementData(player,"Деньги",money-stavka)
+	local money = getElementData(player,"Dinheiro")
+	setElementData(player,"Dinheiro",money-stavka)
 	setElementData(player,"myStavka",stavka)
 	triggerClientEvent ("refreshUserTable", source, globalUsersTable)
 	refreshArenaUsers()
@@ -215,8 +215,8 @@ function  removePlayerInTable( quitType )
 				table.remove (globalUsersTable, i)
 				setElementData(user[1],"partyArena",false)
 				
-				local money = getElementData(user[1],"Деньги")
-				setElementData(user[1],"Деньги",money+user[2])
+				local money = getElementData(user[1],"Dinheiro")
+				setElementData(user[1],"Dinheiro",money+user[2])
 				
 
 				break

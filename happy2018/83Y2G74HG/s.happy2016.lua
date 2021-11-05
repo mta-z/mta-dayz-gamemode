@@ -1,39 +1,22 @@
 ﻿local happyRANDOM = {
-{"Water Bottle"},
-{"Pasta Can"},
-{"Beans Can"},
-{"Burger"},
-{"Pizza"},
-{"Sparkling Water Bottle"},
-{"Cola"},
-{"Grilled meat"},
-{"Fried Fish"},
-{"Big Dry Paja"},
-{"Little dry paja"},
-{"Fishing rod"},
-{"Tackle"},
-{"Bait"},
-{"First aid kit"},
-{"Bag with zombie parts"},
-{"Tent"},
-{"Big tent"},
-{"Military helmet 50%"},
-{"Bronshil 70%"},
-{"Bridering 80%"},
-{"Body armor 20%"},
-{"Body armor 30%"},
-{"Backpack Commander 80"},
-{"Backpack tracker 100"},
-{"Backpack Colorado 120"},
-{"Rubbzak Russian 140"},
-{"Samurai backpack 160"},
-{"Safe"},
-{"Night vision device"},
-{"Infrared vision"},
-{"Map"},
-{"Navigator"},
-{"Instruments"},
-{"Lock"},
+    {"Garrafa de agua"},
+    {"Lata de Marcarrão"},
+    {"Lata de Feijão"},
+    {"Hambúrguer"},
+    {"Pizza"},
+    {"Garrafa de água com Gás"},
+    {"Cola"},
+    {"Carne grelhada"},
+    {"Peixe frito"},
+    {"Ração Seca Grande"},
+    {"Ração Seca Pequena"},
+    {"Vara de Pesca"},
+    {"Ôculos de Visão Noturna"},
+    {"Ôculos de Visão Infravermelha"},
+    {"Mapa"},
+    {"GPS"},
+    {"Caixa de Ferramentas"},
+    {"Algema"},
 
 }
 local gifts={
@@ -57,7 +40,7 @@ if rgift ==2 then
 local rvalue = math.random(1,5)
 local elementsInPlayer= getElementData(player,item[1]) or 0
 setElementData(player,item[1],elementsInPlayer+rvalue)
-outputChatBox("Happy New Year! Gift: "..rvalue.."шт "..item[1],player)
+outputChatBox("Feliz Ano Novo!Presente: "..rvalue.."Pacotes. "..item[1],player)
 end
 
 end
@@ -65,7 +48,7 @@ end
 for id, item in ipairs(gifts) do
 local elementsInPlayer= getElementData(player,item[1]) or 0
 setElementData(player,item[1],elementsInPlayer+item[2])
-outputChatBox("Happy New Year! Gift: "..item[2].."шт "..item[1],player)
+outputChatBox("Feliz Ano Novo!Presente: "..item[2].."Pacotes "..item[1],player)
 end
 local sanki = exports.CarSpawner:CarSpawner ( player, "spawnCar", 571 )
 
@@ -99,7 +82,7 @@ function checkSerial()
 local serial = getPlayerSerial(source)
 local serialOK = executeSQLQuery("SELECT * FROM `happySerials` WHERE `serial` =?",tostring(serial))
 if table.size(serialOK) >0 then -- такой сериал уже есть в базе
-outputChatBox("You have already received your gift!",source,255,0,0)
+outputChatBox("Você já recebeu seu presente!",source,255,0,0)
 else
 setGift(source)
 executeSQLQuery("INSERT INTO `happySerials`(`serial`) VALUES(?)", tostring(serial) )

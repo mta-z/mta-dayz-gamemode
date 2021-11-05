@@ -66,23 +66,23 @@ addEventHandler("onPlayerWasted", getRootElement(), playerdeath)
 
 local botLoot={
 
-{"Бинты",10},
-{"Аптечка",5},
-{"Антибиотики",5},
-{"Обезболивающее",5},
-{"Морфий",7},
+{"Ataduras",10},
+{"Kit de Primeiros Socorros",5},
+{"Antibiótico",5},
+{"Analgésico",5},
+{"Morfina",7},
 {"Бронежилет 20%",2},
 {"Пустая Фляга",10}, 
-{"Рюкзак ШТУРМОВОЙ 40",5},
-{"Рюкзак АБРИС 60",5},
-{"Прибор Ночного Виденья",10},
-{"Инфракрасное Виденье",10},
-{"Карта",10},
-{"Спички",10},
-{"Часы",10},
-{"Навигатор",10},
-{"Инструменты",10},
-{"Рация",10}
+{"Mochila de ASSALTO 40",5},
+{"Mochila de Montanha 60",5},
+{"Ôculos de Visão Noturna",10},
+{"Ôculos de Infravermelho",10},
+{"Mapa",10},
+{"Caixa de Fósforo",10},
+{"Relôgio",10},
+{"GPS",10},
+{"Caixa de Ferramentas",10},
+{"Walkie-Talkie",10}
 }
 function botDead(bot,killer)
 local botCol = getElementData(bot,"botParentCOL")

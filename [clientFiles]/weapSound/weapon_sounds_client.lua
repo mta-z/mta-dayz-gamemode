@@ -63,7 +63,7 @@ local  weapon = getElementData(source or pedWeap,"weaponSwith")
 	sound =	playSound3D ( "sounds/M1014.wav",startX, startY, startZ, false )
 	elseif weapon == "Remington 870" then
 	sound =	playSound3D ( "sounds/REMINGTON.ogg",startX, startY, startZ, false )
-	elseif weapon == "Remington 870 (flashlight)" then
+	elseif weapon == "Remington 870 (Com Lanterna)" then
 	sound =	playSound3D ( "sounds/REMINGTON.ogg",startX, startY, startZ, false )
 	elseif weapon == "Saiga 12K" then
 	sound =	playSound3D ( "sounds/SAIGA.wav",startX, startY, startZ, false )
@@ -93,7 +93,7 @@ local  weapon = getElementData(source or pedWeap,"weaponSwith")
 	sound =	playSound3D ( "sounds/M4A1SD.wav",startX, startY, startZ, false )
 	
 	
-	elseif weapon == "ВСС Винторез" then
+	elseif weapon == "ВСС Vintorez" then
 	local vssrand = math.random(1,2)
 	sound =	playSound3D ( "sounds/VSS_"..vssrand..".wav",startX, startY, startZ, false )
 	setSoundVolume(sound, 0.1)

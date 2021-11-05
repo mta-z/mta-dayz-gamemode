@@ -11,7 +11,7 @@ end
 function cheaterBan(reason,reasonId)
 local cheaterSerial = getPlayerSerial( source )
 if not isAdmin(source) then
-addBan( nil, nil, cheaterSerial, nil, "CHEAT("..reasonId.."), navsegda,bez razbana" )
+addBan( nil, nil, cheaterSerial, nil, "Trapaceiro("..reasonId.."), Para sempre, sem uma pausa" )
 end
 outputDebugString("BanCheater("..reason.."): "..cheaterSerial)
 exports.logger:setLog("BanCheater("..reason.."): "..cheaterSerial)

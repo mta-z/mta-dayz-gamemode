@@ -100,11 +100,11 @@ local startLoot ={
 {"M1911",1},
 {"M1911 mag",20},
 {"Кола",1},
-{"Карта",1},
-{"Антибиотики",1},
+{"Mapa",1},
+{"Antibiótico",1},
 {"Банка Бобов",1},
-{"Бинты",2},
-{"Обезболивающее",1}
+{"Ataduras",2},
+{"Analgésico",1}
 }
 
 function playerRegister(username, pass, player)

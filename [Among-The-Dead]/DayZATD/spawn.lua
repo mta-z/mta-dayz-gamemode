@@ -176,21 +176,21 @@ end
 	local progressBoec = getElementData(player,"progress.boec") or 0
 	--[[
 	
-	if data[1] =="Бинты" then
+	if data[1] =="Ataduras" then
 			setElementData(player,data[1],2)	--client
-		elseif data[1] =="Обезболивающее" then
+		elseif data[1] =="Analgésico" then
 			setElementData(player,data[1],1)	--client	
 		elseif data[1] =="MAX_Slots" then 
 			setElementData(player,data[1],15)--client
 		elseif data[1] =="Кола" then
 			setElementData(player,data[1],1) --client}
-		elseif data[1] =="Антибиотики" then
+		elseif data[1] =="Antibiótico" then
 			setElementData(player,data[1],1) --client
-		elseif data[1] =="Морфий" then
+		elseif data[1] =="Morfina" then
 			setElementData(player,data[1],1) --client
 		elseif data[1] =="Банка Бобов" then
 			setElementData(player,data[1],1)	 --client	
-		elseif data[1] =="Карта" then
+		elseif data[1] =="Mapa" then
 			setElementData(player,data[1],1)	--client
 		elseif data[1] =="M1911" then
 		if playerLvl>=0 and playerLvl<=30 then
@@ -204,7 +204,7 @@ end
 		else
 			setElementData(player,data[1],0) --client	
 		end	
-		elseif data[1] =="Аптечка" then
+		elseif data[1] =="Kit de Primeiros Socorros" then
 		if progressMedik>=90 then
 			setElementData(player,data[1],1)	--client
 		else
@@ -266,25 +266,25 @@ end
 	for i,data in ipairs(lootData) do
 	removeElementData ( player, data[1] ) 
 	
-		if data[1] =="Бинты" then
+		if data[1] =="Ataduras" then
 			setElementData(player,data[1],2)	--client
 			
-		elseif data[1] =="Обезболивающее" then
+		elseif data[1] =="Analgésico" then
 			setElementData(player,data[1],1)	--client	
 		
 		elseif data[1] =="Кола" then
 			setElementData(player,data[1],1) --client}
 			
-		elseif data[1] =="Антибиотики" then
+		elseif data[1] =="Antibiótico" then
 			setElementData(player,data[1],1) --client
 			
-		elseif data[1] =="Морфий" then
+		elseif data[1] =="Morfina" then
 			setElementData(player,data[1],1) --client
 			
 		elseif data[1] =="Банка Бобов" then
 			setElementData(player,data[1],1)	 --client
 			
-		elseif data[1] =="Карта" then
+		elseif data[1] =="Mapa" then
 			setElementData(player,data[1],1)	--client
 			
 		elseif data[1] =="M1911" then
@@ -303,7 +303,7 @@ end
 			setElementData(player,data[1],0) --client	
 		end	
 		
-		elseif data[1] =="Аптечка" then
+		elseif data[1] =="Kit de Primeiros Socorros" then
 		
 		if progressMedik>=90 then
 			setElementData(player,data[1],1)	--client
