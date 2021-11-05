@@ -323,15 +323,15 @@ function playerDamagedFromBot ( hitElement )
 	if weapName == "MG36" then
 	damage=5000
 	botWeapon = "#FFFFFF c помощью MG36"
-	botName = "#FF0000Бандит(пулеметчик)"
+	botName = "#FF0000Bandido (Pesado)"
 	elseif weapName == "G36C-SD" then
 	damage=4000
 	botWeapon = "#FFFFFF c помощью G36C-SD"
-	botName = "#FF0000Бандит(штурмовик)"
+	botName = "#FF0000Bandido (Stormtrooper)"
 	elseif weapName =="DMR" then
 	damage=9000
 	botWeapon = "#FFFFFF c помощью DMR"
-	botName = "#FF0000Бандит(снайпер)"
+	botName = "#FF0000Bandido (Atirador)"
 	end
 	setElementData(localPlayer,"blood",getElementData(localPlayer,"blood")-damage) --server
 	showWhiteScreen()

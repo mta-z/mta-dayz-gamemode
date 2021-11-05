@@ -20,8 +20,8 @@ fading2 = "up"
 		local fuel = getElementData(getElementData(theVehicle,"parent"),"fuel")
 		local needengine = getElementData(theVehicle,"needengines")
 		local needtires = getElementData(theVehicle,"needtires")
-		local engine = getElementData(getElementData(theVehicle,"parent"),"Мотор_inVehicle") or 0
-		local tires = getElementData(getElementData(theVehicle,"parent"),"Колесо_inVehicle") or 0
+		local engine = getElementData(getElementData(theVehicle,"parent"),"Motor_inVehicle") or 0
+		local tires = getElementData(getElementData(theVehicle,"parent"),"Pneu_inVehicle") or 0
 		local steelList= getElementData(theVehicle,"steelList") or 0
 		local VH = ( getElementHealth( theVehicle ) )
            

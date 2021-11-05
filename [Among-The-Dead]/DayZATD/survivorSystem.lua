@@ -501,7 +501,7 @@ if data == "food" then
 	
 	setPedAnimation (source,"VENDING","VEND_Drink2_P",-1,false,false,false,false) 
 	if itemName == "Полная Фляга" then
-		setElementData(source,"Пустая Фляга",(getElementData(source,"Пустая Фляга") or 0)+1) --client
+		setElementData(source,"Garrafa de Água Vazia",(getElementData(source,"Garrafa de Água Vazia") or 0)+1) --client
 	end
 end
 triggerClientEvent (source, "displayClientInfo", source,"Еда",shownInfos["youconsumed"].." "..itemName,22,255,0)

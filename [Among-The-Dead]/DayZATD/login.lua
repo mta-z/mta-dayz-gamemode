@@ -327,8 +327,8 @@ setElementData(getRootElement(),"serverName",getServerName ())
 				setElementPosition(veh,xxx,yyy,zzz+0.1)
 				setElementRotation(veh,0,0,0)
 				--Мотор + Колесо	
-				setElementData(vehCol,"Колесо_inVehicle",math.random(0,needtires)) --client
-				setElementData(vehCol,"Мотор_inVehicle",math.random(0,needengines)) --client
+				setElementData(vehCol,"Pneu_inVehicle",math.random(0,needtires)) --client
+				setElementData(vehCol,"Motor_inVehicle",math.random(0,needengines)) --client
 				setElementData(vehCol,"fuel",5) --client
 			end
 		--others
@@ -372,7 +372,7 @@ setElementData(getRootElement(),"serverName",getServerName ())
 			triggerEvent ( "setCarSettings", veh,settings )	
 		end
 		
-		triggerEvent ( "setWheelStates", getRootElement(), veh,getElementData(vehCol,"Колесо_inVehicle"),"-" )
+		triggerEvent ( "setWheelStates", getRootElement(), veh,getElementData(vehCol,"Pneu_inVehicle"),"-" )
 	end
 	end
 	

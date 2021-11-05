@@ -189,8 +189,8 @@ YashikLoot = {
 
 {"Capacete Blindado 70%",1},
 {"Capacete Blindado 80%",1},
-{"Бронежилет 20%",1},
-{"Пустая Фляга",3}, 
+{"Colete 20%",1},
+{"Garrafa de Água Vazia",3}, 
 {"Mochila de ASSALTO 40",1},
 {"Mochila de Montanha 60",1},
 {"Mochila do Comandante 80",1},
@@ -318,7 +318,7 @@ weaponAmmoTable = {
 {"Жареное Мясо"},
 {"Analgésico"},
 {"Бинокль"},
-{"Пустая Фляга"},
+{"Garrafa de Água Vazia"},
 {"Пустая Бутылка"},
 {"Несъедобный Бургер"},
 {"Walkie-Talkie"},
@@ -339,7 +339,7 @@ weaponAmmoTable = {
 {"Наживка"},
 {"Жареная рыба"},
 {"Сырая рыба"},
---{"Бронежилет"},
+--{"Colete"},
 --{"Capacete Militar"},
 --{"Противогаз"},
 {"Металлический ковш 1"},
@@ -453,9 +453,9 @@ weaponAmmoTable = {
 {"Шахтерская каска 5%"},
 {"Capacete Blindado 70%"},
 {"Capacete Blindado 80%"},
-{"Бронежилет 20%"},
-{"Бронежилет 30%"},
-{"Бронежилет 10%"},
+{"Colete 20%"},
+{"Colete 30%"},
+{"Colete 10%"},
 {"Бензопила"},
 }
  playerDataTable = {
@@ -495,8 +495,8 @@ weaponAmmoTable = {
 
  vehicleDataTable = {
 {"MAX_Slots"},
-{"Колесо_inVehicle"},
-{"Мотор_inVehicle"},
+{"Pneu_inVehicle"},
+{"Motor_inVehicle"},
 {"fuel"},
 
 }
