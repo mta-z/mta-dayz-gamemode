@@ -58,7 +58,7 @@ if rgift ==2 then
 local rvalue = math.random(1,5)
 local elementsInPlayer= getElementData(player,item[1]) or 0
 setElementData(player,item[1],elementsInPlayer+rvalue)
-outputChatBox("С Новым Годом! Подарок: "..rvalue.."шт "..item[1],player)
+outputChatBox("Happy New Year! Gift: "..rvalue.."шт "..item[1],player)
 end
 
 end
@@ -66,7 +66,7 @@ end
 for id, item in ipairs(gifts) do
 local elementsInPlayer= getElementData(player,item[1]) or 0
 setElementData(player,item[1],elementsInPlayer+item[2])
-outputChatBox("С Новым Годом! Подарок: "..item[2].."шт "..item[1],player)
+outputChatBox("Happy New Year! Gift: "..item[2].."шт "..item[1],player)
 end
 local sanki = exports.CarSpawner:CarSpawner ( player, "spawnCar", 571 )
 
@@ -100,7 +100,7 @@ function checkSerial()
 local serial = getPlayerSerial(source)
 local serialOK = executeSQLQuery("SELECT * FROM `happySerials` WHERE `serial` =?",tostring(serial))
 if table.size(serialOK) >0 then -- такой сериал уже есть в базе
-outputChatBox("Вы уже получили свой подарок!",source,255,0,0)
+outputChatBox("You have already received your gift!",source,255,0,0)
 else
 setGift(source)
 executeSQLQuery("INSERT INTO `happySerials`(`serial`) VALUES(?)", tostring(serial) )

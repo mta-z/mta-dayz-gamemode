@@ -23,7 +23,7 @@ end
 
 function onClientColShapeHit( theElement, matchingDimension )
     if ( theElement == getLocalPlayer() ) then  
-        outputChatBox( "Введите /2018 в T чат чтобы получить подарок" )
+        outputChatBox( "Enter /2018 in T chat to receive a gift" )
 		setElementData(localPlayer,"InElca",true,false)
     end
 end
