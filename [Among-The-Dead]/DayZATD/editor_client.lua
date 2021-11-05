@@ -249,7 +249,7 @@ weaponAmmoTable = {
 {"Жареное Мясо"},
 {"Analgésico"},
 {"Бинокль"},
-{"Пустая Фляга"},
+{"Garrafa de Água Vazia"},
 {"Пустая Бутылка"},
 {"Несъедобный Бургер"},
 {"Walkie-Talkie"},
@@ -270,7 +270,7 @@ weaponAmmoTable = {
 {"Наживка"},
 {"Жареная рыба"},
 {"Сырая рыба"},
---{"Бронежилет"},
+--{"Colete"},
 --{"Capacete Militar"},
 --{"Противогаз"},
 {"Металлический ковш 1"},
@@ -384,9 +384,9 @@ weaponAmmoTable = {
 {"Шахтерская каска 5%"},
 {"Capacete Blindado 70%"},
 {"Capacete Blindado 80%"},
-{"Бронежилет 20%"},
-{"Бронежилет 30%"},
-{"Бронежилет 10%"},
+{"Colete 20%"},
+{"Colete 30%"},
+{"Colete 10%"},
 {"Бензопила"},
 }
  playerDataTable = {
@@ -426,8 +426,8 @@ weaponAmmoTable = {
 
  vehicleDataTable = {
 {"MAX_Slots"},
-{"Колесо_inVehicle"},
-{"Мотор_inVehicle"},
+{"Pneu_inVehicle"},
+{"Motor_inVehicle"},
 {"fuel"},
 
 }

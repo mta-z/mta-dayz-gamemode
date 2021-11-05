@@ -434,7 +434,7 @@ end
 				
 				if not isVehicleLocked(arg3)  then
 				if progressEnginer >=40 then
-					if getElementData(getElementData(arg3,"parent"),"Колесо_inVehicle") >=1 then
+					if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
 
 					createMenuItem(number,"Снять колесо","nscrewwheel")
@@ -463,14 +463,14 @@ end
 					end
 					end
 					
-					if getElementData(getElementData(arg3,"parent"),"Мотор_inVehicle") >=1 then
+					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
 					createMenuItem(number,"Снять мотор","nscrewengine")
 					return
 					end
 					else
 					if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
-						if getElementData(getElementData(arg3,"parent"),"Колесо_inVehicle") >=1 then
+						if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
 					createMenuItem(number,"Снять колесо","nscrewwheel")
 					end
@@ -497,7 +497,7 @@ end
 					
 					end
 					end
-					if getElementData(getElementData(arg3,"parent"),"Мотор_inVehicle") >=1 then
+					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
 					createMenuItem(number,"Снять мотор","nscrewengine")
 					return
@@ -609,9 +609,9 @@ if arg1 == "patrol" then
 end
 
 if arg1 == "water" then
-	if (getElementData(localPlayer,"Пустая Фляга") or 0) >= 1 then
+	if (getElementData(localPlayer,"Garrafa de Água Vazia") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Наполнить: Пустая Фляга","upwater")
+		createMenuItem(number,"Наполнить: Garrafa de Água Vazia","upwater")
 	end	
 end
 
@@ -754,7 +754,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("water")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Наполнить Флягу","Требуется: Пустая Фляга",source)
+			setNewbieInfo (true,"Наполнить Флягу","Требуется: Garrafa de Água Vazia",source)
 			return
 		end
 		
@@ -903,7 +903,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			local maxFuel= getElementData(getElementData(source,"parent"),"maxfuel") or 0
 			local needtires = getElementData(getElementData(source,"parent"),"needtires") or 0 
 		local needengines= getElementData(getElementData(source,"parent"),"needengines") or 0 
-			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Транспортное средство" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nКолесо: "..getElementData(source,"Колесо_inVehicle").."/"..needtires.."\nМотор: "..getElementData(source,"Мотор_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
+			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Транспортное средство" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nКолесо: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nМотор: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
 			else
 			--
 			end
@@ -1591,7 +1591,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "upwater" then
-			setElementData(localPlayer,"Пустая Фляга",(getElementData(localPlayer,"Пустая Фляга") or 0)-1) --server
+			setElementData(localPlayer,"Garrafa de Água Vazia",(getElementData(localPlayer,"Garrafa de Água Vazia") or 0)-1) --server
 			setElementData(localPlayer,"Полная Фляга",(getElementData(localPlayer,"Полная Фляга") or 0)+1) --server
 			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы наполнили флягу!",22,255,0)
 			disableMenu()
@@ -2089,20 +2089,20 @@ end
 
 function vehicleAction(act,col)
 if getPlayerCurrentSlots() < getElementData(localPlayer,"MAX_Slots")+PlusSlots() then
-local whinVh = getElementData(col,"Колесо_inVehicle")
+local whinVh = getElementData(col,"Pneu_inVehicle")
 local whinUser = getElementData(localPlayer,"Колесо") or 0
-local enginVh = getElementData(col,"Мотор_inVehicle")
+local enginVh = getElementData(col,"Motor_inVehicle")
 local enginUser = getElementData(localPlayer,"Мотор") or 0
 local fuelVh = getElementData(col,"fuel")
 local fuelUser = getElementData(localPlayer,"Galão de Combútivel Completo") or 0
 if act == 1 and whinVh >=1  then
-setElementData(col,"Колесо_inVehicle",whinVh-1) --server
+setElementData(col,"Pneu_inVehicle",whinVh-1) --server
 setElementData(localPlayer,"Колесо",whinUser+1) --server
 triggerServerEvent("setWheelStates2",localPlayer,getElementData(col,"parent"),whinVh-1,"-")
 end
 if act == 2 and enginVh >=1 then
 
-setElementData(col,"Мотор_inVehicle",enginVh-1) --server
+setElementData(col,"Motor_inVehicle",enginVh-1) --server
 setElementData(localPlayer,"Мотор",enginUser+1) --server
 end
 

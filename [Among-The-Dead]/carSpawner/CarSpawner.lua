@@ -230,8 +230,8 @@ end
 			setElementData(veh,"steelList",math.random(500,1000))
 			end
 		
-		setElementData(vehCol,"Колесо_inVehicle",tires)
-		setElementData(vehCol,"Мотор_inVehicle",engine)
+		setElementData(vehCol,"Pneu_inVehicle",tires)
+		setElementData(vehCol,"Motor_inVehicle",engine)
 
 		--vehicle_indentifikation
 		setElementData(vehCol,"spawn",{id,x,y,z})

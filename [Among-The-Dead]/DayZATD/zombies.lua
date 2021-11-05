@@ -38,7 +38,7 @@ itemTableZombies = {
 }
 
 itemTableZombieMilitaryBig = {
-{"Пустая Фляга",2683,1.5,0,5}, 
+{"Garrafa de Água Vazia",2683,1.5,0,5}, 
 {"Граната",342,1,0,1},
 {"Ôculos de Visão Noturna",368,1,90,6},
 {"Бинокль",369,1,0,2},
@@ -66,14 +66,14 @@ itemTableZombieMilitaryBig = {
 {"Saiga 12K",1911,1,90,4},
 {"Mochila de Explorador 100",953,1,0,3},
 {"Capacete Militar 50%",2394,1,0,7,0.7},
-{"Бронежилет 20%",2020,1,90,5,0,50},
+{"Colete 20%",2020,1,90,5,0,50},
 {"Большой сухой паёк",2778,1,0,4},
 {"Маленький сухой паёк",1956,1,0,6},
 }
 
 
 itemTableZombieMilitarySmall = {
-{"Пустая Фляга",2683,1.5,0,10}, 
+{"Garrafa de Água Vazia",2683,1.5,0,10}, 
 {"Граната",342,1,0,5},
 {"Ôculos de Visão Noturna",368,1,90,6},
 {"Бинокль",369,1,0,5},
@@ -89,7 +89,7 @@ itemTableZombieMilitarySmall = {
 {"M9 SD",1881,1,90,7},
 {"M1014",1905,1,90,7},
 {"Saiga 12K",1911,1,90,6},
-{"Бронежилет 20%",2020,1,90,7,0,50},
+{"Colete 20%",2020,1,90,7,0,50},
 {"Маленький сухой паёк",1956,1,0,10},
 }
 itemTableZombiePolice = {
@@ -99,7 +99,7 @@ itemTableZombiePolice = {
 {"M4A1",2785,1,90,2},
 {"AKS-74U",1852,1,90,5},
 {"M1014",1905,1,90,7},
-{"Бронежилет 20%",2020,1,90,4,0,50},
+{"Colete 20%",2020,1,90,4,0,50},
 {"Маленький сухой паёк",1956,1,0,5},
 }
 itemTableZombieMedik = {
@@ -280,7 +280,7 @@ function zombieKilled (killer,headshot)
 		setElementData(pedCol,"zombieR",true) --client
 		end
 		 
-		setElementData(pedCol,"deadreason","Похоже он мертв. Расчетное время смерти: "..hours..":"..minutes.."") --client
+		setElementData(pedCol,"deadreason","Parece que ele está morto. Hora estimada da morte: "..hours..":"..minutes.."") --client
 	-- 68 вояка
 -- 22 док
 -- 70 полицай

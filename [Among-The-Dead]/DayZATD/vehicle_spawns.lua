@@ -85,8 +85,8 @@ counter = getAccountData(vehicleManager,"vehicleamount") or false
 		
 		setElementData(vehCol,"MAX_Slots",maxSlots) --client
 		local tiresRandom=math.random(0,tires)
-		setElementData(vehCol,"Колесо_inVehicle",tonumber(tiresRandom)) --client
-		setElementData(vehCol,"Мотор_inVehicle",math.random(0,engine)) --client
+		setElementData(vehCol,"Pneu_inVehicle",tonumber(tiresRandom)) --client
+		setElementData(vehCol,"Motor_inVehicle",math.random(0,engine)) --client
 		setElementData(vehCol,"spawn",{vehid,x,y,z})
 		setElementData(vehCol,"fuel",5) --client
 		setElementData(veh,"maxfuel",tonumber(maxFuel))
@@ -132,8 +132,8 @@ for i,veh in ipairs(carSpawns) do
 		
 		setElementData(vehCol,"MAX_Slots",maxSlots) --client
 		local tiresRandom=math.random(0,tires)
-		setElementData(vehCol,"Колесо_inVehicle",tonumber(tiresRandom)) --client
-		setElementData(vehCol,"Мотор_inVehicle",math.random(0,engine)) --client
+		setElementData(vehCol,"Pneu_inVehicle",tonumber(tiresRandom)) --client
+		setElementData(vehCol,"Motor_inVehicle",math.random(0,engine)) --client
 		setElementData(vehCol,"spawn",{vehid,x,y,z})
 		setElementData(vehCol,"fuel",5) --client
 		setElementData(veh,"maxfuel",tonumber(maxFuel))
@@ -269,7 +269,7 @@ local water ={
 
 local lootItems = {
 ["helicrashsides"] = {
-{"Пустая Фляга",2683,1.5,0,2}, 
+{"Garrafa de Água Vazia",2683,1.5,0,2}, 
 {"Сейф",1907,1,0,1,-0.350},
 --{"Mina",1862,2,0,0.8},
 {"Sinal de Fogo",324,1,90,1},
@@ -319,7 +319,7 @@ local lootItems = {
 {"Capacete Militar 50%",2394,1,0,0.1,0.7},
 {"Capacete Blindado 70%",2018,1,0,0.1,0.7},
 {"Capacete Blindado 80%",2019,1,0,0.05,0.7},
-{"Бронежилет 20%",2020,1,90,0.1,0,50},
+{"Colete 20%",2020,1,90,0.1,0,50},
 
 {"Большой сухой паёк",2778,1,0,0.5},
 {"Маленький сухой паёк",1956,1,0,1},
@@ -559,9 +559,9 @@ if not counterVeh then return end
 		setElementData(vehCol,"MAX_Slots",maxSlots) --client
 		
 		local randomTires = math.random(0,tonumber(needtires))
-		setElementData(vehCol,"Колесо_inVehicle",tonumber(randomTires)) --client
+		setElementData(vehCol,"Pneu_inVehicle",tonumber(randomTires)) --client
 		
-		setElementData(vehCol,"Мотор_inVehicle",math.random(0,needengines)) --client
+		setElementData(vehCol,"Motor_inVehicle",math.random(0,needengines)) --client
 		setElementData(veh,"maxfuel",tonumber(maxfuel))
 		setElementData(veh,"expenFuel",tonumber(expenFuel))
 		setElementData(veh,"needtires",tonumber(needtires))
@@ -602,12 +602,12 @@ function onPlayerEnterDayzVehicle(veh,seat)
 		
 	
 	setVehicleEngineState ( veh, false )
-	if ((getElementData(col,"Колесо_inVehicle") or 0) < tonumber(needtires)) then
+	if ((getElementData(col,"Pneu_inVehicle") or 0) < tonumber(needtires)) then
 		setVehicleEngineState ( veh, false )
 		
 		return	
 	end
-	if ((getElementData(col,"Мотор_inVehicle") or 0) < tonumber(needengines)) then
+	if ((getElementData(col,"Motor_inVehicle") or 0) < tonumber(needengines)) then
 		setVehicleEngineState ( veh, false )
 		
 		return
@@ -713,7 +713,7 @@ function fixVehicleDayZ(veh,player)
 	setElementData(player,"repairingvehicle",nil,false)
 	triggerClientEvent (player,"rapireStopVH",player,player)
 	triggerClientEvent (player, "displayClientInfo", player,"Транспортное средство","Вы починили Т/С",22,255,0)
-	local wheels= getElementData(getElementData(veh,"parent"),"Колесо_inVehicle") or false
+	local wheels= getElementData(getElementData(veh,"parent"),"Pneu_inVehicle") or false
 	if wheels then
 	triggerEvent ( "setWheelStates2", getRootElement(), veh,wheels,"-" )
 	end

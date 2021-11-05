@@ -184,14 +184,14 @@
 {"Шахтерская каска 5%",1,"Надеть",{1,5}},
 {"Capacete Blindado 70%",5,"Надеть",{1,70}},
 {"Capacete Blindado 80%",5,"Надеть",{1,80}},
-{"Бронежилет 20%",10,"Надеть",{2,20}},
-{"Бронежилет 30%",15,"Надеть",{2,30}},
-{"Бронежилет 10%",5,"Надеть",{2,10}},
+{"Colete 20%",10,"Надеть",{2,20}},
+{"Colete 30%",15,"Надеть",{2,30}},
+{"Colete 10%",5,"Надеть",{2,10}},
 
 
 
 
-{"Пустая Фляга",1,"Наполнить"}, 
+{"Garrafa de Água Vazia",1,"Наполнить"}, 
 {"Пустая Бутылка",1},
 {"Несъедобный Бургер",1},
 {"Рюкзак САТУРН 20",1,"Экипировать",20},
@@ -1099,7 +1099,7 @@ end
 				local veh = getElementData(isPlayerInLoot(),"parent")
 		local needtires = getElementData(veh,"needtires")
 		local needengines= getElementData(veh,"needengines")
-				if itemName == "Колесо" and (getElementData(isPlayerInLoot(),"Колесо_inVehicle") or 0) < needtires  or itemName == "Мотор" and (getElementData(isPlayerInLoot(),"Мотор_inVehicle") or 0)  < needengines then
+				if itemName == "Колесо" and (getElementData(isPlayerInLoot(),"Pneu_inVehicle") or 0) < needtires  or itemName == "Мотор" and (getElementData(isPlayerInLoot(),"Motor_inVehicle") or 0)  < needengines then
 					
 					local progressEnginer = getElementData(localPlayer,"progress.enginer") or 0
 					if progressEnginer <20 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0)	<=0 then 
@@ -1109,7 +1109,7 @@ end
 					
 					triggerEvent("onPlayerMoveItemOutOFInventoryFunc",localPlayer,itemName.."_inVehicle",isPlayerInLoot())
 					local Vehicle = getElementData(isPlayerInLoot(),"parent")
-		triggerServerEvent("setWheelStates2",localPlayer,Vehicle,getElementData(isPlayerInLoot(),"Колесо_inVehicle"),"-")
+		triggerServerEvent("setWheelStates2",localPlayer,Vehicle,getElementData(isPlayerInLoot(),"Pneu_inVehicle"),"-")
 
 				elseif isToolbeltItem(itemName) then
 					triggerEvent("onPlayerMoveItemOutOFInventoryFunc",localPlayer,itemName,isPlayerInLoot(),all)
@@ -1231,8 +1231,8 @@ end
 			itemPlus = getElementData(localPlayer,itemName) or 0
 		end
 
-if itemName == "Колесо_inVehicle" then itemPlus = 1 end
-if itemName == "Мотор_inVehicle" then itemPlus = 1 end
+if itemName == "Pneu_inVehicle" then itemPlus = 1 end
+if itemName == "Motor_inVehicle" then itemPlus = 1 end
 --if (getElementData(localPlayer,itemName2) or 0)/itemPlus < 1 then
 --	triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить!",255,22,0)
 --return
@@ -1320,8 +1320,8 @@ end
 		triggerServerEvent("playerDropAItem",localPlayer,itemName,false)
 	end
 	end
-	if itemName == "Колесо_inVehicle" then itemName = "Колесо" end
-	if itemName == "Мотор_inVehicle" then itemName = "Мотор" end
+	if itemName == "Pneu_inVehicle" then itemName = "Колесо" end
+	if itemName == "Motor_inVehicle" then itemName = "Мотор" end
 	
 	setElementData(localPlayer,itemName,(getElementData(localPlayer,itemName) or 0)-itemPlus) --server
 	if loot and getElementData(loot,"itemloot") then
@@ -1762,7 +1762,7 @@ local isOnGround = isPedOnGround(localPlayer)
 		triggerServerEvent("onPlayerChangeSkin",localPlayer,itemName,itemData)
 		end
 	end
-	elseif itemName == "Пустая Фляга" then
+	elseif itemName == "Garrafa de Água Vazia" then
 		triggerServerEvent("onPlayerRefillWaterBottle",localPlayer,itemName)
 		
 	elseif itemName == "Палатка" then
@@ -1871,81 +1871,81 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {286,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {285,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {284,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {283,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {282,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {281,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {276,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {280,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 
 {279,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -1953,9 +1953,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0.02,0,0.06,5,-90,5,size =1},
-{3,2020,"Бронежилет 20%", 0, 0.01, -0.54, 0, 0, 95,size=1},
-{3,2396,"Бронежилет 10%",0,0.06,0.07,0,-93,5,size =1}}},
+{3,936,"Colete 30%",0.02,0,0.06,5,-90,5,size =1},
+{3,2020,"Colete 20%", 0, 0.01, -0.54, 0, 0, 95,size=1},
+{3,2396,"Colete 10%",0,0.06,0.07,0,-93,5,size =1}}},
 --[[
 {176,{{1,2394,"Capacete Militar 50%",0,0,-0.560,1.5,4.5,94, size = 1,profit=50},
 
@@ -1964,7 +1964,7 @@ local clotTable={
 {1,2016,"Шахтерская каска 5%",0,0,-0.560,1.6,3.5,94, size = 1.015,profit=5},
 {1,2018,"Capacete Blindado 70%",0,-0.060,-0.550,0.5,9,88, size = 1.010,profit=70},
 {1,2019,"Capacete Blindado 80%",0,-0.060,-0.550,0.5,9,88, size = 1,profit=80},
-{3,2020,"Бронежилет 20%",0.040,0.030,-0.540,-3,0,97, size = 1,profit=20}}},
+{3,2020,"Colete 20%",0.040,0.030,-0.540,-3,0,97, size = 1,profit=20}}},
 
 ]]
 {278,{{1,2394,"Capacete Militar 50%",0,0.09,-0.715,0.9,0,95,size=1.1},
@@ -1973,9 +1973,9 @@ local clotTable={
 {1,2016,"Шахтерская каска 5%",0,0.1,-0.79,0.9,0,95,size=1.2},
 {1,2018,"Capacete Blindado 70%",0,0.1,-0.621,0.9,0,95,size=1},
 {1,2019,"Capacete Blindado 80%",-0.01,0.1,-0.7,0.9,0,95,size=1.1},
-{3,936,"Бронежилет 30%",0.01,-0.01,0.06,0,-90,0,size = 1},
-{3,2020,"Бронежилет 20%",0.05, 0.02, -0.65, -3, 0, 95, size= 1.1},
-{3,2396,"Бронежилет 10%",0,0.08,0.03,0,-90,5,size = 1.1}}},
+{3,936,"Colete 30%",0.01,-0.01,0.06,0,-90,0,size = 1},
+{3,2020,"Colete 20%",0.05, 0.02, -0.65, -3, 0, 95, size= 1.1},
+{3,2396,"Colete 10%",0,0.08,0.03,0,-90,5,size = 1.1}}},
 
 
 {277,{{1,2394,"Capacete Militar 50%",0,-0.01,-0.76,0,0,90,size=1.2},
@@ -1984,9 +1984,9 @@ local clotTable={
 {1,2016,"Шахтерская каска 5%",0.005,-0.01,-0.87,0,0,95,size=1.3},
 {1,2018,"Capacete Blindado 70%",0,-0.007,-0.67,0,0,95,size=1.1},
 {1,2019,"Capacete Blindado 80%",0,-0.01,-0.66,0,0,95,size=1.1},
-{3,936,"Бронежилет 30%",0,-0.01,0.03,0,-90,0,size=1},
-{3,2020,"Бронежилет 20%",-0,0.02,-0.58,0,0,95,size=1},
-{3,2396,"Бронежилет 10%",-0,0.07,0.04,0,-90,0,size=1}}},
+{3,936,"Colete 30%",0,-0.01,0.03,0,-90,0,size=1},
+{3,2020,"Colete 20%",-0,0.02,-0.58,0,0,95,size=1},
+{3,2396,"Colete 10%",-0,0.07,0.04,0,-90,0,size=1}}},
 
 
 {287,{{1,2394,"Capacete Militar 50%",0,-0,-0.71,0,0,92,size=1.1},
@@ -1995,9 +1995,9 @@ local clotTable={
 {1,2016,"Шахтерская каска 5%",0,-0,-0.8,0,0,90,size=1.2},
 {1,2018,"Capacete Blindado 70%",0,0.01,-0.69,0,0,90,size=1.1},
 {1,2019,"Capacete Blindado 80%",0,0.004,-0.69,0,0,90,size=1.1},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 
 {259,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2005,9 +2005,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 
 {258,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2015,9 +2015,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 
 {255,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2025,9 +2025,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0,-0.01,0.03,0,-90,0,size=0.9},
-{3,2020,"Бронежилет 20%",-0,-0,-0.53,0,0,95,size=0.9},
-{3,2396,"Бронежилет 10%",-0,0.05,0.03,0,-90,0,size=0.9}}},
+{3,936,"Colete 30%",0,-0.01,0.03,0,-90,0,size=0.9},
+{3,2020,"Colete 20%",-0,-0,-0.53,0,0,95,size=0.9},
+{3,2396,"Colete 10%",-0,0.05,0.03,0,-90,0,size=0.9}}},
 
 {249,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2035,9 +2035,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=0.9},
-{3,2020,"Бронежилет 20%",-0,-0,-0.53,0,0,95,size=0.9},
-{3,2396,"Бронежилет 10%",-0,0.05,0.03,0,-90,0,size=1}}},
+{3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=0.9},
+{3,2020,"Colete 20%",-0,-0,-0.53,0,0,95,size=0.9},
+{3,2396,"Colete 10%",-0,0.05,0.03,0,-90,0,size=1}}},
 
 {250,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2045,9 +2045,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
-{3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
-{3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
+{3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
+{3,2020,"Colete 20%",-0,-0,-0.55,0,0,95,size=1},
+{3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {252,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2055,9 +2055,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
-{3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
-{3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
+{3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
+{3,2020,"Colete 20%",-0,-0,-0.55,0,0,95,size=1},
+{3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {253,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2065,9 +2065,9 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{3,936,"Бронежилет 30%",0,-0.04,0.03,0,-90,0,size=1},
-{3,2020,"Бронежилет 20%",-0,-0,-0.55,0,0,95,size=1},
-{3,2396,"Бронежилет 10%",-0,0.05,0.06,0,-90,0,size=1}}},
+{3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
+{3,2020,"Colete 20%",-0,-0,-0.55,0,0,95,size=1},
+{3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {275,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
@@ -2075,54 +2075,54 @@ local clotTable={
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {274,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {264,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {262,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {261,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 {260,{{false,false,"Capacete Militar 50%"},
 {false,false,"Мотошлем 10%"},
 {false,false,"Сварочная маска 10%"},
 {false,false,"Шахтерская каска 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
-{false,false,"Бронежилет 30%"},
-{false,false,"Бронежилет 20%"},
-{false,false,"Бронежилет 10%"}}},
+{false,false,"Colete 30%"},
+{false,false,"Colete 20%"},
+{false,false,"Colete 10%"}}},
 
 
 

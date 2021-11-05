@@ -101,8 +101,8 @@ TrainLoot = {
 
 {"Capacete Blindado 70%",2},
 {"Capacete Blindado 80%",1},
-{"Бронежилет 20%",2},
-{"Пустая Фляга",10}, 
+{"Colete 20%",2},
+{"Garrafa de Água Vazia",10}, 
 {"Mochila de ASSALTO 40",5},
 {"Mochila de Montanha 60",5},
 {"Mochila do Comandante 80",4},
