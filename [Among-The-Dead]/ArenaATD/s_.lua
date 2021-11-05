@@ -46,9 +46,9 @@ end
 local playersItems = {
 {"PKM",1},
 {"PKM mag",200},
-{"Инфракрасное Виденье",1},
-{"Аптечка",1},
-{"Бинты",2},
+{"Infrared Vision",1},
+{"First aid kit",1},
+{"Bandages",2},
 
 }
 spawnArea = createColTube ( 625.78576660156,-606.81744384766,0, 100, 30)
@@ -167,13 +167,13 @@ function createArena()
 	--1123.1901855469,-2037.1455078125,69.887756347656
 	local pedArena = createPed (261, 625.78576660156,-606.81744384766,16.795509338379,-60.0,false)
 	setElementData(pedArena,"trader",true)
-	setElementData(pedArena,"pedName","Организатор боёв на арене")
+	setElementData(pedArena,"pedName","Arena Battles Organizer")
 	
 	setElementFrozen  ( pedArena, true )
 	local arenaBlip = createBlip ( 625.78576660156,-606.81744384766,16.795509338379, 20, 2, 255, 0, 0,255)
 	local arenaMarker = createMarker ( 625.78576660156,-606.81744384766,16.795509338379, "cylinder", 1.5, 0, 0, 0, 0 )
 	addEventHandler( "onMarkerHit", arenaMarker, arenaMarkerF )
-	setTimer(preStartMessages,300000,1,"#ffaa00Внимание! #ffffff - Бой начнется через 5 минут!")
+	setTimer(preStartMessages,300000,1,"#ffaa00 Attention! #ffffff -The battle will begin in 5 minutes!")
 	setTimer(removeArena,600000,1,arenaBlip,pedArena,arenaMarker)
 
 end
