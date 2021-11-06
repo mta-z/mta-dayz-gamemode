@@ -49,7 +49,7 @@ if isAdmin then
 		end
 		
 	else
-	outputChatBox("Игрок вышел или поменял ник", source, 255, 0, 0)
+	outputChatBox("ИгрOK вышел или поменял ник", source, 255, 0, 0)
 	end	
 end
 
@@ -273,13 +273,13 @@ return
 
 end
 else
-outputChatBox("Этот игрок в другой группе!",owner)
+outputChatBox("Этот игрOK в другой группе!",owner)
 return
 end
 
 
 else
-outputChatBox("Этого игрока нет в вашей группе!",owner)
+outputChatBox("Этого игрOKа нет в вашей группе!",owner)
 return
 end
 

@@ -621,7 +621,7 @@ end
 			
 			
 			setElementData(hitElement,"blood",getElementData(hitElement,"blood")-damage) --server
-			outputConsole ( "Урон по игроку: "..getPlayerName(hitElement).." с учетом навыков/брони = "..damage..". Остаток: "..getElementData(hitElement,"blood") )
+			outputConsole ( "Урон по игрOKу: "..getPlayerName(hitElement).." с учетом навыков/брони = "..damage..". ОстатOK: "..getElementData(hitElement,"blood") )
 			
 			
 			
@@ -753,7 +753,7 @@ end
 			
 			setElementData(source,"blood",getElementData(source,"blood")-damage) --server
 			
-			outputConsole ( "Урон по игроку: "..getPlayerName(source).." с учетом навыков/брони = "..damage..". Остаток: "..getElementData(source,"blood") )
+			outputConsole ( "Урон по игрOKу: "..getPlayerName(source).." с учетом навыков/брони = "..damage..". ОстатOK: "..getElementData(source,"blood") )
 			--playRandomHitSound()
 			
 
@@ -1416,7 +1416,7 @@ function checkBuggedAccount()
 		if getElementData(localPlayer,"logedin") then
 			if getElementModel(localPlayer) == 0  then
 			--triggerServerEvent("spawnATDPlayer",localPlayer,localPlayer)
-				outputChatBox(getPlayerName(localPlayer).." Ошибка создания игрока. Сообщите администратору сервера")
+				outputChatBox(getPlayerName(localPlayer).." Ошибка создания игрOKа. Сообщите администратору сервера")
 			end
 		end
 	end	
@@ -1505,21 +1505,21 @@ setTimer(checkHumanity,60000,0)
 
 banditSkins = {
 --{210,1,5000},
-{275,1,-5000,-9999,"Одежда: Бандит 1ур"},
-{274,2,-10000,-14999,"Одежда: Бандит 2ур"},
-{264,3,-15000,-19999,"Одежда: Бандит 3ур"},
-{262,4,-20000,-24999,"Одежда: Бандит 4ур"},
-{261,5,-25000,-29999,"Одежда: Бандит 5ур"},
+{275,1,-5000,-9999,"Vestuário: Bandido 1 nível"},
+{274,2,-10000,-14999,"Vestuário: Bandido nível 2"},
+{264,3,-15000,-19999,"Vestuário: Bandido nível 3"},
+{262,4,-20000,-24999,"Vestuário: Bandido nível 4"},
+{261,5,-25000,-29999,"Vestuário: Bandido nível 5"},
 }
 
 function checkBandit ()
 if getElementData(localPlayer,"logedin") then
 local humanity = getElementData(localPlayer,"humanity") or 0
-local hero = getElementData(localPlayer,"Одежда: Герой") or 0
+local hero = getElementData(localPlayer,"Vestuário: Hero") or 0
 local curSkin = getElementData(localPlayer,"skin") or 0
 if humanity >= 5000  and hero<=0 and curSkin~= 210 then
-	triggerServerEvent("setBandit",localPlayer,localPlayer,210,false,"Одежда: Герой")
-	setElementData(localPlayer,"Одежда: Герой",1)
+	triggerServerEvent("setBandit",localPlayer,localPlayer,210,false,"Vestuário: Hero")
+	setElementData(localPlayer,"Vestuário: Hero",1)
 	else
 	for i,skin in ipairs(banditSkins) do
 	local bandit = getElementData(localPlayer,skin[5]) or 0

@@ -7,7 +7,7 @@ if (item[1]== stm) then
 
 local isDead = getElementData(source,"isDead")
 if not isDead then
-local money = getElementData(source,"Деньги") or 0
+local money = getElementData(source,"Dinheiro") or 0
 
 local enginerSlots = getElementData(source,"progress.enginer") or 0
 		local attackerSlots = getElementData(source,"progress.attacker") or 0
@@ -28,7 +28,7 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 	outputChatBox("Не хватает денег",source)
 	return
 	end
-	setElementData(source,"Деньги",money-(math.ceil(item[2]-(item[2]/100*(SKILL_CARTRADE*5)))))
+	setElementData(source,"Dinheiro",money-(math.ceil(item[2]-(item[2]/100*(SKILL_CARTRADE*5)))))
 	setElementData(source,"tsBuyTime",getRealTime().timestamp+600)
 	
 	else
@@ -37,7 +37,7 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 	return
 	end
 
-	setElementData(source,"Деньги",money-item[2])
+	setElementData(source,"Dinheiro",money-item[2])
 	end
 
 
@@ -105,7 +105,7 @@ if (item[1]== stm) then
 	
 local isDead = getElementData(source,"isDead")
 if not isDead then
-local money = getElementData(source,"Деньги") or 0
+local money = getElementData(source,"Dinheiro") or 0
 local economist = getElementData(source,"progress.economist") or 0
 local MyItems = getElementData(source,stm) or 0
 
@@ -121,7 +121,7 @@ local MyItems = getElementData(source,stm) or 0
 
 	
 		setElementData(source,stm,MyItems-item[3])
-		setElementData(source,"Деньги",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
+		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
 		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
 		
 		else
@@ -134,7 +134,7 @@ local MyItems = getElementData(source,stm) or 0
 	outputChatBox("Нельзя продать используемый рюкзак!" ,source)
 	else
 			setElementData(source,stm,MyItems-1)
-		setElementData(source,"Деньги",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
+		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
 		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
 	end
 	
@@ -142,18 +142,18 @@ local MyItems = getElementData(source,stm) or 0
 		else
 
 		setElementData(source,stm,MyItems-1)
-		setElementData(source,"Деньги",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
+		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
 		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
 	
 	end
 	elseif teri == "Барыга" then
 	setElementData(source,stm,MyItems-1)
-		setElementData(source,"Деньги",money+math.ceil (math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2))
+		setElementData(source,"Dinheiro",money+math.ceil (math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2))
 		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil ((math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2)).." денег" ,source)
 	
 	else
 		setElementData(source,stm,MyItems-1)
-		setElementData(source,"Деньги",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
+		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
 		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
 	end
 	
@@ -298,13 +298,13 @@ local location = math.random(1,4)
 	 pedTrader11 = createPed ( 262,blackLocations[location][1],blackLocations[location][2],blackLocations[location][3],-0.0,false) 
 	setElementFrozen  ( pedTrader11, true )
 --setPedAnimation (pedTrader11,"ped","SEAT_idle",nil,true,false,false,false)
-  setElementData(pedTrader11,"pedName","Торговец: черный рынок")
+  setElementData(pedTrader11,"pedName","Торговец: черный рынOK")
   setElementData(pedTrader11,"traderLoc",location)
       local myMarker11 = createMarker ( blackLocations[location][1],blackLocations[location][2],blackLocations[location][3]+0.5, "corona", 1.5, 0, 0, 0, 170 )
 --outputChatBox("ЧР: "..blackLocations[location][1]..","..blackLocations[location][2]..","..blackLocations[location][3])
 function MarkerHitf11(source) 
 if getElementType(source) =="player" then
- triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Торговец: черный рынок",getElementData(pedTrader11,"traderLoc"))  
+ triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Торговец: черный рынOK",getElementData(pedTrader11,"traderLoc"))  
 end
 end
 addEventHandler( "onMarkerHit", myMarker11, MarkerHitf11 )

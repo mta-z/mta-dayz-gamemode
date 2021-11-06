@@ -230,7 +230,7 @@ playerLvl=tonumber(playerLvl)
 if not playerLvl or playerLvl ==nil then return end
 local playerNick= getPlayerName(player)
 local playerAccountName = getAccountName(getPlayerAccount(player))
-local playerStatus = "Новичок"
+local playerStatus = "НовичOK"
 local invOwner  = getElementData(player,"groupInviteOwnerSTATUS") or false
 if invOwner then
 playerStatus = "Участник"
@@ -467,7 +467,7 @@ addEventHandler("removeGroup", getRootElement(), removeGroup)
 local userStatusTable = {
 {"Заместитель","MODER"},
 {"Участник","PARTY"},
-{"Новичок","BEGGINER"},
+{"НовичOK","BEGGINER"},
 }
 
 function setUserSatatus(owner,userAcc,nick,group,role)
@@ -483,17 +483,17 @@ local playerGroup = getElementData(player,"group",false) or false
 
 if playerGroup then
 if playerGroup~=group then
-outputChatBox("Этого игрока нет в вашей группе!",owner)
+outputChatBox("Этого игрOKа нет в вашей группе!",owner)
 getGroupInfoSettings(group,owner)
 return
 end
 else
-outputChatBox("Этого игрока нет в вашей группе!",owner)
+outputChatBox("Этого игрOKа нет в вашей группе!",owner)
 getGroupInfoSettings(group,owner)
 return
 end
 executeSQLQuery("UPDATE `group_users` SET `userRole`=? WHERE `groupName`=? AND  `userAccount`=?",tostring(newRole), tostring(group) , tostring(userAcc) )
-outputChatBox("Вы назначили игроку #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
+outputChatBox("Вы назначили игрOKу #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
 outputChatBox("В группе #FFFF00"..group.." #FFFFFFвам был назначил новый ранг: #0000FF"..tostring(newRole),player,255,255,255,true)
 setElementData(player,"groupUserStatus",userStatusTable[tonumber(role+1)][2])
 getGroupInfoSettings(group,owner)
@@ -508,7 +508,7 @@ executeSQLQuery("UPDATE `group_users` SET `userRole`=? WHERE `groupName`=? AND  
 setAccountData(playerAccount,"groupUserStatus",userStatusTable[tonumber(role+1)][2])
 setAccountData ( playerAccount, "groupMessage", "В группе #FFFF00"..group.." #FFFFFFвам был назначил новый ранг: #0000FF"..tostring(newRole) )
 
-outputChatBox("Вы назначили игроку #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
+outputChatBox("Вы назначили игрOKу #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
 getGroupInfoSettings(group,owner)
 end
 end
@@ -564,14 +564,14 @@ function removePlayerOnGroup(owner,playerAccountName,selectedNick,groupName)
 					
 				else
 				
-					outputChatBox("Этот игрок в другой группе!",owner)
+					outputChatBox("Этот игрOK в другой группе!",owner)
 					return
 					
 				end
 
 
 			else
-				outputChatBox("Этого игрока нет в вашей группе!",owner)
+				outputChatBox("Этого игрOKа нет в вашей группе!",owner)
 				return
 			end
 

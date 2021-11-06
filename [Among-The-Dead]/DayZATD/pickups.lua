@@ -6,11 +6,11 @@
 local itemTable = {
 ----------------------
 ["farm"] = {
-{"Отмычка",1955,0.5,240,5},
+{"Gazua",1955,0.5,240,5},
 {"Galão de Combútivel Vazio",1650,1.5,0,1},
-{"Палатка",1279,2,0,3,0.050},
+{"Tenda",1279,2,0,3,0.050},
 {"Pneu",1073,2,0,1},
-{"Мешки с песком",1876,1,0,0.5,0.100},
+{"Sacos de Areia",1876,1,0,0.5,0.100},
 {"Balde de Metal 1",2704,0.7,0,3},
 {"Balde de Metal 2",2705,1,0,3},
 {"G17",346,1,90,3},
@@ -24,17 +24,17 @@ local itemTable = {
 {"Machado",339,1,90,4},
 {"Vara de Pesca",1545,1,0,1},
 --{"Снасти",1664,1,0,1},
-{"Мотошлем 10%",1755,1,0,4,0.8},
+{"Capacete de Motocicleta 10%",1755,1,0,4,0.8},
 {"Relôgio",2710,1,0,2},
 --{"Pacote de Calor",1576,1.5,0,0.4},
 --{"Arame Farpado",933,0.25,0,0.5},
 {"Mapa",1277,0.5,90,3},
 {"GPS",2976,0.15,0,2},
-{"Стальной лист",3117,0.5,0,4,0.100},
+{"Chapa de Aço",3117,0.5,0,4,0.100},
 {"Pé-de-Cabra",333,1,90,2},
 
 {"Pá",1906,1,90,0.5},
-{"Рюкзак САТУРН 20",3026,1,0,4},
+{"Mochila de SATURNO 20",3026,1,0,4},
 {"Mochila de ASSALTO 40",2405,1,0,3},
 {"Mochila de Montanha 60",1248,1,0,2},
 {"Mochila do Comandante 80",1252,1,0,1},
@@ -44,7 +44,7 @@ local itemTable = {
 {"G36",1856,1,90,1},
 {"CZ550",1916,1,90,1},
 {"DMR",1918,1,90,0.1},
-{"Шланг",1952,1,0,2},
+{"Mangueira",1952,1,0,2},
 {"Motosserra",341,1,90,2},
 {"MP5",353,1,90,1},
 },
@@ -52,17 +52,17 @@ local itemTable = {
 ["residential"] = {
 {"Caixa de Fósforo",328,0.4,90,3},
 {"Machado",339,1,90,1},
-{"Мотошлем 10%",1755,1,0,0.1,0.8},
+{"Capacete de Motocicleta 10%",1755,1,0,0.1,0.8},
    
 {"Galão de Combútivel Vazio",1650,1,0,2}, 
-{"Стальной лист",3117,0.5,0,3,0.100},
+{"Chapa de Aço",3117,0.5,0,3,0.100},
 {"Vestuário: Atirador 1",1213,2,0,1},
 {"Vestuário: Atirador 2",1213,2,0,1},
 {"Vestuário: Atirador 3",1213,2,0,1},
 {"Vestuário: Atirador 4",1213,2,0,1},
 
-{"Палатка",1279,2,0,2,0.050},
-{"Большая палатка",1279,2,0,2,0.050},
+{"Tenda",1279,2,0,2,0.050},
+{"Tenda Grande",1279,2,0,2,0.050},
 --{"Pacote de Calor",1576,1.5,0,0.4},
 --{"Arame Farpado",933,0.25,0,0.5},
 {"Pneu",1073,2,0,2},
@@ -79,7 +79,7 @@ local itemTable = {
 --{"Gauss",1869,1,90,0.5},
 {"M1014",1905,1,90,0.5},
 {"Remington 870",1909,1,90,0.5},
-{"Рюкзак САТУРН 20",3026,1,0,4},
+{"Mochila de SATURNO 20",3026,1,0,4},
 {"Mochila de ASSALTO 40",2405,1,0,3},
 {"Mochila de Montanha 60",1248,1,0,2},
 {"Mochila do Comandante 80",1252,1,0,1},
@@ -101,9 +101,9 @@ local itemTable = {
 },
 ----------------------
 ["military"] = {
-{"GPS маяк",3082,0.25,0,3,0.1,90},
+{"GPS",3082,0.25,0,3,0.1,90},
 {"Garrafa de Água Vazia",2683,1.5,0,2}, 
-{"Сейф",1907,1,0,1,-0.350},
+{"Cofre",1907,1,0,1,-0.350},
 --{"Mina",1862,2,0,0.8},
 {"Sinal de Fogo",324,1,90,1},
 {"Granada",342,1,0,0.2},
@@ -111,7 +111,7 @@ local itemTable = {
 {"Binóculos",369,1,0,2},
 {"Ôculos de Infravermelho",369,1,90,2},
 {"Walkie-Talkie",2966,1,0,1},
-{"Мешки с песком",1876,1,0,0.5,0.100},
+{"Sacos de Areia",1876,1,0,0.5,0.100},
 {"Pára-Quedas",371,1,0,1},
 
 {"Vestuário: Militar 1",1213,2,0,0.1},
@@ -173,7 +173,7 @@ local itemTable = {
 {"Caixa de Fósforo",328,0.4,90,3},
 {"Machado",339,1,90,1},
   {"Garrafa de Água Vazia",2683,1.5,0,2}, 
-{"Мотошлем 10%",1755,1,0,2,0.8},
+{"Capacete de Motocicleta 10%",1755,1,0,2,0.8},
 
    
 {"Vestuário: Sobrevivente 1",1213,2,0,0.1},
@@ -183,8 +183,8 @@ local itemTable = {
 {"Vestuário: Sobrevivente 5",1213,2,0,0.1},
 {"Vestuário: Sobrevivente 6",1213,2,0,0.1},
 {"Vestuário: Sobrevivente 7",1213,2,0,0.1},
-{"Стальной лист",3117,0.5,0,2,0.100},
-{"Палатка",1279,2,0,3,0.050},
+{"Chapa de Aço",3117,0.5,0,2,0.100},
+{"Tenda",1279,2,0,3,0.050},
 --{"Pacote de Calor",1576,1.5,0,0.4},
 --{"Arame Farpado",933,0.25,0,0.5},
 {"Pneu",1073,2,0,0.5},
@@ -201,7 +201,7 @@ local itemTable = {
 --{"Gauss",1869,1,90,0.5},
 {"M1014",1905,1,90,0.5},
 {"Remington 870",1909,1,90,4},
-{"Рюкзак САТУРН 20",3026,1,0,4},
+{"Mochila de SATURNO 20",3026,1,0,4},
 {"Mochila de ASSALTO 40",2405,1,0,3},
 {"Mochila de Montanha 60",1248,1,0,3},
 {"Mochila do Comandante 80",1252,1,0,3},
@@ -218,7 +218,7 @@ local itemTable = {
 },
 ----------------------
 ["supermarket"] = {
-{"Шланг",1952,1,0,2},
+{"Mangueira",1952,1,0,2},
 {"Carne Crua",2804,1.5,90,0.005},
 {"Caixa de Fósforo ",328,0.4,90,2},
 {"Machado",339,1,90,1.1},
@@ -240,10 +240,10 @@ local itemTable = {
 {"Walkie-Talkie",2966,1,0,0.2},
 {"Pé-de-Cabra",333,1,90,1.9},
 --{"Taco de beisebol",336,1,90,1.4},
-{"Деньги",1908,1,0,0.1,0.150},
+{"Dinheiro",1908,1,0,0.1,0.150},
 
 
-{"Мотошлем 10%",1755,1,0,2,0.8},
+{"Capacete de Motocicleta 10%",1755,1,0,2,0.8},
 
 {"AK-107",1515,1,90,2},
 {"AK-74",1833,1,90,2},
@@ -251,7 +251,7 @@ local itemTable = {
 {"CZ550",1916,1,90,2},
 {"DMR",1918,1,90,2},
 
-{"Рюкзак САТУРН 20",3026,1,0,5},
+{"Mochila de SATURNO 20",3026,1,0,5},
 {"Mochila de ASSALTO 40",2405,1,0,4},
 {"Mochila de Montanha 60",1248,1,0,4},
 {"Mochila do Comandante 80",1252,1,0,3},
@@ -267,17 +267,17 @@ local itemTable = {
 --{"Наживка",1668,1,0,0},
 {"Peixe Frito",1517,1,0,0},
 {"Peixe Cru",1512,1,0,0},
-{"Шланг",1952,1,0,0},
+{"Mangueira",1952,1,0,0},
 {"Ração Seca Grande",2778,1,0,0.1},
 {"Ração Seca Pequena",1956,1,0,0.1},
 {"Balde de Metal 1",2704,0.7,0,1},
 {"Balde de Metal 2",2705,1,0,1},
-{"Мешок с частями зомби",1548,1,0,0.1},
-{"Отмычка",1955,0.5,240,0.1},
+{"Saco de Peças de Zumbi",1548,1,0,0.1},
+{"Gazua",1955,0.5,240,0.1},
 --{"Mina",1862,2,0,0.8},
-{"Мешки с песком",1876,1,0,0.5,0.100},
-{"Стальной лист",3117,0.5,0,0.5,0.100},
-{"GPS маяк",3082,0.25,0,90,0.1,90},
+{"Sacos de Areia",1876,1,0,0.5,0.100},
+{"Chapa de Aço",3117,0.5,0,0.5,0.100},
+{"GPS",3082,0.25,0,90,0.1,90},
 {"Carne Crua",2804,1.5,0},
 {"Carne Grelhada",2806,1.5,0},
 {"Galão de Combútivel Completo",1650,1.5,0},
@@ -327,7 +327,7 @@ local itemTable = {
 {"Mapa",1277,0.3,0,4,0.1},
 {"Caixa de Ferramentas",2969,2,0,3,0.100},
 {"Motor",929,2,0,3.5},
-{"Сейф",1907,1,0,1.5,-0.350},
+{"Cofre",1907,1,0,1.5,-0.350},
 {"Garrafa de Água Completo",2683,1.5,0,4},
 {"Gás Lacrimogêneo",343,1,0,0.5},
 {"Granada",342,1,0,0.5},
@@ -336,8 +336,8 @@ local itemTable = {
 {"Lata de Macarrão",2770,2,0,5},
 {"Lata de Feijão",2601,2,0,6},
 --{"Hambúrguer",2768,1,0,2},
-{"Палатка",1279,2,0,0.5,0.050},
-{"Большая палатка",1279,2,0,0.5,0.050},
+{"Tenda",1279,2,0,0.5,0.050},
+{"Tenda Grande",1279,2,0,0.5,0.050},
 {"GPS",2976,0.15,0,1},
 {"Kit de Primeiros Socorros",2891,2.2,0},
 {"Bolsa de Sangue",1580,1.5,0.50},
@@ -345,25 +345,25 @@ local itemTable = {
 {"Pé-de-Cabra",333,1,90,1.9},
 {"Taco de beisebol",336,1,90,1.4},
 {"Machete",337,1,90,1},
-{"Деньги",1908,1,0,0.3,0.150},
+{"Dinheiro",1908,1,0,0.3,0.150},
 {"Pá",1906,1,90,0.5},
 
-{"Рюкзак САТУРН 20",3026,1,0,6},
+{"Mochila de SATURNO 20",3026,1,0,6},
 {"Mochila de ASSALTO 40",2405,1,0,1.5},
 {"Mochila de Montanha 60",1248,1,0,1.1},
 {"Mochila do Comandante 80",1252,1,0,0.7},
 {"Mochila de Explorador 100",953,1,0,0.3},
 {"Mochila do Colorado 120",2410,1,0,0.2},
 {"Mochila Brasileira 140",1641,1,0,0.2},
-{"Рюкзак САМУРАЙ 160",1575,1,0,0.2},
+{"Mochila de Samurai 160",1575,1,0,0.2},
 {"Рюкзак ВОЕННЫЙ 180",1640,1,0,0.1},
 {"Рюкзак ФАРАОН 200",1602,1,0,0.1},
 
 
 
-{"Мотошлем 10%",1755,1,0,0,0.8},
-{"Сварочная маска 10%",2015,1,0,0,0.8},
-{"Шахтерская каска 5%",2016,1,0,0,0.8},
+{"Capacete de Motocicleta 10%",1755,1,0,0,0.8},
+{"Máscara de Soldador 10%",2015,1,0,0,0.8},
+{"Capacete de Mineiro 5%",2016,1,0,0,0.8},
 
 {"Capacete Militar 50%",2394,1,0,0,0.7},
 {"Capacete Blindado 70%",2018,1,0,0,0.7},
@@ -553,7 +553,7 @@ function createItemLoot (lootPlace,x,y,z,id)
 		if value>0 then
 		setElementData(col,item[1],value) --client
 		end
-if (item[1] == "Деньги" and value > 1 ) then
+if (item[1] == "Dinheiro" and value > 1 ) then
 setElementData(col,item[1],math.random(0,100)) --client
 end
 		--weapon Ammo
@@ -659,7 +659,7 @@ function createPickupsOnServerStart5()
 	setServerPassword(nil)
 setGameType ("DayZ:Among the dead")
 
-		outputChatBox("#ffaa00Внимание! #ffffff - Респаун лута окончен!",getRootElement(),255,255,255,true)
+		outputChatBox("#ffaa00Внимание! #ffffff - Респаун лута OKончен!",getRootElement(),255,255,255,true)
 	
 triggerClientEvent ( "onClientBind", getRootElement(), "bind" )	
 end
@@ -695,7 +695,7 @@ setElementData(source,itemName,(getElementData(source,itemName) or 0)+itemPlus o
 local source = source
 
 	destroyElement(getElementData(col,"parent"))
-	--destroyElement(col) ЭТО РЕБЕНОК
+	--destroyElement(col) ЭТО РЕБЕНOK
 
 end
 end
@@ -757,7 +757,7 @@ end
 --Refresh items
 function refreshItemLootPoints ()
 
-	outputChatBox("#ff2200Внимание! #ffffff - Через 60 секунд начнется респаун лута(все игроки будут кикнуты с сервера)!",getRootElement(),255,255,255,true)
+	outputChatBox("#ff2200Внимание! #ffffff - Через 60 секунд начнется респаун лута(все игрOKи будут кикнуты с сервера)!",getRootElement(),255,255,255,true)
 	triggerClientEvent ( "onClientUnBind", getRootElement(), "unbind" )
 	setTimer(refreshItemLoots,60000,1)
 	

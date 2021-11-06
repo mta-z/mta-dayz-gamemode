@@ -284,7 +284,7 @@ local plus = 1
 	end
 
 	
-	if itemName=="Одежда: Бандит 1ур" or itemName=="Одежда: Бандит 2ур" or itemName=="Одежда: Бандит 3ур" or itemName=="Одежда: Бандит 4ур" or itemName=="Одежда: Бандит 5ур" or itemName=="Одежда: Герой"  then
+	if itemName=="Vestuário: Bandido 1 nível" or itemName=="Vestuário: Bandido nível 2" or itemName=="Vestuário: Bandido nível 3" or itemName=="Vestuário: Bandido nível 4" or itemName=="Vestuário: Bandido nível 5" or itemName=="Vestuário: Hero"  then
 		triggerEvent ("displayClientInfo", localPlayer,"Exchange","Cannot be exchanged!",255,22,0)
 		return
 	end
@@ -296,7 +296,7 @@ local plus = 1
 		end
 	end
 
-	if itemName =="GPS маяк" and getElementData(localPlayer,"GPSpharos")  then
+	if itemName =="GPS" and getElementData(localPlayer,"GPSpharos")  then
 		if getElementData(localPlayer,itemName) <= 1 or all then
 			triggerEvent ("displayClientInfo", localPlayer,"Exchange","Activated beacon cannot be exchanged!",255,22,0)
 			return
@@ -624,7 +624,7 @@ if ( gridlistItemsExchange["inventory_colum"] ) then --If the column has been cr
 				guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"],item[1], false, false )
 				guiGridListSetItemText ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum_amount"],lootAmout, false, false )
 			local GPSpharos = getElementData(localPlayer,"GPSpharos") or false
-				if GPSpharos and item[1]=="GPS маяк" then
+				if GPSpharos and item[1]=="GPS" then
 				guiGridListSetItemColor ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum"], 255,0,0 )
 				guiGridListSetItemColor ( gridlistItemsExchange["inventory"], row, gridlistItemsExchange["inventory_colum_amount"], 255,0,0 )
 				end

@@ -1,6 +1,6 @@
 ﻿ZombiePedSkins = {13,69,105,107,108,126,127,128,152} --ALTERNATE SKIN LISTS FOR ZOMBIES (SHORTER LIST IS TEXTURED ZOMBIES ONLY)
 -- 68 вояка
--- 22 док
+-- 22 дOK
 -- 70 полицай
 -- 97 вояка без каски
 
@@ -34,7 +34,7 @@ itemTableZombies = {
 {"Pé-de-Cabra",333,1,90,0.5},
 {"Taco de beisebol",336,1,90,0.5},
 {"Machete",337,1,90,0.5},
-{"Деньги",1212,1,90,12},
+{"Dinheiro",1212,1,90,12},
 }
 
 itemTableZombieMilitaryBig = {
@@ -44,7 +44,7 @@ itemTableZombieMilitaryBig = {
 {"Binóculos",369,1,0,2},
 {"Ôculos de Infravermelho",369,1,90,3},
 {"Walkie-Talkie",2966,1,0,4},
-{"Мешки с песком",1876,1,0,2,0.100},
+{"Sacos de Areia",1876,1,0,2,0.100},
 {"AK-107 PSO",1832,1,90,4},
 {"ВСС Vintorez",1922,1,90,1},
 {"M4A1",2785,1,90,2},
@@ -79,7 +79,7 @@ itemTableZombieMilitarySmall = {
 {"Binóculos",369,1,0,5},
 {"Ôculos de Infravermelho",369,1,90,5},
 {"Walkie-Talkie",2966,1,0,5},
-{"Мешки с песком",1876,1,0,2,0.100},
+{"Sacos de Areia",1876,1,0,2,0.100},
 {"AK-107 PSO",1832,1,90,7},
 {"M4A1",2785,1,90,3},
 {"M4A1 SD",2481,1,90,2},
@@ -282,7 +282,7 @@ function zombieKilled (killer,headshot)
 		 
 		setElementData(pedCol,"deadreason","Parece que ele está morto. Hora estimada da morte: "..hours..":"..minutes.."") --client
 	-- 68 вояка
--- 22 док
+-- 22 дOK
 -- 70 полицай
 -- 97 вояка без каски	
 		if not playerLoot then
@@ -294,7 +294,7 @@ if tonumber(zSkin) ~= 68 and tonumber(zSkin) ~= 22 and  tonumber(zSkin) ~= 70 an
 				setElementData(pedCol,item[1],value) --client	
 			end
 			
-		if (item[1] == "Деньги") then
+		if (item[1] == "Dinheiro") then
 			local rand = math.random(1,2)	
 			if rand ==2 then
 				setElementData(pedCol,item[1],math.random(0,100)) --client

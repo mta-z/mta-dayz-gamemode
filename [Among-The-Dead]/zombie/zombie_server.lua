@@ -150,7 +150,7 @@ function createZombie ( x, y, z, skin,owner )
 		setTimer ( setElementDimension, 100, 1, zomb, tonumber(0)) --sets dimension
 		setPedWalkingStyle ( zomb, 120)
 -- 68 вояка
--- 22 док
+-- 22 дOK
 -- 70 полицай
 -- 97 вояка без каски
 			setElementData ( zomb, "zombie", true)

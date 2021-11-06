@@ -258,7 +258,7 @@ if getElementData(localPlayer,"inbaitZone") then
 
 		
 		number = number+1
-		createMenuItem(number,"Отмена","cancelbaiting")
+		createMenuItem(number,"Cancelar","cancelbaiting")
 
 else
 return
@@ -300,9 +300,9 @@ if arg1 == "Vehicle" then
 local bigTent = getElementData(getElementData(arg3,"parent"),"bigTent") or false
 local ADMINTent = getElementData(getElementData(arg3,"parent"),"ADMINTent")  or false
 if bigTent then 
-arg2 = "Большая палатка"
+arg2 = "Tenda Grande"
 elseif ADMINTent then
-arg2 = "Огромный ящик"
+arg2 = "Caixa Enorme"
 end
 	number = number+1
 	
@@ -312,11 +312,11 @@ end
 	if getElementData(getElementData(arg3,"parent"),"tent") then
 	if getElementData(getElementData(arg3,"parent"),"save") then
 		number = number+1
-			createMenuItem(number,"Выкопать сейф","removesave")
+			createMenuItem(number,"Выкопать Cofre","removesave")
 			
 			
 		if  not getElementData(getElementData(arg3,"parent"),"hackSave")  then
-	local otms = getElementData(localPlayer,"Отмычка") or 0
+	local otms = getElementData(localPlayer,"Gazua") or 0
 	if  otms >=1 then
 	number = number+1
 	local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
@@ -388,7 +388,7 @@ end
 
 	
 		
-		local heckKey = getElementData(localPlayer,"Отмычка") or 0
+		local heckKey = getElementData(localPlayer,"Gazua") or 0
 		if heckKey>=1 then
 			if isVehicleLocked(arg3) then
 			
@@ -404,15 +404,15 @@ end
 	
 	
 	
-	local lists = getElementData(localPlayer,"Стальной лист") or 0
+	local lists = getElementData(localPlayer,"Chapa de Aço") or 0
 	local listsInCar = getElementData(arg3,"steelList") or 0 
 	if  lists >=1  and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 and listsInCar<1000 then
 	number = number+1
-		createMenuItem(number,"Установить: Стальной лист","steelList")
+		createMenuItem(number,"Установить: Chapa de Aço","steelList")
 		end
 	
 	
-			if (getElementData(localPlayer,"Шланг") or 0) >=1 and (getElementData(localPlayer,"Galão de Combútivel Vazio") or 0) >=1  and not isVehicleLocked(arg3)  then
+			if (getElementData(localPlayer,"Mangueira") or 0) >=1 and (getElementData(localPlayer,"Galão de Combútivel Vazio") or 0) >=1  and not isVehicleLocked(arg3)  then
 		
 			if getElementData(getElementData(arg3,"parent"),"fuel") >=20 then
 					number = number+1
@@ -629,10 +629,10 @@ if arg1 == "Arame Farpado" then
 		createMenuItem(number,"Разобрать: Arame Farpado","wirefence")
 	end	
 end
-if arg1 == "Мешки с песком" then
+if arg1 == "Sacos de Areia" then
 	if (getElementData(localPlayer,"Pá") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Разобрать: Мешки с песком","sandbags")
+		createMenuItem(number,"Разобрать: Sacos de Areia","sandbags")
 	end	
 end
 
@@ -774,10 +774,10 @@ if getElementData(source,"parent") == localPlayer then return end
 			return
 		end
 		if getElementData(source,"sandbags") then
-			showClientMenuItem("Мешки с песком")
+			showClientMenuItem("Sacos de Areia")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Разобрать мешки с песком","Требуется: Pá",source)
+			setNewbieInfo (true,"Разобрать Sacos de Areia","Требуется: Pá",source)
 			return
 		end
 		
@@ -850,12 +850,12 @@ if getElementData(source,"parent") == localPlayer then return end
 		end
 		
 		if getElementData(source,"save") then
-		showClientMenuItem("Vehicle","сейф",getElementData(source,"parent"))
+		showClientMenuItem("Vehicle","Cofre",getElementData(source,"parent"))
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Сейф",false)
+			setElementData(localPlayer,"lootname","Cofre",false)
 			
-			setNewbieInfo (true,"Сейф", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..( string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+			setNewbieInfo (true,"Cofre", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..( string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
 
 			return
 		else
@@ -863,11 +863,11 @@ if getElementData(source,"parent") == localPlayer then return end
 			name = ""
 			local bigTent = getElementData(source,"bigTent") or false
 			if bigTent then
-			 name = "Большая палатка"
+			 name = "Tenda Grande"
 			else
 			local isTent = getElementData(source,"tent") or false
 			if isTent then
-			 name = "Палатка"
+			 name = "Tenda"
 			else
 			 name = "Транспортное средство"
 			end
@@ -880,13 +880,13 @@ if getElementData(source,"parent") == localPlayer then return end
 			if getElementData(source,"tent") then
 			local bigTent = getElementData(source,"bigTent") or false
 			if bigTent then
-			setNewbieInfo (true,"Большая палатка", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+			setNewbieInfo (true,"Tenda Grande", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
 			else
 				local ADMINTent = getElementData(source,"ADMINTent") or false
 				if ADMINTent then
-					setNewbieInfo (true,"Огромный ящик", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+					setNewbieInfo (true,"Caixa Enorme", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
 				else
-					setNewbieInfo (true,"Палатка", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+					setNewbieInfo (true,"Tenda", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
 				end
 			end
 			
@@ -1142,19 +1142,19 @@ if ( keyState == "down" ) then
 		end
 			
 		if getElementData(getRootElement(),"checkPacketlossLastSecond") and getNetworkStats().packetlossLastSecond > gameplayVariables["MAXpacketlossLastSecond"]  then
-		startRollMessage2("Инвентарь", "PLLS: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "PLLS: пинг выше нормы!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
 		
 		if getElementData(getRootElement(),"checkMessagesInResendBuffer") and getNetworkStats().messagesInResendBuffer >gameplayVariables["MAXmessagesInResendBuffer"] then
-		startRollMessage2("Инвентарь", "MIRB: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "MIRB: пинг выше нормы!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
 		
 		if getElementData(getRootElement(),"checkPing") and getPlayerPing(localPlayer)  > gameplayVariables["pingMAX"] then
-		startRollMessage2("Инвентарь", "PP: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "PP: пинг выше нормы!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
@@ -1229,10 +1229,10 @@ if ( keyState == "down" ) then
 			outputChatBox("Вам удалось взPé-de-Cabraать "..GetRealVehicleName(parent))
 			triggerServerEvent("openMyVH",localPlayer,parent)	
 			else
-			outputChatBox("Отмычка сPé-de-Cabraалась!")
+			outputChatBox("Gazua сPé-de-Cabraалась!")
 			end
-			local hackKeys = getElementData(localPlayer,"Отмычка") or 0
-			setElementData(localPlayer,"Отмычка",hackKeys-1)
+			local hackKeys = getElementData(localPlayer,"Gazua") or 0
+			setElementData(localPlayer,"Gazua",hackKeys-1)
 			
 			disableMenu()
 			return
@@ -1243,12 +1243,12 @@ if ( keyState == "down" ) then
 			local vero1 = 	math.random(0,100)
 			local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
 			if vero1 <= (20+SKILL_HACK*2) then 
-			outputChatBox("Вы успешно взPé-de-Cabraали сейф!")
-			setElementData(localPlayer,"Отмычка",getElementData(localPlayer,"Отмычка") -1 ) --server
+			outputChatBox("Вы успешно взPé-de-Cabraали Cofre!")
+			setElementData(localPlayer,"Gazua",getElementData(localPlayer,"Gazua") -1 ) --server
 			setElementData(col,"hackSave",true)
 			else
-			outputChatBox("Отмычка сPé-de-Cabraалась")
-			setElementData(localPlayer,"Отмычка",getElementData(localPlayer,"Отмычка") -1 ) --server
+			outputChatBox("Gazua сPé-de-Cabraалась")
+			setElementData(localPlayer,"Gazua",getElementData(localPlayer,"Gazua") -1 ) --server
 			end
 			disableMenu()
 			return
@@ -1381,7 +1381,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "sandbags" then
-			local gearName = "Разобрать мешки с песком"
+			local gearName = "Разобрать Sacos de Areia"
 			triggerServerEvent("removeSandBags",localPlayer,parent)
 			disableMenu()
 			return
@@ -1414,7 +1414,7 @@ if ( keyState == "down" ) then
 		if itemName == "vehicle" then -----------------------------------------------------
 			local col = getElementData(localPlayer,"currentCol")
 			if getElementData(col,"save") then
-			local gearName = "Открыть ( сейф )"
+			local gearName = "Открыть ( Cofre )"
 			openSave(col)
 
 			else
@@ -1422,11 +1422,11 @@ if ( keyState == "down" ) then
 			local isBigTent = getElementData(col,"bigTent") or false
 			if isBigTent then 
 			
-			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Большая палатка")..")"
+			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda Grande")..")"
 			else
 			local smalltent = getElementData(col,"tent") or false
 			if smalltent then
-			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Палатка")..")"
+			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda")..")"
 			else
 			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Транспортное средство")..")"
 			end
@@ -1456,14 +1456,14 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "removetent" then
-			triggerServerEvent("removeTent",localPlayer,parent,"Палатка")
+			triggerServerEvent("removeTent",localPlayer,parent,"Tenda")
 			triggerEvent("PlaySoundDayZ",localPlayer,"removeTent",0,0)
 			disableMenu()
 			return
 		end
 		
 		if itemName == "removebigtent" then
-			triggerServerEvent("removeTent",localPlayer,parent,"Большая палатка")
+			triggerServerEvent("removeTent",localPlayer,parent,"Tenda Grande")
 			triggerEvent("PlaySoundDayZ",localPlayer,"removeTent",0,0)
 			disableMenu()
 			return
@@ -1652,7 +1652,7 @@ end
 	end,2000,1)
 	  end	
 			else
-				startRollMessage2("Инвентарь", "Этот предмет весит "..getItemSlots(itemName).."кг!", 255, 22, 0 )
+				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName).."кг!", 255, 22, 0 )
 			end
 	end
 end
@@ -1691,7 +1691,7 @@ setTimer(function()
 keysOK = true
 end,2000,1)
 else
-outputChatBox("Не нажимайте слишком часто")
+outputChatBox("Não pressione com muita Frequência")
 end
 end
 bindKey("/","down",bindTheKeys)
@@ -1699,7 +1699,7 @@ bindKey(",","down",bindTheKeys)
 bindKey(".","down",bindTheKeys)
 
 
-saveWindows = guiCreateWindow(500, 450, 200, 100, "Открыть сейф", false) 
+saveWindows = guiCreateWindow(500, 450, 200, 100, "Abrir Cofre", false) 
 guiSetVisible(saveWindows, false)
 function openSave(col)
 
@@ -1710,7 +1710,7 @@ function openSave(col)
  local isHackSave = getElementData(col,"hackSave") or false
 
 if isHackSave then
-refreshLoot(col,"Сейф")
+refreshLoot(col,"Cofre")
 showInventoryManual()
 showCursor(true)
 return
@@ -1722,18 +1722,18 @@ centerWindow(saveWindows)
 editBox = guiCreateEdit( 50, 40, 100, 20, "", false,saveWindows )
 guiEditSetMaxLength  (  editBox, 4 )
 guiEditSetMasked (  editBox, true )
-    buttonOK = guiCreateButton(35, 70, 60, 20, "Ок", false,saveWindows)
-buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Отмена", false,saveWindows)
+    buttonOK = guiCreateButton(35, 70, 60, 20, "OK", false,saveWindows)
+buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
 if guiGetText (editBox) == getElementData(col,"pass") then
-refreshLoot(col,"Сейф")
+refreshLoot(col,"Cofre")
 showInventoryManual()
 showCursor(not isCursorShowing())
  guiSetVisible(saveWindows, false)
  else
- outputChatBox("Неверный пароль")
+ outputChatBox("Senha inválida")
  end
  end,false)
  
@@ -1772,7 +1772,7 @@ centerWindow(saveWindows)
 local labl  = guiCreateLabel ( 0, 23, 600, 100, text, false, saveWindows )
 guiLabelSetHorizontalAlign (labl,"center")
     buttonOK = guiCreateButton(200, 70, 60, 20, "Да", false,saveWindows)
-buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Отмена", false,saveWindows)
+buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
@@ -1789,8 +1789,8 @@ end
 local economist = getElementData(localPlayer,"progress.economist") or 0
  local cena = math.floor((1000-health)*3)
  cena = cena - (cena*(economist*0.9)/100)
- if (getElementData(localPlayer,"Деньги") or 0) >= cena then 
- setElementData(localPlayer,"Деньги",(getElementData(localPlayer,"Деньги") or 0)-math.floor((1000-health)*3))
+ if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
+ setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((1000-health)*3))
  setElementHealth(veh,1000)
  outputChatBox(""..(GetRealVehicleName(veh) or "Транспортное средство").." был  поолностью восстановлен!")
  else
@@ -1801,8 +1801,8 @@ local economist = getElementData(localPlayer,"progress.economist") or 0
   if act == 2 then
    local cena = math.floor((maxfuel-fuel)*10)
  cena = cena - (cena*(economist*0.9)/100)
- if (getElementData(localPlayer,"Деньги") or 0) >= cena then 
- setElementData(localPlayer,"Деньги",(getElementData(localPlayer,"Деньги") or 0)-math.floor((maxfuel-fuel)*10))
+ if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
+ setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((maxfuel-fuel)*10))
  setElementData(getElementData(veh,"parent"),"fuel",maxfuel)
  outputChatBox(""..( GetRealVehicleName(veh) or "Транспортное средство").." был  поолностью заправлен!")
  else
@@ -1894,7 +1894,7 @@ centerWindow(saveWindows)
 local labl  = guiCreateLabel ( 0, 23, 600, 100, text, false, saveWindows )
 guiLabelSetHorizontalAlign (labl,"center")
     buttonOK = guiCreateButton(200, 70, 60, 20, "Да", false,saveWindows)
-buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Отмена", false,saveWindows)
+buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
@@ -1918,10 +1918,10 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
  end
  setElementData(veh,"traded",true,false)
 triggerServerEvent("sellCar",localPlayer,veh)
-setElementData(localPlayer,"Деньги",(getElementData(localPlayer,"Деньги") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
+setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
  outputChatBox("Вы продали "..(GetRealVehicleName(veh) or "транспортное средство").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
 else
-startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 		end
 else
 outputChatBox("Это не ваша машина")
@@ -2120,10 +2120,10 @@ if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
 	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
 	setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)+1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в бак!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в Tanque de Combústivel!",0,255,0)
 
 else
-triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бак заполнен!",255,0,0)
+triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Tanque de Combústivel заполнен!",255,0,0)
 end
 
 end
@@ -2138,8 +2138,8 @@ if steelList<1000 then
 	else
 	setElementData(car,"steelList",1000) --server
 	end
-	setElementData(localPlayer,"Стальной лист",(getElementData(localPlayer,"Стальной лист") or 0)-1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Стальной лист был установлен!",0,255,0)
+	setElementData(localPlayer,"Chapa de Aço",(getElementData(localPlayer,"Chapa de Aço") or 0)-1) --server
+	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Chapa de Aço был установлен!",0,255,0)
 
 else
 return
@@ -2153,7 +2153,7 @@ end
 
 end
 
-function standInWater() -- функция проверяет находится ли игрок на береге 
+function standInWater() -- функция проверяет находится ли игрOK на береге 
   if isPedOnGround(localPlayer) then
         local px, py, pz = getElementPosition(localPlayer)
         if testLineAgainstWater(px, py, pz+1, px, py, pz - 2) then
@@ -2278,7 +2278,7 @@ local timerUnbug= nil
 local unbugWindow = guiCreateWindow(0, 0, 200, 200, "UNBUG", false) 	
 local cancelUnbug = guiCreateButton(200/2-70/2, 150, 70, 30, "Отменить", false,unbugWindow)
 --local bebasFont = guiCreateFont  (  "BEBAS", 30  )
-guiCreateLabel(10, 50, 200, 60,"Дождитесь окончания таймера",false,unbugWindow)
+guiCreateLabel(10, 50, 200, 60,"Дождитесь OKончания таймера",false,unbugWindow)
 local lableTimer = guiCreateLabel(0, 100, 200, 60,"0:00",false,unbugWindow)
  --guiSetFont ( lableTimer, bebasFont )
  guiLabelSetColor  (  lableTimer, 255, 0, 0 )

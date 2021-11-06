@@ -270,14 +270,14 @@ local water ={
 local lootItems = {
 ["helicrashsides"] = {
 {"Garrafa de Água Vazia",2683,1.5,0,2}, 
-{"Сейф",1907,1,0,1,-0.350},
+{"Cofre",1907,1,0,1,-0.350},
 --{"Mina",1862,2,0,0.8},
 {"Sinal de Fogo",324,1,90,1},
 {"Ôculos de Visão Noturna",368,1,90,6},
 {"Binóculos",369,1,0,2},
 {"Ôculos de Infravermelho",369,1,90,2},
 {"Walkie-Talkie",2966,1,0,1},
-{"Мешки с песком",1876,1,0,0.5,0.100},
+{"Sacos de Areia",1876,1,0,0.5,0.100},
 
 
 
