@@ -22,7 +22,7 @@ function centerWindow (center_window)
 end
 
 
-inventoryWindows = guiCreateWindow(0, 0,750, 520, "Habilidades", false) 
+inventoryWindows = guiCreateWindow(0, 0,750, 520, ".:: Habilidades ::.", false) 
 guiWindowSetSizable ( inventoryWindows, false )
 centerWindow(inventoryWindows)
 
@@ -32,7 +32,7 @@ local tab2 = guiCreateTab( "Estatisticas", tabPanel )
 addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()),
     function ( startedRes )
  headline["ochko1_img"] = guiCreateStaticImage ( 1, 10, 730, 17, "gray.png", false, tab2 )
-headline["ochko1"] = guiCreateLabel(5, 0, 750, 100,"Pontos de habilidade grátis",false,headline["ochko1_img"])
+headline["ochko1"] = guiCreateLabel(5, 0, 750, 100,"Pontos de habilidade sobrando",false,headline["ochko1_img"])
 headline["ochko1_t"] = guiCreateLabel(0, 0, 725, 100,"-",false,headline["ochko1_img"])
 guiSetFont (headline["ochko1"] , "default-bold-small" )
 guiSetFont (headline["ochko1_t"] , "default-bold-small" )
@@ -54,7 +54,7 @@ guiSetFont (headline["ochko3_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko3_t"],"right")
 
  headline["ochko4_img"] = guiCreateStaticImage ( 1, 80, 730, 17, "gray.png", false, tab2 )
-headline["ochko4"] = guiCreateLabel(5, 0, 750, 100,"Uma experiência",false,headline["ochko4_img"])
+headline["ochko4"] = guiCreateLabel(5, 0, 750, 100,"Experiência",false,headline["ochko4_img"])
 headline["ochko4_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko4_img"])
 guiSetFont (headline["ochko4"] , "default-bold-small" )
 guiSetFont (headline["ochko4_t"] , "default-bold-small" )
@@ -68,7 +68,7 @@ guiSetFont (headline["ochko5_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko5_t"],"right")
 
 headline["ochko6_img"] = guiCreateStaticImage ( 1, 130, 730, 17, "gray.png", false, tab2 )
-headline["ochko6"] = guiCreateLabel(5, 0, 750, 100,"Máximo de mortos por zumbis por vez",false,headline["ochko6_img"])
+headline["ochko6"] = guiCreateLabel(5, 0, 750, 100,"Máximo de zumbis mortos de uma vez",false,headline["ochko6_img"])
 headline["ochko6_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko6_img"])
 guiSetFont (headline["ochko6"] , "default-bold-small" )
 guiSetFont (headline["ochko6_t"] , "default-bold-small" )
@@ -89,14 +89,14 @@ guiSetFont (headline["ochko8_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko8_t"],"right")
 
 headline["ochko9_img"] = guiCreateStaticImage ( 1, 190, 730, 17, "gray.png", false, tab2 )
-headline["ochko9"] = guiCreateLabel(5, 0, 750, 100," Tempo Máximo de uma vez",false,headline["ochko9_img"])
+headline["ochko9"] = guiCreateLabel(5, 0, 750, 100," Tempo Máximo de vida unica",false,headline["ochko9_img"])
 headline["ochko9_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko9_img"])
 guiSetFont (headline["ochko9"] , "default-bold-small" )
 guiSetFont (headline["ochko9_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko9_t"],"right")
 
 headline["ochko10_img"] = guiCreateStaticImage ( 1, 220, 730, 17, "gray.png", false, tab2 )
-headline["ochko10"] = guiCreateLabel(5, 0, 750, 100,"Zumbis mortos durante todo o jogo",false,headline["ochko10_img"])
+headline["ochko10"] = guiCreateLabel(5, 0, 750, 100,"Total de zombies mortos",false,headline["ochko10_img"])
 headline["ochko10_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko10_img"])
 guiSetFont (headline["ochko10"] , "default-bold-small" )
 guiSetFont (headline["ochko10_t"] , "default-bold-small" )
@@ -110,7 +110,7 @@ guiSetFont (headline["ochko11_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko11_t"],"right")
 
 headline["ochko12_img"] = guiCreateStaticImage ( 1, 260, 730, 17, "gray.png", false, tab2 )
-headline["ochko12"] = guiCreateLabel(5, 0, 750, 100,"Marotos mortos durante todo o jogo",false,headline["ochko12_img"])
+headline["ochko12"] = guiCreateLabel(5, 0, 750, 100,"Bandidos mortos durante todo o jogo",false,headline["ochko12_img"])
 headline["ochko12_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko12_img"])
 guiSetFont (headline["ochko12"] , "default-bold-small" )
 guiSetFont (headline["ochko12_t"] , "default-bold-small" )
@@ -141,7 +141,7 @@ addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource
 --local img = {}
 local pos1 = 70
 
-headline["attack_plane"] = guiCreateLabel(0, 15, 750, 100,"Штурмовик",false,tab1)
+headline["attack_plane"] = guiCreateLabel(0, 15, 750, 100,"Atirador",false,tab1)
 guiSetFont (headline["attack_plane"] , "default-bold-small" ) 
 guiLabelSetHorizontalAlign (headline["attack_plane"],"center")
 
@@ -243,7 +243,7 @@ return
   --local img2 ={}
     local pos2 = 70
 
-headline["medik"] = guiCreateLabel(0, 70, 750, 100,"Медик",false,tab1)
+headline["medik"] = guiCreateLabel(0, 70, 750, 100,"Médico",false,tab1)
 guiSetFont (headline["medik"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["medik"],"center")
 headline["medikProgress"] = guiCreateLabel(20, 90, 50, 40,"0/100",false,tab1)
@@ -327,7 +327,7 @@ addEventHandler( "onClientMouseLeave", medikPlus,
 	local medik = getElementData(getLocalPlayer(),"progress.medik") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if medik >= 100 then return end
@@ -340,7 +340,7 @@ return
  local pos3 = 70
 local sniper = getElementData(getLocalPlayer(),"progress.sniper") or 0
 --local img3 ={};
-  headline["sniper"] = guiCreateLabel(0, 125, 750, 100,"Снайпер",false,tab1)
+  headline["sniper"] = guiCreateLabel(0, 125, 750, 100,"Franco atirador",false,tab1)
 guiSetFont (headline["sniper"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["sniper"],"center")
 headline["sniperProgress"] = guiCreateLabel(20, 145, 50, 40,"/0100",false,tab1)
@@ -444,7 +444,7 @@ return
   local pos4 = 70
 local enginer = getElementData(getLocalPlayer(),"progress.enginer") or 0
 --local img4 ={};
-  headline["enginer"] = guiCreateLabel(0, 180, 750, 100,"Инженер",false,tab1)
+  headline["enginer"] = guiCreateLabel(0, 180, 750, 100,"Engenheiro",false,tab1)
 guiSetFont (headline["enginer"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["enginer"],"center")
 headline["enginerProgress"] = guiCreateLabel(20, 200, 50, 40,"0/100",false,tab1)
@@ -548,7 +548,7 @@ return
   local pos5 = 70
 local economist = getElementData(getLocalPlayer(),"progress.economist") or 0
 --local img5 ={};
-  headline["economist"] = guiCreateLabel(0, 235, 750, 100,"Экономист",false,tab1)
+  headline["economist"] = guiCreateLabel(0, 235, 750, 100,"Economista",false,tab1)
 guiSetFont (headline["economist"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["economist"],"center")
 headline["economistProgress"] = guiCreateLabel(20, 255, 50, 40,"0/100",false,tab1)
@@ -653,7 +653,7 @@ return
 	  local pos6 = 70
 local djagernaut = getElementData(getLocalPlayer(),"progress.djagernaut") or 0
 --local img5 ={};
-  headline["djagernaut"] = guiCreateLabel(0, 290, 750, 100,"Джаггернаут",false,tab1)
+  headline["djagernaut"] = guiCreateLabel(0, 290, 750, 100,"Juggernaut",false,tab1)
 guiSetFont (headline["djagernaut"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["djagernaut"],"center")
 headline["djagernautProgress"] = guiCreateLabel(20, 310, 50, 40,"0/100",false,tab1)
@@ -678,27 +678,27 @@ guiLabelSetHorizontalAlign (headline["djagernautProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Fuzil +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Rifle +"..(i*20).."")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -736,7 +736,7 @@ addEventHandler( "onClientMouseLeave", djagernautPlus,
 	local djagernaut = getElementData(getLocalPlayer(),"progress.djagernaut") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if djagernaut >= 100 then return end
@@ -784,27 +784,27 @@ guiLabelSetHorizontalAlign (headline["boecProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano de arma corpo a corpo +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -859,7 +859,7 @@ return
 	  local pos8 = 70
 local automech = getElementData(getLocalPlayer(),"progress.automech") or 0
 --local img5 ={};
-  headline["automech"] = guiCreateLabel(0, 400, 750, 100,"Автомеханик",false,tab1)
+  headline["automech"] = guiCreateLabel(0, 400, 750, 100,"Auto-Mecânica",false,tab1)
 guiSetFont (headline["automech"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["automech"],"center")
 headline["automechProgress"] = guiCreateLabel(20, 420, 50, 40,"0/100",false,tab1)
@@ -884,27 +884,27 @@ guiLabelSetHorizontalAlign (headline["automechProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%\n")
+		guiSetText(headline["toolTipTextT"],"Probabilidade de Pé-de-Cabraa TC+"..(i*0.2).."%\n")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%\nАвтомеханик")
+		guiSetText(headline["toolTipTextT"],"DaProbabilidade de Pé-de-Cabraa TC +"..(i*0.2).."%\nAuto-Mecânica")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -942,7 +942,7 @@ addEventHandler( "onClientMouseLeave", automechPlus,
 	local automech = getElementData(getLocalPlayer(),"progress.automech") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if automech >= 100 then return end
@@ -961,7 +961,7 @@ function reloadATDProgressBar(tableBar,oldDataBar,newdataBar)
   
  local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
   setElementData(getLocalPlayer(),"progress.clicks",clicks+1)
-  outputChatBox("Осталось очков навыков:"..clicks+1)
+  outputChatBox("Pontos de habilidade restantes:"..clicks+1)
   
   guiStaticImageLoadImage ( tableBar[oldDataBar], "prgsBar.nil.png" )
 guiSetSize(tableBar[oldDataBar],5,20,false)
@@ -975,7 +975,7 @@ guiSetSize(tableBar[oldDataBar],5,20,false)
   local clicksOFF=  getElementData(getLocalPlayer(),"progress.clicksOFF") or 0
   setElementData(getLocalPlayer(),"progress.clicksOFF",clicksOFF+1)
 
-  outputChatBox("Осталось очков навыков:"..clicks-1)
+  outputChatBox("Pontos de habilidade restantes:"..clicks-1)
   
    guiStaticImageLoadImage ( tableBar[newdataBar], "prgsBar.full.png" )
   guiSetSize(tableBar[newdataBar],5,25,false)
@@ -995,7 +995,7 @@ guiSetVisible(inventoryWindows,true )
 showCursor(true)
 end
 local nick = getPlayerName ( getLocalPlayer())
-guiSetText(inventoryWindows,"Игрок:"..nick)
+guiSetText(inventoryWindows,"Jogador:"..nick)
 
 	local attack_plane = getElementData(getLocalPlayer(),"progress.attacker") or 0
   for i=1,100,1 do 
@@ -1170,8 +1170,8 @@ end
 
 function roundTime(value)
 	if value then
-local hours = math.floor(value/60) -- Получаем количество полных часов
-local minutes = value - (hours*60) -- Получаем оставшиеся минуты	
+local hours = math.floor(value/60) -- Conseguimos o número de horas completas
+local minutes = value - (hours*60) -- Pegamos os minutos restantes
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end
@@ -1194,7 +1194,7 @@ function isSpamTimer2()
   if isTimer(antiSpamTimer2) then
     do
    --   local t = getTimerDetails(antiSpamTimer2)
-      outputChatBox("Не нажимайте слишком часто!")
+      outputChatBox("Vai com calma !!")
       return true
     end
   else
