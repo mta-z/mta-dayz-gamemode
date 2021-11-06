@@ -6,8 +6,8 @@
 		setElementData(player,"offerExc",source)
 		triggerClientEvent(player,"hideInventoryManual",player)
 		
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Предложил вам обмен.",player,255,255,255,true)
-		outputChatBox("#FFFF00Нажмите #FF0000J #FFFF00чтобы согласиться/отказаться",player,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Ofereceu-lhe uma troca.",player,255,255,255,true)
+		outputChatBox("#FFFF00Clique em #FF0000J #FFFF00concordar / recusar",player,255,255,255,true)
 		setTimer(function()
 		triggerEvent("offerExcCancel",player,source)
 		end,10000,1)
@@ -23,7 +23,7 @@ function offerExcCancel(player)
 	
 	if player and isElement(player) then
 
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Отказался от обмена.",player,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Recusou-se a trocar.",player,255,255,255,true)
 		
 
 	end
@@ -38,7 +38,7 @@ function offerExcOK(player)
 	
 	if player and isElement(player) then
 
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Согласился на обмен.",player,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Eu concordei em trocar.",player,255,255,255,true)
 		triggerClientEvent(player,"hideInventoryManual",player)
 		
 		--setTimer(function()
@@ -86,10 +86,10 @@ function exchangeCompleted()
         outputConsole ( k .. ": " .. tostring ( v ) )
 		
 		local datas = getElementData(source,tostring(k)) 
-		setElementData(source,tostring(k),datas+v) -- добавляем в Inventário из Coca-Colaпса партнера по обмену
+		setElementData(source,tostring(k),datas+v) -- adicionando um parceiro de troca ao Inventário da Coca-Cola
 		
 		--local datas = getElementData(exchangePartner,tostring(k))
-		--setElementData(exchangePartner,tostring(k),datas-v) -- удаляем из инвентаря партнера по обмену
+		--setElementData(exchangePartner,tostring(k),datas-v) -- excluindo do inventário do parceiro de troca
 		
 		
     end
@@ -102,7 +102,7 @@ function exchangeCompleted()
 	
 	outputChatBox(getPlayerName(source).." exchangePartner set to nil")
 	
-	outputChatBox("#FFFFFFОбмен завершен.",source,255,255,255,true)
+	outputChatBox("#FFFFFFTroca concluída.",source,255,255,255,true)
 end
 
 addEvent("exchangeCompleted",true)
@@ -115,7 +115,7 @@ function exchangeCancel()
 	
 	if exchangePartner and isElement(exchangePartner) then
 
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Отменил обмен.",exchangePartner,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFFCancelou a troca.",exchangePartner,255,255,255,true)
 	
 	end
 	local exchangeColPartner = getElementData(exchangePartner,"exchange")

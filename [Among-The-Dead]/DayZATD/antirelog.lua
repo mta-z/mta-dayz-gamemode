@@ -61,7 +61,7 @@ addEventHandler( 'onPlayerQuit', root,
 	if lastKillPlayerTime then
 	local ticks = realTick-lastKillPlayerTime
 	if ticks<60000 then -- 1 the moment passed and the last victim = same person = cancel
-	outputDebugString("ANTIRELOG: abortar matança de jogador "..getPlayerName(source).." esquerda: "..ticks.."ms")
+	outputDebugString("ANTIRELOG: abortar kill do jogador "..getPlayerName(source).." esquerda: "..ticks.."ms")
 	return
 	end
 	end

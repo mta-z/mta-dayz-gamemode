@@ -753,7 +753,7 @@ end
 			
 			setElementData(source,"blood",getElementData(source,"blood")-damage) --server
 			
-			outputConsole ( "Урон по игрOKу: "..getPlayerName(source).." с учетом навыков/брони = "..damage..". ОстатOK: "..getElementData(source,"blood") )
+			outputConsole ( "Danos por jogador: "..getPlayerName(source).." levando em consideração habilidades / armadura = "..damage..". O resto está bem: "..getElementData(source,"blood") )
 			--playRandomHitSound()
 			
 
@@ -1299,8 +1299,8 @@ end
 
 function roundTime(value)
 	if value then
-local hours = math.floor(value/60) -- Получаем количество полных часов
-local minutes = value - (hours*60) -- Получаем оставшиеся минуты	
+local hours = math.floor(value/60) -- Conseguimos o número de horas completas
+local minutes = value - (hours*60) -- Pegamos os minutos restanteses	
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end
@@ -2266,10 +2266,10 @@ function openCloseVeh()
 		if carOwner and carOwner == userAcc then
 			if isVehicleLocked(veh) then
 				triggerServerEvent("openMyVH",localPlayer,veh)
-				outputChatBox("Вы открыли #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
+				outputChatBox("Você abriu #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
 				else
 				triggerServerEvent("closeMyVH",localPlayer,veh)
-				outputChatBox("Вы закрыли #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
+				outputChatBox("Você fechou #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
 			end
 		end
 	end
@@ -2283,7 +2283,7 @@ function enterVeh(thePlayer, seat)
 			local carOwner = getElementData(source,"owner") 
 			local userAcc =  getElementData(localPlayer,"userAccount")
 			if carOwner and carOwner == userAcc then
-            outputChatBox("Нажмите #FF0000L #FFFFFFчтобы Abrir/Fechar #FFFF00"..GetRealVehicleName(source),255,255,255,true)
+            outputChatBox("Clique em #FF0000L #FFFFFFpara Abrir/Fechar #FFFF00"..GetRealVehicleName(source),255,255,255,true)
 			end
 		end
 	end
@@ -2294,7 +2294,7 @@ addEventHandler("onClientVehicleEnter", root,enterVeh)
 
 
 
------ ОТРИСОВКА ТАЙМЕРА УДАЛЕНИЯ ТС
+----- DESENHANDO O TEMPORIZADOR DE EXCLUIR
 
 function roundTimeVeh(value)
 if value<=0 then 

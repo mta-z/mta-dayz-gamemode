@@ -22,13 +22,13 @@ guiSetFont (headlineExchange["inventory"], "default-bold-small" )
 
 gridlistItemsExchange["loot"] = guiCreateGridList (0.03, 0.11, 0.39, 0.375,true,exchangeWindows)
 guiGridListSetSortingEnabled ( gridlistItemsExchange["loot"], false )
-gridlistItemsExchange["loot_colum"] = guiGridListAddColumn( gridlistItemsExchange["loot"], "123456789123456789123 предложил:", 0.7 )
+gridlistItemsExchange["loot_colum"] = guiGridListAddColumn( gridlistItemsExchange["loot"], "123456789123456789123 proposta:", 0.7 )
 gridlistItemsExchange["loot_colum_amount"] = guiGridListAddColumn( gridlistItemsExchange["loot"], "", 0.2 )
 
 
 gridlistItemsExchange["loot2"] = guiCreateGridList (0.03, 0.485, 0.39, 0.375,true,exchangeWindows)
 guiGridListSetSortingEnabled ( gridlistItemsExchange["loot2"], false )
-gridlistItemsExchange["loot_colum2"] = guiGridListAddColumn( gridlistItemsExchange["loot2"], "123456789123456789123 предложил:", 0.7 )
+gridlistItemsExchange["loot_colum2"] = guiGridListAddColumn( gridlistItemsExchange["loot2"], "123456789123456789123 proposta:", 0.7 )
 gridlistItemsExchange["loot_colum_amount2"] = guiGridListAddColumn( gridlistItemsExchange["loot2"], "", 0.2 )
 
 guiSetEnabled ( gridlistItemsExchange["loot2"], false )
@@ -111,8 +111,8 @@ guiSetVisible(exchangeWindows,false)
 
 
 
-local excAccept = guiCreateWindow(0, 0, 350, 150, "Exchange Accept", false)
-local excAcceptText = guiCreateLabel(0, 30, 350, 100,"12345678901234567890123\n\nOffered you an exchange",false,excAccept)
+local excAccept = guiCreateWindow(0, 0, 350, 150, "Aceitar troca", false)
+local excAcceptText = guiCreateLabel(0, 30, 350, 100,"12345678901234567890123\n\nOfereceu-lhe uma troca",false,excAccept)
 guiLabelSetHorizontalAlign (excAcceptText,"center")
 
 local excAcceptOK = guiCreateButton(0.1, 0.7, 0.3, 0.7, "Accept", true,excAccept)
@@ -229,7 +229,7 @@ local cancelBtnFlood = false
 function inventoryLootToExc(all)
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Exchange", "Ping exceeds the norm!", 255, 22, 0 )
+startRollMessage2("Exchange", "Ping excede a norma!", 255, 22, 0 )
 return
 end
 

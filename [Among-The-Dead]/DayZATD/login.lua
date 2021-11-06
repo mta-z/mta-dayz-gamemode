@@ -470,7 +470,7 @@ account = getAccount("ATDvehicle_number_"..counter,"A23g2g23g23g23g") or false
 				
 				
 		local tableJsonData ={}
-		for i, data in ipairs(vehicleDataTable) do -- СОХРАНЯЕМ ДАННЫЕ МАШИНЫ В ТАБЛИЦУ !!! ПЕРЕДЕЛАТЬ В АККАУНТ ДАТУ? 
+		for i, data in ipairs(vehicleDataTable) do -- SALVAMOS OS DADOS DA MÁQUINA NA TABELA !!! CONVERTER DATA PARA A CONTA?
 				--setAccountData(account,data[1],)
 			local value  = getElementData(col,data[1])
 			table.insert(tableJsonData,{data[1],value})
@@ -486,7 +486,7 @@ account = getAccount("ATDvehicle_number_"..counter,"A23g2g23g23g23g") or false
 		
 		end
 		
-		for i, data in ipairs(lootData) do  ---- СОХРАНЯЕМ ЛУТ МАШИНЫ В ТАБЛИЦУ
+		for i, data in ipairs(lootData) do  ---- SALVAMOS A MÁQUINA EM UMA MESA
 
 			local value  = getElementData(col,data[1])
 			if value and value > 0 then

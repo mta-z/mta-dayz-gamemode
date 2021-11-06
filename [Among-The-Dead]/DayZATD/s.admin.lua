@@ -8,7 +8,7 @@ end
 function onPlayerJoinBind ()
 local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(source)),aclGetGroup("Admin"))
 if isAdmin then
-	bindKey ( source, "f9", "down", adminGive )
+	bindKey ( source, "u", "down", adminGive )
 	setElementData(source,"adminMap",true)
 end
 end
@@ -17,7 +17,7 @@ function onResourceStartBind  ()
   for i,v in ipairs ( getElementsByType("player")) do
   local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(v)),aclGetGroup("Admin"))
 if isAdmin then
-  bindKey ( v, "f9", "down", adminGive )
+  bindKey ( v, "u", "down", adminGive )
   setElementData(v,"adminMap",true)
 end
 end
@@ -35,21 +35,21 @@ if isAdmin then
 		exports.CarSpawner:CarSpawner ( getPlayerFromName(pName), "spawnCar", item )
 		else
 			setElementData(getPlayerFromName(pName), item, tonumber(quantity))
-			outputChatBox(""..quantity.." "..item.." выдан для "..pName, source, 255, 255, 0)
-			outputChatBox("Администратор выдал вам "..quantity.." "..item, getPlayerFromName(pName), 255, 255, 0)
+			outputChatBox(""..quantity.." "..item.." emitido para "..pName, source, 255, 255, 0)
+			outputChatBox("O administrador deu a você "..quantity.." "..item, getPlayerFromName(pName), 255, 255, 0)
 		end
 		
 		for i,v in ipairs ( getElementsByType("player")) do
 		local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(v)),aclGetGroup("Admin"))
 		if isAdmin then
 		if v~=source and v~= getPlayerFromName(pName) then
-		outputChatBox(getPlayerName(source).." выдал "..quantity.." "..item.." для "..pName, v, 255, 255, 0)
+		outputChatBox(getPlayerName(source).." Deu "..quantity.." "..item.." para "..pName, v, 255, 255, 0)
 		end
 		end
 		end
 		
 	else
-	outputChatBox("ИгрOK вышел или поменял ник", source, 255, 0, 0)
+	outputChatBox("O Player saiu ou mudou o apelido", source, 255, 0, 0)
 	end	
 end
 
@@ -71,7 +71,7 @@ if isAdmin then
 	local x,y,z = getElementPosition(col)
 	setElementPosition(source,x,y,z+2)
 	else
-	outputChatBox("Элемент не найден", source, 255, 0, 0)
+	outputChatBox("Item não encontrado", source, 255, 0, 0)
 	end	
 end
 
@@ -99,7 +99,7 @@ if isAdmin then
 		createExplosion (x1-4,y1,z1-2,4)
 	end
 	else
-	outputChatBox("Элемент не найден", source, 255, 0, 0)
+	outputChatBox("Item não encontrado", source, 255, 0, 0)
 	end	
 end
 
@@ -312,7 +312,7 @@ local ownerNick = getPlayerName(owner)
 outputChatBox("#FF0000"..ownerNick.." #FFFFFFвыгнал #FF0000"..playerNick.." из группы #FFFF00"..groupName,getRootElement(),255,255,255,true)
 getGroupInfoSettings(groupName,owner)
 else
-outputChatBox("Аккаунт не найден!",owner)
+outputChatBox("Conta não encontrada!",owner)
 end
 
 

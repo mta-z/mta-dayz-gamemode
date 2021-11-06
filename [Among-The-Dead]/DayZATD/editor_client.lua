@@ -724,9 +724,9 @@ elseif id == 434 then
 return "Ford Mustang 1967"
 
 elseif id == 569 then
-return "Военный поезд"
+return "Trem militar"
 elseif id == 537 then
-return "Военный поезд"
+return "Trem militar"
 
 
 

@@ -657,7 +657,7 @@ function createPickupsOnServerStart5()
 	
 	
 	setServerPassword(nil)
-setGameType ("DayZ:Among the dead")
+setGameType ("DayZ EpochZ v1.6")
 
 		outputChatBox("#ffaa00Atenção! #ffffff - Respawn Loot OK!",getRootElement(),255,255,255,true)
 	
@@ -726,11 +726,11 @@ local rLootTimer=false
 function refreshItemLoots ()
 
 setServerPassword("kawfjawhfai1y2631yhgwfgawfgagwfagwfagwfgawf")
-setGameType ("Респаун лута")
+setGameType ("Respawn loot")
 		for i, player in ipairs(getElementsByType("player")) do
-			kickPlayer(player,"Респаун лута")
+			kickPlayer(player,"Respawn loot")
 		end
-	outputChatBox("#ffaa00Внимание! #ffffff - Начался респаун лута!",getRootElement(),255,255,255,true)
+	outputChatBox("#ffaa00Atenção! #ffffff -O Respawn de Loot começou!",getRootElement(),255,255,255,true)
 	for i, loots in ipairs(getElementsByType("colshape")) do
 		local itemloot = getElementData(loots,"itemloot")
 		if itemloot then
@@ -757,7 +757,7 @@ end
 --Refresh items
 function refreshItemLootPoints ()
 
-	outputChatBox("#ff2200Внимание! #ffffff - Через 60 секунд начнется респаун лута(все игрOKи будут кикнуты с сервера)!",getRootElement(),255,255,255,true)
+	outputChatBox("#ff2200Atenção! #ffffff - Após 60 segundos, o loot irá reaparecer (todos os jogadores OK serão espulso do servidor)!",getRootElement(),255,255,255,true)
 	triggerClientEvent ( "onClientUnBind", getRootElement(), "unbind" )
 	setTimer(refreshItemLoots,60000,1)
 	
@@ -771,7 +771,7 @@ function TESTSERVRELOOT(player, command, params)
 local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(player)),aclGetGroup("Admin"))
 if isAdmin then
 
-outputChatBox("Точек лута:"..#getElementChildren(itemLootTable))
+outputChatBox("Pontos de LooT:"..#getElementChildren(itemLootTable))
 
 	end
 end

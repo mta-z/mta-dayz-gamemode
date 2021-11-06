@@ -121,7 +121,7 @@ function spawnDayZPlayer(player,location,unbug)
 
 
 if unbug then
-exports.logger:setLog("( Account:"..getAccountName ( getPlayerAccount ( player ) ).." Serial:"..getPlayerSerial ( player ).." IP:"..getPlayerIP ( player ).." ) "..getPlayerName(player).." function: spawnDayZPlayer type: unbug","log")	
+exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( player ) ).." Serial:"..getPlayerSerial ( player ).." IP:"..getPlayerIP ( player ).." ) "..getPlayerName(player).." function: spawnDayZPlayer type: unbug","log")	
 end
 
 	if location then
@@ -362,13 +362,13 @@ function setPedStats()
 local acc = getPlayerAccount(source)
 
 
--- получаем стаатистику на время смерти
+-- obter estatísticas para a hora da morte
 	local murders = getElementData(source,'murders')
 	local zombieskilled = getElementData(source,'zombieskilled')
 	local banditskilled = getElementData(source,'banditskilled') 
 	local alivetime = getElementData(source,"alivetime")
 
--- статистика игрOKа за все время	
+-- Todas as estatísticas do jogo OK
 	local accMurders = getElementData ( source, "stat.murders") or 0
 	local accZombieskilled = getElementData ( source, "stat.zombieskilled") or 0
 	local accBanditskilled = getElementData ( source, "stat.banditskilled") or 0
@@ -383,7 +383,7 @@ local acc = getPlayerAccount(source)
 
 
 
--- максимально достигнутая статистика игрOKа 
+-- estatísticas máximas alcançadas do jogo OK
 		local accMurdersMax = getElementData ( source, "stat.murdersMax") or 0
 	local accZombieskilledMax = getElementData ( source, "stat.zombieskilledMax") or 0
 	local accBanditskilledMax = getElementData ( source, "stat.banditskilledMax") or 0
@@ -398,7 +398,7 @@ local acc = getPlayerAccount(source)
 	
 	
 	
--- запись общей статистики игрOKов за все время 
+-- registro de estatísticas gerais de jogos OK de todos os tempos
 
 local USERnick = getPlayerName (source)
 
@@ -467,7 +467,7 @@ setAccountData ( statMaganer, "allstats.banditskilledMAXNICK",tostring(USERnick)
 	end
 	 setAccountData ( statMaganer, "allstats.alivetime" ,  allat+alivetime )
 	 
--- конец общей статистики
+-- fim das estatísticas gerais
 	
 	
 end
@@ -511,9 +511,9 @@ if not account then return end
 
 local timeAlive = getElementData(source,"alivetime") or 0 
 if killer then
-exports.logger:setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer:"..getPlayerName (killer).." killer serial: "..getPlayerSerial (killer).." aliveTime: "..timeAlive.."","log")	
+exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer:"..getPlayerName (killer).." killer serial: "..getPlayerSerial (killer).." aliveTime: "..timeAlive.."","log")	
 else
-exports.logger:setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer: none aliveTime: "..timeAlive.."","log")
+exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer: none aliveTime: "..timeAlive.."","log")
 end
 local  x,y,z = getElementPosition(source)
 
@@ -527,7 +527,7 @@ local  x,y,z = getElementPosition(source)
 	setElementData(source,"weaponSwith",false)
 	setElementData(source,"GPSpharos",false)
 	
-	setTimer(setElementPosition,500,1,source,6000,6000,0) -- зачем это? чтобы труп можно было лутать после смерти сразу
+	setTimer(setElementPosition,500,1,source,6000,6000,0) -- porque é isso? para que o cadáver possa ser saqueado imediatamente após a morte
 	setAccountData(account,"isDead",true)
 	setElementData(source,"isDead",true) --client
 	destroyElement(getElementData(source,"playerCol"))
@@ -543,7 +543,7 @@ local  x,y,z = getElementPosition(source)
 		local realTick = getTickCount ()
 		if lastKillPlayerTime then
 			local ticks = realTick-lastKillPlayerTime
-			if ticks<60000 then -- 1 минута не прошла и последний убитый = тот же человек = отменить
+			if ticks<60000 then -- 1 minuto não passou e o último morto = a mesma pessoa = cancelar
 				outputDebugString("abort player kill "..getPlayerName(source).." left: "..ticks.."ms")
 				
 				lastKillPlayerTime = getTickCount ()
@@ -592,7 +592,7 @@ killPed(source)
 		--killPed(ped)
 		if killer then
 	--	local kx,ky,kz = getElementPosition(killer)
-		pdistance = 500 -- 500 = не создавать зомби после убийства
+		pdistance = 500 -- 500 = não crie zumbis depois de matar
 		else
 		pdistance = 500
 		end
@@ -691,21 +691,21 @@ killPed(source)
 		
 			
 			if headshot then 
-		headshot ='в голову'
+		headshot ='na cabeça'
 		else
 		headshot =false
 		end
 		
 		if (killer and weapon) then
-		killer="игрOKом #FF0000"..getPlayerName (killer).."#FFFFFF"
+		killer=" #FF0000"..getPlayerName (killer).."#FFFFFF"
 		else
 		killer=false
 		end
 				if weapon ~= nil and weapon ~= false then
-		weapon = "c помощью: #FFFF00".. weapon or ""
+		weapon = "usando: #FFFF00".. weapon or ""
 		end
 		 
-		triggerClientEvent ("onRollMessageStart", getRootElement(),"#FF0000"..getPlayerName(source).." #FFFFFF был убит "..(killer or botName or "").." "..(headshot or "").." "..(weapon or botWeapon or "").." #FFFFFF"..(zoneName or ""),0,22,255, "died")
+		triggerClientEvent ("onRollMessageStart", getRootElement(),"#FF0000"..getPlayerName(source).." #FFFFFF foi morto "..(killer or botName or "").." "..(headshot or "").." "..(weapon or botWeapon or "").." #FFFFFF"..(zoneName or ""),0,22,255, "died")
 		
 		
 		else

@@ -111,27 +111,27 @@ end
 		guiLabelSetHorizontalAlign ( colorTwo, "center" )
 	
 	
-	local engineText = guiCreateLabel ( 0, 0.45, 1,  0.5, "Engine", true, mechWin)
+	local engineText = guiCreateLabel ( 0, 0.45, 1,  0.5, "Motor", true, mechWin)
 		guiSetFont ( engineText, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( engineText, "center" )
 		
 		local enginePanel    =	guiCreateLabel ( 0, 0.5, 1, 1, "", true, mechWin )
-			local engineSpeed    =	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Speed", true, enginePanel )
-			local engineStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Standard", true, enginePanel )
-			local engineEconom   = 	guiCreateRadioButton (  0.6, 0,  0.3,  0.05, "Efficiency", true, enginePanel )
+			local engineSpeed    =	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Velocidade", true, enginePanel )
+			local engineStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Padrão", true, enginePanel )
+			local engineEconom   = 	guiCreateRadioButton (  0.6, 0,  0.3,  0.05, "Eficiência", true, enginePanel )
 	
-	local susText = guiCreateLabel ( 0, 0.6, 1,  0.5, "Suspension", true, mechWin)
+	local susText = guiCreateLabel ( 0, 0.6, 1,  0.5, "Suspensão", true, mechWin)
 		guiSetFont ( susText, "default-bold-small" )
 		guiLabelSetHorizontalAlign ( susText, "center" )
 		
 		local susPanel = guiCreateLabel ( 0, 0.65, 1, 1, "", true, mechWin )
-			local susLow      = 	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Low", true, susPanel )
-			local susStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Standard", true, susPanel )
-			local susHigh	  = 	guiCreateRadioButton (  0.6, 0,  0.2,  0.05, "High", true, susPanel )
+			local susLow      = 	guiCreateRadioButton (  0.2, 0,  0.2,  0.05, "Baixo", true, susPanel )
+			local susStandart = 	guiCreateRadioButton (  0.4, 0,  0.2,  0.05, "Padrão", true, susPanel )
+			local susHigh	  = 	guiCreateRadioButton (  0.6, 0,  0.2,  0.05, "Alto", true, susPanel )
 	
 	
 	local saveCarSettingsBtn = guiCreateButton ( 0.05, 0.85,  0.40,  0.1, "OK", true, mechWin )
-	local closeMechWinBtn = guiCreateButton ( 0.55, 0.85,  0.40,  0.1, "Close", true, mechWin )
+	local closeMechWinBtn = guiCreateButton ( 0.55, 0.85,  0.40,  0.1, "Fechar", true, mechWin )
 	
 	
 	
@@ -176,7 +176,7 @@ end
 			end
 			
 			if price>0 then
-				guiSetText ( saveCarSettingsBtn, "Buy for: "..price )
+				guiSetText ( saveCarSettingsBtn, "Comprar por: "..price )
 				
 				else
 				guiSetText ( saveCarSettingsBtn, "OK" )
@@ -214,19 +214,19 @@ end
 		end
 	end
 	
-	addEventHandler( "onClientMouseEnter", engineSpeed,function() showToolTip("Maximum speed: +50%\nFuel consumption: +50%","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineSpeed,function() showToolTip("Velocidade máxima: +50%\nConsumo de combustível: +50%","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineSpeed, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", engineStandart,function() showToolTip("Maximum speed: Standard\nFuel consumption: Standard","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineStandart,function() showToolTip("Velocidade máxima: Standard\nConsumo de combustível: Standard","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineStandart, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", engineEconom,function() showToolTip("Maximum speed: -30%\nFuel consumption: -50%","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", engineEconom,function() showToolTip("Velocidade máxima: -30%\nConsumo de combustível: -50%","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", engineEconom, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", colorOne,function() showToolTip("Main color\nClick to change","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", colorOne,function() showToolTip("Cor Principal\nClique para mudar","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", colorOne, hideToolTip ,false)
 	
-	addEventHandler( "onClientMouseEnter", colorTwo,function() showToolTip("Secondary color\nClick to change","",engineSpeed) end,false)
+	addEventHandler( "onClientMouseEnter", colorTwo,function() showToolTip("Cor secundária\nClique para mudar","",engineSpeed) end,false)
 	addEventHandler( "onClientMouseLeave", colorTwo, hideToolTip ,false)
 	
 	

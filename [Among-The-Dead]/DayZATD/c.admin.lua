@@ -66,19 +66,19 @@ guiWindowSetSizable ( myWindow, false )
 centerWindow(myWindow)
 guiSetVisible ( myWindow, false )
 local tabs = guiCreateTabPanel ( 10, 20, 800, 500, false, myWindow )
-local targ = guiCreateTab( "Give", tabs )
-local sess = guiCreateTab( "Tents/Safes", tabs )
-local playersTab = guiCreateTab( "Players", tabs )
-local cars = guiCreateTab( "Vehicles", tabs )
-local groups = guiCreateTab( "Groups", tabs )
-local map = guiCreateTab( "Map", tabs )
+local targ = guiCreateTab( "Dar", tabs )
+local sess = guiCreateTab( "Tendas / cofres", tabs )
+local playersTab = guiCreateTab( "Jogadores", tabs )
+local cars = guiCreateTab( "Veículos", tabs )
+local groups = guiCreateTab( "Grupos", tabs )
+local map = guiCreateTab( "Mapa", tabs )
 
 local players= guiCreateGridList(10, 10, 250, 430, false, targ)
 local playersCol = guiGridListAddColumn( players, "Player", 0.90 )
 guiGridListSetSortingEnabled(players,false)
  
 
-local category = guiCreateComboBox(270, 10, 500, 150, "-- Selected category --", false, targ)
+local category = guiCreateComboBox(270, 10, 500, 150, "--Categoria selecionada --", false, targ)
 guiSetProperty(category, "InheritsAlpha", "False") 
 for key, value in pairs (giveElements) do
 	guiComboBoxAddItem(category, value)	
@@ -186,7 +186,7 @@ local tentsLootCOL= guiGridListAddColumn( tentsLoot, "", 0.50 )
 local tentsLootQUA= guiGridListAddColumn( tentsLoot, "", 0.40 )	
 guiGridListSetSortingEnabled(tentsLoot,false)
 
-local teleport = guiCreateButton(320, 400, 450, 40, "Teleport", false, sess)
+local teleport = guiCreateButton(320, 400, 450, 40, "Teleportar", false, sess)
 
 	guiSetFont(teleport, "default-bold-small")
 	guiSetProperty(teleport, "NormalTextColour", "FFAAAAAA")
@@ -320,16 +320,16 @@ addEventHandler( "onClientGUIClick", allPlayers,onSelectPlayers , false )
 	
 	
 local allCars= guiCreateGridList(10, 10, 760, 380, false, cars)
-local allCarsNAME = guiGridListAddColumn( allCars, "Name", 0.3 )
-local allCarsTRADE = guiGridListAddColumn( allCars, "Withdraw", 0.1 )
-local allCarsINZZ = guiGridListAddColumn( allCars, "In ZZ", 0.1 )
-local allCarsINBASE = guiGridListAddColumn( allCars, "In the database", 0.1 )
-local allCarsINMOD = guiGridListAddColumn( allCars, "With the name", 0.1 )
-local allCarsOWNER = guiGridListAddColumn( allCars, "Owner", 0.2 )
+local allCarsNAME = guiGridListAddColumn( allCars, "Nome", 0.3 )
+local allCarsTRADE = guiGridListAddColumn( allCars, "Retirar", 0.1 )
+local allCarsINZZ = guiGridListAddColumn( allCars, "Em ZZ", 0.1 )
+local allCarsINBASE = guiGridListAddColumn( allCars, "Em uma base", 0.1 )
+local allCarsINMOD = guiGridListAddColumn( allCars, "Com o nome", 0.1 )
+local allCarsOWNER = guiGridListAddColumn( allCars, "Dono", 0.2 )
 guiGridListSetSortingEnabled(allCars,false)
 
 
-local carBlow = guiCreateButton(10, 400, 760, 40, "Blow up", false, cars)
+local carBlow = guiCreateButton(10, 400, 760, 40, "Explodir", false, cars)
 
 	guiSetFont(carBlow, "default-bold-small")
 	guiSetProperty(carBlow, "NormalTextColour", "FFAAAAAA")
@@ -376,8 +376,8 @@ addEventHandler( "onClientGUIDoubleClick", allCars,onSelectCar , false )
 local allGroups= guiCreateGridList(10, 10, 300, 430, false, groups)
 local allGroupsName= guiGridListAddColumn( allGroups, "Name", 0.4 )
 local allGroupsLVL= guiGridListAddColumn( allGroups, "Level", 0.15 )
-local allGroupsMemmers= guiGridListAddColumn( allGroups, "Participants", 0.15 )
-local allGroupsCreateDate= guiGridListAddColumn( allGroups, "Creation Date", 0.2 )
+local allGroupsMemmers= guiGridListAddColumn( allGroups, "Participantes", 0.15 )
+local allGroupsCreateDate= guiGridListAddColumn( allGroups, "Data de criação", 0.2 )
 guiGridListSetSortingEnabled(allGroups,false)
  
 
@@ -390,7 +390,7 @@ local playersInGroupAccount= guiGridListAddColumn( playersInGroup, "Account", 0.
 guiGridListSetSortingEnabled(playersInGroup,false) 
 
 --local playerKick = guiCreateButton(320, 370, 450, 30, "Выгнать", false, groups)
-local removeGroup = guiCreateButton(320, 370, 450, 50, "Delete Group", false, groups)
+local removeGroup = guiCreateButton(320, 370, 450, 50, "Excluir Grupo", false, groups)
 --guiSetEnabled(playerKick,false)
 guiSetEnabled(removeGroup,false)
 
@@ -401,13 +401,13 @@ guiSetEnabled(removeGroup,false)
 
 
 
-local adminMap = guiCreateCheckBox ( 100, 50, 200, 20, "Teleport around the map", false, false, map )
+local adminMap = guiCreateCheckBox ( 100, 50, 200, 20, "Teleporte-se pelo mapa", false, false, map )
 addEventHandler ( "onClientGUIClick", adminMap, function ( comboBox ) setAdminFunc(adminMap) end,false)
-local adminShowTents = guiCreateCheckBox ( 100, 100, 200, 20, "Show tents nearby", false, false, map )
+local adminShowTents = guiCreateCheckBox ( 100, 100, 200, 20, "Mostrar tendas próximas", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowTents, function ( comboBox ) setAdminFunc(adminShowTents) end,false)
-local adminShowPlayers = guiCreateCheckBox ( 100, 150, 200, 20, "Show players side", false, false, map )
+local adminShowPlayers = guiCreateCheckBox ( 100, 150, 200, 20, "Mostrar o lado dos jogadores", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowPlayers, function ( comboBox ) setAdminFunc(adminShowPlayers) end,false)
-local adminShowCars = guiCreateCheckBox ( 100, 200, 200, 20, "Show the description", false, false, map )
+local adminShowCars = guiCreateCheckBox ( 100, 200, 200, 20, "Mostra a descrição", false, false, map )
 addEventHandler ( "onClientGUIClick", adminShowCars, function ( comboBox ) setAdminFunc(adminShowCars) end,false)
 
 
@@ -521,15 +521,15 @@ addEventHandler( "onClientGUIClick", removeGroup,adminRemoveGroup , false )
 			if isTent and not isBitTent and not isSave  then 
 			local PlayerNick = getElementData(col,"PlayerNick") or false
 			local row = guiGridListAddRow ( tents )
-					guiGridListSetItemText ( tents, row, tentsCOL,"Tent", false, false )
-					guiGridListSetItemText ( tents, row, tentsPASS,"Owner:"..PlayerNick, true, false )
+					guiGridListSetItemText ( tents, row, tentsCOL,"Tenda", false, false )
+					guiGridListSetItemText ( tents, row, tentsPASS,"Dono:"..PlayerNick, true, false )
 					guiGridListSetItemData ( tents, row, tentsCOL, col )
 			end
 			if isBitTent then 
 			local PlayerNick = getElementData(col,"PlayerNick") or false
 			local row = guiGridListAddRow ( tents )
 					guiGridListSetItemText ( tents, row, tentsCOL,"Big tent", false, false )
-					guiGridListSetItemText ( tents, row, tentsPASS,"Owner:"..PlayerNick, true, false )
+					guiGridListSetItemText ( tents, row, tentsPASS,"Dono:"..PlayerNick, true, false )
 					guiGridListSetItemData ( tents, row, tentsCOL, col )
 			end
 			
@@ -579,7 +579,7 @@ addEventHandler( "onClientGUIClick", removeGroup,adminRemoveGroup , false )
 			end
 		
 		elseif selectedTab==groups then
-		guiSetText(removeGroup,"Delete Group")
+		guiSetText(removeGroup,"Excluir Grupo")
 		guiSetEnabled(removeGroup,false)
 		guiGridListClear(allGroups)
 		guiGridListClear(playersInGroup)

@@ -10,22 +10,22 @@ setElementData(getRootElement(),"pingMAX",1000)
 setElementData(getRootElement(),"MAXpacketlossLastSecond",30)
 setElementData(getRootElement(),"MAXmessagesInResendBuffer",20)
 
-setTrafficLightState("disabled") -- отключение светофоров
+setTrafficLightState("disabled") -- desligando semáforos
 
 setFPSLimit ( 80 )     
 
 setModelHandling ( 481, "maxVelocity", 50 ) -- BMX
-setModelHandling ( 510, "maxVelocity", 50 ) -- горный 
-setModelHandling(516, "engineAcceleration", 10) -- mers
-setModelHandling ( 516, "maxVelocity", 200 ) -- mers
-setModelHandling(471, "engineAcceleration", 14) -- квадрик
-setModelHandling ( 471, "maxVelocity", 120 ) -- квадрик
+setModelHandling ( 510, "maxVelocity", 50 ) -- montanha 
+setModelHandling(516, "engineAcceleration", 10) -- andando
+setModelHandling ( 516, "maxVelocity", 200 ) -- andando
+setModelHandling(471, "engineAcceleration", 14) -- quádrica
+setModelHandling ( 471, "maxVelocity", 120 ) -- quádrica
 setModelHandling ( 509, "maxVelocity", 40 ) -- обычный велик
-setWaterColor (111,255,255,120) --цвет воды 
-setWaveHeight ( 0.5) -- высота волн
-setGlitchEnabled ( "hitanim", true ) -- анимация при попадении
-setGlitchEnabled ( "fastsprint", true ) -- бег 
-setCloudsEnabled ( false ) -- облака
+setWaterColor (111,255,255,120) --cor da água
+setWaveHeight ( 0.5) -- altura da onda
+setGlitchEnabled ( "hitanim", true ) -- animação de sucesso
+setGlitchEnabled ( "fastsprint", true ) -- corre 
+setCloudsEnabled ( false ) -- nuvens
 
 
 end
