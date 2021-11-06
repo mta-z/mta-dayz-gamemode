@@ -131,7 +131,7 @@ local MyItems = getElementData(source,stm) or 0
 
 	if getElementData(source,"backPackUsed") == item[1] then
 	if getElementData(source,item[1]) <= 1 then
-	outputChatBox("Нельзя продать используемый рюкзак!" ,source)
+	outputChatBox("Нельзя Vender используемый рюкзак!" ,source)
 	else
 			setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))

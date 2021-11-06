@@ -854,7 +854,7 @@ return
 	
 	
 	
-	--- Автомеханик
+	--- Auto-Mecânica
 	
 	  local pos8 = 70
 local automech = getElementData(getLocalPlayer(),"progress.automech") or 0

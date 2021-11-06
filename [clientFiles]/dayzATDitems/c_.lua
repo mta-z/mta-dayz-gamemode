@@ -62,8 +62,8 @@ local items = {
 {1512,"1512.txd","1512.dff",false,lodDistance}, -- Peixe Cru
 {1517,"1512.txd","1517.dff",false,lodDistance}, -- Peixe Frito
 {2392,"2392.txd","2392.dff","2392.col",lodDistance}, -- могила
-{2704,"2704.txd","2704.dff","2704.col",lodDistance}, -- Balde de Metal 1
-{2705,"2705.txd","2705.dff","2705.col",lodDistance}, -- Balde de Metal 2
+{2704,"2704.txd","2704.dff","2704.col",lodDistance}, -- Placa de Metal 1
+{2705,"2705.txd","2705.dff","2705.col",lodDistance}, -- Placa de Metal 2
 --{2706,"2706.txd","2706.dff","2706.col",lodDistance}, -- кусOK железки для машины лучше закомментировать 
 {2394,"2394.txd","2394.dff",false,70}, -- Capacete Militar 50%
 {2396,"2396.txd","2396.dff",false,70}, -- Colete 10%
