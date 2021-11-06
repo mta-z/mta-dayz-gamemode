@@ -28,7 +28,7 @@ end
 
 function loadSettings()
 
-	settingsFile  = xmlLoadFile ( ":DayZATD/interfaceSettings.xml" )
+	settingsFile  = xmlLoadFile ( ":DayZ/interfaceSettings.xml" )
 
 	local settings = xmlNodeGetChildren(settingsFile)
 	for i,node in ipairs(settings) do 
@@ -40,10 +40,10 @@ function loadSettings()
 		exports.ATD_RADARMAP:radarSiz(tonumber(nodeValue))
 		
 		elseif nodeName == "iconsSize" then
-		exports.DayZATD:setIconsSize(tostring(nodeValue))		
+		exports.DayZ:setIconsSize(tostring(nodeValue))		
 		
 		elseif nodeName == "invSize" then
-		exports.DayZATD:setInvSize(tonumber(nodeValue))
+		exports.DayZ:setInvSize(tonumber(nodeValue))
 		
 		--elseif nodeName == "worldTextureQ" then
 		--exports.WS:setTextureQ(tonumber(nodeValue))
@@ -86,7 +86,7 @@ end
 
 
 addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()), function() 
-if not fileExists ( ":DayZATD/interfaceSettings.xml" ) then
+if not fileExists ( ":DayZ/interfaceSettings.xml" ) then
 	createSettings()
 	else
 	loadSettings()

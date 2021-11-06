@@ -386,7 +386,7 @@ guiSetFont (YourMoneyText, "default-bold-small" )
 		local enginerSlots = getElementData(getLocalPlayer(),"progress.enginer") or 0
 		local attackerSlots = getElementData(getLocalPlayer(),"progress.attacker") or 0
 		
-guiSetText ( YouSlots, exports.DayZATD.getPlayerCurrentSlots().."/"..getElementData(getLocalPlayer(),"MAX_Slots").." +"..math.floor((enginerSlots+attackerSlots)*0.2) )
+guiSetText ( YouSlots, exports.DayZ.getPlayerCurrentSlots().."/"..getElementData(getLocalPlayer(),"MAX_Slots").." +"..math.floor((enginerSlots+attackerSlots)*0.2) )
 guiSetFont (YouSlots, "default-bold-small" )
 if STMITEM == "N/A" or STMITEM == nil or not STMITEM then
 guiSetText ( YouItems, "N/A" )
@@ -567,7 +567,7 @@ end
  addEventHandler ( "onClientGUIClick", BuyWin,function() 
    local row, col = guiGridListGetSelectedItem( aaa3 )
   local stm = guiGridListGetItemText(aaa3,row, col)
-   triggerServerEvent ("PlayerBuy", getLocalPlayer(), row,col,stm,itemList,getLocalPlayer(),exports.DayZATD.getPlayerCurrentSlots(),ped,inventoryItems[itemList],teri,bloc)
+   triggerServerEvent ("PlayerBuy", getLocalPlayer(), row,col,stm,itemList,getLocalPlayer(),exports.DayZ.getPlayerCurrentSlots(),ped,inventoryItems[itemList],teri,bloc)
  end,false)
  
  closeWin = guiCreateButton( 350, 420, 280, 30, "Выход",false,targ)
@@ -600,7 +600,7 @@ end
   if getElementData(getLocalPlayer(),stm) or 0 -1 <=0 then
   guiGridListSetItemColor  (  aaa3, row, aaa4, 255, 255, 255   )
   end
- triggerServerEvent ("PlayerSell", getLocalPlayer(), row,col,stm,itemList,getLocalPlayer(),exports.DayZATD.getPlayerCurrentSlots(),ped,inventoryItems[itemList],teri)
+ triggerServerEvent ("PlayerSell", getLocalPlayer(), row,col,stm,itemList,getLocalPlayer(),exports.DayZ.getPlayerCurrentSlots(),ped,inventoryItems[itemList],teri)
  end,false)
     guiSetEnabled ( closeWin, false )
     guiSetEnabled ( BuyWin, false )

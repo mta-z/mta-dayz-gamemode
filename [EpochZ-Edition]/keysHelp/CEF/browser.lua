@@ -75,13 +75,13 @@ addEventHandler ( "loadBansMuts", theBrowser, loadBansMuts )
 function selectRadarSize(size)
 --outputChatBox(size)
 if size=="noShow" then
-exports.DayZATD:setHideRadar(true)
+exports.DayZ:setHideRadar(true)
 exports.ATD_RADARMAP:setState("hide","radar")
 
 else
-exports.DayZATD:setHideRadar(false)
+exports.DayZ:setHideRadar(false)
 exports.ATD_RADARMAP:radarSiz(tonumber(size))
-exports.DayZATD:setValueSettings("radarSize",tonumber(size))
+exports.DayZ:setValueSettings("radarSize",tonumber(size))
 
 end
 end
@@ -107,8 +107,8 @@ function selectIconsSize(size)
 if size=="noShow" then
 triggerEvent("showDebugMonitor",localPlayer,false)
 else
-exports.DayZATD:setIconsSize(tostring(size))
-exports.DayZATD:setValueSettings("iconsSize",tostring(size))
+exports.DayZ:setIconsSize(tostring(size))
+exports.DayZ:setValueSettings("iconsSize",tostring(size))
 end
 end
 
@@ -118,8 +118,8 @@ addEventHandler ( "selectIconsSize", theBrowser, selectIconsSize )
 
 function selectInvSize(size)
 
-exports.DayZATD:setInvSize(tonumber(size))
-exports.DayZATD:setValueSettings("invSize",tonumber(size))
+exports.DayZ:setInvSize(tonumber(size))
+exports.DayZ:setValueSettings("invSize",tonumber(size))
 end
 
 addEvent ( "selectInvSize", true )
@@ -128,8 +128,8 @@ addEventHandler ( "selectInvSize", theBrowser, selectInvSize )
 
 function selectAIM(aim)
 
-exports.DayZATD:selectAIM(tonumber(aim))
-exports.DayZATD:setValueSettings("aim",tonumber(aim))
+exports.DayZ:selectAIM(tonumber(aim))
+exports.DayZ:setValueSettings("aim",tonumber(aim))
 end
 
 addEvent ( "selectAIM", true )
@@ -137,15 +137,15 @@ addEventHandler ( "selectAIM", theBrowser, selectAIM )
 
 
 function selectTextureQ(Q)
-exports.DayZATD:setValueSettings("worldTextureQ",Q)
+exports.DayZ:setValueSettings("worldTextureQ",Q)
 end
 addEvent ( "selectTextureQ", true )
 addEventHandler ( "selectTextureQ", theBrowser, selectTextureQ )
 
 function setGroupDistance(value)
 	value = tonumber(value)
-	exports.DayZATD:setGroupDistance(value)
-	exports.DayZATD:setValueSettings("groupDistance",value)
+	exports.DayZ:setGroupDistance(value)
+	exports.DayZ:setValueSettings("groupDistance",value)
 end
 addEvent ( "setGroupDistance", true )
 addEventHandler ( "setGroupDistance", theBrowser, setGroupDistance )
@@ -154,7 +154,7 @@ addEventHandler ( "setGroupDistance", theBrowser, setGroupDistance )
 
 function loadSettings()
 
-local jsonSettings = exports.DayZATD:getSettingsJson()
+local jsonSettings = exports.DayZ:getSettingsJson()
  executeBrowserJavascript ( theBrowser, "onLoadSettings('"..jsonSettings.."')" )
 end
 

@@ -8,7 +8,7 @@ local worldTextureQ = "normal"
 
 addEventHandler( "onClientResourceStart", resourceRoot,
 	function()
-	worldTextureQ = exports.DayZATD:getSettingsValue("worldTextureQ")
+	worldTextureQ = exports.DayZ:getSettingsValue("worldTextureQ")
 	if worldTextureQ ~="noShow" then
 		enableDetail()
 	end
