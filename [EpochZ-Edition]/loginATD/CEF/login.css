@@ -18,8 +18,8 @@ input{
     height: 35px;
     width: 250px;
     background-color: rgba(173, 26, 26, 0.7);
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-family: impact;
     font-size: 20px;
     text-align: center;
@@ -36,8 +36,8 @@ input[type="submit"]{
 input[type="submit"]:hover{
 	
 	background-color: rgba(255, 26, 26,1);
-	border-color:#fff;
-	color:#fff;
+	border-color:rgb(0, 0, 0);
+	color:rgb(0, 0, 0);
 }
 input[type="submit"]:active{
 	
@@ -53,15 +53,17 @@ input[type="text"],input[type="password"]{
 .logo{
 	text-align: center;
     margin-top: 50px;
+    font-style: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 50px;
     font-weight: bold;
-    color: #fff;
-    text-shadow: 1px 1px 8px #000;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 8px rgb(255, 255, 255);
 }
 
 #error{
 	
-	       color: #fff;
+	color: rgb(0, 0, 0);
     background-color: #f00;
     padding: 5px;
     display: block;

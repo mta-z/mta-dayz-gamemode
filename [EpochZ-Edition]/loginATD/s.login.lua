@@ -32,7 +32,7 @@ function tryToRegsiterPlayer(login, pass)
 	  triggerClientEvent(source,"showError", source,reason)
     end
   else
-    reason = "This account already exists!"
+    reason = "Essa Conta já existe!"
 	  triggerClientEvent(source,"showError", source,reason)
   end
 end

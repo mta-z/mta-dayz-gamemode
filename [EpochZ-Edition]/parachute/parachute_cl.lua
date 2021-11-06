@@ -10,10 +10,37 @@ turnspeed = 1.5 -- rotation speed when turning
 lastspeed = 0
 opentime = 1000
 
+-- Save bandwidth by converting these strings into numbers for "animation_state" element data
+animIDs = {
+	"PARA_decel",
+	"PARA_steerL",
+	"PARA_steerR",
+	"PARA_float",
+	"FALL_skyDive_DIE",
+	"PARA_Land",
+	"PARA_Land_Water",
+	"FALL_skyDive",
+	"FALL_SkyDive_Accel",
+	"FALL_SkyDive_L",
+	"FALL_SkyDive_R",
+	"FALL_skyDive",
+}
+
+function getAnimIDFromName(animName)
+	for i, anim in ipairs(animIDs) do
+		if (anim == animName) then
+			return i
+		end
+	end
+	return false
+end
+
 local lastAnim = {}
 local lastTick
 local removing = false
 local g_parachuters = {}
+local parachutes = {}
+
 local function onResourceStart ( resource )
 	bindKey ( "fire", "down", onFire )
 	bindKey ( "enter_exit", "down", onEnter )
@@ -108,10 +135,10 @@ local function onRender ( )
 				else
 					if velZ >= FALL_VELOCITY then --they're going to have to fall down at this speed
 						removeParachute(localPlayer,"land")
-						setPedAnimation(localPlayer,"PARACHUTE","FALL_skyDive_DIE", t(3000), false, true, true)
+						setPedAnimation(localPlayer,"PARACHUTE","FALL_skyDive_DIE", -1, true, true, true, true)
 					else
 						removeParachute(localPlayer,"land")
-						setPedNewAnimation ( localPlayer, nil, "PARACHUTE", "PARA_Land", t(3000), false, true, false )
+						setPedNewAnimation ( localPlayer, nil, "PARACHUTE", "PARA_Land", -1, false, true, true, false )
 					end
 				end				
 			end
@@ -119,16 +146,17 @@ local function onRender ( )
 			local posX,posY,posZ = getElementPosition(localPlayer)
 			if testLineAgainstWater ( posX,posY,posZ + 10, posX,posY,posZ) then --Shoot a small line to see if in water
 				removeParachute(localPlayer,"water")
-				setPedNewAnimation ( localPlayer, nil, "PARACHUTE", "PARA_Land_Water", t(3000), false, true, true )
+				setPedNewAnimation ( localPlayer, nil, "PARACHUTE", "PARA_Land_Water", -1, false, true, true, false )
 			end
 		end
 	end
 	--Render remote players
-	for player,t in ipairs(g_parachuters) do
+	for player,t in pairs(g_parachuters) do
 		if player ~= localPlayer and getElementData ( player, "parachuting" ) and isElementStreamedIn(player) then
 			local velX,velY,velZ = getElementVelocity ( player )
 			local rotz = 6.2831853071796 - math.atan2 ( ( velX ), ( velY ) ) % 6.2831853071796
 			local animation = getElementData ( player, "animation_state" )
+			local animation = animIDs[animation]
 			setPedNewAnimation ( player, nil, "PARACHUTE", animation, -1, false, true, false )
 			local _,rotY = getElementRotation(player)
 			--Sync the turning rotation
@@ -182,9 +210,16 @@ function addLocalParachute()
 	local chute = createObject ( 3131, x,y,z )
 	setElementDimension(chute, getElementDimension( localPlayer ) )
 	setElementStreamable(chute, false )
+	parachutes[localPlayer] = chute
 	openChute ( chute, localPlayer, opentime )
 	setElementData ( localPlayer, "parachuting", true )
-	triggerServerEvent ( "requestAddParachute", localPlayer )
+	triggerServerEvent ( "requestAddParachute", resourceRoot )
+end
+
+function setPedAnimationDelayed(player)
+	if (isElement(player)) then
+		setPedAnimation(player)
+	end
 end
 
 function removeParachute(player,type)
@@ -194,9 +229,9 @@ function removeParachute(player,type)
 	end
 
 	local chute = getPlayerParachute ( player )
-	 setTimer ( setPedAnimation, t(3000), 1, player )
-	 openingChutes[chute] = nil
-	 if chute then
+	setTimer ( setPedAnimationDelayed, t(3000), 1, player )
+	openingChutes[chute] = nil
+	if chute then
 		if type == "land" then
 			Animation.createAndPlay(
 			  chute,
@@ -229,8 +264,9 @@ function removeParachute(player,type)
 		setTimer ( setElementData, 1000, 1, localPlayer, "parachuting", false )
 		setTimer ( function() removing = false end, 1100, 1)
 		removeEventHandler ( "onClientPlayerWasted", localPlayer, onWasted )
-		triggerServerEvent ( "requestRemoveParachute", localPlayer )
+		triggerServerEvent ( "requestRemoveParachute", resourceRoot )
 	end
+	parachutes[player] = nil
 end
 
 function animationParachute_land(chute,xoff)
@@ -248,44 +284,37 @@ addEventHandler ( "doAddParachuteToPlayer", root,
 		local chute = createObject ( 3131, x, y, z )
 		setElementDimension( chute, getElementDimension( source ) )
 		setElementStreamable(chute, false )
+		parachutes[source] = chute
 		openChute ( chute, source, opentime )
 	end
 )
-
 
 addEvent ( "doRemoveParachuteFromPlayer", true)
 addEventHandler ( "doRemoveParachuteFromPlayer", root,
 	function()
 		if not isPedOnGround ( source ) or not getPedContactElement ( source ) then
-			setPedNewAnimation ( source, nil, "PARACHUTE", "PARA_Land", t(3000), false, true, false )
+			setPedNewAnimation ( source, nil, "PARACHUTE", "PARA_Land", -1, false, true, true, false )
 			removeParachute(source, "land" )
 		else
-			setPedNewAnimation ( source, nil, "PARACHUTE", "PARA_Land_Water", t(3000), false, true, true )
+			setPedNewAnimation ( source, nil, "PARACHUTE", "PARA_Land_Water", -1, false, true, true, false )
 			removeParachute(source, "water" )
 		end
-	end
-)
+	end)
 
 function setPedNewAnimation ( ped, elementData, animgroup, animname, ... )
 	if animname ~= lastAnim[ped] then
 		lastAnim[ped] = animname
 		if elementData ~= nil then
-			setElementData ( ped, elementData, animname )
+			local animID = getAnimIDFromName(animname)
+			setElementData ( ped, elementData, animID )
 		end
 		return setPedAnimation ( ped, animgroup, animname, ... )
 	end
 	return true
 end
 
-function getPlayerParachute ( player ) --Lazy, but im assuming no other resource will attach parachutes to the player
-	for k,object in ipairs(getAttachedElements(player)) do
-		if getElementType(object)=="object" then
-			if getElementModel(object) == 3131 then
-				return object
-			end
-		end
-	end
-	return false
+function getPlayerParachute(player)
+	return parachutes[player] or false
 end
 
 function isPlayerParachuting(player)
@@ -302,3 +331,12 @@ function updateParachuting ( data, oldval )
 	end
 end
 addEventHandler ( "onClientElementDataChange", root, updateParachuting )
+
+function playerQuitWhenParachuting()
+	if (isPlayerParachuting(source)) then
+		destroyElement(getPlayerParachute(source))
+		parachutes[source] = nil
+		g_parachuters[source] = nil
+	end
+end
+addEventHandler("onClientPlayerQuit", root, playerQuitWhenParachuting)

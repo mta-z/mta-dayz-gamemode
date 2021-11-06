@@ -102,6 +102,7 @@ local function onRender()
 					setElementRotation ( localPlayer, rotX, 0, rotZ )
 					if not warning and processLineOfSight ( x,y,z, x,y,z-WARNING_HEIGHT, true, false,false,true,false,false,false,false,localPlayer ) then
 						addEventHandler ( "onClientRender", root, warningText )
+						warningText() -- Prevent the event handler being called next frame
 					end			
 				end
 			elseif isPedOnGround ( localPlayer ) and getElementData(localPlayer,"skydiving") then
@@ -120,11 +121,12 @@ local function onRender()
 		end
 	end
 	--Process remote players
-	for player,bool in ipairs(g_skydivers) do
+	for player,bool in pairs(g_skydivers) do
 		if player ~= localPlayer and getElementData ( player, "skydiving" ) and isElementStreamedIn(player) then
 			local velX,velY,velZ = getElementVelocity ( player )
 			local rotz = 6.2831853071796 - math.atan2 ( ( velX ), ( velY ) ) % 6.2831853071796
 			local animation = getElementData ( player, "animation_state" )
+			local animation = animIDs[animation]
 			setPedNewAnimation ( player, nil, "PARACHUTE", animation, -1, false, true, false )
 			local rotX = getElementRotation(player)
 			if ( animation == "FALL_SkyDive_Accel" ) then
@@ -191,3 +193,8 @@ function updateSkyDiving ( data, oldval )
 	end
 end
 addEventHandler ( "onClientElementDataChange", root, updateSkyDiving )
+
+function skyDivingQuit()
+	g_skydivers[source] = nil
+end
+addEventHandler("onClientPlayerQuit", root, skyDivingQuit)

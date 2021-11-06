@@ -1,30 +1,35 @@
-﻿root = getRootElement ()
-
+﻿
 local function onResourceStart ( resource )
-  local players = getElementsByType ( "player" )
-  for k, v in pairs ( players ) do
-    setElementData ( v, "parachuting", false )
-  end
+	local players = getElementsByType ( "player" )
+	for k, v in pairs ( players ) do
+		setElementData ( v, "parachuting", false )
+	end
 end
-addEventHandler ( "onResourceStart", getResourceRootElement ( getThisResource () ), onResourceStart )
+addEventHandler ( "onResourceStart", resourceRoot, onResourceStart )
 
 function requestAddParachute ()
-	for key,player in ipairs(getElementsByType"player") do
-		if player ~= source then
-			triggerClientEvent ( player, "doAddParachuteToPlayer", source )
+	local plrs = getElementsByType("player")
+	for key,player in ipairs(plrs) do
+		if player == client then
+			table.remove(plrs, key)
+			break
 		end
 	end
+	triggerClientEvent(plrs, "doAddParachuteToPlayer", client)
 end
 addEvent ( "requestAddParachute", true )
-addEventHandler ( "requestAddParachute", root, requestAddParachute )
+addEventHandler ( "requestAddParachute", resourceRoot, requestAddParachute )
 
 function requestRemoveParachute ()
-	takeWeapon ( source, 46 )
-	for key,player in ipairs(getElementsByType"player") do
-		if player ~= source then
-			triggerClientEvent ( player, "doRemoveParachuteFromPlayer", source )
+	takeWeapon ( client, 46 )
+	local plrs = getElementsByType("player")
+	for key,player in ipairs(plrs) do
+		if player == client then
+			table.remove(plrs, key)
+			break
 		end
 	end
+	triggerClientEvent(plrs, "doRemoveParachuteFromPlayer", client)
 end
 addEvent ( "requestRemoveParachute", true )
-addEventHandler ( "requestRemoveParachute", root, requestRemoveParachute )
+addEventHandler ( "requestRemoveParachute", resourceRoot, requestRemoveParachute )
