@@ -435,17 +435,17 @@ addEventHandler("addPlayerStats11",getRootElement(),addPlayerStats)
 
 function onPlayerRequestChangingStats(itemName,itemInfo,data)
 if data == "food" then
-	if itemName == "Бургер" then
+	if itemName == "Hambúrguer" then
 		blood = 300
-	elseif itemName == "Пицца" then
+	elseif itemName == "Pizza" then
 		blood = 300	
-	elseif itemName == "Жареное Мясо" then
+	elseif itemName == "Carne Grelhada" then
 		blood = 800	
-	elseif itemName == "Жареная рыба" then
+	elseif itemName == "Peixe Frito" then
 		blood = 3000	
-	elseif itemName == "Банка Бобов" then
+	elseif itemName == "Lata de Feijão" then
 		blood = 200	
-	elseif itemName == "Банка Макарон" then
+	elseif itemName == "Lata de Macarrão" then
 		blood = 200
 		
 
@@ -500,7 +500,7 @@ if data == "food" then
 	addPlayerStats (source,data,thirstrestore) -- Restores a random amount between 40-100 (thirst) default: 100
 	
 	setPedAnimation (source,"VENDING","VEND_Drink2_P",-1,false,false,false,false) 
-	if itemName == "Полная Фляга" then
+	if itemName == "Garrafa de Água Completo" then
 		setElementData(source,"Garrafa de Água Vazia",(getElementData(source,"Garrafa de Água Vazia") or 0)+1) --client
 	end
 end
@@ -621,26 +621,26 @@ addEventHandler("onPlayerGiveMedicObject",getRootElement(),onPlayerGiveMedicObje
 
 -- 13,22,56,67,68,69,70,92,97,105,107,108,126,127,128,152,162,167,188,195,206,209,212,229,230,258,264,277,280 
 local skinTable = {
-{"Одежда: Военный 1",288},
-{"Одежда: Военный 2",286},
-{"Одежда: Военный 3",285},
-{"Одежда: Военный 4",284},
-{"Одежда: Военный 5",283},
-{"Одежда: Военный 6",282},
-{"Одежда: Военный 7",281},
-{"Одежда: Военный 8",276},
-{"Одежда: Акваланг",280},
-{"Одежда: Выживший 1",279},
-{"Одежда: Выживший 2",278},
-{"Одежда: Выживший 3",277},
-{"Одежда: Выживший 4",287},
-{"Одежда: Выживший 5",259},
-{"Одежда: Выживший 6",258},
-{"Одежда: Выживший 7",255},
-{"Одежда: Снайпер 1",249},
-{"Одежда: Снайпер 2",250},
-{"Одежда: Снайпер 3",252},
-{"Одежда: Снайпер 4",253},
+{"Vestuário: Militar 1",288},
+{"Vestuário: Militar 2",286},
+{"Vestuário: Militar 3",285},
+{"Vestuário: Militar 4",284},
+{"Vestuário: Militar 5",283},
+{"Vestuário: Militar 6",282},
+{"Vestuário: Militar 7",281},
+{"Vestuário: Militar 8",276},
+{"Vestuário: Mergulho",280},
+{"Vestuário: Sobrevivente 1",279},
+{"Vestuário: Sobrevivente 2",278},
+{"Vestuário: Sobrevivente 3",277},
+{"Vestuário: Sobrevivente 4",287},
+{"Vestuário: Sobrevivente 5",259},
+{"Vestuário: Sobrevivente 6",258},
+{"Vestuário: Sobrevivente 7",255},
+{"Vestuário: Atirador 1",249},
+{"Vestuário: Atirador 2",250},
+{"Vestuário: Atirador 3",252},
+{"Vestuário: Atirador 4",253},
 {"Одежда: Бандит 1ур",275},
 {"Одежда: Бандит 2ур",274},
 {"Одежда: Бандит 3ур",264},
@@ -691,7 +691,7 @@ addEventHandler("onPlayerChangeSkin",getRootElement(),addPlayerSkin)
 
 function onPlayerRefillWaterBottle (itemName)
 	if isElementInWater(source) then
-		setElementData(source,"Полная Фляга",getElementData(source,"Полная Фляга")+1) --client
+		setElementData(source,"Garrafa de Água Completo",getElementData(source,"Garrafa de Água Completo")+1) --client
 		setElementData(source,itemName,getElementData(source,itemName)-1) --client
 		triggerClientEvent(source,"refreshInventoryManual",source)
 		triggerClientEvent (source, "displayClientInfo", source,"Фляга",shownInfos["filledup"],22,255,0)
@@ -1086,7 +1086,7 @@ if getPedOccupiedVehicle(source) then
 return
 end
 
-if getElementData(source,"Лопата") >=1 then
+if getElementData(source,"Pá") >=1 then
 		setElementData(source,itemName,getElementData(source,itemName)-1) --client
 setPedAnimation (source,"BOMBER","BOM_Plant",-1,false,false,false,false)
 
@@ -1169,7 +1169,7 @@ addEventHandler("removeTent",getRootElement(),removeTent)
 
 
 function removeSave (object)
-if (getElementData(source,"Лопата") or 0) >= 1  then
+if (getElementData(source,"Pá") or 0) >= 1  then
 if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 
 
@@ -1203,19 +1203,19 @@ function addPlayerCookMeat (player,act)
 
 if act ==1 then
 	setTimer(function()
-	local smeat = getElementData(player,"Сырое Мясо") or 0 
-			setElementData(player,"Сырое Мясо",smeat-1) --client
-	local zmeat = getElementData(player,"Жареное Мясо") or 0
-			setElementData(player,"Жареное Мясо",zmeat+1) --client
-			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Сырое Мясо.",22,255,0)
+	local smeat = getElementData(player,"Carne Crua") or 0 
+			setElementData(player,"Carne Crua",smeat-1) --client
+	local zmeat = getElementData(player,"Carne Grelhada") or 0
+			setElementData(player,"Carne Grelhada",zmeat+1) --client
+			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Carne Crua.",22,255,0)
 	end,5000,1)
 	elseif act ==2 then
 	setTimer(function()
-	local srib = getElementData(player,"Сырая рыба") or 0 
-			setElementData(player,"Сырая рыба",srib-1) --client
-	local zrib = getElementData(player,"Жареная рыба") or 0
-			setElementData(player,"Жареная рыба",zrib+1) --client
-			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Сырая рыба.",22,255,0)
+	local srib = getElementData(player,"Peixe Cru") or 0 
+			setElementData(player,"Peixe Cru",srib-1) --client
+	local zrib = getElementData(player,"Peixe Frito") or 0
+			setElementData(player,"Peixe Frito",zrib+1) --client
+			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Peixe Cru.",22,255,0)
 	end,5000,1)
 end
 end
@@ -1237,7 +1237,7 @@ function addPlayerGoold ()
 
 	local ornamentation = getElementData(playersource,"Украшения") or 0
 	setTimer(function()
-			setElementData(playersource,"Сырое Мясо",0) --client
+			setElementData(playersource,"Carne Crua",0) --client
 			setElementData(playersource,"Золото",getElementData(playersource,"Золото")+ornamentation/3) --client
 			triggerClientEvent (playersource, "displayClientInfo", playersource,"Вы переплавили "..ornamentation.." украшений в "..getElementData(playersource,"Золото")  or (0) .." золото",22,255,0)
 	end,10000,1)
@@ -1250,7 +1250,7 @@ addEventHandler("addPlayerGoold",getRootElement(),addPlayerGoold)
 
 
 function onPlayerMakeAFire (itemName)
-if (getElementData(source,"Дрова") or 0) <= 0 then
+if (getElementData(source,"Lenha") or 0) <= 0 then
 kickPlayer (source)
 return
 end 
@@ -1259,7 +1259,7 @@ setPedAnimation (source,"BOMBER","BOM_Plant",-1,false,false,false,false)
 
 setTimer( function()
 
-		setElementData(source,"Дрова",getElementData(source,"Дрова")-1) --client
+		setElementData(source,"Lenha",getElementData(source,"Lenha")-1) --client
 		local x,y,z = getElementPosition(source)
 		local xr,yr,zr = getElementRotation(source)
 		px, py, pz = getElementPosition(source)
@@ -1284,7 +1284,7 @@ setTimer( function()
 		setElementParent(fireCol,wood)
 		
 		setElementData(fireCol,"parent",wood) --client
-		setElementData("Дрова","parent",fireCol) --client
+		setElementData("Lenha","parent",fireCol) --client
 		setElementData(fireCol,"fireplace",true) --client
 		triggerClientEvent(source,"refreshInventoryManual",source)
 		setTimer(function()
@@ -1630,19 +1630,19 @@ if colwoods >=1 then
 local curslots = getElementData(source,"current_SLOTS") or false
 local maxslots = getElementData(source,"MAX_Slots") or false
 if curslots >= maxslots+PlusSlots() then
-triggerClientEvent (player,"displayClientInfo",player,"Дрова","В рюкзаке не хватает места!",255,0,0)
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","В рюкзаке не хватает места!",255,0,0)
 return
 end
 setElementData(col,"woods",colwoods-1,false) 
 setElementRotation ( source, x, y, z )
 setTimer( function ()
-local woods = getElementData(player,"Дрова") or 0
-setElementData(player,"Дрова",woods+1) --client 
-triggerClientEvent (player,"displayClientInfo",player,"Дрова","Вы нарубили дров!",22,255,0)
+local woods = getElementData(player,"Lenha") or 0
+setElementData(player,"Lenha",woods+1) --client 
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","Вы нарубили дров!",22,255,0)
 end,1500,1)	
 
 else
-triggerClientEvent (player,"displayClientInfo",player,"Дрова","Это дерево уже не пригодно для рубки дров!",255,0,0)
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","Это дерево уже не пригодно для рубки дров!",255,0,0)
 end
 end
 addEvent("firewood",true)
@@ -1663,7 +1663,7 @@ addEventHandler("setBandit", getRootElement(),setBandit)
 
 function zombiewR(www,www2)
 
-if (getElementData(www,"Топор") or 0) >=1  then
+if (getElementData(www,"Machado") or 0) >=1  then
 
 destroyElement(getElementData(www2,"parent"))
 destroyElement(www2)
@@ -1671,13 +1671,13 @@ destroyElement(www2)
 local curslots = getElementData(www,"current_SLOTS") or false
 local maxslots = getElementData(www,"MAX_Slots") or false
 if curslots+3 >= maxslots+PlusSlots() then
-triggerClientEvent (www,"displayClientInfo",www,"Дрова","В рюкзаке не хватает места!",255,0,0)
+triggerClientEvent (www,"displayClientInfo",www,"Lenha","В рюкзаке не хватает места!",255,0,0)
 return
 end			
 				setElementData(www,"Мешок с частями зомби",(getElementData(www,"Мешок с частями зомби") or 0)+1) --client
 				
 else
-triggerClientEvent (www,"displayClientInfo",www,"Дрова","Для этого действия требуется топор!",255,0,0)
+triggerClientEvent (www,"displayClientInfo",www,"Lenha","Для этого действия требуется Machado!",255,0,0)
 return
 
 				end
@@ -1739,7 +1739,7 @@ addEvent("startFishing",true)
 addEventHandler("startFishing", getRootElement(),startFishing)
 
 function deadbury(player,deadplayer)
-if (getElementData(player,"Лопата") or 0) <= 0 then
+if (getElementData(player,"Pá") or 0) <= 0 then
 outputChatBox("У вас нет лопаты!",player)
 return
 end

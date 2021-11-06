@@ -136,7 +136,7 @@ addEventHandler("onClientGUIComboBoxAccepted", category,
 		addItems(inventoryItems["Weapons"]["Secondary Weapon"],"Secondary Weapon","Slot:")
 		addItems(inventoryItems["Weapons"]["Specially Weapon"],"Specially Weapon","Slot:")
 		elseif text =="Ammo" then
-		addItems(inventoryItems["Ammo"],"Боеприпасы","Slot:") 
+		addItems(inventoryItems["Ammo"],"Ammo","Slot:") 
 		elseif text =="Food/Drinks" then
 		addItems(inventoryItems["Food"],"Food/Drinks","Slot:")
 		elseif text =="Others" then
