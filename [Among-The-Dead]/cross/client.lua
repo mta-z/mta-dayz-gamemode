@@ -45,7 +45,7 @@ if getPedControlState ( "aim_weapon" ) then
 	if backpack and getElementAlpha(backpack) == 255 then
 	setElementAlpha(backpack,0)
 	end
-	if cross ~= "Бинокль" then
+	if cross ~= "Binóculos" then
 	dxDrawRectangle (0, 0, screenw, v, black);
 	dxDrawRectangle (0, 0, u, screenh, black);
 	dxDrawRectangle (0, screenh, screenw, -v, black);
@@ -70,7 +70,7 @@ if getPedControlState ( "aim_weapon" ) then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_m24"]);
 	elseif cross == "SVD Camo" then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_svd"]);
-	elseif cross == "Бинокль" then
+	elseif cross == "Binóculos" then
 	dxDrawImage (0,0, screenw, screenh, textures ["cross_binoculars"]);
 	end
 end

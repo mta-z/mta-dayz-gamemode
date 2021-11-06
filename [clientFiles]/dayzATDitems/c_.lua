@@ -52,18 +52,18 @@ local items = {
 {1875,"sandbags.txd","sandbags.dff","sandbags.col",lodDistance},
 {1907,"save.txd","save.dff","save.col",lodDistance},
 {1548,"1548.txd","1548.dff",false,lodDistance}, -- мешок с частями зомби
-{1956,"1956.txd","1956.dff",false,lodDistance}, -- Маленький сухой паёк
-{2778,"1956.txd","3437.dff",false,lodDistance}, -- Большой сухой паёк
+{1956,"1956.txd","1956.dff",false,lodDistance}, -- Ração Seca Pequena
+{2778,"1956.txd","3437.dff",false,lodDistance}, -- Ração Seca Grande
 {1952,"1952.txd","1952.dff",false,lodDistance}, -- Шланг
 {1664,"1664.txd","1664.dff",false,lodDistance}, -- Снасти
 {1485,"1485.txd","1485.dff",false,lodDistance},
 {1668,"1485.txd","1668.dff",false,lodDistance}, -- Наживка
-{1545,"1485.txd","1545.dff",false,lodDistance}, -- Удочка
-{1512,"1512.txd","1512.dff",false,lodDistance}, -- Сырая рыба
-{1517,"1512.txd","1517.dff",false,lodDistance}, -- Жареная рыба
+{1545,"1485.txd","1545.dff",false,lodDistance}, -- Vara de Pesca
+{1512,"1512.txd","1512.dff",false,lodDistance}, -- Peixe Cru
+{1517,"1512.txd","1517.dff",false,lodDistance}, -- Peixe Frito
 {2392,"2392.txd","2392.dff","2392.col",lodDistance}, -- могила
-{2704,"2704.txd","2704.dff","2704.col",lodDistance}, -- Металлический ковш 1
-{2705,"2705.txd","2705.dff","2705.col",lodDistance}, -- Металлический ковш 2
+{2704,"2704.txd","2704.dff","2704.col",lodDistance}, -- Balde de Metal 1
+{2705,"2705.txd","2705.dff","2705.col",lodDistance}, -- Balde de Metal 2
 --{2706,"2706.txd","2706.dff","2706.col",lodDistance}, -- кусок железки для машины лучше закомментировать 
 {2394,"2394.txd","2394.dff",false,70}, -- Capacete Militar 50%
 {2396,"2396.txd","2396.dff",false,70}, -- Colete 10%

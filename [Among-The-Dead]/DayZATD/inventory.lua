@@ -2,28 +2,21 @@
 ["Weapons"] = {
 ["Primary Weapon"] = {
 {"AK-107",3},
---{"AK-107 PSO",3},
 {"AK-74",3},
 {"AKM",3},
---{"AKS",3},
 {"AKS (gold)",3},
---{"AKS-74 Kobra",3},
---{"AKS-74 PSO",3},
 {"AKS-74U",3},
 {"FN SCAR",3},
 {"G36",3},
 {"G36C-SD",3},
---{"G36K",3},
 {"Gauss",3},
 {"M240",5},
 {"M249 Saw",5},
 {"MG36",5},
 {"Mk 48 Mod 0",5},
 {"PKM",5},
---{"PKP",5},
 {"M1014",3},
 {"Remington 870",3},
---{"Remington 870 (Com Lanterna)",3},
 {"Saiga 12K",3},
 {"AS50",4},
 {"CZ550",4},
@@ -31,22 +24,19 @@
 {"KSVK",4},
 {"M107",4},
 {"M24",4},
---{"M24 (desert)",4},
 {"M40A3",4},
 {"SVD Camo",4},
 {"ВСС Vintorez",4},
 {"M4A1",4},
 {"M4A1 SD",4},
-
 },
-
 ["Secondary Weapon"] = {
-{"Охотничий Нож",1},
-{"Топор",2},
-{"Бейсбольная Бита",2},
-{"Бензопила",5},
-{"Мачете",2},
-{"Лом",2},
+{"Faca de Caça",1},
+{"Machado",2},
+{"Taco de beisebol",2},
+{"Motosserra",5},
+{"Machete",2},
+{"Pé-de-Cabra",2},
 {"G17",2},
 {"M1911",2},
 {"M9",2},
@@ -54,25 +44,17 @@
 {"Makarov PM",2},
 {"Revolver",2},
 {"MP5",2},
-
-
-
 },
-
 ["Specially Weapon"] = {
 {"Pára-Quedas",1},
---{"Слезоточивый газ",1},
---{"Граната",1},
-{"Бинокль",1}
+{"Binóculos",1}
 },
-
 },
 ["Ammo"] = {
 {"AK mag",0.05},
 {"AKM mag",0.05},
 {"FN mag",0.05},
 {"G36 mag",0.05},
-
 {"Gauss mag",0.05},
 {"M240 Belt",0.05},
 {"M249 Belt",0.05},
@@ -82,13 +64,9 @@
 {"M1911 mag",0.05},
 {"M9 mag",0.05},
 {"Makarov mag",0.02},
-
 {".45 ACP",0.05},
-
-
 {"M1014 Pellet",0.05},
 {"Saiga mag",0.1},
-
 {"AS50 mag",0.2},
 {"CZ550 mag",0.2},
 {"DMR mag",0.05},
@@ -101,46 +79,44 @@
 {"M4A1 mag",0.05},
 {"MP5 mag",0.05},
 },
-
 ["Food"] = {
-{"Полная Фляга",1},
-{"Банка Макарон",1},
-{"Банка Бобов",1},
-{"Бургер",1},
-{"Пицца",1},
-{"Газированная Вода",1},
-{"Кола",1},
-{"Жареное Мясо",1},
-{"Жареная рыба",1},
+{"Garrafa de Água Completo",1},
+{"Lata de Macarrão",1},
+{"Lata de Feijão",1},
+{"Hambúrguer",1},
+{"Pizza",1},
+{"Garrafa de Água Com Gás Completo",1},
+{"Coca-Cola",1},
+{"Carne Grelhada",1},
+{"Peixe Frito",1},
 },
-
 ["Items"] = {
-{"Большой сухой паёк",10,"Открыть большой сухой паёк"},
-{"Маленький сухой паёк",5,"Открыть маленький сухой паёк"},
-{"Дрова",2},
+{"Ração Seca Grande",10,"Открыть Ração Seca Grande"},
+{"Ração Seca Pequena",5,"Открыть Ração Seca Pequena"},
+{"Lenha",2},
 
-{"Удочка",2},
+{"Vara de Pesca",2},
 --{"Снасти",0.4},
 --{"Наживка",1},
-{"Сырая рыба",1},
+{"Peixe Cru",1},
 
-{"Ataduras",1,"Использовать"},
+{"Ataduras",1,"Usar"},
 {"Sinal de Fogo",1,"Зажечь"},
-{"Пустая Канистра",2},
+{"Galão de Combútivel Vazio",2},
 {"Galão de Combútivel Completo",2},
-{"Kit de Primeiros Socorros",2,"Использовать"},
---{"Pacote de Calor",1,"Использовать"},
-{"Analgésico",1,"Использовать"},
-{"Morfina",1,"Использовать"},
-{"Antibiótico",1,"Использовать"},
-{"Bolsa de Sangue",1,"Использовать"},
+{"Kit de Primeiros Socorros",2,"Usar"},
+--{"Pacote de Calor",1,"Usar"},
+{"Analgésico",1,"Usar"},
+{"Morfina",1,"Usar"},
+{"Antibiótico",1,"Usar"},
+{"Bolsa de Sangue",1,"Usar"},
 --{"Arame Farpado",3,"Поставить колючую проволку"},
-{"Сырое Мясо",1},
-{"Колесо",2},
-{"Мотор",10},
-{"Металлический ковш 1",15},
-{"Металлический ковш 2",15},
-{"Лопата",5},
+{"Carne Crua",1},
+{"Pneu",2},
+{"Motor",10},
+{"Balde de Metal 1",15},
+{"Balde de Metal 2",15},
+{"Pá",5},
 {"Бак",3},
 {"Шланг",1},
 
@@ -150,32 +126,32 @@
 {"Большая палатка",6,"Разложить палатку"},
 {"Огромный ящик",2,"Установить ящик"},
 
-{"Одежда: Военный 1",1,"Одеться",288},
-{"Одежда: Военный 2",1,"Одеться",286},
-{"Одежда: Военный 3",1,"Одеться",285},
-{"Одежда: Военный 4",1,"Одеться",284},
-{"Одежда: Военный 5",1,"Одеться",283},
-{"Одежда: Военный 6",1,"Одеться",282},
-{"Одежда: Военный 7",1,"Одеться",281},
-{"Одежда: Военный 8",1,"Одеться",276},
-{"Одежда: Акваланг",1,"Одеться",280},
-{"Одежда: Выживший 1",1,"Одеться",279},
-{"Одежда: Выживший 2",1,"Одеться",278},
-{"Одежда: Выживший 3",1,"Одеться",277},
-{"Одежда: Выживший 4",1,"Одеться",287},
-{"Одежда: Выживший 5",1,"Одеться",259},
-{"Одежда: Выживший 6",1,"Одеться",258},
-{"Одежда: Выживший 7",1,"Одеться",255},
-{"Одежда: Снайпер 1",1,"Одеться",249},
-{"Одежда: Снайпер 2",1,"Одеться",250},
-{"Одежда: Снайпер 3",1,"Одеться",252},
-{"Одежда: Снайпер 4",1,"Одеться",253},
-{"Одежда: Бандит 1ур",1,"Одеться",275},
-{"Одежда: Бандит 2ур",1,"Одеться",274},
-{"Одежда: Бандит 3ур",1,"Одеться",264},
-{"Одежда: Бандит 4ур",1,"Одеться",262},
-{"Одежда: Бандит 5ур",1,"Одеться",261},
-{"Одежда: Герой",1,"Одеться",260},
+{"Vestuário: Militar 1",1,"Vestir-se",288},
+{"Vestuário: Militar 2",1,"Vestir-se",286},
+{"Vestuário: Militar 3",1,"Vestir-se",285},
+{"Vestuário: Militar 4",1,"Vestir-se",284},
+{"Vestuário: Militar 5",1,"Vestir-se",283},
+{"Vestuário: Militar 6",1,"Vestir-se",282},
+{"Vestuário: Militar 7",1,"Vestir-se",281},
+{"Vestuário: Militar 8",1,"Vestir-se",276},
+{"Vestuário: Mergulho",1,"Vestir-se",280},
+{"Vestuário: Sobrevivente 1",1,"Vestir-se",279},
+{"Vestuário: Sobrevivente 2",1,"Vestir-se",278},
+{"Vestuário: Sobrevivente 3",1,"Vestir-se",277},
+{"Vestuário: Sobrevivente 4",1,"Vestir-se",287},
+{"Vestuário: Sobrevivente 5",1,"Vestir-se",259},
+{"Vestuário: Sobrevivente 6",1,"Vestir-se",258},
+{"Vestuário: Sobrevivente 7",1,"Vestir-se",255},
+{"Vestuário: Atirador 1",1,"Vestir-se",249},
+{"Vestuário: Atirador 2",1,"Vestir-se",250},
+{"Vestuário: Atirador 3",1,"Vestir-se",252},
+{"Vestuário: Atirador 4",1,"Vestir-se",253},
+{"Одежда: Бандит 1ур",1,"Vestir-se",275},
+{"Одежда: Бандит 2ур",1,"Vestir-se",274},
+{"Одежда: Бандит 3ур",1,"Vestir-se",264},
+{"Одежда: Бандит 4ур",1,"Vestir-se",262},
+{"Одежда: Бандит 5ур",1,"Vestir-se",261},
+{"Одежда: Герой",1,"Vestir-se",260},
 
 
 {"Capacete Militar 50%",2,"Надеть",{1,50}},
@@ -193,7 +169,7 @@
 
 {"Garrafa de Água Vazia",1,"Наполнить"}, 
 {"Пустая Бутылка",1},
-{"Несъедобный Бургер",1},
+{"Несъедобный Hambúrguer",1},
 {"Рюкзак САТУРН 20",1,"Экипировать",20},
 {"Mochila de ASSALTO 40",2,"Экипировать",40},
 {"Mochila de Montanha 60",3,"Экипировать",60},
@@ -1099,7 +1075,7 @@ end
 				local veh = getElementData(isPlayerInLoot(),"parent")
 		local needtires = getElementData(veh,"needtires")
 		local needengines= getElementData(veh,"needengines")
-				if itemName == "Колесо" and (getElementData(isPlayerInLoot(),"Pneu_inVehicle") or 0) < needtires  or itemName == "Мотор" and (getElementData(isPlayerInLoot(),"Motor_inVehicle") or 0)  < needengines then
+				if itemName == "Pneu" and (getElementData(isPlayerInLoot(),"Pneu_inVehicle") or 0) < needtires  or itemName == "Motor" and (getElementData(isPlayerInLoot(),"Motor_inVehicle") or 0)  < needengines then
 					
 					local progressEnginer = getElementData(localPlayer,"progress.enginer") or 0
 					if progressEnginer <20 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0)	<=0 then 
@@ -1320,8 +1296,8 @@ end
 		triggerServerEvent("playerDropAItem",localPlayer,itemName,false)
 	end
 	end
-	if itemName == "Pneu_inVehicle" then itemName = "Колесо" end
-	if itemName == "Motor_inVehicle" then itemName = "Мотор" end
+	if itemName == "Pneu_inVehicle" then itemName = "Pneu" end
+	if itemName == "Motor_inVehicle" then itemName = "Motor" end
 	
 	setElementData(localPlayer,itemName,(getElementData(localPlayer,itemName) or 0)-itemPlus) --server
 	if loot and getElementData(loot,"itemloot") then
@@ -1546,7 +1522,7 @@ if itemName and itemName~=nil then
 local itemName,itemInfo,itemData = getInventoryInfosForRightClickMenu(itemName)
 	if isCursorShowing() and guiGetVisible(inventoryWindows) and itemInfo then
 		if itemName == "Caixa de Fósforo" then
-			if (getElementData(localPlayer,"Дрова") or 0) == 0 then
+			if (getElementData(localPlayer,"Lenha") or 0) == 0 then
 				return
 			end
 		end
@@ -1622,7 +1598,7 @@ for i,itemInfo in ipairs(inventoryItems["Ammo"]) do
 end
 for i,itemInfo in ipairs(inventoryItems["Food"]) do
 	if itemName == itemInfo[1] then
-		if itemInfo[1] == "Полная Фляга" or itemInfo[1] == "Кола" or itemInfo[1] == "Газированная Вода" then
+		if itemInfo[1] == "Garrafa de Água Completo" or itemInfo[1] == "Coca-Cola" or itemInfo[1] == "Garrafa de Água Com Gás Completo" then
 			info = "Выпить"
 		else
 			info = "Cъесть"
@@ -1728,33 +1704,33 @@ local isOnGround = isPedOnGround(localPlayer)
 	if itemInfo == "Выпить" then
 		triggerServerEvent("onPlayerRequestChangingStats",localPlayer,itemName,itemInfo,"thirst")
 		
-		if  itemName == "Газированная Вода" then
+		if  itemName == "Garrafa de Água Com Gás Completo" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Water",0,0)
-		elseif itemName == "Кола"  then
+		elseif itemName == "Coca-Cola"  then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Soda",0,2)
-		elseif itemName == "Полная Фляга"  then
+		elseif itemName == "Garrafa de Água Completo"  then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Water",0,0)
 		end
 		
 	elseif itemInfo == "Cъесть" then
 		triggerServerEvent("onPlayerRequestChangingStats",localPlayer,itemName,itemInfo,"food")
 
-	if itemName == "Бургер" then
+	if itemName == "Hambúrguer" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat1",0,1)
-	elseif itemName == "Пицца" then
+	elseif itemName == "Pizza" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat1",0,1)
-	elseif itemName == "Жареное Мясо" then
+	elseif itemName == "Carne Grelhada" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat1",2,3)
-	elseif itemName == "Жареная рыба" then
+	elseif itemName == "Peixe Frito" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat1",2,3)
-	elseif itemName == "Банка Бобов" then
+	elseif itemName == "Lata de Feijão" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat2",0,0)
-	elseif itemName == "Банка Макарон" then
+	elseif itemName == "Lata de Macarrão" then
 		triggerEvent("PlaySoundDayZ",localPlayer,"Eat2",0,0)
 	end
 
 		
-	elseif itemInfo == "Одеться" then
+	elseif itemInfo == "Vestir-se" then
 	local skinChng = getElementData(localPlayer,itemName)
 	if skinChng and skinChng>=1 then
 	
@@ -1790,11 +1766,11 @@ local isOnGround = isPedOnGround(localPlayer)
 	elseif itemName == "Sinal de Fogo" then
 		triggerServerEvent("onPlayerPlaceRoadflare",localPlayer,itemName)	
 	elseif itemInfo == "Зажечь Огонь" then
-if (getElementData(localPlayer,"Дрова") or 0) <=0 then 
+if (getElementData(localPlayer,"Lenha") or 0) <=0 then 
 return
 end	
 		triggerServerEvent("onPlayerMakeAFire",localPlayer,itemName)	
-	elseif itemInfo == "Использовать" then
+	elseif itemInfo == "Usar" then
 	if isOnGround then
 		triggerServerEvent("onPlayerUseMedicObject",localPlayer,itemName)	
 		
@@ -1833,9 +1809,9 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 		end
 	elseif itemInfo == "Установить мину" then
 		triggerServerEvent("onPlayerBuildAMine",localPlayer,itemName)
-	elseif itemInfo == "Открыть большой сухой паёк" then
+	elseif itemInfo == "Открыть Ração Seca Grande" then
 		SyxPay(itemName,1)
-	elseif itemInfo == "Открыть маленький сухой паёк" then
+	elseif itemInfo == "Открыть Ração Seca Pequena" then
 		SyxPay(itemName,2)
 	elseif itemInfo == "Надеть" then
 		ClotElement(itemName,itemData)
@@ -2162,17 +2138,17 @@ addEventHandler("clotElementC",getRootElement(),ClotElement)
 
 
 local bigPay = {
-{"Полная Фляга",3},
-{"Банка Макарон",3},
-{"Банка Бобов",2},
-{"Жареное Мясо",3},
-{"Газированная Вода",4},
+{"Garrafa de Água Completo",3},
+{"Lata de Macarrão",3},
+{"Lata de Feijão",2},
+{"Carne Grelhada",3},
+{"Garrafa de Água Com Gás Completo",4},
 }
 local smallPay ={
-{"Полная Фляга",1},
-{"Банка Макарон",1},
-{"Банка Бобов",2},
-{"Газированная Вода",2},
+{"Garrafa de Água Completo",1},
+{"Lata de Macarrão",1},
+{"Lata de Feijão",2},
+{"Garrafa de Água Com Gás Completo",2},
 }
 
 function SyxPay(itemName,act) 
@@ -2256,7 +2232,7 @@ local passOnSave = guiGetText (editBox)
 if string.len(passOnSave)>1 then
 if tonumber(passOnSave) then
 if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
-if (getElementData(localPlayer,"Лопата") or 0) >=1 then
+if (getElementData(localPlayer,"Pá") or 0) >=1 then
 guiSetVisible(saveWindows, false)
 saveWindows=nil
 triggerServerEvent("onPlayerPitchASave",localPlayer,itemName,guiGetText ( editBox ))

@@ -1,4 +1,4 @@
--- ID,Колеса,мотор,расход топлива,MAX fuel
+-- ID,Колеса,Motor,расход топлива,MAX fuel
 vehicleAddonsInfo = {
 {403,6,1,0.50,300,150}, -- грузовик
 {584,0,0,0,0,0}, -- бенз прицеп грузовика
@@ -225,7 +225,7 @@ end
 		setElementData(vehCol,"vehicle",true)
 		setElementData(vehCol,"NOCARSPAWN",true)
 		setElementData(vehCol,"MAX_Slots",maxSlots)
-		--Мотор + Колесо
+		--Motor + Pneu
 		if id == 601 or id == 490 or id == 528 or id == 470 then
 			setElementData(veh,"steelList",math.random(500,1000))
 			end

@@ -61,7 +61,7 @@ addEventHandler( 'onPlayerQuit', root,
 	if lastKillPlayerTime then
 	local ticks = realTick-lastKillPlayerTime
 	if ticks<60000 then -- 1 the moment passed and the last victim = same person = cancel
-	outputDebugString("ANTIRELOG: abort player kill "..getPlayerName(source).." left: "..ticks.."ms")
+	outputDebugString("ANTIRELOG: abortar matança de jogador "..getPlayerName(source).." esquerda: "..ticks.."ms")
 	return
 	end
 	end
@@ -87,7 +87,7 @@ addEventHandler( 'onPlayerQuit', root,
         local time = getRealTime();
         local hours = time.hour;
         local minutes = time.minute;
-        setElementData( pedCol, "deadreason", getPlayerName(source).."  He's dead. Cause of death: Antirelog. Time of death: "..hours..":"..minutes.." hours." );
+        setElementData( pedCol, "deadreason", getPlayerName(source).."  Ele está morto. Causa da morte: Antirelog. Hora da morte: "..hours..":"..minutes.." hours." );
         
       for i,data in ipairs(lootData) do
 			local plusData = getElementData(source,data[1]) or 0
@@ -122,26 +122,26 @@ function destroyDeadPlayer( ped, pedCol )
 end
 
 local skinTable = {
-{"Одежда: Военный 1",288},
-{"Одежда: Военный 2",286},
-{"Одежда: Военный 3",285},
-{"Одежда: Военный 4",284},
-{"Одежда: Военный 5",283},
-{"Одежда: Военный 6",282},
-{"Одежда: Военный 7",281},
-{"Одежда: Военный 8",276},
-{"Одежда: Акваланг",280},
-{"Одежда: Выживший 1",279},
-{"Одежда: Выживший 2",278},
-{"Одежда: Выживший 3",277},
-{"Одежда: Выживший 4",287},
-{"Одежда: Выживший 5",259},
-{"Одежда: Выживший 6",258},
-{"Одежда: Выживший 7",255},
-{"Одежда: Снайпер 1",249},
-{"Одежда: Снайпер 2",250},
-{"Одежда: Снайпер 3",252},
-{"Одежда: Снайпер 4",253},
+{"Vestuário: Militar 1",288},
+{"Vestuário: Militar 2",286},
+{"Vestuário: Militar 3",285},
+{"Vestuário: Militar 4",284},
+{"Vestuário: Militar 5",283},
+{"Vestuário: Militar 6",282},
+{"Vestuário: Militar 7",281},
+{"Vestuário: Militar 8",276},
+{"Vestuário: Mergulho",280},
+{"Vestuário: Sobrevivente 1",279},
+{"Vestuário: Sobrevivente 2",278},
+{"Vestuário: Sobrevivente 3",277},
+{"Vestuário: Sobrevivente 4",287},
+{"Vestuário: Sobrevivente 5",259},
+{"Vestuário: Sobrevivente 6",258},
+{"Vestuário: Sobrevivente 7",255},
+{"Vestuário: Atirador 1",249},
+{"Vestuário: Atirador 2",250},
+{"Vestuário: Atirador 3",252},
+{"Vestuário: Atirador 4",253},
 }
 
 function getSkinNameFromID(id)

@@ -44,11 +44,11 @@ local weapon =getElementData(source or ped,"weapon")
 if not weapon then
 weapon = createBotWeapon(source or ped)  
 end
-    --outputChatBox("botStart: игрок: "..getPlayerName(player).." Вошел в колапс бота: "..tostring(source or ped))
+    --outputChatBox("botStart: игрок: "..getPlayerName(player).." Вошел в Coca-Colaпс бота: "..tostring(source or ped))
 	
 	setElementData(source or ped,"attackPlayer",player)
 --setElementFrozen ( source or ped,true)
-	setTimer ( checkClear, 100, 1, source or ped, weapon,player,"игрок в колапсе бота" )
+	setTimer ( checkClear, 100, 1, source or ped, weapon,player,"игрок в Coca-Colaпсе бота" )
 	setElementData(source or ped,"checked",true,false)
 
 end

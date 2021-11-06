@@ -186,7 +186,7 @@ addEventHandler( "onClientMouseEnter", img[i],
 		elseif i ==90 then
 		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг\nТопор")
+		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг\nMachado")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -884,27 +884,27 @@ guiLabelSetHorizontalAlign (headline["automechProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%\n")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%\n")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Вероятность взлома ТС +"..(i*0.2).."%\nАвтомеханик")
+		guiSetText(headline["toolTipTextT"],"Вероятность взPé-de-Cabraа ТС +"..(i*0.2).."%\nАвтомеханик")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)

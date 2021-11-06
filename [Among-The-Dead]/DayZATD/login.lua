@@ -99,10 +99,10 @@ addEventHandler("onPlayerDayZLogin", getRootElement(), playerLogin)
 local startLoot ={
 {"M1911",1},
 {"M1911 mag",20},
-{"Кола",1},
+{"Coca-Cola",1},
 {"Mapa",1},
 {"Antibiótico",1},
-{"Банка Бобов",1},
+{"Lata de Feijão",1},
 {"Ataduras",2},
 {"Analgésico",1}
 }
@@ -326,7 +326,7 @@ setElementData(getRootElement(),"serverName",getServerName ())
 			if wastedVehicle then
 				setElementPosition(veh,xxx,yyy,zzz+0.1)
 				setElementRotation(veh,0,0,0)
-				--Мотор + Колесо	
+				--Motor + Pneu	
 				setElementData(vehCol,"Pneu_inVehicle",math.random(0,needtires)) --client
 				setElementData(vehCol,"Motor_inVehicle",math.random(0,needengines)) --client
 				setElementData(vehCol,"fuel",5) --client

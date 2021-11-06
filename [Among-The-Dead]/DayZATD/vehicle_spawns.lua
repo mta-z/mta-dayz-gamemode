@@ -274,7 +274,7 @@ local lootItems = {
 --{"Mina",1862,2,0,0.8},
 {"Sinal de Fogo",324,1,90,1},
 {"Ôculos de Visão Noturna",368,1,90,6},
-{"Бинокль",369,1,0,2},
+{"Binóculos",369,1,0,2},
 {"Ôculos de Infravermelho",369,1,90,2},
 {"Walkie-Talkie",2966,1,0,1},
 {"Мешки с песком",1876,1,0,0.5,0.100},
@@ -321,8 +321,8 @@ local lootItems = {
 {"Capacete Blindado 80%",2019,1,0,0.05,0.7},
 {"Colete 20%",2020,1,90,0.1,0,50},
 
-{"Большой сухой паёк",2778,1,0,0.5},
-{"Маленький сухой паёк",1956,1,0,1},
+{"Ração Seca Grande",2778,1,0,0.5},
+{"Ração Seca Pequena",1956,1,0,1},
 },
 
 ["hospital"] = {
@@ -772,9 +772,9 @@ function setEngineStateByPlayer (playersource)
 	setVehicleEngineState (veh, not getVehicleEngineState(veh))
 	if getElementData(getElementData(veh,"parent"),"fuel") <= 0 then return end
 	if getVehicleEngineState(veh) == true then
-		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Мотор заведен!",22,255,0)
+		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Motor заведен!",22,255,0)
 	else
-		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Мотор заглушен!",255,22,0)
+		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Motor заглушен!",255,22,0)
 	end
 end
 

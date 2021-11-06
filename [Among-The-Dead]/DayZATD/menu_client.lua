@@ -320,7 +320,7 @@ end
 	if  otms >=1 then
 	number = number+1
 	local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
-		createMenuItem(number,"Взломать("..(20+SKILL_HACK*2).."%)","passkey")
+		createMenuItem(number,"ВзPé-de-Cabraать("..(20+SKILL_HACK*2).."%)","passkey")
 		end
 	end
 	
@@ -394,7 +394,7 @@ end
 			
 			number = number+1
 			local precent = 20+math.floor(progressMech*0.2)
-			createMenuItem(number,"Взломать ("..arg2..")("..precent.."%)","hackCar")
+			createMenuItem(number,"ВзPé-de-Cabraать ("..arg2..")("..precent.."%)","hackCar")
 			
 			end
 		end
@@ -412,7 +412,7 @@ end
 		end
 	
 	
-			if (getElementData(localPlayer,"Шланг") or 0) >=1 and (getElementData(localPlayer,"Пустая Канистра") or 0) >=1  and not isVehicleLocked(arg3)  then
+			if (getElementData(localPlayer,"Шланг") or 0) >=1 and (getElementData(localPlayer,"Galão de Combútivel Vazio") or 0) >=1  and not isVehicleLocked(arg3)  then
 		
 			if getElementData(getElementData(arg3,"parent"),"fuel") >=20 then
 					number = number+1
@@ -437,22 +437,22 @@ end
 					if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
 
-					createMenuItem(number,"Снять колесо","nscrewwheel")
+					createMenuItem(number,"Снять Pneu","nscrewwheel")
 					end
 					local model = getElementModel(arg3) 
 					for theKey,datas in ipairs(VehDetals) do
 					if datas[1] == model then
 
 					if not getElementData(arg3,"kowh") then
-					if (getElementData(localPlayer,"Металлический ковш 1") or 0) >=1  then
+					if (getElementData(localPlayer,"Balde de Metal 1") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Металлический ковш 1","instkoyw")
+					createMenuItem(number,"Установить: Balde de Metal 1","instkoyw")
 					end
-					if (getElementData(localPlayer,"Металлический ковш 2") or 0) >=1  then
+					if (getElementData(localPlayer,"Balde de Metal 2") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Металлический ковш 2","instkoyw2")
+					createMenuItem(number,"Установить: Balde de Metal 2","instkoyw2")
 					end
 					else
 					number = number+1
@@ -465,29 +465,29 @@ end
 					
 					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять мотор","nscrewengine")
+					createMenuItem(number,"Снять Motor","nscrewengine")
 					return
 					end
 					else
 					if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
 						if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять колесо","nscrewwheel")
+					createMenuItem(number,"Снять Pneu","nscrewwheel")
 					end
 						local model = getElementModel(arg3) 
 					for theKey,datas in ipairs(VehDetals) do
 					if datas[1] == model then
 					
 					if not getElementData(arg3,"kowh") then
-					if (getElementData(localPlayer,"Металлический ковш 1") or 0) >=1  then
+					if (getElementData(localPlayer,"Balde de Metal 1") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Металлический ковш 1","instkoyw")
+					createMenuItem(number,"Установить: Balde de Metal 1","instkoyw")
 					end
-					if (getElementData(localPlayer,"Металлический ковш 2") or 0) >=1  then
+					if (getElementData(localPlayer,"Balde de Metal 2") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Металлический ковш 2","instkoyw2")
+					createMenuItem(number,"Установить: Balde de Metal 2","instkoyw2")
 					end
 					else
 					number = number+1
@@ -499,7 +499,7 @@ end
 					end
 					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять мотор","nscrewengine")
+					createMenuItem(number,"Снять Motor","nscrewengine")
 					return
 					end
 					end
@@ -565,7 +565,7 @@ if arg1 == "Dead" then
 	if parent then 
 		local isDeadBot= getElementData(parent,"deadbot") or false
 		if not isDeadBot then
-			if (getElementData(localPlayer,"Лопата") or 0) >=1  then
+			if (getElementData(localPlayer,"Pá") or 0) >=1  then
 			number = number+1
 			createMenuItem(number,"Закопать труп ("..arg2..")","deadbury")
 			end
@@ -584,13 +584,13 @@ if arg1 == "Dead" then
 	
 end
 if arg1 == "Fireplace" then
-	if (getElementData(localPlayer,"Сырое Мясо") or 0) >= 1 then
+	if (getElementData(localPlayer,"Carne Crua") or 0) >= 1 then
 	number = number+1
-	createMenuItem(number,"Жарить: Сырое Мясо","fireplace")
+	createMenuItem(number,"Жарить: Carne Crua","fireplace")
 	end
-		if (getElementData(localPlayer,"Сырая рыба") or 0) >= 1 then
+		if (getElementData(localPlayer,"Peixe Cru") or 0) >= 1 then
 	number = number+1
-	createMenuItem(number,"Жарить: Сырая рыба","fireplace1")
+	createMenuItem(number,"Жарить: Peixe Cru","fireplace1")
 
 	end
 	--	if getElementData(localPlayer,"Украшения") >= 3 then
@@ -602,9 +602,9 @@ if arg1 == "Fireplace" then
 	--end
 end
 if arg1 == "patrol" then
-	if (getElementData(localPlayer,"Пустая Канистра") or 0) >= 1 then
+	if (getElementData(localPlayer,"Galão de Combútivel Vazio") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Наполнить: Пустая Канистра","patrolstation")
+		createMenuItem(number,"Наполнить: Galão de Combútivel Vazio","patrolstation")
 	end	
 end
 
@@ -616,7 +616,7 @@ if arg1 == "water" then
 end
 
 if arg1 == "treepos" then
-	if (getElementData(localPlayer,"Топор") or 0) >= 1 then
+	if (getElementData(localPlayer,"Machado") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Нарубить дров","treepos")
 	end	
@@ -630,7 +630,7 @@ if arg1 == "Arame Farpado" then
 	end	
 end
 if arg1 == "Мешки с песком" then
-	if (getElementData(localPlayer,"Лопата") or 0) >= 1 then
+	if (getElementData(localPlayer,"Pá") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Разобрать: Мешки с песком","sandbags")
 	end	
@@ -746,7 +746,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("patrol")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Наполнить канистру","Требуется: Пустая канистра",source)
+			setNewbieInfo (true,"Наполнить канистру","Требуется: Galão de Combútivel Vazio",source)
 			return
 		end
 		
@@ -762,7 +762,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("treepos")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Нарубить дров","Требуется: Топор",source)
+			setNewbieInfo (true,"Нарубить дров","Требуется: Machado",source)
 			return
 		end
 		
@@ -777,7 +777,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Мешки с песком")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Разобрать мешки с песком","Требуется: Лопата",source)
+			setNewbieInfo (true,"Разобрать мешки с песком","Требуется: Pá",source)
 			return
 		end
 		
@@ -903,7 +903,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			local maxFuel= getElementData(getElementData(source,"parent"),"maxfuel") or 0
 			local needtires = getElementData(getElementData(source,"parent"),"needtires") or 0 
 		local needengines= getElementData(getElementData(source,"parent"),"needengines") or 0 
-			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Транспортное средство" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nКолесо: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nМотор: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
+			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Транспортное средство" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nPneu: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nMotor: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
 			else
 			--
 			end
@@ -1226,10 +1226,10 @@ if ( keyState == "down" ) then
 			local precent = 20+math.floor(progressMech*0.2)
 			
 			if rand<precent then
-			outputChatBox("Вам удалось взломать "..GetRealVehicleName(parent))
+			outputChatBox("Вам удалось взPé-de-Cabraать "..GetRealVehicleName(parent))
 			triggerServerEvent("openMyVH",localPlayer,parent)	
 			else
-			outputChatBox("Отмычка сломалась!")
+			outputChatBox("Отмычка сPé-de-Cabraалась!")
 			end
 			local hackKeys = getElementData(localPlayer,"Отмычка") or 0
 			setElementData(localPlayer,"Отмычка",hackKeys-1)
@@ -1243,11 +1243,11 @@ if ( keyState == "down" ) then
 			local vero1 = 	math.random(0,100)
 			local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
 			if vero1 <= (20+SKILL_HACK*2) then 
-			outputChatBox("Вы успешно взломали сейф!")
+			outputChatBox("Вы успешно взPé-de-Cabraали сейф!")
 			setElementData(localPlayer,"Отмычка",getElementData(localPlayer,"Отмычка") -1 ) --server
 			setElementData(col,"hackSave",true)
 			else
-			outputChatBox("Отмычка сломалась")
+			outputChatBox("Отмычка сPé-de-Cabraалась")
 			setElementData(localPlayer,"Отмычка",getElementData(localPlayer,"Отмычка") -1 ) --server
 			end
 			disableMenu()
@@ -1292,7 +1292,7 @@ if ( keyState == "down" ) then
 		
 		
 		if itemName == "startFishing" then
-		if  (getElementData(localPlayer,"Удочка") or 0) >=1 then
+		if  (getElementData(localPlayer,"Vara de Pesca") or 0) >=1 then
 			triggerServerEvent("startFishing",localPlayer,localPlayer,"start")
 			fishing("start")
 			checkKeysStart()
@@ -1583,7 +1583,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "patrolstation" then
-			setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)-1) --server
+			setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)-1) --server
 			setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)+1) --server
 			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы заправили одну канистру!",22,255,0)
 			disableMenu()
@@ -1592,7 +1592,7 @@ if ( keyState == "down" ) then
 		
 		if itemName == "upwater" then
 			setElementData(localPlayer,"Garrafa de Água Vazia",(getElementData(localPlayer,"Garrafa de Água Vazia") or 0)-1) --server
-			setElementData(localPlayer,"Полная Фляга",(getElementData(localPlayer,"Полная Фляга") or 0)+1) --server
+			setElementData(localPlayer,"Garrafa de Água Completo",(getElementData(localPlayer,"Garrafa de Água Completo") or 0)+1) --server
 			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы наполнили флягу!",22,255,0)
 			disableMenu()
 			return
@@ -2055,18 +2055,18 @@ if not getElementData(car,"kowh") then
 for theKey,datas in ipairs(VehDetals) do
 		if model == datas[1]  then
 		if detal == "kowh1" then
-		local kowh1 = getElementData(localPlayer,"Металлический ковш 1") or 0
+		local kowh1 = getElementData(localPlayer,"Balde de Metal 1") or 0
 		if kowh1 >=1 then
-		setElementData(localPlayer,"Металлический ковш 1",kowh1-1)
-triggerServerEvent("VehDetals",localPlayer,car,col,2704,datas[2].size,datas[2][1],datas[2][2],datas[2][3],datas[2][4],datas[2][5],datas[2][6],"Металлический ковш 1")
+		setElementData(localPlayer,"Balde de Metal 1",kowh1-1)
+triggerServerEvent("VehDetals",localPlayer,car,col,2704,datas[2].size,datas[2][1],datas[2][2],datas[2][3],datas[2][4],datas[2][5],datas[2][6],"Balde de Metal 1")
 else
 outputChatBox("У вас нет этой детали")
 end
 		elseif detal == "kowh2" then
-		local kowh2 = getElementData(localPlayer,"Металлический ковш 2") or 0
+		local kowh2 = getElementData(localPlayer,"Balde de Metal 2") or 0
 		if kowh2 >=1 then
-		setElementData(localPlayer,"Металлический ковш 2",kowh2-1)
-triggerServerEvent("VehDetals",localPlayer,car,col,2705,datas[3].size,datas[3][1],datas[3][2],datas[3][3],datas[3][4],datas[3][5],datas[3][6],"Металлический ковш 2")
+		setElementData(localPlayer,"Balde de Metal 2",kowh2-1)
+triggerServerEvent("VehDetals",localPlayer,car,col,2705,datas[3].size,datas[3][1],datas[3][2],datas[3][3],datas[3][4],datas[3][5],datas[3][6],"Balde de Metal 2")
 else
 outputChatBox("У вас нет этой детали")
 end
@@ -2090,27 +2090,27 @@ end
 function vehicleAction(act,col)
 if getPlayerCurrentSlots() < getElementData(localPlayer,"MAX_Slots")+PlusSlots() then
 local whinVh = getElementData(col,"Pneu_inVehicle")
-local whinUser = getElementData(localPlayer,"Колесо") or 0
+local whinUser = getElementData(localPlayer,"Pneu") or 0
 local enginVh = getElementData(col,"Motor_inVehicle")
-local enginUser = getElementData(localPlayer,"Мотор") or 0
+local enginUser = getElementData(localPlayer,"Motor") or 0
 local fuelVh = getElementData(col,"fuel")
 local fuelUser = getElementData(localPlayer,"Galão de Combútivel Completo") or 0
 if act == 1 and whinVh >=1  then
 setElementData(col,"Pneu_inVehicle",whinVh-1) --server
-setElementData(localPlayer,"Колесо",whinUser+1) --server
+setElementData(localPlayer,"Pneu",whinUser+1) --server
 triggerServerEvent("setWheelStates2",localPlayer,getElementData(col,"parent"),whinVh-1,"-")
 end
 if act == 2 and enginVh >=1 then
 
 setElementData(col,"Motor_inVehicle",enginVh-1) --server
-setElementData(localPlayer,"Мотор",enginUser+1) --server
+setElementData(localPlayer,"Motor",enginUser+1) --server
 end
 
 if act == 3  then
 
 setElementData(col,"fuel",fuelVh-20) --server
 setElementData(localPlayer,"Galão de Combútivel Completo",fuelUser+1) --server
-setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)-1) --server
+setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)-1) --server
 end
 
 if act == 4  then
@@ -2119,7 +2119,7 @@ if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
 	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
-	setElementData(localPlayer,"Пустая Канистра",(getElementData(localPlayer,"Пустая Канистра") or 0)+1) --server
+	setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)+1) --server
 	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в бак!",0,255,0)
 
 else
@@ -2197,8 +2197,8 @@ return
 end	
 			
 			outputChatBox("Вы поймали 1 рыбу")
-			local riba = getElementData(localPlayer,"Сырая рыба") or 0 
-			setElementData(localPlayer,"Сырая рыба",riba+1)
+			local riba = getElementData(localPlayer,"Peixe Cru") or 0 
+			setElementData(localPlayer,"Peixe Cru",riba+1)
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") -1)
 			--elseif matFsh == 4 then
 			--outputChatBox("Снасти порвались!")

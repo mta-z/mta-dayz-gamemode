@@ -182,13 +182,13 @@ end
 			setElementData(player,data[1],1)	--client	
 		elseif data[1] =="MAX_Slots" then 
 			setElementData(player,data[1],15)--client
-		elseif data[1] =="Кола" then
+		elseif data[1] =="Coca-Cola" then
 			setElementData(player,data[1],1) --client}
 		elseif data[1] =="Antibiótico" then
 			setElementData(player,data[1],1) --client
 		elseif data[1] =="Morfina" then
 			setElementData(player,data[1],1) --client
-		elseif data[1] =="Банка Бобов" then
+		elseif data[1] =="Lata de Feijão" then
 			setElementData(player,data[1],1)	 --client	
 		elseif data[1] =="Mapa" then
 			setElementData(player,data[1],1)	--client
@@ -210,13 +210,13 @@ end
 		else
 			setElementData(player,data[1],0)	--client
 		end	
-		elseif data[1] =="Топор" then
+		elseif data[1] =="Machado" then
 		if progressAttacker>=100 then
 			setElementData(player,data[1],1)	--client
-			setElementData(player,"Мачете",0)	 --client
+			setElementData(player,"Machete",0)	 --client
 		else
 			setElementData(player,data[1],0)	--client
-			setElementData(player,"Мачете",1)	 --client
+			setElementData(player,"Machete",1)	 --client
 		end		
 	]]
 	--Player Items on Start
@@ -272,7 +272,7 @@ end
 		elseif data[1] =="Analgésico" then
 			setElementData(player,data[1],1)	--client	
 		
-		elseif data[1] =="Кола" then
+		elseif data[1] =="Coca-Cola" then
 			setElementData(player,data[1],1) --client}
 			
 		elseif data[1] =="Antibiótico" then
@@ -281,7 +281,7 @@ end
 		elseif data[1] =="Morfina" then
 			setElementData(player,data[1],1) --client
 			
-		elseif data[1] =="Банка Бобов" then
+		elseif data[1] =="Lata de Feijão" then
 			setElementData(player,data[1],1)	 --client
 			
 		elseif data[1] =="Mapa" then
@@ -311,14 +311,14 @@ end
 			setElementData(player,data[1],0)	--client
 		end	
 		
-		elseif data[1] =="Топор" then
+		elseif data[1] =="Machado" then
 		
 		if progressAttacker>=100 then
 			setElementData(player,data[1],1)	--client
-			setElementData(player,"Мачете",0)	 --client
+			setElementData(player,"Machete",0)	 --client
 		else
 			setElementData(player,data[1],0)	--client
-			setElementData(player,"Мачете",1)	 --client
+			setElementData(player,"Machete",1)	 --client
 		end	
 		
 		end
@@ -571,7 +571,7 @@ killPed(source)
 		local pedCol = createColSphere(x,y,z,1.5)
 	
 		if pedCol then
-		--outputChatBox("КОЛАПС ТРУПА СОЗДАН")
+		--outputChatBox("Coca-ColaПС ТРУПА СОЗДАН")
 		for i,data in ipairs(murdersSkinTable) do
 			removeElementData ( source, data[1] ) 
 		end

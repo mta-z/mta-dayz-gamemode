@@ -402,7 +402,7 @@ cancelEvent()
 	
 	if not attacker and loss < 35 and loss>=10 then
 		if not getElementData(source,"brokenbone")  then
-					drawingAlphaText(source,"Перелом",200,200,0,"up",false,true)
+					drawingAlphaText(source,"ПереPé-de-Cabra",200,200,0,"up",false,true)
 					setElementData(source,"brokenbone",true)
 		end
 	end
@@ -499,7 +499,7 @@ showWhiteScreen()
 		if bodypart == "LEGS" then
 
 		if not getElementData(hitElement,"brokenbone")  then
-				drawingAlphaText(hitElement,"Перелом",200,200,0,"up",false,true)
+				drawingAlphaText(hitElement,"ПереPé-de-Cabra",200,200,0,"up",false,true)
 				setElementData(hitElement,"brokenbone",true)
 			end
 
@@ -856,7 +856,7 @@ if attacker and attacker == localPlayer then
 	damage = getWeaponDamage (weapName)
 	end 
 
-if weapName == "Топор" or  weapName == "Бейсбольная Бита" or  weapName == "Мачете"  or  weapName == "Лом" or weapon == 0 then
+if weapName == "Machado" or  weapName == "Taco de beisebol" or  weapName == "Machete"  or  weapName == "Pé-de-Cabra" or weapon == 0 then
 local zombkilledRuk = math.random(1,3)
 if zombkilledRuk == 1 then
 bodypart = 9 
@@ -1372,7 +1372,7 @@ function updatePlayerLvl()
 		if playerlvl < lvl then
 			local clicks=getElementData(localPlayer,"progress.clicks") or 0
 			setElementData(localPlayer,"progress.clicks",clicks+(lvl-playerlvl)) 
-			outputChatBox("Вы получили +"..(lvl-playerlvl).." очков навыков! Нажмите F3 чтобы использовать их")
+			outputChatBox("Вы получили +"..(lvl-playerlvl).." очков навыков! Нажмите F3 чтобы Usar их")
 		end
 			
 		setElementData(localPlayer,"playerlvl",lvl) --server
@@ -1852,7 +1852,7 @@ triggerEvent("showClientMenuItem",localPlayer,"startFishing")
 end
 
 --[[
-if getElementData(source,"baitZone") and hitElement == localPlayer and getElementData(localPlayer,"Лопата") >=1 then
+if getElementData(source,"baitZone") and hitElement == localPlayer and getElementData(localPlayer,"Pá") >=1 then
 setElementData(hitElement,"inbaitZone",true,false)
 triggerEvent("showClientMenuItem",localPlayer,"baiting")
 
