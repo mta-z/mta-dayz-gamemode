@@ -1677,7 +1677,7 @@ end
 				setElementData(www,"Saco de Peças de Zumbi",(getElementData(www,"Saco de Peças de Zumbi") or 0)+1) --client
 				
 else
-triggerClientEvent (www,"displayClientInfo",www,"Lenha","Для этого действия требуется Machado!",255,0,0)
+triggerClientEvent (www,"displayClientInfo",www,"Lenha","Для этого действия Necessário Machado!",255,0,0)
 return
 
 				end

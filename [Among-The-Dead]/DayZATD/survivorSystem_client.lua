@@ -2255,7 +2255,7 @@ end
 -- Add this as a handler so that the function will be triggered every time a player fires.
 addEventHandler("onClientPlayerWeaponFire", root, GAUSS_FIRE)
 
------ ОТКРЫТЬ ЗАКРЫТЬ ТС
+----- Abrir Fechar ТС
 function openCloseVeh()
 	local veh = getPedOccupiedVehicle(localPlayer)
 
@@ -2283,7 +2283,7 @@ function enterVeh(thePlayer, seat)
 			local carOwner = getElementData(source,"owner") 
 			local userAcc =  getElementData(localPlayer,"userAccount")
 			if carOwner and carOwner == userAcc then
-            outputChatBox("Нажмите #FF0000L #FFFFFFчтобы открыть/закрыть #FFFF00"..GetRealVehicleName(source),255,255,255,true)
+            outputChatBox("Нажмите #FF0000L #FFFFFFчтобы Abrir/Fechar #FFFF00"..GetRealVehicleName(source),255,255,255,true)
 			end
 		end
 	end

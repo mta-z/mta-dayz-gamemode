@@ -114,8 +114,8 @@
 {"Carne Crua",1},
 {"Pneu",2},
 {"Motor",10},
-{"Balde de Metal 1",15},
-{"Balde de Metal 2",15},
+{"Placa de Metal 1",15},
+{"Placa de Metal 2",15},
 {"Pá",5},
 {"Tanque de Combustível",3},
 {"Mangueira",1},
@@ -124,7 +124,7 @@
 {"Saco de Peças de Zumbi",3},
 {"Tenda",4,"Colocar Tenda"},
 {"Tenda Grande",6,"Colocar Tenda"},
-{"Caixa Enorme",2,"Установить ящик"},
+{"Caixa Enorme",2,"Instalar ящик"},
 
 {"Vestuário: Militar 1",1,"Vestir-se",288},
 {"Vestuário: Militar 2",1,"Vestir-se",286},
@@ -183,7 +183,7 @@
 {"Dinheiro",0.0001},
 {"Cofre",20,"Colocar Cofre"},
 {"Sacos de Areia",10,"Espalhe os Sacos"},
---{"Mina",5,"Установить мину"},
+--{"Mina",5,"Instalar мину"},
 {"Chapa de Aço",3},
 
 },
@@ -1807,7 +1807,7 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 	if isOnGround then
 		triggerServerEvent("onPlayerBuildASandBags",localPlayer,itemName)
 		end
-	elseif itemInfo == "Установить мину" then
+	elseif itemInfo == "Instalar мину" then
 		triggerServerEvent("onPlayerBuildAMine",localPlayer,itemName)
 	elseif itemInfo == "Abrir Ração Seca Grande" then
 		SyxPay(itemName,1)

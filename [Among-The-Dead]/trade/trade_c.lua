@@ -317,8 +317,8 @@ inventoryItems = {
 {"Walkie-Talkie",10},
 {"Lenha",200},
 {"Tenda",3000},
-{"Balde de Metal 1",10000},
-{"Balde de Metal 2",12000},
+{"Placa de Metal 1",10000},
+{"Placa de Metal 2",12000},
 {"Chapa de Aço",5000},
 },
 ["Одежда"] ={
