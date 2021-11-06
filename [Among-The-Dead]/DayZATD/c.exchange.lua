@@ -141,7 +141,7 @@ if offerExc then
 
 	triggerServerEvent("offerExcOK",localPlayer,offerExc)
 
-	outputChatBox("#FFFF00You agreed to an exchange.",255,255,255,true)
+	outputChatBox("#FFFF00Você concordou com uma troca.",255,255,255,true)
 	setTimer(function()
 
 		guiSetVisible(exchangeWindows,true)
@@ -490,7 +490,7 @@ if ( gridLootCol ) then
 	
 	if playerAccept and remoteAccept then
 	
-	outputChatBox("BOTH AGREE - THE EXCHANGE")
+	outputChatBox("AMBOS CONCORDAM - COM A TROCA")
 	guiSetVisible(exchangeWindows,false)
 	showCursor(false)
 	triggerServerEvent("exchangeCompleted",localPlayer)

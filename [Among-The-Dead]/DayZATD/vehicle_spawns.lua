@@ -99,7 +99,7 @@ counter = getAccountData(vehicleManager,"vehicleamount") or false
 	end
 	
 local ticksOfStopSpawn = getTickCount ()
-outputChatBox("Новые транспортные средства были созданы за:"..(ticksOfStopSpawn-ticksOfStartSpawn).."ms")
+outputChatBox("Novos veículos foram criados em:"..(ticksOfStopSpawn-ticksOfStartSpawn).."ms")
 	end
 
 
@@ -145,7 +145,7 @@ for i,veh in ipairs(carSpawns) do
 		triggerEvent("SaveVeh",getRootElement(),veh,counter)
 	end
 local ticksOfStopSpawn = getTickCount ()
-outputChatBox("Транспортные средства были созданы за:"..(ticksOfStopSpawn-ticksOfStartSpawn).."ms")
+outputChatBox("Os veículos foram criados em:"..(ticksOfStopSpawn-ticksOfStartSpawn).."ms")
 end	
 
 end
@@ -375,7 +375,7 @@ function createHeliCrashSite()
 			setElementData(cargoCol,ammoData,math.random(100,200)) --client
 		end
 	end
-	outputChatBox("В квадрате "..heliCrashSites[item_id][1].." разбился военный вертолет", getRootElement(), 255, 0, 0)
+	outputChatBox("Halicrash "..heliCrashSites[item_id][1].." um helicóptero militar caiu", getRootElement(), 255, 0, 0)
 	setTimer(createHeliCrashSite,3600000,1)
 end
 createHeliCrashSite()
@@ -409,7 +409,7 @@ function createCrashAirSite()
 			setElementData(airCol,ammoData,math.random(100,200)) --client
 		end
 	end
-	outputChatBox("В квадрате "..airCrashSites[item_id][1].." разбился военный самолет", getRootElement(), 255, 0, 0)
+	outputChatBox("Airdrop "..airCrashSites[item_id][1].." um avião militar caiu", getRootElement(), 255, 0, 0)
 	setTimer(createCrashAirSite,7200000,1)
 end
 createCrashAirSite()

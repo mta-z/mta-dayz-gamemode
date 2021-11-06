@@ -1,8 +1,8 @@
 ﻿ZombiePedSkins = {13,69,105,107,108,126,127,128,152} --ALTERNATE SKIN LISTS FOR ZOMBIES (SHORTER LIST IS TEXTURED ZOMBIES ONLY)
--- 68 вояка
+-- 68 Guerreiro
 -- 22 дOK
--- 70 полицай
--- 97 вояка без каски
+-- 70 o policial
+-- 97 o soldado sem capacetes
 
 setElementData(getRootElement(),"zombiestotal",0)
 setElementData(getRootElement(),"zombiesalive",0)
@@ -252,7 +252,7 @@ function zombieKilled (killer,headshot)
 		--setElementParent(pedCol,source)
 		
 			if headshot == true then
-		--outputChatBox("в голову z")
+		--outputChatBox("na cabeça z")
 		setPedHeadless(source,true)
 			setElementData(killer,"headshots",getElementData(killer,"headshots")+1) --client
 		end	

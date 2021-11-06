@@ -231,7 +231,7 @@ if getElementData(localPlayer,"fishing") then
 		createMenuItem(number,"Подсечь рыбу","checkFishing")
 		setTimer(function() 
 		if not getElementData(localPlayer,"checkFishing") then
-			outputChatBox("Рыба сорвалась!")
+			outputChatBox("O peixe está desligado!")
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") or 0 -1)
 			triggerServerEvent("startFishing",localPlayer,localPlayer,"stop")
 			disableMenu()
@@ -1226,10 +1226,10 @@ if ( keyState == "down" ) then
 			local precent = 20+math.floor(progressMech*0.2)
 			
 			if rand<precent then
-			outputChatBox("Вам удалось взPé-de-Cabraать "..GetRealVehicleName(parent))
+			outputChatBox("Você conseguiu abrir com Pé-de-Cabra "..GetRealVehicleName(parent))
 			triggerServerEvent("openMyVH",localPlayer,parent)	
 			else
-			outputChatBox("Gazua сPé-de-Cabraалась!")
+			outputChatBox("Sem sucesso")
 			end
 			local hackKeys = getElementData(localPlayer,"Gazua") or 0
 			setElementData(localPlayer,"Gazua",hackKeys-1)
@@ -1243,7 +1243,7 @@ if ( keyState == "down" ) then
 			local vero1 = 	math.random(0,100)
 			local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
 			if vero1 <= (20+SKILL_HACK*2) then 
-			outputChatBox("Вы успешно взPé-de-Cabraали Cofre!")
+			outputChatBox("Você conseguiu abrir com Pé-de-Cabra!")
 			setElementData(localPlayer,"Gazua",getElementData(localPlayer,"Gazua") -1 ) --server
 			setElementData(col,"hackSave",true)
 			else
@@ -1299,7 +1299,7 @@ if ( keyState == "down" ) then
 			disableMenu()
 			return
 		else 
-		outputChatBox("У вас нет удочки")
+		outputChatBox("Você não tem vara de pescar")
 		disableMenu()
 		return
 		end

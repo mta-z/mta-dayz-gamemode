@@ -600,7 +600,7 @@ function saveOneVeh (veh,counter)
 		local steelList = getElementData(veh,"steelList") or 0 
 		setAccountData(account,"steelList",steelList)
 		
-		outputChatBox("save:"..counter)
+		outputChatBox("Salvo :"..counter)
 		
 		local vehicleManager = getAccount("vehicleManagerATD","ATDVhMngrUJ$GH")		
 		setAccountData(vehicleManager,"vehicleamount",counter)

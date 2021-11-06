@@ -189,7 +189,7 @@ end
 					if money>=price then
 						setElementData(localPlayer,"Money",money-price)
 					else
-						outputChatBox("Not enough money")
+						outputChatBox("Dinheiro insuficiente")
 						 return
 					end
 				end
@@ -203,7 +203,7 @@ end
 						
 					triggerServerEvent ( "setCarSettings", veh,settings )	
 						
-					outputChatBox("Vehicle settings saved")
+					outputChatBox("Configurações do veículo salvas")
 					
 				
 					guiSetVisible ( mechWin,false )
@@ -373,7 +373,7 @@ function openMechWin(key, keyState,type)
 	end
 	
 	if getVehicleType (veh) ~="Automobile" then 
-	outputChatBox("This vehicle cannot be configured.")
+	outputChatBox("Este veículo não pode ser configurado.")
 	return
 	end
 	

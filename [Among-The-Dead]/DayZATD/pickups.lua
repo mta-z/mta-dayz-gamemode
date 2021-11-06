@@ -659,7 +659,7 @@ function createPickupsOnServerStart5()
 	setServerPassword(nil)
 setGameType ("DayZ:Among the dead")
 
-		outputChatBox("#ffaa00Внимание! #ffffff - Респаун лута OKончен!",getRootElement(),255,255,255,true)
+		outputChatBox("#ffaa00Atenção! #ffffff - Respawn Loot OK!",getRootElement(),255,255,255,true)
 	
 triggerClientEvent ( "onClientBind", getRootElement(), "bind" )	
 end

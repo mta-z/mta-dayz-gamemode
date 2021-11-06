@@ -169,7 +169,7 @@ addEventHandler("onClientGUIComboBoxAccepted", category,
 		triggerServerEvent("onGive",  localPlayer, playerName, item, guiGetText(quantity),false)
 		end
 	else
-	outputChatBox("The player left or changed nickname",255,0,0)
+	outputChatBox("O jogador saiu ou mudou de apelido",255,0,0)
 	end
 	end, false);
 	
@@ -199,7 +199,7 @@ local teleport = guiCreateButton(320, 400, 450, 40, "Teleport", false, sess)
 	if col then
 	triggerServerEvent("adminTeleport",  localPlayer, col)
 	else
-	outputChatBox("Choose a safe or tent",255,0,0)
+	outputChatBox("Escolha um cofre ou tenda",255,0,0)
 	end
 	end, false);	
 	
@@ -312,7 +312,7 @@ getPlayerLoot(inventoryItems["Food"],"Food/Drinks",player)
 getPlayerLoot(inventoryItems["Items"],"Others",player) 
 getPlayerLoot(inventoryItems["Toolbelt"],"Toolbelt",player)
 else
-outputChatBox("Player released or replaced the one. Refresh the tab",255,0,0)
+outputChatBox("O jogador liberou ou substituiu aquele. Atualize a guia",255,0,0)
 end
 end		
 end
@@ -346,7 +346,7 @@ if isElement(car) then
 triggerServerEvent("adminCarBlow",  localPlayer, car)
 
 else
-outputChatBox("No such machine",255,0,0)
+outputChatBox("Essa máquina não existe",255,0,0)
 end
 end
 	end, false);	
@@ -366,7 +366,7 @@ if isElement(car) then
 triggerServerEvent("adminTeleport",  localPlayer, car)
 
 else
-outputChatBox("No such machine",255,0,0)
+outputChatBox("Essa máquina não existe",255,0,0)
 end
 end		
 end
