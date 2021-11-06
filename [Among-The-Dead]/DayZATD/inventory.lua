@@ -641,7 +641,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Еда/Вода", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Comidas & Bebidas", true, false )
 		for id, item in ipairs(inventoryItems["Food"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -650,7 +650,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Прочее", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Items", true, false )
 		for id, item in ipairs(inventoryItems["Items"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -673,7 +673,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Caixa de Ferramentas", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Ferramentas", true, false )
 		for id, item in ipairs(inventoryItems["Toolbelt"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -698,7 +698,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 		local maxSlots = getPlayerMaxAviableSlots()
 		local maxSlotsReal = maxSlots+math.floor((enginerSlots+attackerSlots)*0.2)
 		setProgressBar("slots",curSlots,maxSlotsReal)
-		guiSetText(headline["slots"],"Вес: "..curSlots.."/"..maxSlots.."+"..math.floor((enginerSlots+attackerSlots)*0.2).."")
+		guiSetText(headline["slots"],"Espaço: "..curSlots.."/"..maxSlots.."+"..math.floor((enginerSlots+attackerSlots)*0.2).."")
 	end
 end
 
@@ -708,8 +708,8 @@ function refreshLoot(loot,gearName)
 if getElementData(localPlayer,"inArena") then  return  end
 if loot == false or not isElement(loot) then
 	guiGridListClear(gridlistItems["loot"])
-	guiSetText(headline["loot"],"Пусто")
-	guiSetText(headline["slots_loot"],"Вес: 0/0")
+	guiSetText(headline["loot"],"Vazio")
+	guiSetText(headline["slots_loot"],"Espaço: 0/0")
 	setProgressBar("loot",0,0)
 	return
 end
@@ -769,7 +769,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["loot"] ) 
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Еда/Вода", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Comidas & Bebidas", true, false )
 		for id, item in ipairs(inventoryItems["Food"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -778,7 +778,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end 
 			local row = guiGridListAddRow ( gridlistItems["loot"] ) 
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Прочее", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Items", true, false )
 		for id, item in ipairs(inventoryItems["Items"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -787,7 +787,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["loot"] )
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Caixa de Ferramentas", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Ferramentas", true, false )
 		for id, item in ipairs(inventoryItems["Toolbelt"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -804,7 +804,7 @@ if ( gridlistItems["loot_colum"] ) then
 		local maxSlots = getLootMaxAviableSlots(loot)or 0
 		setProgressBar("loot",curSlots,maxSlots)
 		
-		guiSetText(headline["slots_loot"],"Вес: "..curSlots.."/"..maxSlots)
+		guiSetText(headline["slots_loot"],"Espaço: "..curSlots.."/"..maxSlots)
 	end
 end
 

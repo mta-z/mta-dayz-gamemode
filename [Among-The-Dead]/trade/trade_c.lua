@@ -30,13 +30,13 @@ inventoryItems = {
 },
 ["Торговец: разное"] = {
 {"Caixa de Ferramentas"},
-{"Прочее"},
+{"Items"},
 },
 ["Торговец: одежда"] = {
 {"Рюкзаки"},
 {"Одежда"},
 },
-["Торговец: еда/вода/мед"] = {
+["Торговец: Comidas & Bebidas & Mel"] = {
 {"Еда"},
 {"Вода"},
 {"Медикаменты"},
@@ -48,11 +48,11 @@ inventoryItems = {
 {"Пулеметы(черный рынOK)"},
 {"Снайперские винтовки(черный рынOK)"},
 
-{"Прочее(черный рынOK)"},
+{"Items(черный рынOK)"},
 {"Одежда(черный рынOK)"},
 },
 
-["Прочее(черный рынOK)"] = {
+["Items(черный рынOK)"] = {
 {"Saco de Peças de Zumbi",11000},
 },
 
@@ -302,7 +302,7 @@ inventoryItems = {
 {"Ataduras",100}, 
 
 },
-["Прочее"] = {
+["Items"] = {
 {"Sinal de Fogo",350},
 {"Galão de Combútivel Vazio",700},
 --{"Arame Farpado",184},
@@ -914,7 +914,7 @@ end
 	setPedAnimation (pedTrader26,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker26,"trader",pedTrader26,false)
 	setElementData(pedTrader26,"trader",myMarker26,false)
-	setElementData(pedTrader26,"pedName","Торговец: еда/вода/мед")
+	setElementData(pedTrader26,"pedName","Торговец: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader26, true )
 	
 	pedTrader27 = createPed ( 287, -2431.5227050781,-644.47119140625,132.99859619141,90,false) 
@@ -979,7 +979,7 @@ end
 	--setPedAnimation (pedTrader4,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker4,"trader",pedTrader4,false)
 	setElementData(pedTrader4,"trader",myMarker4,false)
-	setElementData(pedTrader4,"pedName","Торговец: еда/вода/мед")
+	setElementData(pedTrader4,"pedName","Торговец: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader4, true )
 	
 	pedTrader5 = createPed ( 277, 668.37225341797,-586.22241210938,16.3359375,190,false) 
@@ -1007,7 +1007,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker29,"trader",pedTrader29,false)
 	setElementData(pedTrader29,"trader",myMarker29,false)
-	setElementData(pedTrader29,"pedName","Торговец: еда/вода/мед")
+	setElementData(pedTrader29,"pedName","Торговец: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader29, true )
 	
 	pedTrader3 = createPed ( 287, 1621.5806884766,1534.5533447266,10.80073261261,-40,false) 
@@ -1079,7 +1079,7 @@ pedTrader29 = createPed ( 259, -1538.7884521484,-368.83847045898,6.875	,240,fals
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker29,"trader",pedTrader29,false)
 	setElementData(pedTrader29,"trader",myMarker29,false)
-	setElementData(pedTrader29,"pedName","Торговец: еда/вода/мед")
+	setElementData(pedTrader29,"pedName","Торговец: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader29, true )
 	
 
