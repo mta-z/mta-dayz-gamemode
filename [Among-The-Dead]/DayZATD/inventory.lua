@@ -91,8 +91,8 @@
 {"Peixe Frito",1},
 },
 ["Items"] = {
-{"Ração Seca Grande",10,"Открыть Ração Seca Grande"},
-{"Ração Seca Pequena",5,"Открыть Ração Seca Pequena"},
+{"Ração Seca Grande",10,"Abrir Ração Seca Grande"},
+{"Ração Seca Pequena",5,"Abrir Ração Seca Pequena"},
 {"Lenha",2},
 
 {"Vara de Pesca",2},
@@ -101,7 +101,7 @@
 {"Peixe Cru",1},
 
 {"Ataduras",1,"Usar"},
-{"Sinal de Fogo",1,"Зажечь"},
+{"Sinal de Fogo",1,"Colocar"},
 {"Galão de Combútivel Vazio",2},
 {"Galão de Combútivel Completo",2},
 {"Kit de Primeiros Socorros",2,"Usar"},
@@ -117,14 +117,14 @@
 {"Balde de Metal 1",15},
 {"Balde de Metal 2",15},
 {"Pá",5},
-{"Бак",3},
-{"Шланг",1},
+{"Tanque de Combústivel",3},
+{"Mangueira",1},
 
 
-{"Мешок с частями зомби",3},
-{"Палатка",4,"Разложить палатку"},
-{"Большая палатка",6,"Разложить палатку"},
-{"Огромный ящик",2,"Установить ящик"},
+{"Saco de Peças de Zumbi",3},
+{"Tenda",4,"Colocar Tenda"},
+{"Tenda Grande",6,"Colocar Tenda"},
+{"Caixa Enorme",2,"Установить ящик"},
 
 {"Vestuário: Militar 1",1,"Vestir-se",288},
 {"Vestuário: Militar 2",1,"Vestir-se",286},
@@ -146,45 +146,45 @@
 {"Vestuário: Atirador 2",1,"Vestir-se",250},
 {"Vestuário: Atirador 3",1,"Vestir-se",252},
 {"Vestuário: Atirador 4",1,"Vestir-se",253},
-{"Одежда: Бандит 1ур",1,"Vestir-se",275},
-{"Одежда: Бандит 2ур",1,"Vestir-se",274},
-{"Одежда: Бандит 3ур",1,"Vestir-se",264},
-{"Одежда: Бандит 4ур",1,"Vestir-se",262},
-{"Одежда: Бандит 5ур",1,"Vestir-se",261},
-{"Одежда: Герой",1,"Vestir-se",260},
+{"Vestuário: Bandido 1 nível",1,"Vestir-se",275},
+{"Vestuário: Bandido nível 2",1,"Vestir-se",274},
+{"Vestuário: Bandido nível 3",1,"Vestir-se",264},
+{"Vestuário: Bandido nível 4",1,"Vestir-se",262},
+{"Vestuário: Bandido nível 5",1,"Vestir-se",261},
+{"Vestuário: Hero",1,"Vestir-se",260},
 
 
-{"Capacete Militar 50%",2,"Надеть",{1,50}},
-{"Мотошлем 10%",2,"Надеть",{1,10}},
-{"Сварочная маска 10%",1,"Надеть",{1,10}},
-{"Шахтерская каска 5%",1,"Надеть",{1,5}},
-{"Capacete Blindado 70%",5,"Надеть",{1,70}},
-{"Capacete Blindado 80%",5,"Надеть",{1,80}},
-{"Colete 20%",10,"Надеть",{2,20}},
-{"Colete 30%",15,"Надеть",{2,30}},
-{"Colete 10%",5,"Надеть",{2,10}},
+{"Capacete Militar 50%",2,"Colocar",{1,50}},
+{"Capacete de Motocicleta 10%",2,"Colocar",{1,10}},
+{"Máscara de Soldador 10%",1,"Colocar",{1,10}},
+{"Capacete de Mineiro 5%",1,"Colocar",{1,5}},
+{"Capacete Blindado 70%",5,"Colocar",{1,70}},
+{"Capacete Blindado 80%",5,"Colocar",{1,80}},
+{"Colete 20%",10,"Colocar",{2,20}},
+{"Colete 30%",15,"Colocar",{2,30}},
+{"Colete 10%",5,"Colocar",{2,10}},
 
 
 
 
 {"Garrafa de Água Vazia",1,"Наполнить"}, 
-{"Пустая Бутылка",1},
-{"Несъедобный Hambúrguer",1},
-{"Рюкзак САТУРН 20",1,"Экипировать",20},
+{"Garrafa de Água Vaziaа",1},
+{"Hambúrguer não Comestível",1},
+{"Mochila de SATURNO 20",1,"Экипировать",20},
 {"Mochila de ASSALTO 40",2,"Экипировать",40},
 {"Mochila de Montanha 60",3,"Экипировать",60},
 {"Mochila do Comandante 80",4,"Экипировать",80},
 {"Mochila de Explorador 100",4,"Экипировать",100},
 {"Mochila do Colorado 120",5,"Экипировать",120},
 {"Mochila Brasileira 140",6,"Экипировать",140},
-{"Рюкзак САМУРАЙ 160",16,"Экипировать",160},
+{"Mochila de Samurai 160",16,"Экипировать",160},
 --{"Рюкзак ВОЕННЫЙ 180",18,"Экипировать",180},
 --{"Рюкзак ФАРАОН 200",20,"Экипировать",200},
-{"Деньги",0.0001},
-{"Сейф",20,"Поставить сейф"},
-{"Мешки с песком",10,"Разложить мешки"},
+{"Dinheiro",0.0001},
+{"Cofre",20,"Colocar Cofre"},
+{"Sacos de Areia",10,"Espalhe os Sacos"},
 --{"Mina",5,"Установить мину"},
-{"Стальной лист",3},
+{"Chapa de Aço",3},
 
 },
 
@@ -192,14 +192,14 @@
 {"Ôculos de Visão Noturna",1},
 {"Ôculos de Infravermelho",1},
 {"Mapa",1},
-{"Caixa de Fósforo",1,"Зажечь Огонь"},
-{"GPS маяк",1,"Активировать"},
-{"Огниво",2,"Зажечь Огонь"},
+{"Caixa de Fósforo",1,"Colocar Fogo"},
+{"GPS",1,"Ativar"},
+{"Sílex",2,"Colocar Fogo"},
 {"Relôgio",1},
 {"GPS",1},
 {"Caixa de Ferramentas",1},
 {"Walkie-Talkie",1},
-{"Отмычка",0.005},
+{"Gazua",0.005},
 
 },
 }
@@ -221,11 +221,11 @@ inventoryWindows =guiCreateStaticImage ( 0, 0, 0.8, 0.8,  "images/scrollmenu_1.p
 -- inventoryWindows = guiCreateStaticImage(0.25,0.25,0.5,0.5,"images/scrollmenu_1.png",true)
 guiSetAlpha(inventoryWindows,0.7)
 
-headline["loot"] = guiCreateLabel(0.06, 0.05, 0.34, 0.09,"Содержимое",true,inventoryWindows)
+headline["loot"] = guiCreateLabel(0.06, 0.05, 0.34, 0.09,"Conteúdo",true,inventoryWindows)
 guiLabelSetHorizontalAlign (headline["loot"],"center")
 guiSetFont (headline["loot"], "default-bold-small" )
 
-headline["inventory"] = guiCreateLabel(0.60, 0.05, 0.34, 0.09,"Инвентарь",true,inventoryWindows)
+headline["inventory"] = guiCreateLabel(0.60, 0.05, 0.34, 0.09,"Inventário",true,inventoryWindows)
 guiLabelSetHorizontalAlign (headline["inventory"],"center")
 guiSetFont (headline["inventory"], "default-bold-small" )
 
@@ -250,7 +250,7 @@ buttonItems["inventorySpeed"] = guiCreateButton(0.51, 0.11, 0.06, 0.13, "<<-", t
 local substrateSlots = guiCreateStaticImage ( 0.57, 0.955, 0.39, 0.032,  "images/redPix.png",true,inventoryWindows )
 substrateSlotsTop = guiCreateStaticImage ( 0, 0, 0.39, 1,  "images/redPix.png",true,substrateSlots )
 guiSetAlpha(substrateSlots,0.5)
-headline["slots"] = guiCreateLabel(0.62, 0.95, 0.29, 0.04,"Вес:",true,inventoryWindows)
+headline["slots"] = guiCreateLabel(0.62, 0.95, 0.29, 0.04,"Espaço:",true,inventoryWindows)
 guiLabelSetHorizontalAlign (headline["slots"],"center")
 guiLabelSetVerticalAlign (headline["slots"],"center")
 guiSetFont (headline["slots"], "default-bold-small" )
@@ -258,13 +258,13 @@ guiSetFont (headline["slots"], "default-bold-small" )
 local substrateLoot = guiCreateStaticImage ( 0.03, 0.955, 0.39, 0.032,  "images/redPix.png",true,inventoryWindows )
 substrateLootTop = guiCreateStaticImage ( 0, 0, 0.39, 1,  "images/redPix.png",true,substrateLoot )
 guiSetAlpha(substrateLoot,0.5)
-headline["slots_loot"] = guiCreateLabel(0.07, 0.95, 0.29, 0.04,"Вес:",true,inventoryWindows)
+headline["slots_loot"] = guiCreateLabel(0.07, 0.95, 0.29, 0.04,"Espaço:",true,inventoryWindows)
 guiLabelSetHorizontalAlign (headline["slots_loot"],"center")
 guiLabelSetVerticalAlign (headline["slots_loot"],"center")
 guiSetFont (headline["slots_loot"], "default-bold-small" )
 
 
---guiWindowSetSizable  (  inventoryWindows, false )
+guiWindowSetSizable  (  inventoryWindows, false )
 
 centerWindow(inventoryWindows)
 
@@ -411,7 +411,7 @@ end
 
 if isElement ( obj )  and  getElementType ( obj )  ==  "vehicle" then
 if isVehicleLocked ( getElementData(col,"parent") ) then
-outputChatBox("Это транспортное средство закрыто!")
+outputChatBox("Este veículo está fechado!")
 return
 end
 end
@@ -493,30 +493,30 @@ function openSave(col)
 local isHackSave = getElementData(col,"hackSave") or false
 
 if isHackSave then
-refreshLoot(col,"Сейф")
+refreshLoot(col,"Cofre")
 showInventoryManual()
 showCursor(true)
 return
 end
 
  showCursor(true) 
-saveWindows = guiCreateWindow(500, 450, 200, 100, "Открыть сейф", false) 
+saveWindows = guiCreateWindow(500, 450, 200, 100, "Abrir Cofre", false) 
 editBox = guiCreateEdit( 50, 40, 100, 20, "", false,saveWindows )
 guiEditSetMaxLength  (  editBox, 4 )
 guiEditSetMasked (  editBox, true )
-    buttonOK = guiCreateButton(35, 70, 60, 20, "Ок", false,saveWindows)
-buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Отмена", false,saveWindows)
+    buttonOK = guiCreateButton(35, 70, 60, 20, "OK", false,saveWindows)
+buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
 if guiGetText (editBox) == getElementData(col,"pass") then
-refreshLoot(col,"Сейф")
+refreshLoot(col,"Cofre")
 showInventoryManual()
 showCursor(true)
  guiSetVisible(saveWindows, false)
  else
- outputChatBox("Неверный пароль")
+ outputChatBox("Senha inválida")
  end
  end,false)
  
@@ -538,7 +538,7 @@ if col and isElement(col)  then
 local parent = getElementData(col,"parent") or false
 if parent and isElement(parent) and  getElementType ( parent )  ==  "vehicle" then 
 if isVehicleLocked ( getElementData(col,"parent") ) then
-outputChatBox("Это транспортное средство закрыто!")
+outputChatBox("Este veículo está fechado!")
 return
 end
 end
@@ -586,7 +586,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
 			--guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"ITEMS", false, false )
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Основное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Arma Principal", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Primary Weapon"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -602,7 +602,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Дополнительное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Arma Secundario", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Secondary Weapon"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -617,7 +617,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] )
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Специальное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Armas Especiais", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Specially Weapon"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -632,7 +632,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["inventory"] ) 
-			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Боеприпасы", true, false )
+			guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],"Munições", true, false )
 		for id, item in ipairs(inventoryItems["Ammo"]) do
 			if getElementData(localPlayer,item[1]) and (getElementData(localPlayer,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["inventory"] )
@@ -680,7 +680,7 @@ if ( gridlistItems["inventory_colum"] ) then --If the column has been created, f
 				guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"],item[1], false, false )
 				guiGridListSetItemText ( gridlistItems["inventory"], row, gridlistItems["inventory_colum_amount"],getElementData(localPlayer,item[1]), false, false )
 			local GPSpharos = getElementData(localPlayer,"GPSpharos") or false
-				if GPSpharos and item[1]=="GPS маяк" then
+				if GPSpharos and item[1]=="GPS" then
 				guiGridListSetItemColor ( gridlistItems["inventory"], row, gridlistItems["inventory_colum"], 255,0,0 )
 				guiGridListSetItemColor ( gridlistItems["inventory"], row, gridlistItems["inventory_colum_amount"], 255,0,0 )
 				end
@@ -733,7 +733,7 @@ if ( gridlistItems["loot_colum"] ) then
 			local row = guiGridListAddRow ( gridlistItems["loot"] )
 			--guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Weapons", true, false )
 			local row = guiGridListAddRow ( gridlistItems["loot"] )
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Основное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Arma Principal", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Primary Weapon"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -742,7 +742,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Дополнительное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Arma Secundario", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Secondary Weapon"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -751,7 +751,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["loot"] )
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Специальное оружие", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Armas Especiais", true, false )
 		for id, item in ipairs(inventoryItems["Weapons"]["Specially Weapon"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -760,7 +760,7 @@ if ( gridlistItems["loot_colum"] ) then
 			end
 		end
 			local row = guiGridListAddRow ( gridlistItems["loot"] ) 
-			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Боеприпасы", true, false )
+			guiGridListSetItemText ( gridlistItems["loot"], row, gridlistItems["loot_colum"],"Munições", true, false )
 		for id, item in ipairs(inventoryItems["Ammo"]) do
 			if getElementData(loot,item[1]) and (getElementData(loot,item[1]) or 0) >= 1 then
 				local row = guiGridListAddRow ( gridlistItems["loot"] )
@@ -1037,7 +1037,7 @@ return
 end
 if gameplayVariables["checkBTNFLOOD"] then
 if cancelBtnFlood then
-startRollMessage2("Инвентарь", "Не нажимайте слишком часто!", 255, 0, 0 )
+startRollMessage2("Inventário", "Не нажимайте слишком часто!", 255, 0, 0 )
 return
 end
 cancelBtnFlood = true
@@ -1095,7 +1095,7 @@ end
 
 				else
 
-					startRollMessage2("Инвентарь", "Этот предмет весит "..(getItemSlots(itemName)*plus).."кг!", 255, 0, 0 )
+					startRollMessage2("Inventário", "Этот предмет весит "..(getItemSlots(itemName)*plus).."кг!", 255, 0, 0 )
 					return
 				end
 			elseif isToolbeltItem(itemName) then
@@ -1122,7 +1122,7 @@ end
 			end 
 			
 
-				startRollMessage2("Инвентарь", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
+				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
 				return
 			end	
 		else
@@ -1140,7 +1140,7 @@ end
 addEventHandler ( "onClientGUIClick", buttonItems["inventory"], function() 
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemOutOfInventory(false) 
@@ -1153,7 +1153,7 @@ end,false )
 addEventHandler ( "onClientGUIClick", buttonItems["inventorySpeed"], function() 
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemOutOfInventory(true)
@@ -1210,26 +1210,26 @@ end
 if itemName == "Pneu_inVehicle" then itemPlus = 1 end
 if itemName == "Motor_inVehicle" then itemPlus = 1 end
 --if (getElementData(localPlayer,itemName2) or 0)/itemPlus < 1 then
---	triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить!",255,22,0)
+--	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить!",255,22,0)
 --return
 --end
 
-if itemName=="Одежда: Бандит 1ур" or itemName=="Одежда: Бандит 2ур" or itemName=="Одежда: Бандит 3ур" or itemName=="Одежда: Бандит 4ур" or itemName=="Одежда: Бандит 5ур" or itemName=="Одежда: Герой"  then
-	triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить!",255,22,0)
+if itemName=="Vestuário: Bandido 1 nível" or itemName=="Vestuário: Bandido nível 2" or itemName=="Vestuário: Bandido nível 3" or itemName=="Vestuário: Bandido nível 4" or itemName=="Vestuário: Bandido nível 5" or itemName=="Vestuário: Hero"  then
+	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить!",255,22,0)
 return
 end
 
 
 if getElementData(localPlayer,"backPackUsed") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить используемый рюкзак!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемый рюкзак!",255,22,0)
 return
 end
 end
 
-if itemName =="GPS маяк" and getElementData(localPlayer,"GPSpharos")  then
+if itemName =="GPS" and getElementData(localPlayer,"GPSpharos")  then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить активированный маяк!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить активированный маяк!",255,22,0)
 return
 end
 end
@@ -1237,14 +1237,14 @@ end
 
 if getElementData(localPlayer,"clotType_1") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить используемую вещь!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемую вещь!",255,22,0)
 return
 end
 end
 
 if getElementData(localPlayer,"clotType_2") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Нельзя выбросить используемую вещь!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемую вещь!",255,22,0)
 return
 end
 end
@@ -1257,9 +1257,9 @@ end
 				triggerServerEvent("onPlayerChangeLoot",getRootElement(),loot)
 			else
 
-		if itemName == "Деньги" and not all then
+		if itemName == "Dinheiro" and not all then
 		
-		local moneyIninvv = getElementData(localPlayer,"Деньги") or 0
+		local moneyIninvv = getElementData(localPlayer,"Dinheiro") or 0
 		if moneyIninvv >=10000 then
 		itemPlus =10000
 		elseif  moneyIninvv >=5000 then
@@ -1335,7 +1335,7 @@ end
 
 if gameplayVariables["checkBTNFLOOD"] then
 if cancelBtnFlood2 then
-startRollMessage2("Инвентарь", "Не нажимайте слишком часто!", 255, 0, 0 )
+startRollMessage2("Inventário", "Не нажимайте слишком часто!", 255, 0, 0 )
 return
 end
 cancelBtnFlood2 = true
@@ -1374,7 +1374,7 @@ if isPlayerInLoot() then
 			if getPlayerCurrentSlots() + (getItemSlots(itemName)*plus) <= (getPlayerMaxAviableSlots()+PlusSlots()) then
 			triggerEvent("onPlayerMoveItemInInventoryFunc",localPlayer,itemName,isPlayerInLoot(),all)
 			else
-				startRollMessage2("Инвентарь", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
+				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
 				return
 			end
 		else
@@ -1392,7 +1392,7 @@ end
 addEventHandler ( "onClientGUIClick", buttonItems["loot"], function()
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemInInventory(false) 
@@ -1403,7 +1403,7 @@ end,false )
 addEventHandler ( "onClientGUIClick", buttonItems["lootSpeed"], function()
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemInInventory(true) 
@@ -1450,7 +1450,7 @@ end
 	
 
 	--	if getNetworkStats().packetlossLastSecond > 3 or getNetworkStats().messagesInResendBuffer >10 then
-	--	startRollMessage2("Инвентарь", "Пинг превышает норму!", 255, 22, 0 )
+	--	startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
 	--	return
 	--	end
 	
@@ -1458,9 +1458,9 @@ end
 			if #players > 1 then
 				triggerServerEvent("onPlayerChangeLoot",getRootElement(),loot)
 			else
-if itemName == "Деньги" and not all then
+if itemName == "Dinheiro" and not all then
 		
-		local moneyIninvv = getElementData(loot,"Деньги") or 0
+		local moneyIninvv = getElementData(loot,"Dinheiro") or 0
 		if moneyIninvv >=10000 then
 		itemPlus =10000
 		elseif  moneyIninvv >=5000 then
@@ -1578,17 +1578,17 @@ bindKey("mouse2","down",onPlayerPressRightKeyInInventory)
 function getInventoryInfosForRightClickMenu(itemName)
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Primary Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять основное оружие"
+		return itemName,"Взять Arma Principal"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Secondary Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять дополнительное оружие"
+		return itemName,"Взять Arma Secundario"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Specially Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять специальное оружие"
+		return itemName,"Взять Armas Especiais"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Ammo"]) do
@@ -1622,10 +1622,10 @@ for i,itemInfo in ipairs(inventoryItems["Items"]) do
 end
 for i,itemInfo in ipairs(inventoryItems["Toolbelt"]) do
 	if itemName == itemInfo[1] then
-		if itemName=="GPS маяк" then
+		if itemName=="GPS" then
 		local GPSpharos = getElementData(localPlayer,"GPSpharos") or false
 		if GPSpharos then
-		return itemName,"Деактивировать" or false
+		return itemName,"ДеAtivar" or false
 		else
 		return itemName,itemInfo[3] or false
 		end
@@ -1741,19 +1741,19 @@ local isOnGround = isPedOnGround(localPlayer)
 	elseif itemName == "Garrafa de Água Vazia" then
 		triggerServerEvent("onPlayerRefillWaterBottle",localPlayer,itemName)
 		
-	elseif itemName == "Палатка" then
+	elseif itemName == "Tenda" then
 	
 		if isOnGround then
 			triggerServerEvent("onPlayerPitchATent",localPlayer,itemName)
 			triggerEvent("PlaySoundDayZ",localPlayer,"PitchATent",0,0)
 		end
 		
-	elseif itemName == "Большая палатка" then
+	elseif itemName == "Tenda Grande" then
 		if isOnGround then
 			triggerServerEvent("onPlayerPitchABigTent",localPlayer,itemName)
 			triggerEvent("PlaySoundDayZ",localPlayer,"PitchATent",0,0)
 		end
-	elseif itemName == "Огромный ящик" then
+	elseif itemName == "Caixa Enorme" then
 		if isOnGround then
 			triggerServerEvent("onPlayerPitchADMINTent",localPlayer,itemName)
 			triggerEvent("PlaySoundDayZ",localPlayer,"PitchATent",0,0)
@@ -1765,7 +1765,7 @@ local isOnGround = isPedOnGround(localPlayer)
 		end
 	elseif itemName == "Sinal de Fogo" then
 		triggerServerEvent("onPlayerPlaceRoadflare",localPlayer,itemName)	
-	elseif itemInfo == "Зажечь Огонь" then
+	elseif itemInfo == "Colocar Fogo" then
 if (getElementData(localPlayer,"Lenha") or 0) <=0 then 
 return
 end	
@@ -1793,41 +1793,41 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 		end
 		
 		
-	elseif itemInfo == "Взять основное оружие" then
+	elseif itemInfo == "Взять Arma Principal" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,1)
-	elseif itemInfo == "Взять дополнительное оружие" then
+	elseif itemInfo == "Взять Arma Secundario" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,2)
-	elseif itemInfo == "Взять специальное оружие" then
+	elseif itemInfo == "Взять Armas Especiais" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,3)
 	elseif itemInfo == "Экипировать" then
 		equipBackPack(itemName,itemInfo,itemData)
-	elseif itemInfo == "Поставить сейф"	then
+	elseif itemInfo == "Colocar Cofre"	then
 		onSave(itemName)
-	elseif itemInfo == "Разложить мешки" then
+	elseif itemInfo == "Espalhe os Sacos" then
 	if isOnGround then
 		triggerServerEvent("onPlayerBuildASandBags",localPlayer,itemName)
 		end
 	elseif itemInfo == "Установить мину" then
 		triggerServerEvent("onPlayerBuildAMine",localPlayer,itemName)
-	elseif itemInfo == "Открыть Ração Seca Grande" then
+	elseif itemInfo == "Abrir Ração Seca Grande" then
 		SyxPay(itemName,1)
-	elseif itemInfo == "Открыть Ração Seca Pequena" then
+	elseif itemInfo == "Abrir Ração Seca Pequena" then
 		SyxPay(itemName,2)
-	elseif itemInfo == "Надеть" then
+	elseif itemInfo == "Colocar" then
 		ClotElement(itemName,itemData)
 	elseif itemInfo == "Снять" then
 		triggerServerEvent("clotElementDel",localPlayer,itemData[1])
-	elseif itemInfo == "Активировать" then
-	local mayakGPS = getElementData(localPlayer,"GPS маяк") or false
+	elseif itemInfo == "Ativar" then
+	local mayakGPS = getElementData(localPlayer,"GPS") or false
 	if mayakGPS and mayakGPS>=1 then
 		setElementData(localPlayer,"GPSpharos",true)
-		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 активировал GPS маяк!",255,0,0)
+		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 активировал GPS!",255,0,0)
 	end
-	elseif itemInfo == "Деактивировать" then
-		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 деактивировал GPS маяк!",255,0,0)
+	elseif itemInfo == "ДеAtivar" then
+		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 деактивировал GPS!",255,0,0)
 		
-		local mayakGPS = getElementData(localPlayer,"GPS маяк")  or 0
-		setElementData(localPlayer,"GPS маяк",mayakGPS-1)
+		local mayakGPS = getElementData(localPlayer,"GPS")  or 0
+		setElementData(localPlayer,"GPS",mayakGPS-1)
 		setElementData(localPlayer,"GPSpharos",false)
 	
 		
@@ -1842,81 +1842,81 @@ local clotTable={
 
 
 {288,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {286,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {285,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {284,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {283,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {282,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {281,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {276,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {280,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
@@ -1924,9 +1924,9 @@ local clotTable={
 {false,false,"Colete 10%"}}},
 
 {279,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0.02,0,0.06,5,-90,5,size =1},
@@ -1935,18 +1935,18 @@ local clotTable={
 --[[
 {176,{{1,2394,"Capacete Militar 50%",0,0,-0.560,1.5,4.5,94, size = 1,profit=50},
 
-{1,1755,"Мотошлем 10%",0,0,-0.640,1.5,3.1,94, size = 1,profit=10},
-{1,2015,"Сварочная маска 10%",0,0,-0.620,0.5,3.1,87, size = 1.090,profit=10},
-{1,2016,"Шахтерская каска 5%",0,0,-0.560,1.6,3.5,94, size = 1.015,profit=5},
+{1,1755,"Capacete de Motocicleta 10%",0,0,-0.640,1.5,3.1,94, size = 1,profit=10},
+{1,2015,"Máscara de Soldador 10%",0,0,-0.620,0.5,3.1,87, size = 1.090,profit=10},
+{1,2016,"Capacete de Mineiro 5%",0,0,-0.560,1.6,3.5,94, size = 1.015,profit=5},
 {1,2018,"Capacete Blindado 70%",0,-0.060,-0.550,0.5,9,88, size = 1.010,profit=70},
 {1,2019,"Capacete Blindado 80%",0,-0.060,-0.550,0.5,9,88, size = 1,profit=80},
 {3,2020,"Colete 20%",0.040,0.030,-0.540,-3,0,97, size = 1,profit=20}}},
 
 ]]
 {278,{{1,2394,"Capacete Militar 50%",0,0.09,-0.715,0.9,0,95,size=1.1},
-{1,1755,"Мотошлем 10%",0,0.09,-0.715,0.9,0,95,size=1},
-{1,2015,"Сварочная маска 10%",0,0.07,-0.63,0.9,0,95,size=1},
-{1,2016,"Шахтерская каска 5%",0,0.1,-0.79,0.9,0,95,size=1.2},
+{1,1755,"Capacete de Motocicleta 10%",0,0.09,-0.715,0.9,0,95,size=1},
+{1,2015,"Máscara de Soldador 10%",0,0.07,-0.63,0.9,0,95,size=1},
+{1,2016,"Capacete de Mineiro 5%",0,0.1,-0.79,0.9,0,95,size=1.2},
 {1,2018,"Capacete Blindado 70%",0,0.1,-0.621,0.9,0,95,size=1},
 {1,2019,"Capacete Blindado 80%",-0.01,0.1,-0.7,0.9,0,95,size=1.1},
 {3,936,"Colete 30%",0.01,-0.01,0.06,0,-90,0,size = 1},
@@ -1955,9 +1955,9 @@ local clotTable={
 
 
 {277,{{1,2394,"Capacete Militar 50%",0,-0.01,-0.76,0,0,90,size=1.2},
-{1,1755,"Мотошлем 10%",0,-0.03,-0.78,0,0,95,size=1.1},
-{1,2015,"Сварочная маска 10%",0,-0.03,-0.7,0,0,95,size=1.1},
-{1,2016,"Шахтерская каска 5%",0.005,-0.01,-0.87,0,0,95,size=1.3},
+{1,1755,"Capacete de Motocicleta 10%",0,-0.03,-0.78,0,0,95,size=1.1},
+{1,2015,"Máscara de Soldador 10%",0,-0.03,-0.7,0,0,95,size=1.1},
+{1,2016,"Capacete de Mineiro 5%",0.005,-0.01,-0.87,0,0,95,size=1.3},
 {1,2018,"Capacete Blindado 70%",0,-0.007,-0.67,0,0,95,size=1.1},
 {1,2019,"Capacete Blindado 80%",0,-0.01,-0.66,0,0,95,size=1.1},
 {3,936,"Colete 30%",0,-0.01,0.03,0,-90,0,size=1},
@@ -1966,9 +1966,9 @@ local clotTable={
 
 
 {287,{{1,2394,"Capacete Militar 50%",0,-0,-0.71,0,0,92,size=1.1},
-{1,1755,"Мотошлем 10%",0,-0.13,-0.7,0,10,90,size=1},
-{1,2015,"Сварочная маска 10%",0,-0.03,-0.66,0,0,90,size=1},
-{1,2016,"Шахтерская каска 5%",0,-0,-0.8,0,0,90,size=1.2},
+{1,1755,"Capacete de Motocicleta 10%",0,-0.13,-0.7,0,10,90,size=1},
+{1,2015,"Máscara de Soldador 10%",0,-0.03,-0.66,0,0,90,size=1},
+{1,2016,"Capacete de Mineiro 5%",0,-0,-0.8,0,0,90,size=1.2},
 {1,2018,"Capacete Blindado 70%",0,0.01,-0.69,0,0,90,size=1.1},
 {1,2019,"Capacete Blindado 80%",0,0.004,-0.69,0,0,90,size=1.1},
 {false,false,"Colete 30%"},
@@ -1976,9 +1976,9 @@ local clotTable={
 {false,false,"Colete 10%"}}},
 
 {259,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
@@ -1986,9 +1986,9 @@ local clotTable={
 {false,false,"Colete 10%"}}},
 
 {258,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
@@ -1996,9 +1996,9 @@ local clotTable={
 {false,false,"Colete 10%"}}},
 
 {255,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0,-0.01,0.03,0,-90,0,size=0.9},
@@ -2006,9 +2006,9 @@ local clotTable={
 {3,2396,"Colete 10%",-0,0.05,0.03,0,-90,0,size=0.9}}},
 
 {249,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=0.9},
@@ -2016,9 +2016,9 @@ local clotTable={
 {3,2396,"Colete 10%",-0,0.05,0.03,0,-90,0,size=1}}},
 
 {250,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
@@ -2026,9 +2026,9 @@ local clotTable={
 {3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {252,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
@@ -2036,9 +2036,9 @@ local clotTable={
 {3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {253,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {3,936,"Colete 30%",0,-0.04,0.03,0,-90,0,size=1},
@@ -2046,54 +2046,54 @@ local clotTable={
 {3,2396,"Colete 10%",-0,0.05,0.06,0,-90,0,size=1}}},
 
 {275,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {274,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {264,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {262,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {261,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
 {false,false,"Colete 20%"},
 {false,false,"Colete 10%"}}},
 {260,{{false,false,"Capacete Militar 50%"},
-{false,false,"Мотошлем 10%"},
-{false,false,"Сварочная маска 10%"},
-{false,false,"Шахтерская каска 5%"},
+{false,false,"Capacete de Motocicleta 10%"},
+{false,false,"Máscara de Soldador 10%"},
+{false,false,"Capacete de Mineiro 5%"},
 {false,false,"Capacete Blindado 70%"},
 {false,false,"Capacete Blindado 80%"},
 {false,false,"Colete 30%"},
@@ -2161,7 +2161,7 @@ local maxslots = getElementData(localPlayer,"MAX_Slots") or false
 if act ==1 then
 
 if curslots+15 >= maxslots+PlusSlots() then
-triggerEvent ("displayClientInfo",localPlayer,"Инвентарь","В рюкзаке не хватает места!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Inventário","В рюкзаке не хватает места!",255,0,0)
 return
 end
 
@@ -2172,7 +2172,7 @@ end
 if act ==2 then
 
 if curslots+6 >= maxslots then
-triggerEvent ("displayClientInfo",localPlayer,"Инвентарь","В рюкзаке не хватает места!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Inventário","В рюкзаке не хватает места!",255,0,0)
 return
 end
 
@@ -2188,9 +2188,9 @@ end
 end
 function equipBackPack(itemName,itemInfo,itemData)
 if itemData then
---if getElementData(localPlayer,"playerlvl") < 100 and itemData > 100  then triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","У вас недостаточно опыта для использования этого рюкзака",255,22,0) return end
-if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Вы уже используете этот рюкзак!",255,22,0) return end
-	--if getElementData(localPlayer,"MAX_Slots") > itemData then triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","В настоящий момент, ваш рюкзак имеет больше пространства!",255,22,0) return end
+--if getElementData(localPlayer,"playerlvl") < 100 and itemData > 100  then triggerEvent ("displayClientInfo", localPlayer,"Inventário","У вас недостаточно опыта для использования этого рюкзака",255,22,0) return end
+if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","Вы уже используете этот рюкзак!",255,22,0) return end
+	--if getElementData(localPlayer,"MAX_Slots") > itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","В настоящий момент, ваш рюкзак имеет больше пространства!",255,22,0) return end
 	
 	local enginerSlots = getElementData(localPlayer,"progress.enginer") or 0
 	local attackerSlots = getElementData(localPlayer,"progress.attacker") or 0
@@ -2204,7 +2204,7 @@ if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displ
 	return
 	end
 	else
-	triggerEvent ("displayClientInfo", localPlayer,"Инвентарь","Этот рюкзак имеет меньше пространства чем необходимо!",255,22,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Этот рюкзак имеет меньше пространства чем необходимо!",255,22,0)
 	end
 	--setElementData(localPlayer,itemName,getElementData(localPlayer,itemName)-1)
 	refreshInventory()
@@ -2220,12 +2220,12 @@ if saveWindows then
  showCursor(false)
 end
  
-saveWindows = guiCreateWindow(500, 450, 200, 100, "Сейф", false) 
+saveWindows = guiCreateWindow(500, 450, 200, 100, "Cofre", false) 
 editBox = guiCreateEdit( 50, 40, 100, 20, "", false,saveWindows )
 guiEditSetMaxLength  (  editBox, 4 )
 guiEditSetMasked (  editBox, true )
-    buttonOK = guiCreateButton(35, 70, 60, 20, "Ок", false,saveWindows)
-buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Отмена", false,saveWindows)
+    buttonOK = guiCreateButton(35, 70, 60, 20, "OK", false,saveWindows)
+buttonCANCEL = guiCreateButton(110, 70, 60, 20, "Cancelar", false,saveWindows)
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
 local passOnSave = guiGetText (editBox)
