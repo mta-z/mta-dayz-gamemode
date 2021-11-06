@@ -37,9 +37,9 @@ inventoryItems = {
 {"Одежда"},
 },
 ["Торговец: Comidas & Bebidas & Mel"] = {
-{"Еда"},
+{"Comida"},
 {"Вода"},
-{"Медикаменты"},
+{"Médicoаменты"},
 },
 
 ["Торговец: черный рынOK"] = {
@@ -277,7 +277,7 @@ inventoryItems = {
 
 
 
-["Еда"] = {
+["Comida"] = {
 
 {"Lata de Macarrão",700},
 {"Lata de Feijão",800},
@@ -292,7 +292,7 @@ inventoryItems = {
 {"Garrafa de Água Com Gás Completo",500},
 {"Coca-Cola",650},
 },
-["Медикаменты"] = {
+["Médicoаменты"] = {
 
 {"Bolsa de Sangue",3500},
 {"Antibiótico",600},

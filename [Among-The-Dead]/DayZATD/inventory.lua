@@ -110,7 +110,7 @@
 {"Morfina",1,"Usar"},
 {"Antibiótico",1,"Usar"},
 {"Bolsa de Sangue",1,"Usar"},
---{"Arame Farpado",3,"Поставить колючую проволку"},
+--{"Arame Farpado",3,"Coloque o arame farpado"},
 {"Carne Crua",1},
 {"Pneu",2},
 {"Motor",10},
@@ -170,16 +170,16 @@
 {"Garrafa de Água Vazia",1,"Наполнить"}, 
 {"Garrafa de Água Vaziaа",1},
 {"Hambúrguer não Comestível",1},
-{"Mochila de SATURNO 20",1,"Экипировать",20},
-{"Mochila de ASSALTO 40",2,"Экипировать",40},
-{"Mochila de Montanha 60",3,"Экипировать",60},
-{"Mochila do Comandante 80",4,"Экипировать",80},
-{"Mochila de Explorador 100",4,"Экипировать",100},
-{"Mochila do Colorado 120",5,"Экипировать",120},
-{"Mochila Brasileira 140",6,"Экипировать",140},
-{"Mochila de Samurai 160",16,"Экипировать",160},
---{"Рюкзак ВОЕННЫЙ 180",18,"Экипировать",180},
---{"Рюкзак ФАРАОН 200",20,"Экипировать",200},
+{"Mochila de SATURNO 20",1,"Equipar",20},
+{"Mochila de ASSALTO 40",2,"Equipar",40},
+{"Mochila de Montanha 60",3,"Equipar",60},
+{"Mochila do Comandante 80",4,"Equipar",80},
+{"Mochila de Explorador 100",4,"Equipar",100},
+{"Mochila do Colorado 120",5,"Equipar",120},
+{"Mochila Brasileira 140",6,"Equipar",140},
+{"Mochila de Samurai 160",16,"Equipar",160},
+--{"Рюкзак ВОЕННЫЙ 180",18,"Equipar",180},
+--{"Рюкзак ФАРАОН 200",20,"Equipar",200},
 {"Dinheiro",0.0001},
 {"Cofre",20,"Colocar Cofre"},
 {"Sacos de Areia",10,"Espalhe os Sacos"},
@@ -1095,7 +1095,7 @@ end
 
 				else
 
-					startRollMessage2("Inventário", "Этот предмет весит "..(getItemSlots(itemName)*plus).."кг!", 255, 0, 0 )
+					startRollMessage2("Inventário", "Este item pesa "..(getItemSlots(itemName)*plus).."Kg!", 255, 0, 0 )
 					return
 				end
 			elseif isToolbeltItem(itemName) then
@@ -1122,7 +1122,7 @@ end
 			end 
 			
 
-				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
+				startRollMessage2("Inventário", "Este item pesa "..getItemSlots(itemName)*plus.."Kg!", 255, 0, 0 )
 				return
 			end	
 		else
@@ -1374,7 +1374,7 @@ if isPlayerInLoot() then
 			if getPlayerCurrentSlots() + (getItemSlots(itemName)*plus) <= (getPlayerMaxAviableSlots()+PlusSlots()) then
 			triggerEvent("onPlayerMoveItemInInventoryFunc",localPlayer,itemName,isPlayerInLoot(),all)
 			else
-				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName)*plus.."кг!", 255, 0, 0 )
+				startRollMessage2("Inventário", "Este item pesa "..getItemSlots(itemName)*plus.."Kg!", 255, 0, 0 )
 				return
 			end
 		else
@@ -1578,17 +1578,17 @@ bindKey("mouse2","down",onPlayerPressRightKeyInInventory)
 function getInventoryInfosForRightClickMenu(itemName)
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Primary Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять Arma Principal"
+		return itemName,"Equipar Arma Principal"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Secondary Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять Arma Secundario"
+		return itemName,"Equipar Arma Secundario"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Weapons"]["Specially Weapon"]) do
 	if itemName == itemInfo[1] then
-		return itemName,"Взять Armas Especiais"
+		return itemName,"Equipar Armas Especiais"
 	end	
 end
 for i,itemInfo in ipairs(inventoryItems["Ammo"]) do
@@ -1599,9 +1599,9 @@ end
 for i,itemInfo in ipairs(inventoryItems["Food"]) do
 	if itemName == itemInfo[1] then
 		if itemInfo[1] == "Garrafa de Água Completo" or itemInfo[1] == "Coca-Cola" or itemInfo[1] == "Garrafa de Água Com Gás Completo" then
-			info = "Выпить"
+			info = "Beber"
 		else
-			info = "Cъесть"
+			info = "Comer"
 		end
 		return itemName,info
 	end	
@@ -1611,7 +1611,7 @@ for i,itemInfo in ipairs(inventoryItems["Items"]) do
 		
 		if itemInfo[4] then
 		if getElementData(localPlayer,"clotType_1") == itemName or getElementData(localPlayer,"clotType_2") == itemName then
-		return itemName,"Снять" or false,itemInfo[4] or false
+		return itemName,"Retirar" or false,itemInfo[4] or false
 		end
 		
 		return itemName,itemInfo[3] or false,itemInfo[4] or false
@@ -1625,7 +1625,7 @@ for i,itemInfo in ipairs(inventoryItems["Toolbelt"]) do
 		if itemName=="GPS" then
 		local GPSpharos = getElementData(localPlayer,"GPSpharos") or false
 		if GPSpharos then
-		return itemName,"ДеAtivar" or false
+		return itemName,"Desativar" or false
 		else
 		return itemName,itemInfo[3] or false
 		end
@@ -1701,7 +1701,7 @@ if (getElementData(localPlayer,itemName) or 0) <=0 then
 return
 end
 local isOnGround = isPedOnGround(localPlayer)
-	if itemInfo == "Выпить" then
+	if itemInfo == "Beber" then
 		triggerServerEvent("onPlayerRequestChangingStats",localPlayer,itemName,itemInfo,"thirst")
 		
 		if  itemName == "Garrafa de Água Com Gás Completo" then
@@ -1712,7 +1712,7 @@ local isOnGround = isPedOnGround(localPlayer)
 		triggerEvent("PlaySoundDayZ",localPlayer,"Water",0,0)
 		end
 		
-	elseif itemInfo == "Cъесть" then
+	elseif itemInfo == "Comer" then
 		triggerServerEvent("onPlayerRequestChangingStats",localPlayer,itemName,itemInfo,"food")
 
 	if itemName == "Hambúrguer" then
@@ -1759,7 +1759,7 @@ local isOnGround = isPedOnGround(localPlayer)
 			triggerEvent("PlaySoundDayZ",localPlayer,"PitchATent",0,0)
 		end
 		
-	elseif itemInfo == "Поставить колючую проволку"	then
+	elseif itemInfo == "Coloque o arame farpado"	then
 	if isOnGround then
 		triggerServerEvent("onPlayerBuildAWireFence",localPlayer,itemName)
 		end
@@ -1793,13 +1793,13 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 		end
 		
 		
-	elseif itemInfo == "Взять Arma Principal" then
+	elseif itemInfo == "Equipar Arma Principal" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,1)
-	elseif itemInfo == "Взять Arma Secundario" then
+	elseif itemInfo == "Equipar Arma Secundario" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,2)
-	elseif itemInfo == "Взять Armas Especiais" then
+	elseif itemInfo == "Equipar Armas Especiais" then
 		triggerServerEvent("onPlayerRearmWeapon",localPlayer,itemName,3)
-	elseif itemInfo == "Экипировать" then
+	elseif itemInfo == "Equipar" then
 		equipBackPack(itemName,itemInfo,itemData)
 	elseif itemInfo == "Colocar Cofre"	then
 		onSave(itemName)
@@ -1815,16 +1815,16 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 		SyxPay(itemName,2)
 	elseif itemInfo == "Colocar" then
 		ClotElement(itemName,itemData)
-	elseif itemInfo == "Снять" then
+	elseif itemInfo == "Retirar" then
 		triggerServerEvent("clotElementDel",localPlayer,itemData[1])
 	elseif itemInfo == "Ativar" then
 	local mayakGPS = getElementData(localPlayer,"GPS") or false
 	if mayakGPS and mayakGPS>=1 then
 		setElementData(localPlayer,"GPSpharos",true)
-		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 активировал GPS!",255,0,0)
+		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 activou o GPS!",255,0,0)
 	end
 	elseif itemInfo == "ДеAtivar" then
-		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 деактивировал GPS!",255,0,0)
+		triggerServerEvent("outputChatBoxMESSAGE",localPlayer,"#FF0000"..getPlayerName(localPlayer).."#FF0000 desactivou o GPS!",255,0,0)
 		
 		local mayakGPS = getElementData(localPlayer,"GPS")  or 0
 		setElementData(localPlayer,"GPS",mayakGPS-1)
@@ -2161,7 +2161,7 @@ local maxslots = getElementData(localPlayer,"MAX_Slots") or false
 if act ==1 then
 
 if curslots+15 >= maxslots+PlusSlots() then
-triggerEvent ("displayClientInfo",localPlayer,"Inventário","В рюкзаке не хватает места!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Inventário","Não há espaço suficiente na mochila!",255,0,0)
 return
 end
 
@@ -2172,7 +2172,7 @@ end
 if act ==2 then
 
 if curslots+6 >= maxslots then
-triggerEvent ("displayClientInfo",localPlayer,"Inventário","В рюкзаке не хватает места!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Inventário","Não há espaço suficiente na mochila!",255,0,0)
 return
 end
 

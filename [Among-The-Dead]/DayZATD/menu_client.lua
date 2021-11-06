@@ -437,7 +437,7 @@ end
 					if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
 
-					createMenuItem(number,"Снять Pneu","nscrewwheel")
+					createMenuItem(number,"Retirar Pneu","nscrewwheel")
 					end
 					local model = getElementModel(arg3) 
 					for theKey,datas in ipairs(VehDetals) do
@@ -456,7 +456,7 @@ end
 					end
 					else
 					number = number+1
-					createMenuItem(number,"Снять ковш","dystrkoyw")
+					createMenuItem(number,"Retirar ковш","dystrkoyw")
 					
 					end
 					
@@ -465,14 +465,14 @@ end
 					
 					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять Motor","nscrewengine")
+					createMenuItem(number,"Retirar Motor","nscrewengine")
 					return
 					end
 					else
 					if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >=1 then
 						if getElementData(getElementData(arg3,"parent"),"Pneu_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять Pneu","nscrewwheel")
+					createMenuItem(number,"Retirar Pneu","nscrewwheel")
 					end
 						local model = getElementModel(arg3) 
 					for theKey,datas in ipairs(VehDetals) do
@@ -491,7 +491,7 @@ end
 					end
 					else
 					number = number+1
-					createMenuItem(number,"Снять ковш","dystrkoyw")
+					createMenuItem(number,"Retirar ковш","dystrkoyw")
 					end
 					
 					
@@ -499,7 +499,7 @@ end
 					end
 					if getElementData(getElementData(arg3,"parent"),"Motor_inVehicle") >=1 then
 					number = number+1
-					createMenuItem(number,"Снять Motor","nscrewengine")
+					createMenuItem(number,"Retirar Motor","nscrewengine")
 					return
 					end
 					end
@@ -1652,7 +1652,7 @@ end
 	end,2000,1)
 	  end	
 			else
-				startRollMessage2("Inventário", "Этот предмет весит "..getItemSlots(itemName).."кг!", 255, 22, 0 )
+				startRollMessage2("Inventário", "Este item pesa "..getItemSlots(itemName).."Kg!", 255, 22, 0 )
 			end
 	end
 end
@@ -2192,7 +2192,7 @@ checkKeysStop()
 local curslots = getElementData(localPlayer,"current_SLOTS") or 0
 local maxslots = getElementData(localPlayer,"MAX_Slots") or 0
 if curslots+1 >= maxslots+PlusSlots() then
-triggerEvent ("displayClientInfo",localPlayer,"Рыбалка","В рюкзаке не хватает места!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Рыбалка","Não há espaço suficiente na mochila!",255,0,0)
 return
 end	
 			

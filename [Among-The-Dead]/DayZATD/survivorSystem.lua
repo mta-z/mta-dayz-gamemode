@@ -504,7 +504,7 @@ if data == "food" then
 		setElementData(source,"Garrafa de Água Vazia",(getElementData(source,"Garrafa de Água Vazia") or 0)+1) --client
 	end
 end
-triggerClientEvent (source, "displayClientInfo", source,"Еда",shownInfos["youconsumed"].." "..itemName,22,255,0)
+triggerClientEvent (source, "displayClientInfo", source,"Comida",shownInfos["youconsumed"].." "..itemName,22,255,0)
 triggerClientEvent(source,"refreshInventoryManual",source)
 end
 addEvent("onPlayerRequestChangingStats",true)
@@ -1630,7 +1630,7 @@ if colwoods >=1 then
 local curslots = getElementData(source,"current_SLOTS") or false
 local maxslots = getElementData(source,"MAX_Slots") or false
 if curslots >= maxslots+PlusSlots() then
-triggerClientEvent (player,"displayClientInfo",player,"Lenha","В рюкзаке не хватает места!",255,0,0)
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","Não há espaço suficiente na mochila!",255,0,0)
 return
 end
 setElementData(col,"woods",colwoods-1,false) 
@@ -1671,7 +1671,7 @@ destroyElement(www2)
 local curslots = getElementData(www,"current_SLOTS") or false
 local maxslots = getElementData(www,"MAX_Slots") or false
 if curslots+3 >= maxslots+PlusSlots() then
-triggerClientEvent (www,"displayClientInfo",www,"Lenha","В рюкзаке не хватает места!",255,0,0)
+triggerClientEvent (www,"displayClientInfo",www,"Lenha","Não há espaço suficiente na mochila!",255,0,0)
 return
 end			
 				setElementData(www,"Saco de Peças de Zumbi",(getElementData(www,"Saco de Peças de Zumbi") or 0)+1) --client
@@ -1720,7 +1720,7 @@ elseif act =="baiting" then
 local curslots = getElementData(player,"current_SLOTS") or false
 local maxslots = getElementData(player,"MAX_Slots") or false
 if curslots+1 >= maxslots+PlusSlots() then
-triggerClientEvent (player,"displayClientInfo",player,"Наживка","В рюкзаке не хватает места!",255,0,0)
+triggerClientEvent (player,"displayClientInfo",player,"Наживка","Não há espaço suficiente na mochila!",255,0,0)
 return
 end	
 
