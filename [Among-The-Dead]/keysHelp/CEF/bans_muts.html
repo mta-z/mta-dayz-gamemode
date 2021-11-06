@@ -1,22 +1,22 @@
 ﻿<center>
 			<div id="preloader"></div><br>
 			<select onchange="loadBansMuts(this.options[this.selectedIndex].value)">
-			  <option value="0">Выберите тип</option>
-			  <option value="1">Баны</option>
-			  <option value="2">Муты</option>
+			  <option value="0">Selecione o tipo</option>
+			  <option value="1">Bans</option>
+			  <option value="2">Mute</option>
 			 <!-- <option value="2">Among the dead №2</option> -->
 			</select><br>
 			<div id="bansMuts">
 				<div style="display:none;" id="bans">
 					<table>
-						<tbody><tr><th title="Серийный номер клиента MTA(в MTA: F8>serial)">Серийный номер MTA</th><th title="Дата окончания бана">Дата разбана</th><th title="Разбанить(платно)">Разбанить</th></tr>
+						<tbody><tr><th title="Número de serial do cliente MTA(в MTA: F8>serial)">Serial</th><th title="Data de término do banimento">A data está quebrada</th><th title="Tirar Ban (pago)">Desvendar</th></tr>
 						</tbody><tbody id="bansLoad">
 						 </tbody>
 					</table>
 				</div>
 				<div style="display:none;" id="muts">
 					<table>
-						<tbody><tr><th title="Серийный номер клиента MTA(в MTA: F8>serial)">Серийный номер MTA</th><th title="Дата окончания мута">Дата размута</th><th title="Размутить(платно)">Размутить</th></tr>
+						<tbody><tr><th title="Número de serial do cliente MTA(в MTA: F8>serial)">Serial</th><th title="Data de término do Mute">Desfoque de data</th><th title="desmutar (pago)">Esvaziar</th></tr>
 						</tbody><tbody id="mutsLoad">
 						 </tbody>
 					</table>
