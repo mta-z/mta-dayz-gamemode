@@ -1691,7 +1691,7 @@ setTimer(function()
 keysOK = true
 end,2000,1)
 else
-outputChatBox("Не нажимайте слишком часто")
+outputChatBox("Não pressione com muita Frequência")
 end
 end
 bindKey("/","down",bindTheKeys)
@@ -1921,7 +1921,7 @@ triggerServerEvent("sellCar",localPlayer,veh)
 setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
  outputChatBox("Вы продали "..(GetRealVehicleName(veh) or "транспортное средство").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
 else
-startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 		end
 else
 outputChatBox("Это не ваша машина")

@@ -1189,7 +1189,7 @@ if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 	destroyElement(getElementData(object,"parent"))
 	destroyElement(object)
 	else
-	outputChatBox("У вас нет инструментов!",source)
+	outputChatBox("Você não tem ferramentas!",source)
 end
 else
 outputChatBox("У вас нет лопаты!",source)

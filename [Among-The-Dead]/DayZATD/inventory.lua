@@ -1037,7 +1037,7 @@ return
 end
 if gameplayVariables["checkBTNFLOOD"] then
 if cancelBtnFlood then
-startRollMessage2("Inventário", "Не нажимайте слишком часто!", 255, 0, 0 )
+startRollMessage2("Inventário", "Não pressione com muita Frequência!", 255, 0, 0 )
 return
 end
 cancelBtnFlood = true
@@ -1079,7 +1079,7 @@ end
 					
 					local progressEnginer = getElementData(localPlayer,"progress.enginer") or 0
 					if progressEnginer <20 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0)	<=0 then 
-					outputChatBox("У вас нет инструментов") 
+					outputChatBox("Você não tem ferramentas") 
 					return 
 					end
 					
@@ -1140,7 +1140,7 @@ end
 addEventHandler ( "onClientGUIClick", buttonItems["inventory"], function() 
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemOutOfInventory(false) 
@@ -1153,7 +1153,7 @@ end,false )
 addEventHandler ( "onClientGUIClick", buttonItems["inventorySpeed"], function() 
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemOutOfInventory(true)
@@ -1210,26 +1210,26 @@ end
 if itemName == "Pneu_inVehicle" then itemPlus = 1 end
 if itemName == "Motor_inVehicle" then itemPlus = 1 end
 --if (getElementData(localPlayer,itemName2) or 0)/itemPlus < 1 then
---	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить!",255,22,0)
+--	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora!",255,22,0)
 --return
 --end
 
 if itemName=="Vestuário: Bandido 1 nível" or itemName=="Vestuário: Bandido nível 2" or itemName=="Vestuário: Bandido nível 3" or itemName=="Vestuário: Bandido nível 4" or itemName=="Vestuário: Bandido nível 5" or itemName=="Vestuário: Hero"  then
-	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить!",255,22,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora!",255,22,0)
 return
 end
 
 
 if getElementData(localPlayer,"backPackUsed") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемый рюкзак!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora Mochila sendo usada!",255,22,0)
 return
 end
 end
 
 if itemName =="GPS" and getElementData(localPlayer,"GPSpharos")  then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить активированный маяк!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora GPS ativado!",255,22,0)
 return
 end
 end
@@ -1237,14 +1237,14 @@ end
 
 if getElementData(localPlayer,"clotType_1") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемую вещь!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora coisa usada!",255,22,0)
 return
 end
 end
 
 if getElementData(localPlayer,"clotType_2") == itemName then
 if (getElementData(localPlayer,itemName) or 0) <= 1 or all then
-triggerEvent ("displayClientInfo", localPlayer,"Inventário","Нельзя выбросить используемую вещь!",255,22,0)
+triggerEvent ("displayClientInfo", localPlayer,"Inventário","Não pode ser jogado fora coisa usada!",255,22,0)
 return
 end
 end
@@ -1335,7 +1335,7 @@ end
 
 if gameplayVariables["checkBTNFLOOD"] then
 if cancelBtnFlood2 then
-startRollMessage2("Inventário", "Не нажимайте слишком часто!", 255, 0, 0 )
+startRollMessage2("Inventário", "Não pressione com muita Frequência!", 255, 0, 0 )
 return
 end
 cancelBtnFlood2 = true
@@ -1392,7 +1392,7 @@ end
 addEventHandler ( "onClientGUIClick", buttonItems["loot"], function()
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemInInventory(false) 
@@ -1403,7 +1403,7 @@ end,false )
 addEventHandler ( "onClientGUIClick", buttonItems["lootSpeed"], function()
 local networkStatus = getElementData(localPlayer,"networkStatus",false) or false
 if networkStatus then
-startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 return
 end
 onPlayerMoveItemInInventory(true) 
@@ -1450,7 +1450,7 @@ end
 	
 
 	--	if getNetworkStats().packetlossLastSecond > 3 or getNetworkStats().messagesInResendBuffer >10 then
-	--	startRollMessage2("Inventário", "Пинг превышает норму!", 255, 22, 0 )
+	--	startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 	--	return
 	--	end
 	
@@ -2241,7 +2241,7 @@ triggerServerEvent("onPlayerPitchASave",localPlayer,itemName,guiGetText ( editBo
  outputChatBox("У вас нет лопаты!")
 end
 else
-outputChatBox("У вас нет инструментов!")
+outputChatBox("Você não tem ferramentas!")
 end
  else
  outputChatBox("Пароль должен состоять только из цифр!")

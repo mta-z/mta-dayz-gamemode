@@ -1194,7 +1194,7 @@ function isSpamTimer2()
   if isTimer(antiSpamTimer2) then
     do
    --   local t = getTimerDetails(antiSpamTimer2)
-      outputChatBox("Не нажимайте слишком часто!")
+      outputChatBox("Não pressione com muita Frequência!")
       return true
     end
   else
