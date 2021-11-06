@@ -6,7 +6,7 @@ addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource
         local screenWidth, screenHeight = gameplayVariables["screenSize"][1],gameplayVariables["screenSize"][2]
 statsWindows = guiCreateStaticImage(0,0,screenWidth,15,"images/headerScore.png",false)
 
-debugLable = guiCreateLabel(0,0,screenWidth,15,"Мародёрства: 0/0 | Убито зомби: 0/0 | Карма: -0 | Кровь: 0 | Еда: 0% | Вода: 0%",false,statsWindows)
+debugLable = guiCreateLabel(0,0,screenWidth,15,"Pilhagem: 0/0 | Morto por zumbis: 0/0 | Carma: -0 | Sangue: 0 | Comida: 0% | Água: 0%",false,statsWindows)
 
 guiSetVisible(statsWindows,false)
     end
@@ -39,7 +39,7 @@ local bvalueMax = (12000+((progressMedik*60)+(progressBoec*20)))
 local fvalue = getElementData(localPlayer,"food",false) or 0
 local tvalue = getElementData(localPlayer,"thirst",false) or 0
 
-guiSetText(debugLable,"Мародёрства: "..math.floor(mvalue).."/"..math.floor(mvalueMax).." | Убито зомби: "..math.floor(zvalue).."/"..math.floor(zvalueMax).." | Карма: "..math.floor(hvalue).." | Кровь: "..math.floor(bvalue).."/"..math.floor(bvalueMax).." | Еда: "..math.floor(fvalue).."% | Вода: "..math.floor(tvalue).."%" ) 			
+guiSetText(debugLable,"Pilhagem: "..math.floor(mvalue).."/"..math.floor(mvalueMax).." | zumbis Mortos : "..math.floor(zvalue).."/"..math.floor(zvalueMax).." | Carma: "..math.floor(hvalue).." | Sangue: "..math.floor(bvalue).."/"..math.floor(bvalueMax).." | Comida: "..math.floor(fvalue).."% | Água: "..math.floor(tvalue).."%" ) 			
 			
 end			
 end

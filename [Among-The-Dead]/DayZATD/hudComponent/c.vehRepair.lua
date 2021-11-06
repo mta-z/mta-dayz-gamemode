@@ -13,7 +13,7 @@ local startLine = (screenWidth/2)-195
 local stopLine = startLine+380/100*carHealth
 dxDrawLine ( startLine, screenHeight*0.9,stopLine ,screenHeight*0.9, tocolor ( 175,25,25,200 ), 20, false )
 
-dxDrawText ( "Починка: "..carName, (screenWidth/2)-200, screenHeight*0.85,(screenWidth/2)+200,screenHeight*0.85 ,tocolor ( 255,255,255 ),1, "default-bold","center","center" )
+dxDrawText ( "Descanso: "..carName, (screenWidth/2)-200, screenHeight*0.85,(screenWidth/2)+200,screenHeight*0.85 ,tocolor ( 255,255,255 ),1, "default-bold","center","center" )
 dxDrawText ( carHealth.."%", (screenWidth/2)-200, screenHeight*0.9,(screenWidth/2)+200,screenHeight*0.9 ,tocolor ( 255,255,255 ),1, "default-bold","center","center" )
 
 end

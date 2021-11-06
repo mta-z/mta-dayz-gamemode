@@ -2,7 +2,7 @@
  -- сасай кароч если ты это присвоил себе))0) 
 local W,H = gameplayVariables["screenSize"][1],gameplayVariables["screenSize"][2]
 if W<=1024 and H<=768 then
-outputChatBox("Маленькое разрешение экрана! Для комфортной игры попробуйте изменить его в: Меню игры>Settings>Video>Resolution")
+outputChatBox("Resolução de tela pequena! Para um jogo confortável, tente alterá-lo em: Menu do jogo> Configurações> Vídeo> Resolução")
 end
 
  fading = 0 
