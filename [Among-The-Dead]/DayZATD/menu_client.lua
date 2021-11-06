@@ -184,10 +184,10 @@ function showClientMenuItem(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10)
 		end
 		if getElementData(localPlayer,"inArena") then disableMenu() return  end
 local number = 0
-if arg1 == "Подобрать" then
+if arg1 == "Pegar" then
 	number = number+1
 	
-	createMenuItem(number,"Подобрать: "..arg2,arg2)
+	createMenuItem(number,"Pegar: "..arg2,arg2)
 	
 end
 if arg1 == "stop" then
@@ -320,7 +320,7 @@ end
 	if  otms >=1 then
 	number = number+1
 	local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
-		createMenuItem(number,"ВзPé-de-Cabraать("..(20+SKILL_HACK*2).."%)","passkey")
+		createMenuItem(number,"Hackear("..(20+SKILL_HACK*2).."%)","passkey")
 		end
 	end
 	
@@ -332,7 +332,7 @@ end
 		if bigTent then
 		
 			number = number+1
-			createMenuItem(number,"Убрать ("..arg2..")","removebigtent")
+			createMenuItem(number,"Remover ("..arg2..")","removebigtent")
 			
 			return
 		
@@ -341,11 +341,11 @@ end
 			
 			if ADMINTent then
 				number = number+1
-				createMenuItem(number,"Убрать ("..arg2..")","removeadmintent") --- сделать проверку на сериал !!!
+				createMenuItem(number,"Remover ("..arg2..")","removeadmintent") --- сделать проверку на сериал !!!
 				return 
 			else
 				number = number+1
-				createMenuItem(number,"Убрать ("..arg2..")","removetent")
+				createMenuItem(number,"Remover ("..arg2..")","removetent")
 				return
 			end
 
@@ -375,12 +375,12 @@ end
 		if isVehicleLocked(arg3) then
 
 		number = number+1
-		createMenuItem(number,"Открыть ("..arg2..")","openCar")
+		createMenuItem(number,"Abrir ("..arg2..")","openCar")
 		
 		else
 		
 		number = number+1
-		createMenuItem(number,"Закрыть ("..arg2..")","closeCar")
+		createMenuItem(number,"Fechar ("..arg2..")","closeCar")
 		
 		end
 		
@@ -394,7 +394,7 @@ end
 			
 			number = number+1
 			local precent = 20+math.floor(progressMech*0.2)
-			createMenuItem(number,"ВзPé-de-Cabraать ("..arg2..")("..precent.."%)","hackCar")
+			createMenuItem(number,"Hackear ("..arg2..")("..precent.."%)","hackCar")
 			
 			end
 		end
@@ -408,7 +408,7 @@ end
 	local listsInCar = getElementData(arg3,"steelList") or 0 
 	if  lists >=1  and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 and listsInCar<1000 then
 	number = number+1
-		createMenuItem(number,"Установить: Chapa de Aço","steelList")
+		createMenuItem(number,"Instalar: Chapa de Aço","steelList")
 		end
 	
 	
@@ -416,7 +416,7 @@ end
 		
 			if getElementData(getElementData(arg3,"parent"),"fuel") >=20 then
 					number = number+1
-					createMenuItem(number,"Слить бензин","fuelRems")
+					createMenuItem(number,"Drenar gasolina","fuelRems")
 					end
 			end	
 			
@@ -444,19 +444,19 @@ end
 					if datas[1] == model then
 
 					if not getElementData(arg3,"kowh") then
-					if (getElementData(localPlayer,"Balde de Metal 1") or 0) >=1  then
+					if (getElementData(localPlayer,"Placa de Metal 1") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Balde de Metal 1","instkoyw")
+					createMenuItem(number,"Instalar: Placa de Metal 1","instkoyw")
 					end
-					if (getElementData(localPlayer,"Balde de Metal 2") or 0) >=1  then
+					if (getElementData(localPlayer,"Placa de Metal 2") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Balde de Metal 2","instkoyw2")
+					createMenuItem(number,"Instalar: Placa de Metal 2","instkoyw2")
 					end
 					else
 					number = number+1
-					createMenuItem(number,"Retirar ковш","dystrkoyw")
+					createMenuItem(number,"Retirar Placa de Metal","dystrkoyw")
 					
 					end
 					
@@ -479,19 +479,19 @@ end
 					if datas[1] == model then
 					
 					if not getElementData(arg3,"kowh") then
-					if (getElementData(localPlayer,"Balde de Metal 1") or 0) >=1  then
+					if (getElementData(localPlayer,"Placa de Metal 1") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Balde de Metal 1","instkoyw")
+					createMenuItem(number,"Instalar: Placa de Metal 1","instkoyw")
 					end
-					if (getElementData(localPlayer,"Balde de Metal 2") or 0) >=1  then
+					if (getElementData(localPlayer,"Placa de Metal 2") or 0) >=1  then
 					
 					number = number+1
-					createMenuItem(number,"Установить: Balde de Metal 2","instkoyw2")
+					createMenuItem(number,"Instalar: Placa de Metal 2","instkoyw2")
 					end
 					else
 					number = number+1
-					createMenuItem(number,"Retirar ковш","dystrkoyw")
+					createMenuItem(number,"Retirar Placa de Metal","dystrkoyw")
 					end
 					
 					
@@ -516,7 +516,7 @@ local progressMedik = getElementData(localPlayer,"progress.medik") or 0
 		if  getElementData(localPlayer,"groupUserStatus") =="OWNER" or getElementData(localPlayer,"groupUserStatus") =="MODER" or getElementData(localPlayer,"groupUserStatus")=="PARTY" then
 		if getElementData(localPlayer,"mayInvite") then
 		number = number+1
-		createMenuItem(number,"Пригласить в группу:"..getElementData(localPlayer,"group"),"inviteToGroup")
+		createMenuItem(number,"Convidar para o grupo:"..getElementData(localPlayer,"group"),"inviteToGroup")
 		end
 		end
 	end	
@@ -528,22 +528,22 @@ local progressMedik = getElementData(localPlayer,"progress.medik") or 0
 	]]
 	if getElementData(arg2,"bleeding") > 0 and (getElementData(localPlayer,"Ataduras") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Перевязать","bandage")
+		createMenuItem(number,"Parar Sangramento","bandage")
 	end	
 	
 	if getElementData(arg2,"blood") < 11900 and (getElementData(localPlayer,"Bolsa de Sangue") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Перелить кровь","giveblood")
+		createMenuItem(number,"Doar Sangue","giveblood")
 
 	end
 	
 	if getElementData(arg2,"brokenbone") and (getElementData(localPlayer,"Morfina") or 0) >= 1 and progressMedik>=40 then
 		number = number+1
-		createMenuItem(number,"Дать: Morfina","givemorph")
+		createMenuItem(number,"Aplicar Morfina","givemorph")
 	end
 			if getElementData(arg2,"pain") and (getElementData(localPlayer,"Analgésico") or 0) >= 1 and progressMedik>=40 then
 		number = number+1
-		createMenuItem(number,"Дать: Analgésico","giveobezb")
+		createMenuItem(number,"Aplicar Analgésico","giveobezb")
 	end
 	
 	
@@ -553,12 +553,12 @@ end
 if arg1 == "Dead" then
 
 	number = number+1
-	createMenuItem(number,"Procurar труп ("..arg2..")","dead")
+	createMenuItem(number,"Procurar ("..arg2..")","dead")
 
 	
 	
 	number = number+1
-	createMenuItem(number,"Осмотреть труп ("..arg2..")","deadreason")
+	createMenuItem(number,"Examinar ("..arg2..")","deadreason")
 
 	local col = getElementData(localPlayer,"currentCol")
 	local parent = getElementData(col,"parent") or false
@@ -567,7 +567,7 @@ if arg1 == "Dead" then
 		if not isDeadBot then
 			if (getElementData(localPlayer,"Pá") or 0) >=1  then
 			number = number+1
-			createMenuItem(number,"Закопать труп ("..arg2..")","deadbury")
+			createMenuItem(number,"Enterrar ("..arg2..")","deadbury")
 			end
 		end
 	end
@@ -578,7 +578,7 @@ if arg1 == "Dead" then
 	local rand = getElementData(col,"zombieR") or false
 	if rand then
 	number = number+1
-	createMenuItem(number,"Расчленить труп ("..arg2..")","zombieR")
+	createMenuItem(number,"Desmembrar ("..arg2..")","zombieR")
 	end
 	end
 	
@@ -586,11 +586,11 @@ end
 if arg1 == "Fireplace" then
 	if (getElementData(localPlayer,"Carne Crua") or 0) >= 1 then
 	number = number+1
-	createMenuItem(number,"Жарить: Carne Crua","fireplace")
+	createMenuItem(number,"Fritar Carne Crua","fireplace")
 	end
 		if (getElementData(localPlayer,"Peixe Cru") or 0) >= 1 then
 	number = number+1
-	createMenuItem(number,"Жарить: Peixe Cru","fireplace1")
+	createMenuItem(number,"Fritar Peixe Cru","fireplace1")
 
 	end
 	--	if getElementData(localPlayer,"Украшения") >= 3 then
@@ -604,21 +604,21 @@ end
 if arg1 == "patrol" then
 	if (getElementData(localPlayer,"Galão de Combútivel Vazio") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Наполнить: Galão de Combútivel Vazio","patrolstation")
+		createMenuItem(number,"Preencher: Galão de Combútivel Vazio","patrolstation")
 	end	
 end
 
 if arg1 == "water" then
 	if (getElementData(localPlayer,"Garrafa de Água Vazia") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Наполнить: Garrafa de Água Vazia","upwater")
+		createMenuItem(number,"Preencher: Garrafa de Água Vazia","upwater")
 	end	
 end
 
 if arg1 == "treepos" then
 	if (getElementData(localPlayer,"Machado") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Нарубить дров","treepos")
+		createMenuItem(number,"Cortar Madeira","treepos")
 	end	
 end
 
@@ -626,13 +626,13 @@ end
 if arg1 == "Arame Farpado" then
 	if (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Разобрать: Arame Farpado","wirefence")
+		createMenuItem(number,"Desmontar Arame Farpado","wirefence")
 	end	
 end
 if arg1 == "Sacos de Areia" then
 	if (getElementData(localPlayer,"Pá") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Разобрать: Sacos de Areia","sandbags")
+		createMenuItem(number,"Desmontar Sacos de Areia","sandbags")
 	end	
 end
 
@@ -746,7 +746,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("patrol")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Наполнить канистру","Требуется: Galão de Combútivel Vazio",source)
+			setNewbieInfo (true,"Encher","Necessário: Galão de Combútivel Vazio",source)
 			return
 		end
 		
@@ -754,7 +754,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("water")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Наполнить Флягу","Требуется: Garrafa de Água Vazia",source)
+			setNewbieInfo (true,"Encher","Necessário: Garrafa de Água Vazia",source)
 			return
 		end
 		
@@ -762,7 +762,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("treepos")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Нарубить дров","Требуется: Machado",source)
+			setNewbieInfo (true,"Cortar Madeira","Necessário: Machado",source)
 			return
 		end
 		
@@ -770,14 +770,14 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Arame Farpado")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Разобрать колючую проволку","Требуется: Caixa de Ferramentas",source)
+			setNewbieInfo (true,"Desmontar","Necessário: Caixa de Ferramentas",source)
 			return
 		end
 		if getElementData(source,"sandbags") then
 			showClientMenuItem("Sacos de Areia")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
-			setNewbieInfo (true,"Разобрать Sacos de Areia","Требуется: Pá",source)
+			setNewbieInfo (true,"Desmontar","Necessário: Pá",source)
 			return
 		end
 		
@@ -797,7 +797,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			return
 		end
 		if getElementData(source,"item") then
-			showClientMenuItem("Подобрать",getElementData(source,"item"))
+			showClientMenuItem("Pegar",getElementData(source,"item"))
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
 			setShowItemIcon (true,source)
@@ -1226,7 +1226,7 @@ if ( keyState == "down" ) then
 			local precent = 20+math.floor(progressMech*0.2)
 			
 			if rand<precent then
-			outputChatBox("Вам удалось взPé-de-Cabraать "..GetRealVehicleName(parent))
+			outputChatBox("Вам удалось Hackear "..GetRealVehicleName(parent))
 			triggerServerEvent("openMyVH",localPlayer,parent)	
 			else
 			outputChatBox("Gazua сPé-de-Cabraалась!")
@@ -1414,7 +1414,7 @@ if ( keyState == "down" ) then
 		if itemName == "vehicle" then -----------------------------------------------------
 			local col = getElementData(localPlayer,"currentCol")
 			if getElementData(col,"save") then
-			local gearName = "Открыть ( Cofre )"
+			local gearName = "Abrir ( Cofre )"
 			openSave(col)
 
 			else
@@ -2055,18 +2055,18 @@ if not getElementData(car,"kowh") then
 for theKey,datas in ipairs(VehDetals) do
 		if model == datas[1]  then
 		if detal == "kowh1" then
-		local kowh1 = getElementData(localPlayer,"Balde de Metal 1") or 0
+		local kowh1 = getElementData(localPlayer,"Placa de Metal 1") or 0
 		if kowh1 >=1 then
-		setElementData(localPlayer,"Balde de Metal 1",kowh1-1)
-triggerServerEvent("VehDetals",localPlayer,car,col,2704,datas[2].size,datas[2][1],datas[2][2],datas[2][3],datas[2][4],datas[2][5],datas[2][6],"Balde de Metal 1")
+		setElementData(localPlayer,"Placa de Metal 1",kowh1-1)
+triggerServerEvent("VehDetals",localPlayer,car,col,2704,datas[2].size,datas[2][1],datas[2][2],datas[2][3],datas[2][4],datas[2][5],datas[2][6],"Placa de Metal 1")
 else
 outputChatBox("У вас нет этой детали")
 end
 		elseif detal == "kowh2" then
-		local kowh2 = getElementData(localPlayer,"Balde de Metal 2") or 0
+		local kowh2 = getElementData(localPlayer,"Placa de Metal 2") or 0
 		if kowh2 >=1 then
-		setElementData(localPlayer,"Balde de Metal 2",kowh2-1)
-triggerServerEvent("VehDetals",localPlayer,car,col,2705,datas[3].size,datas[3][1],datas[3][2],datas[3][3],datas[3][4],datas[3][5],datas[3][6],"Balde de Metal 2")
+		setElementData(localPlayer,"Placa de Metal 2",kowh2-1)
+triggerServerEvent("VehDetals",localPlayer,car,col,2705,datas[3].size,datas[3][1],datas[3][2],datas[3][3],datas[3][4],datas[3][5],datas[3][6],"Placa de Metal 2")
 else
 outputChatBox("У вас нет этой детали")
 end
@@ -2192,11 +2192,11 @@ checkKeysStop()
 local curslots = getElementData(localPlayer,"current_SLOTS") or 0
 local maxslots = getElementData(localPlayer,"MAX_Slots") or 0
 if curslots+1 >= maxslots+PlusSlots() then
-triggerEvent ("displayClientInfo",localPlayer,"Рыбалка","Não há espaço suficiente na mochila!",255,0,0)
+triggerEvent ("displayClientInfo",localPlayer,"Pescaria","Não há espaço suficiente na mochila!",255,0,0)
 return
 end	
 			
-			outputChatBox("Вы поймали 1 рыбу")
+			outputChatBox("Você pegou 1 peixe")
 			local riba = getElementData(localPlayer,"Peixe Cru") or 0 
 			setElementData(localPlayer,"Peixe Cru",riba+1)
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") -1)
@@ -2276,9 +2276,9 @@ addEventHandler( "onClientPlayerNetworkStatus", root, handleInterrupt)
 
 local timerUnbug= nil
 local unbugWindow = guiCreateWindow(0, 0, 200, 200, "UNBUG", false) 	
-local cancelUnbug = guiCreateButton(200/2-70/2, 150, 70, 30, "Отменить", false,unbugWindow)
+local cancelUnbug = guiCreateButton(200/2-70/2, 150, 70, 30, "Cancelar", false,unbugWindow)
 --local bebasFont = guiCreateFont  (  "BEBAS", 30  )
-guiCreateLabel(10, 50, 200, 60,"Дождитесь OKончания таймера",false,unbugWindow)
+guiCreateLabel(10, 50, 200, 60,"Aguarde OK ao final do cronômetro",false,unbugWindow)
 local lableTimer = guiCreateLabel(0, 100, 200, 60,"0:00",false,unbugWindow)
  --guiSetFont ( lableTimer, bebasFont )
  guiLabelSetColor  (  lableTimer, 255, 0, 0 )
