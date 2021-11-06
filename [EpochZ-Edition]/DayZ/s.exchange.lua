@@ -23,7 +23,7 @@ function offerExcCancel(player)
 	
 	if player and isElement(player) then
 
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Recusou-se a trocar.",player,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Recusou-se a troca.",player,255,255,255,true)
 		
 
 	end
@@ -38,7 +38,7 @@ function offerExcOK(player)
 	
 	if player and isElement(player) then
 
-		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Eu concordei em trocar.",player,255,255,255,true)
+		outputChatBox("#FFFF00"..getPlayerName(source).."#FFFFFF Eu concordei em troca.",player,255,255,255,true)
 		triggerClientEvent(player,"hideInventoryManual",player)
 		
 		--setTimer(function()

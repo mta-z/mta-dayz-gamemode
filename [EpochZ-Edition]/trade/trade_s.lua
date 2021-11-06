@@ -19,13 +19,13 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 	if (teri == "Торговец: транспорт") then
 	local tsBuyTime = getElementData(source,"tsBuyTime") or 0
 		if(tsBuyTime>getRealTime().timestamp) then
-			outputChatBox("В данный момент вы не можете купить транспорт",source)
+			outputChatBox("Você não pode comprar esse carro no momento",source)
 			return
 		end
 	
 	
 	if (money  < (math.ceil(item[2]-(item[2]/100*(SKILL_CARTRADE*5))))) then
-	outputChatBox("Не хватает денег",source)
+	outputChatBox("Dinheiro insuficiente",source)
 	return
 	end
 	setElementData(source,"Dinheiro",money-(math.ceil(item[2]-(item[2]/100*(SKILL_CARTRADE*5)))))
@@ -33,7 +33,7 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 	
 	else
 	if (money  < item[2]) then
-	outputChatBox("Не хватает денег",source)
+	outputChatBox("Dinheiro insuficiente",source)
 	return
 	end
 
@@ -48,9 +48,9 @@ if (teri == "Торговец: патроны") then
 local playerItem = getElementData(source,item[1]) or false
 if playerItem then
 setElementData(source,item[1], playerItem + item[3])
-outputChatBox("Вы купили 1 "..item[1],source)
+outputChatBox("Você comprou 1 "..item[1],source)
 else
-outputChatBox("Вы купили 1 "..item[1],source)
+outputChatBox("Você comprou 1 "..item[1],source)
 setElementData(source,item[1],item[3])
 end
 
@@ -71,16 +71,16 @@ setTimer( function() warpPedIntoVehicle(source,car) end,100,1)
 
 triggerClientEvent ("closeTradeWin", source, source)
 --outputChatBox("Ваша машина появилась на улице!",source)
-outputChatBox("Вы купили 1 "..item[1],source)
+outputChatBox("Você comprou 1 "..item[1],source)
 
 else
 local playerItem = getElementData(source,item[1]) or false
 if playerItem then
 setElementData(source,item[1],playerItem + 1)
-outputChatBox("Вы купили 1 "..item[1],source)
+outputChatBox("Você comprou 1 "..item[1],source)
 else
 setElementData(source,item[1],1)
-outputChatBox("Вы купили 1 "..item[1],source)
+outputChatBox("Você comprou 1 "..item[1],source)
 end
 		end
 		
@@ -122,20 +122,20 @@ local MyItems = getElementData(source,stm) or 0
 	
 		setElementData(source,stm,MyItems-item[3])
 		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
-		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
+		outputChatBox("Você vendeu 1 "..stm.." e consegui isso "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." de dinheiro" ,source)
 		
 		else
-		outputChatBox("У вас нет этого предмета или обойма не полная" ,source)
+		outputChatBox("Você não tem este item ou o clipe está incompleto" ,source)
 	end
 	elseif (itemList == "Рюкзаки") then 
 
 	if getElementData(source,"backPackUsed") == item[1] then
 	if getElementData(source,item[1]) <= 1 then
-	outputChatBox("Нельзя Vender используемый рюкзак!" ,source)
+	outputChatBox("Mochila usada de Can't Vender!" ,source)
 	else
 			setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
-		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
+		outputChatBox("Você vendeu 1 "..stm.." e consegui isso "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." de dinheiro" ,source)
 	end
 	
 
@@ -143,22 +143,22 @@ local MyItems = getElementData(source,stm) or 0
 
 		setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
-		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
+		outputChatBox("Você vendeu 1 "..stm.."e consegui isso "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." de dinheiro" ,source)
 	
 	end
 	elseif teri == "Барыга" then
 	setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2))
-		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil ((math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2)).." денег" ,source)
+		outputChatBox("Você vendeu 1 "..stm.." e consegui isso "..math.ceil ((math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2)).." de dinheiro" ,source)
 	
 	else
 		setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)))
-		outputChatBox("Вы продали 1 "..stm.." и получили за это "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." денег" ,source)
+		outputChatBox("Você vendeu 1 "..stm.." e consegui isso "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." de dinheiro" ,source)
 	end
 	
 	else
-		outputChatBox("У вас нет этого предмета",source)
+		outputChatBox("Você não tem este item",source)
 	
 	end
 end

@@ -10,6 +10,6 @@ GlobalChatKey = "m"
 addEventHandler( "onClientResourceStart", getResourceRootElement ( ),
 	function ( )
 		bindKey ( GlobalChatKey, "down", "chatbox", "Chat" )
-		outputChatBox ( "Click " .. string.upper ( GlobalChatKey ) .. " to write in general chat." , 255, 255, 255, true )
+		outputChatBox ( "Clique " .. string.upper ( GlobalChatKey ) .. " escrever no chat geral." , 255, 255, 255, true )
 	end
 )

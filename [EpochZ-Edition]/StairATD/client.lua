@@ -139,7 +139,7 @@ local isStair2 = getElementData(source,"stair2",false)
 if isStair1 then
 local onStair = getElementData(localPlayer,"onStair",false)
 if not onStair then
---outputChatBox("вошел в лестницу снизу")
+--outputChatBox("entrou na escada pela parte inferior")
 setElementFrozen(localPlayer,true)
 --setPedAnimation ( localPlayer, "ped", "FIGHTIDLE", -1, true, true, false, false )
 triggerServerEvent("setStairAnima",getLocalPlayer(),1,getLocalPlayer())
@@ -162,7 +162,7 @@ setElementData(localPlayer,"onStairKey",true,false)
 end
 
 else
---outputChatBox("вышел с лестницы снизу")
+--outputChatBox("saiu da escada abaixo")
 setElementFrozen(localPlayer,false)
 --setPedAnimation ( localPlayer )
 triggerServerEvent("setStairAnima",getLocalPlayer(),2,getLocalPlayer())
@@ -182,7 +182,7 @@ end
 elseif isStair2 then 
 local onStair = getElementData(localPlayer,"onStair",false)
 if not onStair then
---outputChatBox("вошел в лестницу снизу")
+--outputChatBox("entrou na escada pela parte inferior")
 setElementFrozen(localPlayer,true)
 --setPedAnimation ( localPlayer, "ped", "FIGHTIDLE", -1, true, true, false, false )
 triggerServerEvent("setStairAnima",getLocalPlayer(),1,getLocalPlayer())

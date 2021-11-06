@@ -71,7 +71,7 @@ function mutePlayer( player )
 	if not isPlayerMuted( player ) then
 		setPlayerMuted( player, true );
 		gPlayerMuteTimer[ player ] = setTimer( unmutePlayer, gSettings.muteTime * 1000, 1, player );
-		outputChatBox( "Você foi desativado Bate-papo " .. gSettings.muteTime .." segundos.", player, 82, 82, 82 )
+		outputChatBox( "Você foi MUTADO do Bate-papo " .. gSettings.muteTime .." segundos.", player, 82, 82, 82 )
 	end
 end
 

@@ -1226,10 +1226,10 @@ if ( keyState == "down" ) then
 			local precent = 20+math.floor(progressMech*0.2)
 			
 			if rand<precent then
-			outputChatBox("Вам удалось Hackear "..GetRealVehicleName(parent))
+			outputChatBox("Você teve sucesso no Hackear "..GetRealVehicleName(parent))
 			triggerServerEvent("openMyVH",localPlayer,parent)	
 			else
-			outputChatBox("Gazua сPé-de-Cabraалась!")
+			outputChatBox("Você falhou")
 			end
 			local hackKeys = getElementData(localPlayer,"Gazua") or 0
 			setElementData(localPlayer,"Gazua",hackKeys-1)
@@ -1243,11 +1243,11 @@ if ( keyState == "down" ) then
 			local vero1 = 	math.random(0,100)
 			local SKILL_HACK = getElementData(localPlayer,"SKILL_HACK") or 0
 			if vero1 <= (20+SKILL_HACK*2) then 
-			outputChatBox("Вы успешно взPé-de-Cabraали Cofre!")
+			outputChatBox("Você abriu com sucesso o Cofre!")
 			setElementData(localPlayer,"Gazua",getElementData(localPlayer,"Gazua") -1 ) --server
 			setElementData(col,"hackSave",true)
 			else
-			outputChatBox("Gazua сPé-de-Cabraалась")
+			outputChatBox("Você falhou")
 			setElementData(localPlayer,"Gazua",getElementData(localPlayer,"Gazua") -1 ) --server
 			end
 			disableMenu()
@@ -1299,7 +1299,7 @@ if ( keyState == "down" ) then
 			disableMenu()
 			return
 		else 
-		outputChatBox("У вас нет удочки")
+		outputChatBox("Você não tem vara de pescar")
 		disableMenu()
 		return
 		end
@@ -1585,7 +1585,7 @@ if ( keyState == "down" ) then
 		if itemName == "patrolstation" then
 			setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)-1) --server
 			setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)+1) --server
-			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы заправили одну канистру!",22,255,0)
+			triggerEvent ("displayClientInfo",localPlayer,"Posto de gasolina","Você encheu um Galão!",22,255,0)
 			disableMenu()
 			return
 		end
@@ -1614,7 +1614,7 @@ if ( keyState == "down" ) then
 			else
 			if getElementData(col,"user") == localPlayer then
 			else
-			outputChatBox("Вы не можете подобрать этот предмет!")
+			outputChatBox("Você não pode pegar este item!")
 			return
 			end
 			end
@@ -1754,30 +1754,30 @@ if act ==1 then
 local cena = math.floor((1000-health)*3)
  local cena1 = cena - cena*(economist*0.9)/100
  
-text = "Вы действительно хотите Consertar "..( GetRealVehicleName(veh) or "Veículo").." ? \nЦена:"..math.floor(cena1)
+text = "Você realmente quer Consertar "..( GetRealVehicleName(veh) or "Veículo").." ? \nPreço:"..math.floor(cena1)
 elseif act ==2 then
 maxfuel = getElementData(veh,"maxfuel") or 0 
 fuel = getElementData(getElementData(veh,"parent"),"fuel") or 0 
 local cena = math.floor((maxfuel-fuel)*10)
  local cena1 = cena - cena*(economist*0.9)/100
-text = "Вы действительно хотите полностью Encher "..(GetRealVehicleName(veh) or "Veículo" ).." ? \nЦена:"..math.floor(cena1)..""
+text = "Você realmente quer completamente Encher "..(GetRealVehicleName(veh) or "Veículo" ).." ? \nPreço:"..math.floor(cena1)..""
 end
 
 
  if guiGetVisible (saveWindows) then 
  return
  else  showCursor(not isCursorShowing()) 
-saveWindows = guiCreateWindow(300, 450, 600, 100, "Станция заправки", false) 
+saveWindows = guiCreateWindow(300, 450, 600, 100, "Posto de gasolina", false) 
 centerWindow(saveWindows)
 local labl  = guiCreateLabel ( 0, 23, 600, 100, text, false, saveWindows )
 guiLabelSetHorizontalAlign (labl,"center")
-    buttonOK = guiCreateButton(200, 70, 60, 20, "Да", false,saveWindows)
+    buttonOK = guiCreateButton(200, 70, 60, 20, "sim", false,saveWindows)
 buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
 if not isPedInVehicle(localPlayer) then
-outputChatBox("Вы не в машине!")
+outputChatBox("Voce nao esta no carro!")
 
  guiSetVisible(saveWindows, false)
  showCursor(false)
@@ -1792,9 +1792,9 @@ local economist = getElementData(localPlayer,"progress.economist") or 0
  if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
  setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((1000-health)*3))
  setElementHealth(veh,1000)
- outputChatBox(""..(GetRealVehicleName(veh) or "Veículo").." был  поолностью восстановлен!")
+ outputChatBox(""..(GetRealVehicleName(veh) or "Veículo").." foi totalmente restaurado!")
  else
- outputChatBox("У вас не хватает денег!")
+ outputChatBox("Você não tem dinheiro suficiente!")
  end
  end
  
@@ -1804,9 +1804,9 @@ local economist = getElementData(localPlayer,"progress.economist") or 0
  if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
  setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((maxfuel-fuel)*10))
  setElementData(getElementData(veh,"parent"),"fuel",maxfuel)
- outputChatBox(""..( GetRealVehicleName(veh) or "Veículo").." был  поолностью заправлен!")
+ outputChatBox(""..( GetRealVehicleName(veh) or "Veículo").." estava totalmente abastecido!")
  else
- outputChatBox("У вас не хватает денег!")
+ outputChatBox("Você não tem dinheiro suficiente!")
  end
  end
  
@@ -1881,7 +1881,7 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
 	end
  
  
-text = "Вы действительно хотите Vender "..(GetRealVehicleName(veh) or "Veículo").." ? \nЦена продажи:"..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100)
+text = "Você realmente quer Vender "..(GetRealVehicleName(veh) or "Veículo").." ? \nPreço de venda:"..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100)
 end
 end
 
@@ -1899,7 +1899,7 @@ end
 
 addEventHandler ( "onClientGUIClick", buttonOK,function() 
 if not isPedInVehicle(localPlayer) then
-outputChatBox("Вы не в машине!")
+outputChatBox("Você não está no carro!")
 
  guiSetVisible(saveWindows, false)
  showCursor(false)
@@ -1919,12 +1919,12 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
  setElementData(veh,"traded",true,false)
 triggerServerEvent("sellCar",localPlayer,veh)
 setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
- outputChatBox("Вы продали "..(GetRealVehicleName(veh) or "Veículo").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
+ outputChatBox("Você vendeu "..(GetRealVehicleName(veh) or "Veículo").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
 else
 startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 		end
 else
-outputChatBox("Это не ваша машина")
+outputChatBox("Este não é o seu carro")
  end
  end
  
@@ -1966,7 +1966,7 @@ addEventHandler("onClientVehicleExit", getRootElement(),
 function unbindOnReloot()
 unbindKey("mouse3","down")
 unbindKey("-","down")
-outputChatBox("Средняя кнопка мыши была отключена")
+outputChatBox("O botão do meio do mouse foi desativado")
 end
 addEvent("onClientUnBind",true)
 addEventHandler("onClientUnBind",getRootElement(),unbindOnReloot)
@@ -1978,7 +1978,7 @@ addEventHandler("onClientUnBind",getRootElement(),unbindOnReloot)
 function bindOffReloot()
 bindKey ( "mouse3", "down", onPlayerPressMiddleMouse )
 bindKey ( "-", "down", onPlayerPressMiddleMouse )
-		outputChatBox("Средняя кнопка мыши  кнопка была включена")
+		outputChatBox("O botão do meio do mouse foi habilitado")
 end
 
 function bindOffRelootTimer()
@@ -2060,7 +2060,7 @@ for theKey,datas in ipairs(VehDetals) do
 		setElementData(localPlayer,"Placa de Metal 1",kowh1-1)
 triggerServerEvent("VehDetals",localPlayer,car,col,2704,datas[2].size,datas[2][1],datas[2][2],datas[2][3],datas[2][4],datas[2][5],datas[2][6],"Placa de Metal 1")
 else
-outputChatBox("У вас нет этой детали")
+outputChatBox("Você não tem esse detalhe")
 end
 		elseif detal == "kowh2" then
 		local kowh2 = getElementData(localPlayer,"Placa de Metal 2") or 0
@@ -2068,7 +2068,7 @@ end
 		setElementData(localPlayer,"Placa de Metal 2",kowh2-1)
 triggerServerEvent("VehDetals",localPlayer,car,col,2705,datas[3].size,datas[3][1],datas[3][2],datas[3][3],datas[3][4],datas[3][5],datas[3][6],"Placa de Metal 2")
 else
-outputChatBox("У вас нет этой детали")
+outputChatBox("Você não tem esse detalhe")
 end
 		end
 		end
@@ -2148,12 +2148,12 @@ end
 end
 
 else
-outputChatBox("Рюкзак переполнен")
+outputChatBox("Mochila cheia")
 end
 
 end
 
-function standInWater() -- функция проверяет находится ли игрOK на береге 
+function standInWater() -- a função verifica se o jogo OK está na costa
   if isPedOnGround(localPlayer) then
         local px, py, pz = getElementPosition(localPlayer)
         if testLineAgainstWater(px, py, pz+1, px, py, pz - 2) then
@@ -2176,7 +2176,7 @@ killTimer(timerFish)
 end
 timerFish = setTimer(function() 
 if  getElementData(localPlayer,"fishing") then
-outputChatBox("Клюёт!")
+outputChatBox("Mordendo!")
 setElementData(localPlayer,"checkFishing",false,false)
 showClientMenuItem("checkFishing")
 else

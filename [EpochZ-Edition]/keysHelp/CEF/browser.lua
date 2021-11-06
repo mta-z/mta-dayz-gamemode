@@ -31,13 +31,13 @@ guiSetVisible ( browser, true )
 keystate=1
 --outputChatBox(key)
 if key =="F7" and fileLoad~="http://mta/keysHelp/CEF/settings.html" then
-executeBrowserJavascript ( theBrowser, "loadPages('Настройки','http://mta/keysHelp/CEF/settings.html')" )
+executeBrowserJavascript ( theBrowser, "loadPages('Definições','http://mta/keysHelp/CEF/settings.html')" )
 fileLoad="http://mta/keysHelp/CEF/settings.html"
 elseif key =="F6" and fileLoad~="http://mta/keysHelp/CEF/rules.html" then
-executeBrowserJavascript ( theBrowser, "loadPages('Правила','http://mta/keysHelp/CEF/rules.html')" )
+executeBrowserJavascript ( theBrowser, "loadPages('as regras','http://mta/keysHelp/CEF/rules.html')" )
 fileLoad="http://mta/keysHelp/CEF/rules.html"
 elseif key =="F5" and fileLoad~="http://mta/keysHelp/CEF/help.html" then
-executeBrowserJavascript ( theBrowser, "loadPages('Помощь','http://mta/keysHelp/CEF/help.html')" )
+executeBrowserJavascript ( theBrowser, "loadPages('Ajuda','http://mta/keysHelp/CEF/help.html')" )
 fileLoad="http://mta/keysHelp/CEF/help.html"
 end
 --loadNews(5)

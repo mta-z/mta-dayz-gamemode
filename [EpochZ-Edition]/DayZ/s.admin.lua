@@ -36,7 +36,7 @@ if isAdmin then
 		else
 			setElementData(getPlayerFromName(pName), item, tonumber(quantity))
 			outputChatBox(""..quantity.." "..item.." emitido para "..pName, source, 255, 255, 0)
-			outputChatBox("O administrador deu a você "..quantity.." "..item, getPlayerFromName(pName), 255, 255, 0)
+			outputChatBox("O admin deu a você "..quantity.." "..item, getPlayerFromName(pName), 255, 255, 0)
 		end
 		
 		for i,v in ipairs ( getElementsByType("player")) do
@@ -344,7 +344,7 @@ if playerData.player then
 setElementData(playerData.player,"group",false)
 setElementData(playerData.player,"groupUserStatus",false)
 setElementData(playerData.player,"groupProfit",0)
-outputChatBox("Вы были исключены из группы #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCАдминистратор удалил группу ",playerData.player,255,255,255,true)
+outputChatBox("Você foi expulso do grupo #FFFF00"..tostring(groupName).." #FFFFFFpor causa de: #DCDCDCАadmin excluiu o grupo ",playerData.player,255,255,255,true)
 triggerClientEvent(playerData.player, "groupRemoved", playerData.player)
 
 else
@@ -352,7 +352,7 @@ local accountPlayer  = getAccount ( playerData.userAccount )
 if accountPlayer then
 setAccountData ( accountPlayer, "group", false )
 setAccountData ( accountPlayer, "groupUserStatus", false )
-setAccountData ( accountPlayer, "groupMessage", "Вы были исключены из группы #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCАдминистратор удалил группу" )
+setAccountData ( accountPlayer, "groupMessage", "Você foi expulso do grupo #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCАadmin excluiu o grupo" )
 end
 end
 
@@ -363,7 +363,7 @@ executeSQLQuery("DELETE FROM `groups` WHERE `groupName`=? ",tostring(groupName) 
 --executeSQLQuery("DELETE FROM `groups_skills` WHERE `groupName`=? ",tostring(groupName) )
 
 
-outputChatBox("ГРУППА УДАЛЕНА С: ",source)
+outputChatBox("GRUPO REMOVIDO DE: ",source)
 triggerEvent("getGroups",source)
 end
 end
@@ -392,7 +392,7 @@ function removeOldTents(ps,comm)
 				outputConsole ( "remove tent id:"..i,ps)
 			end
 		end
-		outputChatBox("REMOVE TENTS("..tentamount.."): "..countRemoveTents)
+		outputChatBox("REMOVER TENDASs("..tentamount.."): "..countRemoveTents)
 		
 		
 		
@@ -423,7 +423,7 @@ function removeOldAccounts(ps,comm)
 			end
 			end
 		end
-		outputChatBox("REMOVE ACCOUNTS("..playerAccounts.."): "..accountsRemove)
+		outputChatBox("REMOVER CONTAS("..playerAccounts.."): "..accountsRemove)
 		
 		
 		

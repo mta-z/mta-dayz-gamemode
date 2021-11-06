@@ -322,15 +322,15 @@ function playerDamagedFromBot ( hitElement )
 
 	if weapName == "MG36" then
 	damage=5000
-	botWeapon = "#FFFFFF c помощью MG36"
+	botWeapon = "#FFFFFF com MG36"
 	botName = "#FF0000Bandido (Pesado)"
 	elseif weapName == "G36C-SD" then
 	damage=4000
-	botWeapon = "#FFFFFF c помощью G36C-SD"
+	botWeapon = "#FFFFFF com G36C-SD"
 	botName = "#FF0000Bandido (Stormtrooper)"
 	elseif weapName =="DMR" then
 	damage=9000
-	botWeapon = "#FFFFFF c помощью DMR"
+	botWeapon = "#FFFFFF com DMR"
 	botName = "#FF0000Bandido (Atirador)"
 	end
 	setElementData(localPlayer,"blood",getElementData(localPlayer,"blood")-damage) --server
@@ -347,7 +347,7 @@ function playerDamagedFromBot ( hitElement )
 			end
 			
 		end	
-		--outputChatBox("Стреляет бот")
+		--outputChatBox("Bot shoots")
 	
 
 
@@ -374,7 +374,7 @@ if attacker then
 			local infRand = math.random(0,100)
 			if infRand <=5  then
 				setInfection(true)
-				drawingAlphaText(localPlayer,"Инфекция",200,10,0,"up",false,true)
+				drawingAlphaText(localPlayer,"Infecção",200,10,0,"up",false,true)
 			end
 			
 			if getElementData(localPlayer,"blood") <= 0 then
@@ -1372,7 +1372,7 @@ function updatePlayerLvl()
 		if playerlvl < lvl then
 			local clicks=getElementData(localPlayer,"progress.clicks") or 0
 			setElementData(localPlayer,"progress.clicks",clicks+(lvl-playerlvl)) 
-			outputChatBox("Вы получили +"..(lvl-playerlvl).." очков навыков! Нажмите F3 чтобы Usar их")
+			outputChatBox("Você recebeu +"..(lvl-playerlvl).." Pontos de habilidade! Pressione F3 para usá-los")
 		end
 			
 		setElementData(localPlayer,"playerlvl",lvl) --server
@@ -1416,7 +1416,7 @@ function checkBuggedAccount()
 		if getElementData(localPlayer,"logedin") then
 			if getElementModel(localPlayer) == 0  then
 			--triggerServerEvent("spawnATDPlayer",localPlayer,localPlayer)
-				outputChatBox(getPlayerName(localPlayer).." Ошибка создания игрOKа. Сообщите администратору сервера")
+				outputChatBox(getPlayerName(localPlayer).." Erro de criação do jogo. Diga ao administrador do servidor")
 			end
 		end
 	end	
@@ -2301,9 +2301,9 @@ if value<=0 then
 return "0:00"
 end
 	if value then
-local hours = math.floor(value/3600) -- Получаем количество полных часов
-local minutes = value - (hours*3600) -- Получаем оставшиеся минуты	
- minutes = math.floor(minutes/60) -- Получаем оставшиеся минуты	
+local hours = math.floor(value/3600) -- Conseguimos o número de horas completas
+local minutes = value - (hours*3600) -- Pegamos os minutos restantes
+ minutes = math.floor(minutes/60) -- Pegamos os minutos restantes
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end

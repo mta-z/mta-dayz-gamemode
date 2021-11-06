@@ -82,11 +82,11 @@ function invitePlayer(groupName,invitedPlayer,typeCall)
 local isOwner = getElementData(source,"groupUserStatus") or false
 local groupOwner = getElementData(source,"group",false) or false
 if not groupOwner then
-outputChatBox("Ошибка: function: invitePlayer. Type: not groupOwner. Сообщите администратору сервера",source)
+outputChatBox("Erro: function: invitePlayer. Type: not groupOwner. Diga ao administrador do servidor",source)
 return
 end
 if groupName~=groupOwner then
-outputChatBox("Ошибка: function: invitePlayer. Type: groupName~=groupOwner. Сообщите администратору сервера",source)
+outputChatBox("Erro: function: invitePlayer. Type: groupName~=groupOwner. Diga ao administrador do servidorа",source)
 return
 end
 if isOwner and isOwner=="OWNER" or isOwner=="MODER" or isOwner=="PARTY"  then
@@ -106,7 +106,7 @@ setElementData(invitedPlayer,"groupInviteOwner",source)
 if isOwner=="OWNER" or isOwner=="MODER" then
 setElementData(invitedPlayer,"groupInviteOwnerSTATUS",true)
 end
-outputChatBox("#FF0000"..getPlayerName(invitedPlayer).." #FFFFFFбыл приглашен в группу: #FFFF00"..groupName,source,255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(invitedPlayer).." #FFFFFFfoi convidado para o grupo: #FFFF00"..groupName,source,255,255,255,true)
 triggerClientEvent(invitedPlayer, "onPlayerInvite", invitedPlayer,source,groupOwner)
 if typeCall == 1 then
 triggerClientEvent(source, "refreshPlayersOnInviteList", source)
@@ -246,7 +246,7 @@ local membersInGrup = tonumber(groupInfo[1].groupMembers)
 executeSQLQuery("UPDATE `groups` SET `groupMembers`=? WHERE `groupName`=?", tonumber(membersInGrup+1), tostring(groupName) )
 
 
-outputChatBox("#FF0000"..getPlayerName(player).." #FFFFFFвступил в группу: #FFFF00"..groupName,getRootElement(),255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(player).." #FFFFFFjuntou-se ao grupo: #FFFF00"..groupName,getRootElement(),255,255,255,true)
 setElementData(player,"group",tostring(groupName))
 
 if invOwner then

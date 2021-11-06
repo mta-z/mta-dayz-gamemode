@@ -23,7 +23,7 @@ function tryToRegsiterPlayer(login, pass)
     if theAccount then
      local isLogin =  logIn(source, theAccount, pass)
 	 if isLogin then
-      outputChatBox("You have registered an account with login: " .. login .. " and password:" .. pass .. "", source, 255, 255, 255, true)
+      outputChatBox("Você registrou uma conta com login: " .. login .. " e senha:" .. pass .. "", source, 255, 255, 255, true)
       triggerClientEvent(source, "onPlayerDoneLogin", source, login, pass)
       triggerEvent("onPlayerDayZRegister", getRootElement(), login, pass, source)
     end

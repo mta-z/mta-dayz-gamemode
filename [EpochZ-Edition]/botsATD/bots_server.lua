@@ -325,14 +325,14 @@ local botPos = {
 {{2314.9631347656,-753.23394775391,74.717247009277} ,true,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- пещера внутри
 
 
-{{2224.8405761719,-2463.3059082031,-11.943175315857},false,262,31,"Bandido (Pesado)","gunner"},	-- секретка 1 комната
-{{2222.1279296875,-2438.4819335938,-19.670936584473} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- секретка 2 комната
-{{2199.208984375,-2416.2448730469,-15.416250228882} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- секретка 3 комната над входом
-{{2187.6472167969,-2396.9072265625,-15.920352935791},false,262,31,"Bandido (Pesado)","gunner"},	-- секретка 3 комната на контейнере
-{{2156.46875,-2396.0397949219,-15.416250228882},false,262,31,"Bandido (Pesado)","gunner"},	-- секретка 3 комната выход сверху
+{{2224.8405761719,-2463.3059082031,-11.943175315857},false,262,31,"Bandido (Pesado)","gunner"},	-- segredo 1 quarto
+{{2222.1279296875,-2438.4819335938,-19.670936584473} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- 2 quartos secretos
+{{2199.208984375,-2416.2448730469,-15.416250228882} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- sala secreta 3 acima da entrada
+{{2187.6472167969,-2396.9072265625,-15.920352935791},false,262,31,"Bandido (Pesado)","gunner"},	-- sala secreta 3 no contêiner
+{{2156.46875,-2396.0397949219,-15.416250228882},false,262,31,"Bandido (Pesado)","gunner"},	-- saída secreta de 3 quartos de cima
 
-{{2111.5725097656,-2412.4462890625,-19.893928527832} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- секретка вход в лабу
-{{2116.6774902344,-2441.7861328125,-20.120416641235} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- секретка лаба
+{{2111.5725097656,-2412.4462890625,-19.893928527832} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- entrada secreta para o laboratório
+{{2116.6774902344,-2441.7861328125,-20.120416641235} ,false,264,30,"Bandido (Stormtrooper)","hedgehopper"}, -- segredo de laboratório
 }
 
 

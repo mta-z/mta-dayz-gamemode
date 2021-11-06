@@ -590,11 +590,11 @@ end
   local clot2 = getElementData(getLocalPlayer(),"clotType_2")
   if clot1 and clot1~=0 and clot1==stm  then
   local clot1IN = getElementData(getLocalPlayer(),clot1)
-  if clot1IN<=1 then outputChatBox("Нельзя Vender используемую вещь") return end
+  if clot1IN<=1 then outputChatBox("Não posso vender uma coisa utilizável") return end
   end
   if clot2 and clot1~=0 and clot2==stm then
   local clot2IN = getElementData(getLocalPlayer(),clot2)
-  if clot2IN<=1 then outputChatBox("Нельзя Vender используемую вещь") return end
+  if clot2IN<=1 then outputChatBox("Não posso vender uma coisa utilizável") return end
   end
   
   if getElementData(getLocalPlayer(),stm) or 0 -1 <=0 then
@@ -715,7 +715,7 @@ toggleControl ("action", false )
 --toggleControl ("previous_weapon", false )
 
 toggleControl ("aim_weapon", false )
-outputChatBox("Вы вошли в зеленую зону!")
+outputChatBox("Você entrou na zona verde!")
 setElementData(getLocalPlayer(),"InGreenZone",true)
 
 
@@ -741,7 +741,7 @@ toggleControl ("action", true )
 --toggleControl ("previous_weapon", true )
 toggleControl ("aim_weapon", true )
 setElementData(getLocalPlayer(),"InGreenZone",false) 
-outputChatBox("Вы вышли из зеленой зоны!")
+outputChatBox("Você está fora da zona verde!")
 removeEventHandler("onClientRender", root, updateZZtimer) 
 
 end,15000,1)
@@ -767,7 +767,7 @@ local screenWidth, screenHeight = guiGetScreenSize ( )
 function updateZZtimer ()
 if globaltimer then
 	local ms, mm, ss = getTimerDetails ( globaltimer )
-	local textZZ = "Безопасная зона:"..math.ceil(ms/1000).." сек"
+	local textZZ = "Área segura:"..math.ceil(ms/1000).." s"
 	local textZZW = dxGetTextWidth ( textZZ, 1.4, "sans" )
 	  dxDrawText ( textZZ, (screenWidth/2)-(textZZW/2),  80, screenWidth, screenHeight, tocolor ( 0,200,0, 200 ), 1.4, "sans" )
 else
@@ -781,7 +781,7 @@ function onClientPlayerWeaponFireFunc(weapon, ammo, ammoInClip, hitX, hitY, hitZ
 local green= getElementData(getLocalPlayer(),"InGreenZone",false)
 if green and hitElement then
 triggerServerEvent("kilLDayZPlayer",getLocalPlayer())
-outputChatBox("Запрещено стрелять в зеленой зоне!")
+outputChatBox("É proibido atirar na zona verde!")
 end
 end
 

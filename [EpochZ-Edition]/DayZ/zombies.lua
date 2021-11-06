@@ -206,7 +206,7 @@ function destroyDeadZombie (ped,pedCol)
 end
 
 function zombieKilled (killer,headshot)
---outputChatBox("Server: destroyed zombie (reason: zombie died)")
+--outputChatBox("Server: zumbi destruído (motivo: zumbi morreu)")
 	if killer then
 	
 	--[[

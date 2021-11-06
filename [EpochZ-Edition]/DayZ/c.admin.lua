@@ -169,7 +169,7 @@ addEventHandler("onClientGUIComboBoxAccepted", category,
 		triggerServerEvent("onGive",  localPlayer, playerName, item, guiGetText(quantity),false)
 		end
 	else
-	outputChatBox("O jogador saiu ou mudou de apelido",255,0,0)
+	outputChatBox("O jogador saiu ou mudou de nick",255,0,0)
 	end
 	end, false);
 	

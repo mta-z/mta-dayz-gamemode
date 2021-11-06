@@ -228,7 +228,7 @@ addEventHandler( "onClientGUIClick", attack_planePlus,
 	local attack_plane = getElementData(getLocalPlayer(),"progress.attacker") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	
@@ -421,7 +421,7 @@ addEventHandler( "onClientMouseLeave", sniperPlus,
 	local sniper = getElementData(getLocalPlayer(),"progress.sniper") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if sniper >= 100 then return end
@@ -524,7 +524,7 @@ addEventHandler( "onClientMouseLeave", enginerPlus,
 	local enginer = getElementData(getLocalPlayer(),"progress.enginer") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if enginer >= 100 then return end
@@ -842,7 +842,7 @@ addEventHandler( "onClientMouseLeave", boecPlus,
 	local boec = getElementData(getLocalPlayer(),"progress.boec") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if boec >= 100 then return end

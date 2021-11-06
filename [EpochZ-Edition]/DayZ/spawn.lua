@@ -544,7 +544,7 @@ local  x,y,z = getElementPosition(source)
 		if lastKillPlayerTime then
 			local ticks = realTick-lastKillPlayerTime
 			if ticks<60000 then -- 1 minuto não passou e o último morto = a mesma pessoa = cancelar
-				outputDebugString("abort player kill "..getPlayerName(source).." left: "..ticks.."ms")
+				outputDebugString("abortar kill de jogador "..getPlayerName(source).." deixou: "..ticks.."ms")
 				
 				lastKillPlayerTime = getTickCount ()
 				lastKillPlayer = source
@@ -571,7 +571,7 @@ killPed(source)
 		local pedCol = createColSphere(x,y,z,1.5)
 	
 		if pedCol then
-		--outputChatBox("Coca-ColaПС ТРУПА СОЗДАН")
+		--outputChatBox("Coca-ColaPS CORPSE CREATED")
 		for i,data in ipairs(murdersSkinTable) do
 			removeElementData ( source, data[1] ) 
 		end

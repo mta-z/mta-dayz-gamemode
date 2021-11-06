@@ -245,7 +245,7 @@ resetWeaponPosition(ped,weapon,player)
 --if getPedControlState( ped, "forwards") then
 --setPedControlState( ped, "forwards", false )
 --end
-----outputChatBox("чисто - вызов изменения ротации")
+----outputChatBox("limpo - chamada para mudar a rotação")
 else
 
 if  isFiring then

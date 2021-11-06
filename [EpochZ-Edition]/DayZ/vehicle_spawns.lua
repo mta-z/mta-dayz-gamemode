@@ -375,7 +375,7 @@ function createHeliCrashSite()
 			setElementData(cargoCol,ammoData,math.random(100,200)) --client
 		end
 	end
-	outputChatBox("Halicrash "..heliCrashSites[item_id][1].." um helicóptero militar caiu", getRootElement(), 255, 0, 0)
+	outputChatBox("[EpochZ]: Um helicóptero militar caiu no quadrante"..heliCrashSites[item_id][1], getRootElement(), 255, 0, 0)
 	setTimer(createHeliCrashSite,3600000,1)
 end
 createHeliCrashSite()
@@ -409,7 +409,8 @@ function createCrashAirSite()
 			setElementData(airCol,ammoData,math.random(100,200)) --client
 		end
 	end
-	outputChatBox("Airdrop "..airCrashSites[item_id][1].." um avião militar caiu", getRootElement(), 255, 0, 0)
+	--outputChatBox("Airdrop "..airCrashSites[item_id][1].." um  caiu", getRootElement(), 255, 0, 0)
+	outputChatBox("[EpochZ]: Um avião militar caiu no quadrante"..heliCrashSites[item_id][1], getRootElement(), 255, 0, 0)
 	setTimer(createCrashAirSite,7200000,1)
 end
 createCrashAirSite()

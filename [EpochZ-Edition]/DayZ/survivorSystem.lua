@@ -751,7 +751,7 @@ setTimer( function ()
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 end	
 end
 
@@ -797,7 +797,7 @@ setTimer( function ()
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 end	
 end
 
@@ -843,7 +843,7 @@ setTimer( function ()
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 end	
 end
 
@@ -889,11 +889,11 @@ setTimer( function ()
 		setElementData(tentCol,"PlayerSerial",getPlayerSerial(source)) 
 		setElementData(tentCol,"MAX_Slots",150) --client
 		setElementData(tentCol,"pass",pass) --client
-		outputChatBox("Cofre установлен с паролем: "..pass,source)
+		outputChatBox("Cofre instalado com senha: "..pass,source)
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 end	
 end
 
@@ -936,7 +936,7 @@ setTimer( function ()
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 end	
 end
 addEvent("onPlayerBuildAWireFence",true)
@@ -992,7 +992,7 @@ setTimer( function ()
 
 end,1500,1)
 else
-outputChatBox("Вы в зеленой зоне!",source)
+outputChatBox("Você está na zona verde!",source)
 	end		
 end
 addEvent("onPlayerBuildAMine",true)
@@ -1730,7 +1730,7 @@ local bait = getElementData(player,"Наживка") or 0
 setTimer(function()
 triggerClientEvent(player,"showClientMenuItem",player,"baiting")
 setElementData(player,"Наживка",bait+1)
-outputChatBox("Вы получили +1 наживку",player)
+outputChatBox("Você tem +1 isca",player)
 end,5000,1)
 end
 
