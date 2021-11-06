@@ -80,7 +80,7 @@ inventoryItems = {
 
 ["Воздушный транспорт"]={
 { "UH-60 Black Hawk",60000,417 },
-{ "Экскурсионный вертолёт",70000,488 },
+{ "Helicóptero turístico",70000,488 },
 { "Police Maverick",84000,497 },
 { "Robinson R44 Clipper",80000,447 },
 { "MH-X Silenthawk",65000,563 },
@@ -115,7 +115,7 @@ inventoryItems = {
 { "Phoenix",99000,603 },
 --{ "Reefer",453,200000 },
 { "Mitsubishi Lancer Evolution IX",100000,516 },
---{ "Топливо",584,600000 },
+--{ "Combustível",584,600000 },
 --{ "Прицеп",591,650000 },
 {"Ford Mustang 1967",100000,434},
 { "Honda Civic Si 2012",90000,504 },

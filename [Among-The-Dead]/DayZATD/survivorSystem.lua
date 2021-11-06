@@ -1118,7 +1118,7 @@ setTimer( function ()
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
-outputChatBox("У вас нет лопаты!",source)
+outputChatBox("Você não tem uma pá!",source)
 end	
 end
 addEvent("onPlayerBuildASandBags",true)
@@ -1192,7 +1192,7 @@ if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 	outputChatBox("Você não tem ferramentas!",source)
 end
 else
-outputChatBox("У вас нет лопаты!",source)
+outputChatBox("Você não tem uma pá!",source)
 end
 end
 addEvent("removeSave",true)
@@ -1740,7 +1740,7 @@ addEventHandler("startFishing", getRootElement(),startFishing)
 
 function deadbury(player,deadplayer)
 if (getElementData(player,"Pá") or 0) <= 0 then
-outputChatBox("У вас нет лопаты!",player)
+outputChatBox("Você não tem uma pá!",player)
 return
 end
 local x,y,z = getElementPosition(deadplayer)
@@ -1934,7 +1934,7 @@ addEventHandler( 'onPlayerVoiceStart', root,
     function()
 	local ration = getElementData(source,"Walkie-Talkie") or 0 
 	if ration <=0 then 
-	outputChatBox("У вас нет рации!",source)
+	outputChatBox("Você não tem Walkie-Talkie!",source)
 	cancelEvent()
 	end
 

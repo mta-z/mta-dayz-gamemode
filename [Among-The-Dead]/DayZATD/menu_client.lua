@@ -1827,7 +1827,7 @@ end
 
 local SELLPRICECAR = {
 { "UH-60 Black Hawk",1400000,417 },
-{ "Экскурсионный вертолёт",900000,488 },
+{ "Helicóptero turístico",900000,488 },
 { "Chevrolet Suburban FBI",660000,490 },
 { "Zombie chopper",400000,463 },
 { "BMW M3 E36",500000,422 },
@@ -1845,7 +1845,7 @@ local SELLPRICECAR = {
 { "Phoenix",840000,603 },
 --{ "Reefer",453,200000 },
 --{ "Mercedes-Benz E63",950000,516 },
---{ "Топливо",584,600000 },
+--{ "Combustível",584,600000 },
 --{ "Прицеп",591,650000 },
 { "Kenworth W 900L",970000,403 },
 { "Bati MIX",670000,461 },
@@ -2120,10 +2120,10 @@ if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
 	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
 	setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)+1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в Tanque de Combústivel!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в Tanque de Combustível!",0,255,0)
 
 else
-triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Tanque de Combústivel заполнен!",255,0,0)
+triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Tanque de Combustível заполнен!",255,0,0)
 end
 
 end

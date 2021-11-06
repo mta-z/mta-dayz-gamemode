@@ -642,7 +642,7 @@ end
 if id == 417 then
 return "UH-60 Black Hawk"
 elseif id == 488 then
-return "Экскурсионный вертолёт"
+return "Helicóptero turístico"
 elseif id == 490 then
 return "Chevrolet Suburban FBI"
 elseif id == 463 then
@@ -678,7 +678,7 @@ return "Reefer"
 elseif id == 516 then
 return "Mitsubishi Lancer Evolution IX"
 elseif id == 584 then
-return "Топливо"
+return "Combustível"
 elseif id == 591 then
 return "Прицеп"
 elseif id == 403 then

@@ -117,7 +117,7 @@
 {"Balde de Metal 1",15},
 {"Balde de Metal 2",15},
 {"Pá",5},
-{"Tanque de Combústivel",3},
+{"Tanque de Combustível",3},
 {"Mangueira",1},
 
 
@@ -2204,7 +2204,7 @@ if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displ
 	return
 	end
 	else
-	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Этот рюкзак имеет меньше пространства чем необходимо!",255,22,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Inventário","Esta mochila tem menos espaço do que o necessário!",255,22,0)
 	end
 	--setElementData(localPlayer,itemName,getElementData(localPlayer,itemName)-1)
 	refreshInventory()
@@ -2238,16 +2238,16 @@ saveWindows=nil
 triggerServerEvent("onPlayerPitchASave",localPlayer,itemName,guiGetText ( editBox ))
  showCursor(false)
  else
- outputChatBox("У вас нет лопаты!")
+ outputChatBox("Você não tem uma pá!")
 end
 else
 outputChatBox("Você não tem ferramentas!")
 end
  else
- outputChatBox("Пароль должен состоять только из цифр!")
+ outputChatBox("A senha deve consistir apenas em números!")
  end
  else
- outputChatBox("Введите пароль!")
+ outputChatBox("Digite sua senha!")
  end
  end,false)
  
