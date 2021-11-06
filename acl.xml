@@ -22,7 +22,7 @@
         <acl name="RPC"></acl>
         <object name="resource.admin"></object>
         <object name="resource.webadmin"></object>
-        <object name="resource.DayZATD"></object>
+        <object name="resource.DayZ"></object>
         <object name="resource.loginATD"></object>
         <object name="resource.slothbot"></object>
         <object name="resource.antirelog"></object>
