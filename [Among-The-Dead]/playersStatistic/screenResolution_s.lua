@@ -49,10 +49,10 @@ end
 local statistic = executeSQLQuery("SELECT * FROM `playersStatistic` WHERE `date` =?",tostring(realDate) )
 
     if accounts>=1 then
-	local debugstr = "игрок у которого уже имеется аккаунт(ы) на сервере"
+	local debugstr = "um jogador que já possui uma (s) conta (s) no servidor"
 	--outputDebugString(debugstr)
 	else
-	local debugstr ="игрок который заходит первый раз и не имеет аккаунт(ов) на сервере"
+	local debugstr ="um jogador que faz o login pela primeira vez e não tem conta (s) no servidor"
 	--outputDebugString(debugstr)
 	if statistic[1] then 
 	local statisticNewPlayers = tonumber(statistic[1].newPlayers)
@@ -61,7 +61,7 @@ local statistic = executeSQLQuery("SELECT * FROM `playersStatistic` WHERE `date`
 	setElementData(source,"newPlayer",true,false)
 	end
 	
-	local debugstr = "все подключения"
+	local debugstr = "todas as conexões"
 	--outputDebugString(debugstr)
 	
 	if statistic[1] then 

@@ -16,17 +16,17 @@ var chart2 = Highcharts.chart('container2', {
         type: 'area'
     },
     title: {
-        text: 'Статистика по игрокам'
+        text: 'Estatísticas do jogador'
     },
     subtitle: {
-        text: 'Учитывается каждое подключение/Вход в аккаунт'
+        text: 'Cada conexão / login de conta é contado'
     },
     xAxis: {
          categories: []
     },
     yAxis: {
         title: {
-            text: 'Количество подключений'
+            text: 'Número de conexões'
         },
         labels: {
             formatter: function () {
@@ -53,13 +53,13 @@ var chart2 = Highcharts.chart('container2', {
     },
 
     series: [{
-        name: 'Всего подключений',
+        name: 'Total de conexões',
         data: []
     }, {
-        name: 'Подключений новых игроков',
+        name: 'Conexões de novos jogadores',
         data: []
     },{
-        name: 'Уникальные игроки',
+        name: 'Jogadores únicos',
         data: []
     }]
 });
@@ -71,14 +71,14 @@ var chart3 = Highcharts.chart('container3', {
         type: 'line'
     },
     title: {
-        text: 'Время игры уникальных игроков'
+        text: 'Tempo de jogo de jogadores únicos'
     },
     xAxis: {
          categories: []
     },
     yAxis: {
         title: {
-            text: 'Время игры в минутах'
+            text: 'Tempo de jogo em minutos'
         },
         labels: {
             formatter: function () {
@@ -105,13 +105,13 @@ var chart3 = Highcharts.chart('container3', {
     },
 
     series: [{
-        name: 'Общее время игры',
+        name: 'Tempo total de jogo',
         data: []
     }, {
-        name: 'Среднее время игры',
+        name: 'Tempo médio de jogo',
         data: []
     },{
-        name: 'Уникальные игроки',
+        name: 'Jogadores únicos',
         data: []
     }]
 });

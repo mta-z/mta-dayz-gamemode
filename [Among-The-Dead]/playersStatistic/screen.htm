@@ -10,11 +10,11 @@
 var chart = Highcharts.chart('container', {
 
     title: {
-        text: 'Разрешения экранов'
+        text: 'Resoluções de tela'
     },
 
     subtitle: {
-        text: 'Учитывается каждый вход'
+        text: 'Cada entrada conta'
     },
 
     xAxis: {
@@ -22,7 +22,7 @@ var chart = Highcharts.chart('container', {
     },
     yAxis: {
         title: {
-            text: 'Количество подключений'
+            text: 'Número de conexões'
         },
         labels: {
             formatter: function () {
@@ -35,7 +35,7 @@ var chart = Highcharts.chart('container', {
     },
 
     series: [{
-		name:"Количество подключений",
+		name:"Número de conexões",
         type: 'column',
         colorByPoint: true,
         data: [],
