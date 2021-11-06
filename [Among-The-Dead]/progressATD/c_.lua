@@ -22,17 +22,17 @@ function centerWindow (center_window)
 end
 
 
-inventoryWindows = guiCreateWindow(0, 0,750, 520, "Навыки", false) 
+inventoryWindows = guiCreateWindow(0, 0,750, 520, "Habilidades", false) 
 guiWindowSetSizable ( inventoryWindows, false )
 centerWindow(inventoryWindows)
 
 local tabPanel = guiCreateTabPanel ( 0, 25, 750, 500, false, inventoryWindows )
-local tab1 = guiCreateTab( "Навыки", tabPanel )
-local tab2 = guiCreateTab( "Статистика", tabPanel )
+local tab1 = guiCreateTab( "Habilidades", tabPanel )
+local tab2 = guiCreateTab( "Estatisticas", tabPanel )
 addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()),
     function ( startedRes )
  headline["ochko1_img"] = guiCreateStaticImage ( 1, 10, 730, 17, "gray.png", false, tab2 )
-headline["ochko1"] = guiCreateLabel(5, 0, 750, 100,"Свободно очков навыков",false,headline["ochko1_img"])
+headline["ochko1"] = guiCreateLabel(5, 0, 750, 100,"Pontos de habilidade grátis",false,headline["ochko1_img"])
 headline["ochko1_t"] = guiCreateLabel(0, 0, 725, 100,"-",false,headline["ochko1_img"])
 guiSetFont (headline["ochko1"] , "default-bold-small" )
 guiSetFont (headline["ochko1_t"] , "default-bold-small" )
@@ -40,84 +40,84 @@ guiLabelSetHorizontalAlign (headline["ochko1_t"],"right")
 
 
  headline["ochko2_img"] = guiCreateStaticImage ( 1, 30, 730, 17, "gray.png", false, tab2 )
-headline["ochko2"] = guiCreateLabel(5, 0, 750, 100,"Потрачено очков навыков",false,headline["ochko2_img"])
+headline["ochko2"] = guiCreateLabel(5, 0, 750, 100,"Pontos de habilidade gastos",false,headline["ochko2_img"])
 headline["ochko2_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko2_img"])
 guiSetFont (headline["ochko2"] , "default-bold-small" )
 guiSetFont (headline["ochko2_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko2_t"],"right")
 
  headline["ochko3_img"] = guiCreateStaticImage ( 1, 60, 730, 17, "gray.png", false, tab2 )
-headline["ochko3"] = guiCreateLabel(5, 0, 750, 100,"Уровень",false,headline["ochko3_img"])
+headline["ochko3"] = guiCreateLabel(5, 0, 750, 100,"Nível",false,headline["ochko3_img"])
 headline["ochko3_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko3_img"])
 guiSetFont (headline["ochko3"] , "default-bold-small" )
 guiSetFont (headline["ochko3_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko3_t"],"right")
 
  headline["ochko4_img"] = guiCreateStaticImage ( 1, 80, 730, 17, "gray.png", false, tab2 )
-headline["ochko4"] = guiCreateLabel(5, 0, 750, 100,"Опыт",false,headline["ochko4_img"])
+headline["ochko4"] = guiCreateLabel(5, 0, 750, 100,"Uma experiência",false,headline["ochko4_img"])
 headline["ochko4_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko4_img"])
 guiSetFont (headline["ochko4"] , "default-bold-small" )
 guiSetFont (headline["ochko4_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko4_t"],"right")
 
  headline["ochko5_img"] = guiCreateStaticImage ( 1, 100, 730, 17, "gray.png", false, tab2 )
-headline["ochko5"] = guiCreateLabel(5, 0, 750, 100,"Опыт следующего уровня",false,headline["ochko5_img"])
+headline["ochko5"] = guiCreateLabel(5, 0, 750, 100,"XP para o próximo nível",false,headline["ochko5_img"])
 headline["ochko5_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko5_img"])
 guiSetFont (headline["ochko5"] , "default-bold-small" )
 guiSetFont (headline["ochko5_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko5_t"],"right")
 
 headline["ochko6_img"] = guiCreateStaticImage ( 1, 130, 730, 17, "gray.png", false, tab2 )
-headline["ochko6"] = guiCreateLabel(5, 0, 750, 100,"Максимум убито зомби за один раз",false,headline["ochko6_img"])
+headline["ochko6"] = guiCreateLabel(5, 0, 750, 100,"Máximo de mortos por zumbis por vez",false,headline["ochko6_img"])
 headline["ochko6_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko6_img"])
 guiSetFont (headline["ochko6"] , "default-bold-small" )
 guiSetFont (headline["ochko6_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko6_t"],"right")
 
 headline["ochko7_img"] = guiCreateStaticImage ( 1, 150, 730, 17, "gray.png", false, tab2 )
-headline["ochko7"] = guiCreateLabel(5, 0, 750, 100,"Максимум убито игроков за один раз",false,headline["ochko7_img"])
+headline["ochko7"] = guiCreateLabel(5, 0, 750, 100,"Máximo de jogadores mortos de uma vez",false,headline["ochko7_img"])
 headline["ochko7_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko7_img"])
 guiSetFont (headline["ochko7"] , "default-bold-small" )
 guiSetFont (headline["ochko7_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko7_t"],"right")
 
 headline["ochko8_img"] = guiCreateStaticImage ( 1, 170, 730, 17, "gray.png", false, tab2 )
-headline["ochko8"] = guiCreateLabel(5, 0, 750, 100,"Максимум убито мародёров за один раз",false,headline["ochko8_img"])
+headline["ochko8"] = guiCreateLabel(5, 0, 750, 100,"Máximo de Bandidos mortos de uma vez",false,headline["ochko8_img"])
 headline["ochko8_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko8_img"])
 guiSetFont (headline["ochko8"] , "default-bold-small" )
 guiSetFont (headline["ochko8_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko8_t"],"right")
 
 headline["ochko9_img"] = guiCreateStaticImage ( 1, 190, 730, 17, "gray.png", false, tab2 )
-headline["ochko9"] = guiCreateLabel(5, 0, 750, 100,"Максимум прожито за один раз",false,headline["ochko9_img"])
+headline["ochko9"] = guiCreateLabel(5, 0, 750, 100," Tempo Máximo de uma vez",false,headline["ochko9_img"])
 headline["ochko9_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko9_img"])
 guiSetFont (headline["ochko9"] , "default-bold-small" )
 guiSetFont (headline["ochko9_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko9_t"],"right")
 
 headline["ochko10_img"] = guiCreateStaticImage ( 1, 220, 730, 17, "gray.png", false, tab2 )
-headline["ochko10"] = guiCreateLabel(5, 0, 750, 100,"Убито зомби за все время игры",false,headline["ochko10_img"])
+headline["ochko10"] = guiCreateLabel(5, 0, 750, 100,"Zumbis mortos durante todo o jogo",false,headline["ochko10_img"])
 headline["ochko10_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko10_img"])
 guiSetFont (headline["ochko10"] , "default-bold-small" )
 guiSetFont (headline["ochko10_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko10_t"],"right")
 
 headline["ochko11_img"] = guiCreateStaticImage ( 1, 240, 730, 17, "gray.png", false, tab2 )
-headline["ochko11"] = guiCreateLabel(5, 0, 750, 100,"Убито игроков за все время игры",false,headline["ochko11_img"])
+headline["ochko11"] = guiCreateLabel(5, 0, 750, 100,"Jogadores mortos durante todo o jogo",false,headline["ochko11_img"])
 headline["ochko11_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko11_img"])
 guiSetFont (headline["ochko11"] , "default-bold-small" )
 guiSetFont (headline["ochko11_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko11_t"],"right")
 
 headline["ochko12_img"] = guiCreateStaticImage ( 1, 260, 730, 17, "gray.png", false, tab2 )
-headline["ochko12"] = guiCreateLabel(5, 0, 750, 100,"Убито мародёров за все время игры",false,headline["ochko12_img"])
+headline["ochko12"] = guiCreateLabel(5, 0, 750, 100,"Marotos mortos durante todo o jogo",false,headline["ochko12_img"])
 headline["ochko12_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko12_img"])
 guiSetFont (headline["ochko12"] , "default-bold-small" )
 guiSetFont (headline["ochko12_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko12_t"],"right")
 
 headline["ochko13_img"] = guiCreateStaticImage ( 1, 280, 730, 17, "gray.png", false, tab2 )
-headline["ochko13"] = guiCreateLabel(5, 0, 750, 100,"Прожито за все время игры",false,headline["ochko13_img"])
+headline["ochko13"] = guiCreateLabel(5, 0, 750, 100,"Viveu o tempo todo do jogo",false,headline["ochko13_img"])
 headline["ochko13_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko13_img"])
 guiSetFont (headline["ochko13"] , "default-bold-small" )
 guiSetFont (headline["ochko13_t"] , "default-bold-small" )
@@ -166,27 +166,27 @@ addEventHandler( "onClientMouseEnter", img[i],
 		guiMoveToBack(inventoryWindows)
 		guiSetText(headline["toolTipText"],i.."/100")
 		
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Урон штурмового оружия +"..(i*30).."\nПереносимый вес +"..(i*0.2).."кг\nMachado")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг\nMachado")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -271,27 +271,27 @@ guiLabelSetHorizontalAlign (headline["medikProgress"],"center")
 			guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\nВозможность дать Morfina и Analgésico")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nPossibilidade de dar Morfina e Analgésico")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\Kit de Primeiros Socorros")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nKit de Primeiros Socorros")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Увеличение крови +"..(i*60).."ед\nРегенерация +"..(i*3).."ед в мин\nВозможность перелить кровь себе")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nA capacidade de transferir sangue para si mesmo")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -365,27 +365,27 @@ guiLabelSetHorizontalAlign (headline["sniperProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"Danos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Урон снайперского оружия +"..(i*30).."\nДальность видимости в прицел +"..(i*5).."м")
+		guiSetText(headline["toolTipTextT"],"УDanos da Sniper +"..(i*30).."\nAlcance de mira através do escope +"..(i*5).."м")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -469,27 +469,27 @@ guiLabelSetHorizontalAlign (headline["enginerProgress"],"center")
 	guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."кг")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг\nУстановка запчастей без инструментов")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg\nInstalação de peças sem Caixa de ferramentas")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг\nСнятие запчастей без инструментов")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg\nRemovendo peças sem Caixa de ferramentas")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Скорость починки тс -"..(i*0.5).."сек\nПереносимый вес +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -573,27 +573,27 @@ guiLabelSetHorizontalAlign (headline["economistProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Стоимость продажи предмета +"..(i*0.5).."%\nАвтозаправка/Автопочинка -"..(i*0.9).."%")
+		guiSetText(headline["toolTipTextT"],"Preço de item +"..(i*0.5).."%\nPosto de gasolina / conserto de automóveis -"..(i*0.9).."%")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -631,7 +631,7 @@ addEventHandler( "onClientMouseLeave", economistPlus,
 	local economist = getElementData(getLocalPlayer(),"progress.economist") or 0
 	local clicks=  getElementData(getLocalPlayer(),"progress.clicks") or 0
     if clicks <=0 then 
-  outputChatBox("У вас нет очков навыков!")
+  outputChatBox("Você não tem pontos de habilidade!")
 return
   end
 	if economist >= 100 then return end
@@ -678,27 +678,27 @@ guiLabelSetHorizontalAlign (headline["djagernautProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nDanos de Fuzil +"..(i*20).."")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Получаемый урон -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Dano recebido -"..(i*0.2).."%\nУрон пулеметов +"..(i*20).."")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -784,27 +784,27 @@ guiLabelSetHorizontalAlign (headline["boecProgress"],"center")
 		guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nУвеличение крови +"..(i*20).."")
+		guiSetText(headline["toolTipTextT"],"Урон оружия ближнего боя +"..(i*30).."\nSangue aumentado +"..(i*20).."")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
