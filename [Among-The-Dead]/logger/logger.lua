@@ -89,9 +89,9 @@ addEventHandler("onResourceStart", getResourceRootElement(getThisResource()), re
 
 function nickChangeHandler(oldNick, newNick)
 if getElementData(source,"logedin") then
-setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial (source).." IP:"..getPlayerIP ( source ).." )  Сменил ник:"..oldNick.." на "..newNick.."","log")
+setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial (source).." IP:"..getPlayerIP ( source ).." )  Nick alterado:"..oldNick.." sobre "..newNick.."","log")
 else
-setLog("( Serial:"..getPlayerSerial ( source).." IP:"..getPlayerIP ( source ).." )  Сменил ник:"..oldNick.." на "..newNick.."","log")
+setLog("( Serial:"..getPlayerSerial ( source).." IP:"..getPlayerIP ( source ).." )  nick alterado:"..oldNick.." para "..newNick.."","log")
 
 end
 end
@@ -99,9 +99,9 @@ addEventHandler("onPlayerChangeNick", getRootElement(), nickChangeHandler)
 
 function loggerChat( message, messageType )
 if getElementData(source,"logedin") then
-	setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getAccountSerial ( getPlayerAccount ( source ) ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).."  написал в локальный чат #"..messageType.." :"..message.."","chat")
+	setLog("( Account:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getAccountSerial ( getPlayerAccount ( source ) ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).."  escreveu para o chat local #"..messageType.." :"..message.."","chat")
 else
-	setLog("( Serial:"..getPlayerSerial (source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).."  написал в локальный чат #"..messageType.." :"..message.."","chat")
+	setLog("( Serial:"..getPlayerSerial (source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." escreveu para o chat local #"..messageType.." :"..message.."","chat")
 
 	end
 end

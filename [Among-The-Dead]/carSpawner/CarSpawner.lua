@@ -257,7 +257,7 @@ return veh
 end
 
 end
---addCommandHandler("spawnCar", CarSpawner)
+addCommandHandler("spawnCar", CarSpawner)
 
 
 addEvent("SpawnCar",true)
