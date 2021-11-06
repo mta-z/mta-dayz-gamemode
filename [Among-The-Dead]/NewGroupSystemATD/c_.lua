@@ -45,37 +45,37 @@ groupTabs = guiCreateTabPanel ( 10, 40, 600, 600, false, groupWindows )
 	
 
 
-local leavleGroup = 	guiCreateButton ( 10, 430, 560, 30, "Leave the group", false, tabGroup )
-local groupUserInformation = 	guiCreateButton ( 10, 470, 560, 30, "Player Statistics", false, tabGroup )
+local leavleGroup = 	guiCreateButton ( 10, 430, 560, 30, "Sair do grupo", false, tabGroup )
+local groupUserInformation = 	guiCreateButton ( 10, 470, 560, 30, "Estatísticas do jogador", false, tabGroup )
 
 
 	
-local createNewGroup = 	guiCreateButton ( 10, 430, 560, 30, "To create a group", false, tabGroups )
+local createNewGroup = 	guiCreateButton ( 10, 430, 560, 30, "Para criar um grupo", false, tabGroups )
 
 
 
 
-local groupInviteClient = guiCreateWindow(0, 0, 300, 250, "Confirm your group membership.", false) 
+local groupInviteClient = guiCreateWindow(0, 0, 300, 250, "Confirme sua associação ao grupo.", false) 
 guiWindowSetSizable ( groupInviteClient, false )
 guiSetVisible(groupInviteClient,false)
 centerWindow(groupInviteClient)
-local groupInviteText = guiCreateLabel(10, 50, 300, 300,"1234567890123456789012\ninvited you to the group Confirm your entry into the group\n1234567890",false,groupInviteClient)
+local groupInviteText = guiCreateLabel(10, 50, 300, 300,"1234567890123456789012\nconvidou você para o grupo Confirme sua entrada no grupo\n1234567890",false,groupInviteClient)
 guiSetFont (groupInviteText , "default-bold-small" )
 guiLabelSetHorizontalAlign ( groupInviteText, "center" )
 
 --guiSetSize ( groupInviteText, 100, 100, false )
 
 --\n Лидер группы:1234567890123456789012\nУровень группы:123
-local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Group Information:1234567890", false, groupInviteClient )
-local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "Confirm", false, groupInviteClient )
-local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Reject", false, groupInviteClient )
+local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Informação do Grupo:1234567890", false, groupInviteClient )
+local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "confirme", false, groupInviteClient )
+local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Rejeitar", false, groupInviteClient )
 
 
 
 
 
 
-playerStatisticWin = guiCreateWindow(0, 25, 400, 500, "Player Statistics", false) 
+playerStatisticWin = guiCreateWindow(0, 25, 400, 500, "Estatísticas do jogador", false) 
 
 guiWindowSetSizable ( playerStatisticWin, false )
 centerWindow(playerStatisticWin)
@@ -100,59 +100,59 @@ function setLineText(typeLine,id,text)
 guiSetText(headline[typeLine..""..id.."_t"],text)
 end
 
-addLineToWin("progress",1,"Free skill points:","-",10,400,playerStatisticWin)
-addLineToWin("progress",2,"Skill points spent:","-",10,400,playerStatisticWin)
+addLineToWin("progress",1,"Pontos de habilidade livres:","-",10,400,playerStatisticWin)
+addLineToWin("progress",2,"Pontos de habilidade gastos:","-",10,400,playerStatisticWin)
 addLineToWin("progress",3,"Level:","-",10,400,playerStatisticWin)
-addLineToWin("progress",4,"Experience:","-",10,400,playerStatisticWin)
-addLineToWin("progress",5,"Experience the next level:","-",10,400,playerStatisticWin)
-addLineToWin("progress",6,"Maximum killed zombies at a time:","-",10,400,playerStatisticWin)
-addLineToWin("progress",7,"Maximum players killed at one time:","-",10,400,playerStatisticWin)
-addLineToWin("progress",8,"Maximum killed marauders at once:","-",10,400,playerStatisticWin)
-addLineToWin("progress",9,"Maximum lived at one time:","-",10,400,playerStatisticWin)
-addLineToWin("progress",10,"Zombies killed during the entire game.:","-",10,400,playerStatisticWin)
-addLineToWin("progress",11,"Players killed during the entire game.:","-",10,400,playerStatisticWin)
-addLineToWin("progress",12,"Killed marauders for all the time of the game:","-",10,400,playerStatisticWin)
-addLineToWin("progress",13,"Lived throughout the game:","-",10,400,playerStatisticWin)
-addLineToWin("progress",14,"Stormtrooper:","/",10,400,playerStatisticWin)
-addLineToWin("progress",15,"Medic:","/",10,400,playerStatisticWin)
+addLineToWin("progress",4,"Experiência:","-",10,400,playerStatisticWin)
+addLineToWin("progress",5,"XP para o próximo nível:","-",10,400,playerStatisticWin)
+addLineToWin("progress",6,"Máximo de zumbis mortos por vez:","-",10,400,playerStatisticWin)
+addLineToWin("progress",7,"Máximo de jogadores mortos de uma vez:","-",10,400,playerStatisticWin)
+addLineToWin("progress",8,"Máximo de saqueadores mortos de uma vez:","-",10,400,playerStatisticWin)
+addLineToWin("progress",9,"Tempo máximo vivido de uma só vez:","-",10,400,playerStatisticWin)
+addLineToWin("progress",10,"Total de Zumbis mortos.:","-",10,400,playerStatisticWin)
+addLineToWin("progress",11,"Total de Players mortos.:","-",10,400,playerStatisticWin)
+addLineToWin("progress",12,"Total de Bandidos mortos.:","-",10,400,playerStatisticWin)
+addLineToWin("progress",13,"Tempo de vida:","-",10,400,playerStatisticWin)
+addLineToWin("progress",14,"Atirador:","/",10,400,playerStatisticWin)
+addLineToWin("progress",15,"Doutor:","/",10,400,playerStatisticWin)
 addLineToWin("progress",16,"Sniper:","/",10,400,playerStatisticWin)
-addLineToWin("progress",17,"Engineer:","/",10,400,playerStatisticWin)
-addLineToWin("progress",18,"Economist:","/",10,400,playerStatisticWin)
+addLineToWin("progress",17,"Engenheiro:","/",10,400,playerStatisticWin)
+addLineToWin("progress",18,"Economista:","/",10,400,playerStatisticWin)
 addLineToWin("progress",19,"Juggernaut:","/",10,400,playerStatisticWin)
-addLineToWin("progress",20,"Fighter:","/",10,400,playerStatisticWin)
-addLineToWin("progress",21,"Mechanic:","/",10,400,playerStatisticWin)
+addLineToWin("progress",20,"Lutador:","/",10,400,playerStatisticWin)
+addLineToWin("progress",21,"Mecânico:","/",10,400,playerStatisticWin)
 
-addLineToWin("groupInfo",1,"Group name:","-",0,600,tabGroup)
-addLineToWin("groupInfo",2,"Members of the group:","/",0,600,tabGroup)
-addLineToWin("groupInfo",3,"Group Creation Date:","0.0.0",0,600,tabGroup)
-addLineToWin("groupInfo",4,"Уровень группы:","-",0,600,tabGroup)
-
-
+addLineToWin("groupInfo",1,"Nome do grupo:","-",0,600,tabGroup)
+addLineToWin("groupInfo",2,"Membros do grupo:","/",0,600,tabGroup)
+addLineToWin("groupInfo",3,"Data de Criação do Grupo:","0.0.0",0,600,tabGroup)
+addLineToWin("groupInfo",4,"Nível de grupo:","-",0,600,tabGroup)
 
 
-getGroupInfoWin = guiCreateWindow(0, 0, 600, 620, "Group Information:", false) 
+
+
+getGroupInfoWin = guiCreateWindow(0, 0, 600, 620, "Informação do Grupo:", false) 
 guiWindowSetSizable ( getGroupInfoWin, false )
 guiSetVisible(getGroupInfoWin,false)
 
-addLineToWin("groupInfo2",1,"Group Information...:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",2,"Members of the group:","/",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",3,"Group Creation Date:","0.0.0",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",4,"Group level:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",5,"Experience:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",6,"Experience the next level:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",7,"Free skill points:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",8,"Skill points spent:","-",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",9,"Useful links:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",10,"Light armor transport:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",11,"Group extension:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",12,"Combat training:","-/10",5,600,getGroupInfoWin)
-addLineToWin("groupInfo2",13,"Traces of hacking:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",1,"Informação do Grupo...:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",2,"Membros do grupo:","/",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",3,"Data de Criação do Grupo:","0.0.0",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",4,"Nível de grupo:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",5,"Experiência:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",6,"Experiência para o próximo nível:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",7,"Pontos de habilidade grátis:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",8,"Pontos de habilidade gastos:","-",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",9,"Links Úteis:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",10,"Transporte de armadura leve:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",11,"Tamanho de grupo:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",12,"Treino de combate:","-/10",5,600,getGroupInfoWin)
+addLineToWin("groupInfo2",13,"Traços de hackeamento:","-/10",5,600,getGroupInfoWin)
 
 
-local closePlayerStatisticWin =	guiCreateButton ( 20, 500-45 , 360, 30, "Close", false, playerStatisticWin )
+local closePlayerStatisticWin =	guiCreateButton ( 20, 500-45 , 360, 30, "Fechar", false, playerStatisticWin )
 
 
-local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Group Information", false, tabGroups )
+local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Informação do Grupo", false, tabGroups )
 	guiSetEnabled ( getGroupInfo, false )
 	
 
@@ -165,13 +165,13 @@ local getGroupInfo =	guiCreateButton ( 10, 470, 560, 30, "Group Information", fa
 	local columnGroupMembersProfitInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Benefit (experience)", 0.2 )
 	local columnGroupMembersRoleInfo = guiGridListAddColumn( groupListGroupMembersInfo, "Rank", 0.25 )
 	
-local groupMemberStatistic = 	guiCreateButton ( 20, 540, 560, 30, "Player Statistics", false, getGroupInfoWin )
+local groupMemberStatistic = 	guiCreateButton ( 20, 540, 560, 30, "Estatísticas do jogador", false, getGroupInfoWin )
 guiSetEnabled ( groupMemberStatistic, false )
-local closegetGroupInfoWin =	guiCreateButton ( 20, 580, 560, 30, "Close", false, getGroupInfoWin )
+local closegetGroupInfoWin =	guiCreateButton ( 20, 580, 560, 30, "Fechar", false, getGroupInfoWin )
 guiSetEnabled ( getGroupInfo, true )
 
 addEventHandler ( "onClientGUIClick", closePlayerStatisticWin, function()
- guiSetText(playerStatisticWin,"Статистика игрOKа")
+ guiSetText(playerStatisticWin,"Estatísticas do jogo OK")
 guiSetVisible(playerStatisticWin,false)
 guiSetEnabled ( groupMemberStatistic, true )
 guiMoveToBack( groupWindows )
@@ -188,7 +188,7 @@ addEventHandler ( "onClientGUIClick", groupMemberStatistic, function()
  local row, col = guiGridListGetSelectedItem( groupListGroupMembersInfo )
   local stm = guiGridListGetItemText(groupListGroupMembersInfo,row, col)
   if stm~="" and stm~=nil then
-  guiSetText(playerStatisticWin,"Player Statistics:"..stm)
+  guiSetText(playerStatisticWin,"Estatísticas do jogador:"..stm)
   guiSetEnabled ( groupMemberStatistic, false )
   local player = getPlayerFromName(stm)
   if player then
@@ -207,7 +207,7 @@ centerWindow (getGroupInfoWin)
 addEventHandler ( "onClientGUIClick", getGroupInfo, function()
  local row, col = guiGridListGetSelectedItem( groupList )
   local stm = guiGridListGetItemText(groupList,row, col)
-  guiSetText(getGroupInfoWin,"Group Information:"..stm)
+  guiSetText(getGroupInfoWin,"Informação do Grupo:"..stm)
 triggerServerEvent("getGroupInfo", getLocalPlayer(), tostring(stm),getLocalPlayer(),2) 
 guiSetVisible(getGroupInfoWin,true)
 guiSetEnabled ( getGroupInfo, false )
@@ -237,12 +237,12 @@ end, false )
 if stm == "" or stm == false then
 stm =""
 guiSetEnabled ( groupMemberStatistic, false )
-guiSetText(groupMemberStatistic,"Player Statistics"..stm)
+guiSetText(groupMemberStatistic,"Estatísticas do jogador"..stm)
 else
 stm = ":"..stm
 guiSetEnabled ( groupMemberStatistic, true )
 end
- guiSetText(groupMemberStatistic,"Player Statistics"..stm)
+ guiSetText(groupMemberStatistic,"Estatísticas do jogador"..stm)
   end, false )
 
   
@@ -336,8 +336,8 @@ addEventHandler("loadGroupInfo2", getLocalPlayer(), loadGroupInfo2)
 
 function roundTime(value)
 	if value then
-local hours = math.floor(value/60) -- Получаем количество полных часов
-local minutes = value - (hours*60) -- Получаем оставшиеся минуты	
+local hours = math.floor(value/60) -- Conseguimos o número de horas completas
+local minutes = value - (hours*60) -- Pegamos os minutos restantes
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end
@@ -444,7 +444,7 @@ local inviteOwner = getElementData(getLocalPlayer(),"groupInviteOwner",false) or
 if inviteOwner and isElement(inviteOwner) then
 triggerServerEvent("invitePlayerCancel", getLocalPlayer(), inviteGroup,inviteOwner) 
 end
-outputChatBox("#FFFFFFInvitation to the group: #FFFF00"..inviteGroup.." #FFFFFFwas rejected",255,255,255,true)
+outputChatBox("#FFFFFFConvite para o grupo: #FFFF00"..inviteGroup.." #FFFFFFfoi rejeitado",255,255,255,true)
 setElementData(getLocalPlayer(),"groupInvite",false)
 setElementData(getLocalPlayer(),"groupInviteOwner",false)
 setElementData(getLocalPlayer(),"groupInviteOwnerSTATUS",false)
@@ -474,16 +474,16 @@ end
 end, false )
 
 function onPlayerInvite(groupOwner,groupName,groupLVL)
-outputChatBox("#FF0000"..getPlayerName(groupOwner).." #FFFFFFinvites you to the group: #FFFF00"..groupName,255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(groupOwner).." #FFFFFFconvidou você para o grupo: #FFFF00"..groupName,255,255,255,true)
 outputChatBox("#FFFFFFPress F1 to respond to the invitation.",255,255,255,true)
-guiSetText(groupInviteText,getPlayerName(groupOwner).."\ninvited you to a group\n"..groupName)
-guiSetText(groupInviteClientINFOGROUP,"Group Information:"..groupName)
+guiSetText(groupInviteText,getPlayerName(groupOwner).."\nconvidou você para um grupo\n"..groupName)
+guiSetText(groupInviteClientINFOGROUP,"Informação do Grupo:"..groupName)
 
 if not inviteTimer then
 inviteTimer= setTimer(function()
 local groupInvite = getElementData(getLocalPlayer(),"groupInvite",false) or false
 if groupInvite then
-outputChatBox("#FFFFFFGroup Information......: #FFFF00"..groupInvite.." #FFFFFFwas rejected automatically by reason: Response time expired",255,255,255,true)
+outputChatBox("#FFFFFFInformação do Grupo......: #FFFF00"..groupInvite.." #FFFFFFfoi rejeitado automaticamente pelo motivo: o tempo de resposta expirou",255,255,255,true)
 
 local inviteOwner = getElementData(getLocalPlayer(),"groupInviteOwner",false) or false
 if inviteOwner and isElement(inviteOwner) then
@@ -510,7 +510,7 @@ addEventHandler("onPlayerInvite", getLocalPlayer(), onPlayerInvite)
 
 
 	
-local newGroupWindows = guiCreateWindow(0, 0, 300, 340, "Group creation", false) 
+local newGroupWindows = guiCreateWindow(0, 0, 300, 340, "Criação de grupo", false) 
 guiWindowSetSizable ( newGroupWindows, false )
 
 local groupsStatus = {
@@ -519,16 +519,16 @@ local groupsStatus = {
 "Friendly"
 }
 
-local helpCreateGroup = guiCreateLabel ( 0, 60, 300, 200, "The group name can consist only of letters.\nEnglish alphabet\nnumbers and symbols _ [ ] { } ( )", false, newGroupWindows )
+local helpCreateGroup = guiCreateLabel ( 0, 60, 300, 200, "O nome do grupo pode consistir apenas em letras.\nEnglish alphabet\nnumbers and symbols _ [ ] { } ( )", false, newGroupWindows )
 guiLabelSetHorizontalAlign ( helpCreateGroup, "center" )
 --guiLabelSetColor (helpCreateGroup, 200, 0, 0 )
 
-local editBoxGroup = guiCreateEdit ( 50, 165, 200, 40, "A new group", false, newGroupWindows )
+local editBoxGroup = guiCreateEdit ( 50, 165, 200, 40, "Um novo grupo", false, newGroupWindows )
 guiEditSetMaxLength ( editBoxGroup,12 )
 
 
-local createGroup = 	guiCreateButton ( 50, 240, 200, 30, "To create a group", false, newGroupWindows )
-local cancelGroup = 	guiCreateButton ( 50, 280, 200, 30, "Cancel", false, newGroupWindows )
+local createGroup = 	guiCreateButton ( 50, 240, 200, 30, "Para criar um grupo", false, newGroupWindows )
+local cancelGroup = 	guiCreateButton ( 50, 280, 200, 30, "Cancelar", false, newGroupWindows )
 guiSetVisible(newGroupWindows,false)
 
 addEventHandler ( "onClientGUIClick", cancelGroup, function() 
@@ -608,7 +608,7 @@ function addSkill(skillName)
 	local groupClicks = getElementData(getLocalPlayer(),"GROUP.CLICKS") or 0
 	
     if groupClicks <=0 then 
-	outputChatBox("Not enough skill points!")
+	outputChatBox("Não há pontos de habilidade suficientes!")
 	return
 	end
 	
@@ -929,15 +929,15 @@ addEventHandler("setSKILLSinfo", getLocalPlayer(), setSKILLSinfo)
 	local columnGroupMembersRoleSettings = guiGridListAddColumn( groupListGroupMembersSettings, "Rank", 0.25 )
 
 
-local setUserStatusGroup = 	guiCreateButton ( 10, 350, 560, 30, "Assign Rank", false, tabGroupSettings )	
-local deleteUserGroup = 	guiCreateButton ( 10, 390, 560, 30, "Expel", false, tabGroupSettings )
-local inviteNewPlayers = 	guiCreateButton ( 10, 430, 560, 30, "Invite new members", false, tabGroupSettings )
-local removeGroup = 	guiCreateButton ( 10, 470, 560, 30, "Delete group", false, tabGroupSettings )
+local setUserStatusGroup = 	guiCreateButton ( 10, 350, 560, 30, "Atribuir Rank", false, tabGroupSettings )	
+local deleteUserGroup = 	guiCreateButton ( 10, 390, 560, 30, "Expulsar", false, tabGroupSettings )
+local inviteNewPlayers = 	guiCreateButton ( 10, 430, 560, 30, "Convidar", false, tabGroupSettings )
+local removeGroup = 	guiCreateButton ( 10, 470, 560, 30, "Excluir grupo", false, tabGroupSettings )
 
-local inviteNewPlayersWin = guiCreateWindow(0, 0, 600, 440, "Invite new members", false) 
-local sendInviteToPlayer = 	guiCreateButton ( 20, 350, 560, 30, "To invite", false, inviteNewPlayersWin )	
+local inviteNewPlayersWin = guiCreateWindow(0, 0, 600, 440, "Convidar", false) 
+local sendInviteToPlayer = 	guiCreateButton ( 20, 350, 560, 30, "Convidar", false, inviteNewPlayersWin )	
  guiSetEnabled ( sendInviteToPlayer, false )
-local closeinviteNewPlayersWin = 	guiCreateButton ( 20, 390, 560, 30, "Close", false, inviteNewPlayersWin )
+local closeinviteNewPlayersWin = 	guiCreateButton ( 20, 390, 560, 30, "Fechar", false, inviteNewPlayersWin )
 centerWindow(inviteNewPlayersWin)
 guiSetVisible(inviteNewPlayersWin,false)
 
@@ -948,8 +948,8 @@ guiSetVisible(inviteNewPlayersWin,false)
 	--Create a players column in the list
 	local inviteNewPlayersColNICK = guiGridListAddColumn( inviteNewPlayersGrid, "Nick", 0.4 )
 	local inviteNewPlayersColLVL = guiGridListAddColumn( inviteNewPlayersGrid, "Level", 0.15 )
-	local inviteNewPlayersColMURDERS = guiGridListAddColumn( inviteNewPlayersGrid, "Looting", 0.2 )
-	local inviteNewPlayersColALIVETIME = guiGridListAddColumn( inviteNewPlayersGrid, "Lived", 0.2 )
+	local inviteNewPlayersColMURDERS = guiGridListAddColumn( inviteNewPlayersGrid, "Kills", 0.2 )
+	local inviteNewPlayersColALIVETIME = guiGridListAddColumn( inviteNewPlayersGrid, "Tempo", 0.2 )
 
 
 	
@@ -981,11 +981,11 @@ addEventHandler ( "onClientGUIClick", inviteNewPlayersGrid, function()
  local row, col = guiGridListGetSelectedItem( inviteNewPlayersGrid )
   local stm = guiGridListGetItemText(inviteNewPlayersGrid,row, col)
   if stm~="" and stm~=nil then
-  guiSetText(sendInviteToPlayer,"To invite:"..stm)
+  guiSetText(sendInviteToPlayer,"Convidar:"..stm)
   guiSetEnabled ( sendInviteToPlayer, true )
   else
   guiSetEnabled ( sendInviteToPlayer, false )
-  guiSetText(sendInviteToPlayer,"To invite")
+  guiSetText(sendInviteToPlayer,"Convidar")
   end
 end, false )
  
@@ -1040,13 +1040,13 @@ local userStatusTable = {
 {"Newbie","BEGGINER"},
 }
 
-local setStatusWin = guiCreateWindow(0, 0, 300, 200, "Assign rank", false) 
+local setStatusWin = guiCreateWindow(0, 0, 300, 200, "Atribuir Rank", false) 
 
 
   
 guiWindowSetSizable ( setStatusWin, false )
 
-local statusText = guiCreateLabel(0, 40, 300, 150,"Choose a rank for a player",false,setStatusWin)
+local statusText = guiCreateLabel(0, 40, 300, 150,"Escolha um Rank para um jogador",false,setStatusWin)
 guiLabelSetHorizontalAlign (statusText,"center")
 
 local userStatus = guiCreateComboBox  (  50, 80, 200, 80, "Player rank", false, setStatusWin )
@@ -1085,7 +1085,7 @@ if status =="OWNER" or status =="MODER"  then
 local newGroupStatus = guiComboBoxGetSelected(userStatus)
 local thisStatus = guiComboBoxGetItemText(userStatus, newGroupStatus)
 if thisStatus ==playerStatusInGroup then
-outputChatBox("This player already has the selected status!")
+outputChatBox("Este jogador já possui o status selecionado!")
 return
 end
 if status =="MODER" then
@@ -1140,7 +1140,7 @@ end
 
 
 
-addEventHandler ( "onClientGUIClick", removeGroup, function() IFWindow("Delete group","Do you really want\n delete group?","removeGroupFunc") end, false )
+addEventHandler ( "onClientGUIClick", removeGroup, function() IFWindow("Excluir grupo","Você realmente quer\n deletar esse grupo?","removeGroupFunc") end, false )
 
 
 
@@ -1166,7 +1166,7 @@ end
 addEventHandler ( "onClientGUIClick", deleteUserGroup, function() 
   local row, col = guiGridListGetSelectedItem( groupListGroupMembersSettings )
   local stm = guiGridListGetItemText(groupListGroupMembersSettings,row, col)
-IFWindow("Delete group","Do you really want\n drive out"..stm.." from the group?","deleteUserGroupFunc")
+IFWindow("Excluir grupo","Você realmente quer\n expulsar "..stm.." do grupo?","deleteUserGroupFunc")
 
  end, false )
 
@@ -1183,20 +1183,20 @@ local newGroupName = guiGetText(editBoxGroup)
 if string.len (newGroupName) >4  then
 
 else
-outputChatBox("The name of the new group must be longer than 4 characters.")
+outputChatBox("O nome do novo grupo deve ter mais de 4 caracteres.")
 return
 end
 
 
 if not string.find(newGroupName," ") then
 else
-outputChatBox("The name of the new group should not contain spaces.")
+outputChatBox("O nome do novo grupo não deve conter espaços.")
 return
 end
 
 local newOwnerInGroup =  getElementData(localPlayer,"group") or false
 if newOwnerInGroup then
-outputChatBox("You cannot create a new group as you are already in another group: "..newOwnerInGroup)
+outputChatBox("Você não pode criar um novo grupo porque já está em outro grupo: "..newOwnerInGroup)
 return
 end
 
@@ -1260,13 +1260,13 @@ local playerInGroup =  getElementData(localPlayer,"group") or false
 if playerInGroup then
 triggerServerEvent("leavleGroup", getLocalPlayer(), getLocalPlayer(), playerInGroup)
 else
-outputChatBox("ERROR: Exit from group is not possible")
+outputChatBox("ERRO: Não é possível sair do grupo")
 end
  
 --triggerServerEvent("getGroupInfo", getLocalPlayer(), tostring(playerInGroup),getLocalPlayer(),1)
   
 end
-addEventHandler ( "onClientGUIClick", leavleGroup, function() IFWindow("Leave the group","Do you really want\n leave the group?","leavleGroupFunc") end, false )
+addEventHandler ( "onClientGUIClick", leavleGroup, function() IFWindow("Sair do grupo","Você realmente quer\n sair do grupo?","leavleGroupFunc") end, false )
 
 
 
@@ -1445,9 +1445,9 @@ end
 	
 
 guiSetEnabled ( deleteUserGroup, false )
-	guiSetText(deleteUserGroup,"Expel")
+	guiSetText(deleteUserGroup,"Expulsar")
 	guiSetEnabled ( setUserStatusGroup, false )
-	guiSetText(setUserStatusGroup,"Assign rank")	
+	guiSetText(setUserStatusGroup,"Definir rank")	
 
 end
 
@@ -1475,7 +1475,7 @@ local tabText = guiGetText(selectedTab)
 		setTimer(function() getGroupTimerTab = false end,15000,1)
 		end
 guiSetEnabled ( getGroupInfo, false )
-guiSetText(getGroupInfo,"Group Information")
+guiSetText(getGroupInfo,"Informação do Grupo")
 	elseif selectedTab == tabGroup then
 	
 	guiSetEnabled ( groupUserInformation, false )
@@ -1547,7 +1547,7 @@ else
 stm = ":"..stm
 guiSetEnabled ( getGroupInfo, true )
 end
- guiSetText(getGroupInfo,"Group Information"..stm)
+ guiSetText(getGroupInfo,"Informação do Grupo"..stm)
   end, false )
  
  
@@ -1569,7 +1569,7 @@ else
 stm = ":"..stm
 guiSetEnabled ( groupUserInformation, true )
 end
- guiSetText(groupUserInformation,"Player Statistics"..stm)
+ guiSetText(groupUserInformation,"Estatísticas do jogador"..stm)
   end, false )
  
  
@@ -1607,7 +1607,7 @@ end
 
 else
 guiSetEnabled ( deleteUserGroup, false )
-guiSetText(deleteUserGroup,"Expel")
+guiSetText(deleteUserGroup,"Expulsar")
 guiSetEnabled ( setUserStatusGroup, false )
 guiSetText(setUserStatusGroup,"Assign rank")
 
@@ -1615,7 +1615,7 @@ end
 end
 
 if getPlayerName(getLocalPlayer()) ~= playerName   then
-	guiSetText(deleteUserGroup,"Expel"..stm)
+	guiSetText(deleteUserGroup,"Expulsar"..stm)
 	guiSetText(setUserStatusGroup,"Assign rank"..stm)
 if playergroupStatus =="MODER" and stm2=="Deputy" or  stm2=="Founder" then
 	guiSetText(deleteUserGroup,"Expel")
@@ -1643,7 +1643,7 @@ return
 end
 	
 guiSetEnabled ( getGroupInfo, false )
-guiSetText(getGroupInfo,"Group Information")
+guiSetText(getGroupInfo,"Informação do Grupo")
 
 
 
@@ -1660,10 +1660,10 @@ guiSetText(getGroupInfo,"Group Information")
   guiSetEnabled ( inviteNewPlayers, true )
 
  guiSetEnabled ( tabGroupSettings, true )
- -- guiSetText(tabGroupSettings,"Настройки:"..playergroup)
+ -- guiSetText(tabGroupSettings,"Definições:"..playergroup)
   else
    guiSetEnabled ( tabGroupSettings, false )
-  --guiSetText(tabGroupSettings,"Настройки:"..playergroup)
+  --guiSetText(tabGroupSettings,"Definições:"..playergroup)
 end
 if playergroupStatus =="OWNER" then
 guiSetEnabled ( removeGroup, true )

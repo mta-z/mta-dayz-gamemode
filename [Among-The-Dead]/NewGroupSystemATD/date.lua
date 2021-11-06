@@ -32,7 +32,7 @@
     end
 end
 
-local gWeekDays = { "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" }
+local gWeekDays = { "Domingo", "Segunda-feira", "terça", "quarta-feira", "quinta-feira", "sexta-feira", "sábado" }
 function FormatDate(format, escaper, timestamp)
 	Check("FormatDate", "string", format, "format", {"nil","string"}, escaper, "escaper", {"nil","string"}, timestamp, "timestamp")
  

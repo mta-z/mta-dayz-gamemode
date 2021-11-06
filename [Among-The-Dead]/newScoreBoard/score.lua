@@ -81,8 +81,8 @@ end
 
 function roundTime(value)
 	if value then
-local hours = math.floor(value/60) -- Получаем количество полных часов
-local minutes = value - (hours*60) -- Получаем оставшиеся минуты	
+local hours = math.floor(value/60) -- Conseguimos o número de horas completas
+local minutes = value - (hours*60) -- Pegamos os minutos restantes
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end
@@ -129,62 +129,63 @@ local startPosX =screenHeight/2-height/2
 
 dxDrawImage ( startPos, startPosX-30, width, headerHeight, "headerScore.png")
 height=headerHeight
-local players = "ИгрOKов: "..#getElementsByType("player").." / 50"
+local players = "Players : "..#getElementsByType("player").." / 50"
 local playersW = dxGetTextWidth(players,1,"default-bold")
 dxDrawText (players, (startPos+width)-playersW-20, startPosX-22, width, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 
-local serverName = getElementData(getRootElement(),"serverName") or "Among The Dead"
+--local serverName = getElementData(getRootElement(),"serverName") or " EpochZ - epochz.com.br "
+local serverName = "                                                                                           EpochZ - epochz.com.br "
 dxDrawText (serverName, startPos+20, startPosX-22, width, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 
 
-dxDrawRectangle ( startPos, startPosX, width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- верхняя линия шапки
-dxDrawRectangle ( startPos, startPosX+headerHeight-30, width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- нижняя линия шапки
+dxDrawRectangle ( startPos, startPosX, width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- linha superior da tampa
+dxDrawRectangle ( startPos, startPosX+headerHeight-30, width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- linha inferior da tampa
 
-dxDrawRectangle ( startPos, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
+dxDrawRectangle ( startPos, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- Linha lateral esquerda
 
-dxDrawRectangle ( startPos+width, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая правая линия
+dxDrawRectangle ( startPos+width, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- linha lateral direita
 
-dxDrawRectangle ( startPos, (startPosX+headerHeight-30)+(oneBlockHeight*playesLines), width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- нижняя закрывающая линия
+dxDrawRectangle ( startPos, (startPosX+headerHeight-30)+(oneBlockHeight*playesLines), width, lineHeight, tocolor ( 255, 255,255, LineTransporent ) ) -- linha de fechamento inferior
 
  width = 0
 local textWidth = dxGetTextWidth("№",1,"default-bold")
 dxDrawText ("№", startPos+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
-dxDrawRectangle ( startPos+textWidth+20, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
+dxDrawRectangle ( startPos+textWidth+20, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- Linha lateral esquerda
 width=textWidth+20
 oneColum = textWidth+20
 
-local textWidth = dxGetTextWidth("Ник",1,"default-bold")
-dxDrawText ("Ник", startPos+width+80, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Player",1,"default-bold")
+dxDrawText ("Player", startPos+width+80, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+160, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+160
  twoColum = textWidth+160
 
-local textWidth = dxGetTextWidth("Мародёрства",1,"default-bold")
-dxDrawText ("Мародёрства", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Kills",1,"default-bold")
+dxDrawText ("Kills", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+20, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+20
  threeColum =textWidth+20
 
-local textWidth = dxGetTextWidth("Убито зомби",1,"default-bold")
-dxDrawText ("Убито зомби", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Zumbis Morto",1,"default-bold")
+dxDrawText ("Zumbis Mortos", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+20, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+20
  fourColum = textWidth+20
 
-local textWidth = dxGetTextWidth("Прожито",1,"default-bold")
-dxDrawText ("Прожито", startPos+width+30, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Tempo Vivo",1,"default-bold")
+dxDrawText ("Tempo Vivo", startPos+width+30, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+60, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+60
  fiveColum = textWidth+60
 
-local textWidth = dxGetTextWidth("Группа",1,"default-bold")
-dxDrawText ("Группа", startPos+width+40, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Grupo",1,"default-bold")
+dxDrawText ("Grupo", startPos+width+40, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+80, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+80
  sixColum = textWidth+80
 
-local textWidth = dxGetTextWidth("Уровень",1,"default-bold")
-dxDrawText ("Уровень", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
+local textWidth = dxGetTextWidth("Nível",1,"default-bold")
+dxDrawText ("Nível", startPos+width+10, startPosX+10, 100, headerHeight, tocolor ( 200, 200, 200, 255 ), 1, "default-bold" )
 dxDrawRectangle ( startPos+width+textWidth+20, startPosX, lineHeight, (headerHeight-30)+(oneBlockHeight*playesLines), tocolor ( 255, 255,255, LineTransporent ) ) -- бOKовая левая линия
 width=width+textWidth+20
  sevenColum = textWidth+20
@@ -274,9 +275,9 @@ end
 	dxDrawText (alivetimeText, (startPos+oneColum+twoColum+threeColum+fourColum)+(fiveColum/2)-(textWidth/2), (startPosX+headerHeight-30)+(oneBlockHeight*i)-oneBlockHeight+10, 1, 1, tocolor ( 200, 200, 200, 255 ), 1, "default-bold-small" )
 	
 	r,g,b = 200, 200, 200
-	local gangName = getElementData(player,"group") or "Без группы"
-	if not gangName or gangName=="Без группы" then
-	gangName="Без группы"
+	local gangName = getElementData(player,"group") or "Sem grupo"
+	if not gangName or gangName=="Sem grupo" then
+	gangName="Sem grupo"
 	r,g,b = 0, 200, 0 
 	end
 	if gangName  then

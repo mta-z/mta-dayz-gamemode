@@ -113,7 +113,7 @@ triggerClientEvent(source, "refreshPlayersOnInviteList", source)
 end
 end
 else
-outputChatBox("Вы не являетесь участником, владельцем или заместителем группы "..groupName,source)
+outputChatBox("Você não é membro, proprietário ou suplente de um grupo "..groupName,source)
 end
 end
 
@@ -125,7 +125,7 @@ function invitePlayerCancel(groupName,owner)
 if owner and isElement(owner) then
 local groupOwner = getElementData(owner,"group",false) or false
 if groupOwner  and groupOwner == groupName then
-outputChatBox("#FF0000"..getPlayerName(source).." #FFFFFFотклонил ваше приглашение в группу: #FFFF00"..groupName,owner,255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(source).." #FFFFFFrecusou seu convite para o grupo: #FFFF00"..groupName,owner,255,255,255,true)
 end
 end
 end
@@ -191,7 +191,7 @@ if not owner then return end
 
 for i,group in pairs(getGroups()) do 
 if group.groupName == groupName then
-outputChatBox("Группа с таким названием уже существует!",owner)
+outputChatBox("Já existe um grupo com o mesmo nome!",owner)
 return
 end
 end
@@ -208,7 +208,7 @@ executeSQLQuery("INSERT INTO `group_users`(`groupName`,`userProfit`,`userLvl`,us
 
 
 
-outputChatBox("#FF0000"..getPlayerName(owner).." #FFFFFFосновал новую группу: #FFFF00"..groupName,getRootElement(),255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(owner).." #FFFFFFfundou um novo grupo: #FFFF00"..groupName,getRootElement(),255,255,255,true)
 setElementData(owner,"group",tostring(groupName))
 setElementData(owner,"groupUserStatus","OWNER")
 setElementData(owner,"groupProfit",0)
@@ -397,7 +397,7 @@ executeSQLQuery("UPDATE `groups` SET `groupMembers`=? WHERE `groupName`=?", tonu
 local delte = executeSQLQuery("DELETE FROM `group_users` WHERE `userAccount`=? AND `groupName`=? ",tostring(playerAccountName),tostring(groupName) )
 
 
-outputChatBox("#FF0000"..getPlayerName(player).." #FFFFFFвышел из группы: #FFFF00"..groupName,getRootElement(),255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(player).." #FFFFFFdeixou o grupo: #FFFF00"..groupName,getRootElement(),255,255,255,true)
 setElementData(player,"group",false)
 setElementData(player,"groupUserStatus",false)
 setElementData(player,"groupProfit",false)
@@ -430,7 +430,7 @@ setElementData(playerData.player,"group",false)
 setElementData(playerData.player,"groupUserStatus",false)
 setElementData(playerData.player,"groupProfit",0)
 if playerData.player ~= owner then
-outputChatBox("Вы были исключены из группы #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCОснователь удалил группу ",playerData.player,255,255,255,true)
+outputChatBox("Você foi excluído do grupo #FFFF00"..tostring(groupName).." #FFFFFFsobre o motivo: #DCDCDCОo fundador deletou o grupo ",playerData.player,255,255,255,true)
 triggerClientEvent(playerData.player, "groupRemoved", playerData.player)
 end
 else
@@ -438,7 +438,7 @@ local accountPlayer  = getAccount ( tostring(playerData.userAccount) )
 if accountPlayer then
 setAccountData ( accountPlayer, "group", nil )
 setAccountData ( accountPlayer, "groupUserStatus", nil )
-setAccountData ( accountPlayer, "groupMessage", "Вы были исключены из группы #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCОснователь удалил группу" )
+setAccountData ( accountPlayer, "groupMessage", "Você foi excluído do grupo #FFFF00"..tostring(groupName).." #FFFFFFпsobre o motivo: #DCDCDCОo fundador deletou o grupo" )
 end
 end
 
@@ -449,7 +449,7 @@ executeSQLQuery("DELETE FROM `groups` WHERE `groupName`=? ",tostring(groupName) 
 --executeSQLQuery("DELETE FROM `groups_skills` WHERE `groupName`=? ",tostring(groupName) )
 
 
-outputChatBox("#FF0000"..getPlayerName(owner).." #FFFFFFудалил группу: #FFFF00"..groupName,getRootElement(),255,255,255,true)
+outputChatBox("#FF0000"..getPlayerName(owner).." #FFFFFFexcluiu o grupo: #FFFF00"..groupName,getRootElement(),255,255,255,true)
 setElementData(owner,"group",false)
 setElementData(owner,"groupUserStatus",false)
 setElementData(owner,"groupProfit",0)
@@ -483,18 +483,18 @@ local playerGroup = getElementData(player,"group",false) or false
 
 if playerGroup then
 if playerGroup~=group then
-outputChatBox("Этого игрOKа нет в вашей группе!",owner)
+outputChatBox("Este jogo OK não está em seu grupo!",owner)
 getGroupInfoSettings(group,owner)
 return
 end
 else
-outputChatBox("Этого игрOKа нет в вашей группе!",owner)
+outputChatBox("Este jogo OK não está em seu grupo!",owner)
 getGroupInfoSettings(group,owner)
 return
 end
 executeSQLQuery("UPDATE `group_users` SET `userRole`=? WHERE `groupName`=? AND  `userAccount`=?",tostring(newRole), tostring(group) , tostring(userAcc) )
-outputChatBox("Вы назначили игрOKу #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
-outputChatBox("В группе #FFFF00"..group.." #FFFFFFвам был назначил новый ранг: #0000FF"..tostring(newRole),player,255,255,255,true)
+outputChatBox("Você atribuiu um jogador #FF0000"..nick.." #FFFFFF Para Rank: #0000FF"..newRole,owner,255,255,255,true)
+outputChatBox("No grupo #FFFF00"..group.." #FFFFFFvocê foi atribuído a um novo Rank: #0000FF"..tostring(newRole),player,255,255,255,true)
 setElementData(player,"groupUserStatus",userStatusTable[tonumber(role+1)][2])
 getGroupInfoSettings(group,owner)
 
@@ -506,17 +506,17 @@ if playerAccount then
 executeSQLQuery("UPDATE `group_users` SET `userRole`=? WHERE `groupName`=? AND  `userAccount`=?",tostring(newRole), tostring(group) , tostring(userAcc) )
 
 setAccountData(playerAccount,"groupUserStatus",userStatusTable[tonumber(role+1)][2])
-setAccountData ( playerAccount, "groupMessage", "В группе #FFFF00"..group.." #FFFFFFвам был назначил новый ранг: #0000FF"..tostring(newRole) )
+setAccountData ( playerAccount, "groupMessage", "No grupo #FFFF00"..group.." #FFFFFFvocê foi atribuído a um novo Rank : #0000FF"..tostring(newRole) )
 
-outputChatBox("Вы назначили игрOKу #FF0000"..nick.." #FFFFFFновый ранг: #0000FF"..newRole,owner,255,255,255,true)
+outputChatBox("Você atribuiu um jogador #FF0000"..nick.." #FFFFFF para o Rank: #0000FF"..newRole,owner,255,255,255,true)
 getGroupInfoSettings(group,owner)
 end
 end
 else
-outputChatBox("Аккаунт не найден",owner)
+outputChatBox("Conta não encontrada",owner)
 end
 else
-outputChatBox("Выберите новый ранг!",owner)
+outputChatBox("Escolha um novo Rank!",owner)
 end
 
 
@@ -552,26 +552,26 @@ function removePlayerOnGroup(owner,playerAccountName,selectedNick,groupName)
 						clearSKILLToPlayer(player,false)
 						setInvited(false,groupName)
 						local ownerNick = getPlayerName(owner)
-						outputChatBox("#FF0000"..ownerNick.." #FFFFFFвыгнал #FF0000"..getPlayerName(player).." #FFFFFFиз группы #FFFF00"..groupName,getRootElement(),255,255,255,true)
+						outputChatBox("#FF0000"..ownerNick.." #FFFFFFexpulsou #FF0000"..getPlayerName(player).." #FFFFFFdo grupo #FFFF00"..groupName,getRootElement(),255,255,255,true)
 						getGroupInfoSettings(groupName,owner)
 						triggerClientEvent(player, "groupRemoved", player)
 
 					else
-						outputChatBox("Вы не являетесь основателем или заместителем этой группы!",owner)
+						outputChatBox("Você não é o fundador ou representante deste grupo!",owner)
 						return
 
 					end
 					
 				else
 				
-					outputChatBox("Этот игрOK в другой группе!",owner)
+					outputChatBox("Este jogador está em outro grupo!",owner)
 					return
 					
 				end
 
 
 			else
-				outputChatBox("Этого игрOKа нет в вашей группе!",owner)
+				outputChatBox("Este jogador não está em seu grupo.!",owner)
 				return
 			end
 
@@ -592,17 +592,17 @@ function removePlayerOnGroup(owner,playerAccountName,selectedNick,groupName)
 					setAccountData ( playerAccount, "group", nil )
 					setAccountData ( playerAccount, "groupUserStatus", nil )
 					local ownerNick = getPlayerName(owner)
-					setAccountData ( playerAccount, "groupMessage", "#FF0000"..ownerNick.." #FFFFFFвыгнал вас из группы #FFFF00"..tostring(groupName) )
+					setAccountData ( playerAccount, "groupMessage", "#FF0000"..ownerNick.." #FFFFFFexpulsou você do grupo #FFFF00"..tostring(groupName) )
 					setInvited(false,groupName)
 	
-					outputChatBox("#FF0000"..ownerNick.." #FFFFFFвыгнал #FF0000"..selectedNick.."#FFFFFF из группы #FFFF00"..groupName,getRootElement(),255,255,255,true)
+					outputChatBox("#FF0000"..ownerNick.." #FFFFFFexpulso #FF0000"..selectedNick.."#FFFFFF do grupo #FFFF00"..groupName,getRootElement(),255,255,255,true)
 					getGroupInfoSettings(groupName,owner)
 				end
 			end
 
 		end
 	else
-		outputChatBox("Аккаунт не найден",owner)
+		outputChatBox("Conta não encontrada",owner)
 		return
 	end
 
