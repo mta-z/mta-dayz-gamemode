@@ -37,13 +37,13 @@ function loadSettings()
         local nodeValue = xmlNodeGetValue(node)  
 		
 		if nodeName == "radarSize" then
-		exports.ATD_RADARMAP:radarSiz(tonumber(nodeValue))
+		exports.epz_gps:radarSiz(tonumber(nodeValue))
 		
 		elseif nodeName == "iconsSize" then
-		exports.DayZ:setIconsSize(tostring(nodeValue))		
+		exports.EpochZ:setIconsSize(tostring(nodeValue))		
 		
 		elseif nodeName == "invSize" then
-		exports.DayZ:setInvSize(tonumber(nodeValue))
+		exports.EpochZ:setInvSize(tonumber(nodeValue))
 		
 		--elseif nodeName == "worldTextureQ" then
 		--exports.WS:setTextureQ(tonumber(nodeValue))

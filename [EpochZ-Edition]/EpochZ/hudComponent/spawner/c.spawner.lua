@@ -31,7 +31,7 @@ guiSetAlpha ( LSpoint, 0.5 )
  
  addEventHandler( "onClientGUIClick", LSpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),1,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),1,false)
  end,false)
  
 ----- LS POINT -----
@@ -55,7 +55,7 @@ guiSetAlpha ( LStpoint, 0.5 )
 
 addEventHandler( "onClientGUIClick", LStpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),2,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),2,false)
  end,false)
  -------LS T POINT ------
  
@@ -83,7 +83,7 @@ guiSetAlpha ( SFpoint, 0.5 )
  
 addEventHandler( "onClientGUIClick", SFpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),5,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),5,false)
  end,false)
   -------SF POINT ------
   
@@ -106,7 +106,7 @@ guiSetAlpha ( SFtpoint, 0.5 )
  
 addEventHandler( "onClientGUIClick", SFtpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),6,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),6,false)
  end,false)
   -------SF T POINT ------
 
@@ -133,7 +133,7 @@ guiSetAlpha ( LVpoint, 0.5 )
  
 addEventHandler( "onClientGUIClick", LVpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),3,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),3,false)
  end,false)
   -------LV POINT ------
 
@@ -155,7 +155,7 @@ guiSetAlpha ( LVtpoint, 0.5 )
 
 addEventHandler( "onClientGUIClick", LVtpoint, function() 
 hideSpawner()
-triggerServerEvent("spawnATDPlayer",getLocalPlayer(),getLocalPlayer(),4,false)
+triggerServerEvent("spawnEpochZPlayer",getLocalPlayer(),getLocalPlayer(),4,false)
  end,false)
   -------LV T POINT ------
 

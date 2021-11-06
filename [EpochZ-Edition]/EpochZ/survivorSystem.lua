@@ -1,4 +1,22 @@
-﻿
+﻿function loadAddons( res )
+for resourceKey, resourceValue in ipairs(getResources()) do
+local name = getResourceName(resourceValue)
+if string.find(name,"epz_") then
+	setTimer(startResource,2000,1,resourceValue)
+end
+end
+end
+addEventHandler ( "onResourceStart", getResourceRootElement(getThisResource()), loadAddons )
+
+function unloadAddons ( res )
+for resourceKey, resourceValue in ipairs(getResources()) do
+local name = getResourceName(resourceValue)
+if string.find(name,"epz_") then
+	stopResource(resourceValue)
+end
+end
+end
+addEventHandler ( "onResourceStop", getResourceRootElement(getThisResource()), unloadAddons )
 
 local elementWeaponBack = {}
 local elementWeapon ={}
@@ -1152,7 +1170,7 @@ function removeTent (object,name)
 	
 	local counter = getElementData(getElementData(object,"parent"),"counterT")
 	if counter then 
-	tentData = getAccount("ATDtent_number_"..counter,"hgij2o3hg23")
+	tentData = getAccount("EpochZtent_number_"..counter,"hgij2o3hg23")
 	if tentData then
 	setAccountData(tentData,"removed",true)
 	removeAccount(tentData)
@@ -1175,7 +1193,7 @@ if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 
 	local counter = getElementData(getElementData(object,"parent"),"counterT")
 	if counter then 
-	tentData = getAccount("ATDtent_number_"..counter,"hgij2o3hg23")
+	tentData = getAccount("EpochZtent_number_"..counter,"hgij2o3hg23")
 	if tentData then
 	setAccountData(tentData,"removed",true)
 	removeAccount(tentData)

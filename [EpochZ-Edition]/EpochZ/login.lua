@@ -267,15 +267,15 @@ function createVehicleOnServerStart()
 
 setElementData(getRootElement(),"serverName",getServerName ())
 
-	local vehicleManager = getAccount("vehicleManagerATD","23g2g23g23g23g")
+	local vehicleManager = getAccount("vehicleManagerEpochZ","23g2g23g23g23g")
 	if not vehicleManager then 
-	vehicleManager = addAccount("vehicleManagerATD","23g2g23g23g23g")
+	vehicleManager = addAccount("vehicleManagerEpochZ","23g2g23g23g23g")
 	end
 	
 	
 	for i = 1, (getAccountData(vehicleManager,"vehicleamount") or 0) do
 		wastedVehicle = false
-		vehicle = getAccount("ATDvehicle_number_"..i,"23g2g23g23g23g")
+		vehicle = getAccount("EpochZvehicle_number_"..i,"23g2g23g23g23g")
 		if not vehicle then break end
 		if getAccountData(vehicle,"isExploded") == true then
 			setAccountData(vehicle,"health",1000)
@@ -379,7 +379,7 @@ setElementData(getRootElement(),"serverName",getServerName ())
 	
 	
 	for i = 1, (getAccountData(vehicleManager,"tentamount") or 0) do
-		tentData = getAccount("ATDtent_number_"..i,"ATDtntNmb$Uhjm")
+		tentData = getAccount("EpochZtent_number_"..i,"EpochZtntNmb$Uhjm")
 		--if not tentData then break end
 		if tentData and not getAccountData(tentData,"removed") then 
 		
@@ -459,7 +459,7 @@ if seat == 0 then
 
 counter  = getElementData(source,"counterV") 
 if not counter then return end	
-account = getAccount("ATDvehicle_number_"..counter,"A23g2g23g23g23g") or false
+account = getAccount("EpochZvehicle_number_"..counter,"A23g2g23g23g23g") or false
 		if not account then return end	
 		setElementData(source,"counterV",counter,false) 
 		local col = getElementData(source,"parent")
@@ -548,9 +548,9 @@ addEventHandler ( "saveVehOnExit", getRootElement(), saveVehOnExit )
 
 function saveOneVeh (veh,counter)
 
-	account = getAccount("ATDvehicle_number_"..counter,"23g2g23g23g23g") or false
+	account = getAccount("EpochZvehicle_number_"..counter,"23g2g23g23g23g") or false
 	if not account then
-		account = addAccount("ATDvehicle_number_"..counter,"23g2g23g23g23g")
+		account = addAccount("EpochZvehicle_number_"..counter,"23g2g23g23g23g")
 	end	
 		
 	local col = getElementData(veh,"parent")
@@ -602,7 +602,7 @@ function saveOneVeh (veh,counter)
 		
 		outputChatBox("Salvo :"..counter)
 		
-		local vehicleManager = getAccount("vehicleManagerATD","ATDVhMngrUJ$GH")		
+		local vehicleManager = getAccount("vehicleManagerEpochZ","EpochZVhMngrUJ$GH")		
 		setAccountData(vehicleManager,"vehicleamount",counter)
 		
 	end
@@ -618,13 +618,13 @@ addEventHandler ( "SaveVeh", getRootElement(), saveOneVeh )
 function saveTentOnClose (col,counterTent)
 
 
-	vehicleManager = getAccount("vehicleManagerATD","ATDVhMngrUJ$GH")		
+	vehicleManager = getAccount("vehicleManagerEpochZ","EpochZVhMngrUJ$GH")		
 	tentAmount =  getAccountData(vehicleManager,"tentamount") or 0
 
-	account = getAccount("ATDtent_number_"..counterTent,"ATDtntNmb$Uhjm") or false
+	account = getAccount("EpochZtent_number_"..counterTent,"EpochZtntNmb$Uhjm") or false
 	if not account then
 			
-		account = addAccount("ATDtent_number_"..tostring(tentAmount+1),"ATDtntNmb$Uhjm")
+		account = addAccount("EpochZtent_number_"..tostring(tentAmount+1),"EpochZtntNmb$Uhjm")
 		setElementData(col,"counterT",tentAmount+1) --client
 				
 		setAccountData(vehicleManager,"tentamount",tentAmount+1)
@@ -724,7 +724,7 @@ function saveVehsOnDetatch(veh)
 		
 		local col = getElementData(veh,"parent")
 	if  not getElementData(col,"NOCARSPAWN") then
-		account = getAccount("ATDvehicle_number_"..counter,"23g2g23g23g23g") or false
+		account = getAccount("EpochZvehicle_number_"..counter,"23g2g23g23g23g") or false
 		if not account then return end	
 		setElementData(veh,"counterV",counter,false) 
 		setAccountData(account,"spawn_x",getElementData(col,"spawn")[2])

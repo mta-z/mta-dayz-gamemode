@@ -21,7 +21,7 @@ local pageLoaded = false
 
 	addEventHandler("onClientBrowserCreated", theBrowser, 
 	function()
-		loadBrowserURL(theBrowser, "http://mta/loginATD/CEF/login.html")
+		loadBrowserURL(theBrowser, "http://mta/epz_login/CEF/login.html")
 		--setBrowserRenderingPaused ( theBrowser, true )
 		--toggleBrowserDevTools ( theBrowser, true )
 		showChat(false)
@@ -39,7 +39,7 @@ addEventHandler ( "onClientBrowserDocumentReady" , theBrowser ,
 		local login = ""
 		local pass = ""
 		
-		local confFile = xmlLoadFile(":loginATD/preferencesL.xml")
+		local confFile = xmlLoadFile(":epz_login/preferencesL.xml")
 	if (confFile) then
 		login = xmlNodeGetAttribute(confFile,"username")
 		pass = xmlNodeGetAttribute(confFile,"pass")
@@ -72,7 +72,7 @@ addEvent ( "registerAccount", true )
 addEventHandler ( "registerAccount", theBrowser, registerAccount )
 
 function toggleSavePassword(login, pass)
-		confFile = xmlLoadFile(":loginATD/preferencesL.xml")
+		confFile = xmlLoadFile(":epz_login/preferencesL.xml")
 		xmlNodeSetAttribute(confFile, "username", login)
 		xmlNodeSetAttribute(confFile, "pass", pass)
 		xmlSaveFile(confFile)

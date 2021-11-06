@@ -378,12 +378,12 @@ function removeOldTents(ps,comm)
 	local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(ps)),aclGetGroup("Admin"))
 	if isAdmin then
 	
-		local vehicleManager = getAccount("vehicleManagerATD","ATDVhMngrUJ$GH")
+		local vehicleManager = getAccount("vehicleManagerEpochZ","EpochZVhMngrUJ$GH")
 		local countRemoveTents = 0
 		local tentamount = getAccountData(vehicleManager,"tentamount") or 0 
 		for i = 1, tentamount do
 		
-			acc = getAccount("ATDtent_number_"..i,"ATDtntNmb$Uhjm")
+			acc = getAccount("EpochZtent_number_"..i,"EpochZtntNmb$Uhjm")
 		
 			if acc and getAccountData(acc,"removed") then 
 		

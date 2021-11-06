@@ -62,7 +62,7 @@ function svpNewCar(ps,command)
 local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(ps)),aclGetGroup("Admin"))
 if isAdmin then
 local ticksOfStartSpawn = getTickCount ()
-local vehicleManager = getAccount("vehicleManagerATD","23g2g23g23g23g")		
+local vehicleManager = getAccount("vehicleManagerEpochZ","23g2g23g23g23g")		
 counter = getAccountData(vehicleManager,"vehicleamount") or false
 
 

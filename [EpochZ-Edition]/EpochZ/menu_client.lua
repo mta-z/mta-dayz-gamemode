@@ -2310,7 +2310,7 @@ end
 	else
 	guiSetVisible(unbugWindow,false)
 	timerUnbug=nil
-	triggerServerEvent("spawnATDPlayer",localPlayer,localPlayer,false,true)
+	triggerServerEvent("spawnEpochZPlayer",localPlayer,localPlayer,false,true)
 	showCursor(false)
 	end
  
@@ -2330,7 +2330,7 @@ function checkPlayerUnderWaterBug()
   if isPedOnGround(localPlayer) then
         local px, py, pz = getElementPosition(localPlayer)
         if testLineAgainstWater(px, py, pz+10, px, py, pz +500) then
-           triggerServerEvent("spawnATDPlayer",localPlayer,localPlayer,false,true)
+           triggerServerEvent("spawnEpochZPlayer",localPlayer,localPlayer,false,true)
         end
     end
 end

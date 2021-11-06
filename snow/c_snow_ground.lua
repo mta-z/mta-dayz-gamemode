@@ -1,14 +1,14 @@
 
 local textures = { 
 	--Neve é ​​simples
-	single = "textures/single/single.dayzatd",
-	singleLOD = "textures/single/singleLOD.dayzatd",
+	single = "textures/single/single.epochz",
+	singleLOD = "textures/single/singleLOD.epochz",
 
-	trottile = "textures/single/trottile.dayzatd",
-	trottileLOD = "textures/single/trottileLOD.dayzatd",
+	trottile = "textures/single/trottile.epochz",
+	trottileLOD = "textures/single/trottileLOD.epochz",
 
-	blend = "textures/blend/blend.dayzatd",
-	noise = "textures/other/noise.dayzatd",
+	blend = "textures/blend/blend.epochz",
+	noise = "textures/other/noise.epochz",
  }
 
 ----------------------------------------------

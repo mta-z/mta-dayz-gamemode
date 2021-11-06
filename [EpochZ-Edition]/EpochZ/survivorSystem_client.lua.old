@@ -5,7 +5,7 @@ function playerStatsClientSite()
 if getElementData(localPlayer,"logedin") then
 toggleControl ("radar",false) 
 if clockShowState then
-	if  (getElementData(localPlayer,"Relôgio") or 0) < 1 then
+	if  (getElementData(localPlayer,"Часы") or 0) < 1 then
 	removeEventHandler("onClientRender",getRootElement(),renderClock)
 	end
 end
@@ -14,7 +14,7 @@ local radarShowStateByRes =  exports.ATD_RADARMAP:getMinimapState()
 
 	if not hideRadar then
 
-		if (getElementData(localPlayer,"GPS") or 0)>= 1  then
+		if (getElementData(localPlayer,"Навигатор") or 0)>= 1  then
 				if not radarShowStateByRes  then
 					exports.ATD_RADARMAP:setState("show","radar") 
 				end
@@ -34,7 +34,7 @@ hideRadar = state
 end
 
 	function ClockShow()
-		if  (getElementData(localPlayer,"Relôgio") or 0) >= 1 then
+		if  (getElementData(localPlayer,"Часы") or 0) >= 1 then
 			addEventHandler("onClientRender",getRootElement(),renderClock)	
 			clockShowState = true
 		end
@@ -55,7 +55,7 @@ end
 function playerZoom (key,keyState)
 local hour, minutes = getTime()	
 	if key == "n" then
-		if (getElementData(localPlayer,"Ôculos de Visão Noturna") or 0) > 0 then
+		if (getElementData(localPlayer,"Прибор Ночного Виденья") or 0) > 0 then
 			if nightvision then
 				nightvision = false
 				setCameraGoggleEffect("normal")
@@ -70,7 +70,7 @@ local hour, minutes = getTime()
 			end
 		end
 	elseif key == "i" then
-		if (getElementData(localPlayer,"Ôculos de Infravermelho") or 0) > 0 then
+		if (getElementData(localPlayer,"Инфракрасное Виденье") or 0) > 0 then
 			if infaredvision then
 				infaredvision = false
 				setCameraGoggleEffect("normal")
@@ -322,16 +322,16 @@ function playerDamagedFromBot ( hitElement )
 
 	if weapName == "MG36" then
 	damage=5000
-	botWeapon = "#FFFFFF com MG36"
-	botName = "#FF0000Bandido (Pesado)"
+	botWeapon = "#FFFFFF c помощью MG36"
+	botName = "#FF0000Бандит(пулеметчик)"
 	elseif weapName == "G36C-SD" then
 	damage=4000
-	botWeapon = "#FFFFFF com G36C-SD"
-	botName = "#FF0000Bandido (Stormtrooper)"
+	botWeapon = "#FFFFFF c помощью G36C-SD"
+	botName = "#FF0000Бандит(штурмовик)"
 	elseif weapName =="DMR" then
 	damage=9000
-	botWeapon = "#FFFFFF com DMR"
-	botName = "#FF0000Bandido (Atirador)"
+	botWeapon = "#FFFFFF c помощью DMR"
+	botName = "#FF0000Бандит(снайпер)"
 	end
 	setElementData(localPlayer,"blood",getElementData(localPlayer,"blood")-damage) --server
 	showWhiteScreen()
@@ -347,7 +347,7 @@ function playerDamagedFromBot ( hitElement )
 			end
 			
 		end	
-		--outputChatBox("Bot shoots")
+		--outputChatBox("Стреляет бот")
 	
 
 
@@ -374,7 +374,7 @@ if attacker then
 			local infRand = math.random(0,100)
 			if infRand <=5  then
 				setInfection(true)
-				drawingAlphaText(localPlayer,"Infecção",200,10,0,"up",false,true)
+				drawingAlphaText(localPlayer,"Инфекция",200,10,0,"up",false,true)
 			end
 			
 			if getElementData(localPlayer,"blood") <= 0 then
@@ -402,7 +402,7 @@ cancelEvent()
 	
 	if not attacker and loss < 35 and loss>=10 then
 		if not getElementData(source,"brokenbone")  then
-					drawingAlphaText(source,"ПереPé-de-Cabra",200,200,0,"up",false,true)
+					drawingAlphaText(source,"Перелом",200,200,0,"up",false,true)
 					setElementData(source,"brokenbone",true)
 		end
 	end
@@ -499,7 +499,7 @@ showWhiteScreen()
 		if bodypart == "LEGS" then
 
 		if not getElementData(hitElement,"brokenbone")  then
-				drawingAlphaText(hitElement,"ПереPé-de-Cabra",200,200,0,"up",false,true)
+				drawingAlphaText(hitElement,"Перелом",200,200,0,"up",false,true)
 				setElementData(hitElement,"brokenbone",true)
 			end
 
@@ -621,7 +621,7 @@ end
 			
 			
 			setElementData(hitElement,"blood",getElementData(hitElement,"blood")-damage) --server
-			outputConsole ( "Урон по игрOKу: "..getPlayerName(hitElement).." с учетом навыков/брони = "..damage..". ОстатOK: "..getElementData(hitElement,"blood") )
+			outputConsole ( "Урон по игроку: "..getPlayerName(hitElement).." с учетом навыков/брони = "..damage..". Остаток: "..getElementData(hitElement,"blood") )
 			
 			
 			
@@ -753,7 +753,7 @@ end
 			
 			setElementData(source,"blood",getElementData(source,"blood")-damage) --server
 			
-			outputConsole ( "Danos por jogador: "..getPlayerName(source).." levando em consideração habilidades / armadura = "..damage..". O resto está bem: "..getElementData(source,"blood") )
+			outputConsole ( "Урон по игроку: "..getPlayerName(source).." с учетом навыков/брони = "..damage..". Остаток: "..getElementData(source,"blood") )
 			--playRandomHitSound()
 			
 
@@ -856,7 +856,7 @@ if attacker and attacker == localPlayer then
 	damage = getWeaponDamage (weapName)
 	end 
 
-if weapName == "Machado" or  weapName == "Taco de beisebol" or  weapName == "Machete"  or  weapName == "Pé-de-Cabra" or weapon == 0 then
+if weapName == "Топор" or  weapName == "Бейсбольная Бита" or  weapName == "Мачете"  or  weapName == "Лом" or weapon == 0 then
 local zombkilledRuk = math.random(1,3)
 if zombkilledRuk == 1 then
 bodypart = 9 
@@ -1120,7 +1120,7 @@ setTimer(setCold,1500,0)
 value =0
 
 function debugJump()
-if getPedControlState("jump") then
+if getControlState("jump") then
 	setElementData(localPlayer,"jumping",true,false) 
 	setTimer(debugJump2,650,1)
 end
@@ -1299,8 +1299,8 @@ end
 
 function roundTime(value)
 	if value then
-local hours = math.floor(value/60) -- Conseguimos o número de horas completas
-local minutes = value - (hours*60) -- Pegamos os minutos restanteses	
+local hours = math.floor(value/60) -- Получаем количество полных часов
+local minutes = value - (hours*60) -- Получаем оставшиеся минуты	
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end
@@ -1372,7 +1372,7 @@ function updatePlayerLvl()
 		if playerlvl < lvl then
 			local clicks=getElementData(localPlayer,"progress.clicks") or 0
 			setElementData(localPlayer,"progress.clicks",clicks+(lvl-playerlvl)) 
-			outputChatBox("Você recebeu +"..(lvl-playerlvl).." Pontos de habilidade! Pressione F3 para usá-los")
+			outputChatBox("Вы получили +"..(lvl-playerlvl).." очков навыков! Нажмите F3 чтобы использовать их")
 		end
 			
 		setElementData(localPlayer,"playerlvl",lvl) --server
@@ -1415,8 +1415,8 @@ end
 function checkBuggedAccount()
 		if getElementData(localPlayer,"logedin") then
 			if getElementModel(localPlayer) == 0  then
-			--triggerServerEvent("spawnATDPlayer",localPlayer,localPlayer)
-				outputChatBox(getPlayerName(localPlayer).." Erro de criação do jogo. Diga ao administrador do servidor")
+			--triggerServerEvent("spawnEpochZPlayer",localPlayer,localPlayer)
+				outputChatBox(getPlayerName(localPlayer).." Ошибка создания игрока. Сообщите администратору сервера")
 			end
 		end
 	end	
@@ -1505,21 +1505,21 @@ setTimer(checkHumanity,60000,0)
 
 banditSkins = {
 --{210,1,5000},
-{275,1,-5000,-9999,"Vestuário: Bandido 1 nível"},
-{274,2,-10000,-14999,"Vestuário: Bandido nível 2"},
-{264,3,-15000,-19999,"Vestuário: Bandido nível 3"},
-{262,4,-20000,-24999,"Vestuário: Bandido nível 4"},
-{261,5,-25000,-29999,"Vestuário: Bandido nível 5"},
+{275,1,-5000,-9999,"Одежда: Бандит 1ур"},
+{274,2,-10000,-14999,"Одежда: Бандит 2ур"},
+{264,3,-15000,-19999,"Одежда: Бандит 3ур"},
+{262,4,-20000,-24999,"Одежда: Бандит 4ур"},
+{261,5,-25000,-29999,"Одежда: Бандит 5ур"},
 }
 
 function checkBandit ()
 if getElementData(localPlayer,"logedin") then
 local humanity = getElementData(localPlayer,"humanity") or 0
-local hero = getElementData(localPlayer,"Vestuário: Hero") or 0
+local hero = getElementData(localPlayer,"Одежда: Герой") or 0
 local curSkin = getElementData(localPlayer,"skin") or 0
 if humanity >= 5000  and hero<=0 and curSkin~= 210 then
-	triggerServerEvent("setBandit",localPlayer,localPlayer,210,false,"Vestuário: Hero")
-	setElementData(localPlayer,"Vestuário: Hero",1)
+	triggerServerEvent("setBandit",localPlayer,localPlayer,210,false,"Одежда: Герой")
+	setElementData(localPlayer,"Одежда: Герой",1)
 	else
 	for i,skin in ipairs(banditSkins) do
 	local bandit = getElementData(localPlayer,skin[5]) or 0
@@ -1616,7 +1616,7 @@ targetElementType = false
 function targetingActivated ( target )
 
 
-	if  target and getPedControlState ("aim_weapon")  then
+	if  target and getControlState ("aim_weapon")  then
 	
 	
 	if target and getElementType(target) =="ped" or  getElementType(target) =="player" or getElementType(target) == "vehicle"  then
@@ -1657,7 +1657,7 @@ if not getElementData(localPlayer,"isDead") then
 	if not targetElement then return end
 
 if targetElement ~= localPlayer then
-if not getPedControlState ("aim_weapon") then
+if not getControlState ("aim_weapon") then
 return
 end	
 	if targetElementType == "ped" then
@@ -1665,7 +1665,7 @@ end
 	elseif targetElementType == "player"  then
 	nick = getPlayerName(targetElement)
 	elseif targetElementType == "veh"  then
-	nick = GetRealVehicleName (targetElement) or "Veículo"
+	nick = GetRealVehicleName (targetElement) or "Транспортное средство"
 	
 	end
 	
@@ -1852,7 +1852,7 @@ triggerEvent("showClientMenuItem",localPlayer,"startFishing")
 end
 
 --[[
-if getElementData(source,"baitZone") and hitElement == localPlayer and getElementData(localPlayer,"Pá") >=1 then
+if getElementData(source,"baitZone") and hitElement == localPlayer and getElementData(localPlayer,"Лопата") >=1 then
 setElementData(hitElement,"inbaitZone",true,false)
 triggerEvent("showClientMenuItem",localPlayer,"baiting")
 
@@ -2255,7 +2255,7 @@ end
 -- Add this as a handler so that the function will be triggered every time a player fires.
 addEventHandler("onClientPlayerWeaponFire", root, GAUSS_FIRE)
 
------ Abrir Fechar ТС
+----- ОТКРЫТЬ ЗАКРЫТЬ ТС
 function openCloseVeh()
 	local veh = getPedOccupiedVehicle(localPlayer)
 
@@ -2266,10 +2266,10 @@ function openCloseVeh()
 		if carOwner and carOwner == userAcc then
 			if isVehicleLocked(veh) then
 				triggerServerEvent("openMyVH",localPlayer,veh)
-				outputChatBox("Você abriu #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
+				outputChatBox("Вы открыли #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
 				else
 				triggerServerEvent("closeMyVH",localPlayer,veh)
-				outputChatBox("Você fechou #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
+				outputChatBox("Вы закрыли #FFFF00"..GetRealVehicleName(veh),255,255,255,true)
 			end
 		end
 	end
@@ -2283,7 +2283,7 @@ function enterVeh(thePlayer, seat)
 			local carOwner = getElementData(source,"owner") 
 			local userAcc =  getElementData(localPlayer,"userAccount")
 			if carOwner and carOwner == userAcc then
-            outputChatBox("Clique em #FF0000L #FFFFFFpara Abrir/Fechar #FFFF00"..GetRealVehicleName(source),255,255,255,true)
+            outputChatBox("Нажмите #FF0000L #FFFFFFчтобы открыть/закрыть #FFFF00"..GetRealVehicleName(source),255,255,255,true)
 			end
 		end
 	end
@@ -2294,16 +2294,16 @@ addEventHandler("onClientVehicleEnter", root,enterVeh)
 
 
 
------ DESENHANDO O TEMPORIZADOR DE EXCLUIR
+----- ОТРИСОВКА ТАЙМЕРА УДАЛЕНИЯ ТС
 
 function roundTimeVeh(value)
 if value<=0 then 
 return "0:00"
 end
 	if value then
-local hours = math.floor(value/3600) -- Conseguimos o número de horas completas
-local minutes = value - (hours*3600) -- Pegamos os minutos restantes
- minutes = math.floor(minutes/60) -- Pegamos os minutos restantes
+local hours = math.floor(value/3600) -- Получаем количество полных часов
+local minutes = value - (hours*3600) -- Получаем оставшиеся минуты	
+ minutes = math.floor(minutes/60) -- Получаем оставшиеся минуты	
 	if minutes <= 9 then 
 	minutes = "0"..minutes
 	end

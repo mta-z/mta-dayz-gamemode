@@ -1,5 +1,5 @@
 <meta>
-	<info author="ATD" />
+	<info author="EpochZ" />
 	<script src="weapon_sounds_client.lua" type="client" cache="false" />
 	
 	<file src="sounds/AK74.wav" />

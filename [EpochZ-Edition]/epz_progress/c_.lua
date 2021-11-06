@@ -235,7 +235,7 @@ return
 	if attack_plane >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["attack_planeProgress"],(attack_plane+1).."/100")
-       reloadATDProgressBar(img,attack_plane,attack_plane+1)
+       reloadEpochZprogress(img,attack_plane,attack_plane+1)
 	    setElementData(getLocalPlayer(),"progress.attacker",attack_plane+1)
     end,false) 
 
@@ -333,7 +333,7 @@ return
 	if medik >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["medikProgress"],(medik+1).."/100")
-       reloadATDProgressBar(img2,medik,medik+1)
+       reloadEpochZprogress(img2,medik,medik+1)
 	   setElementData(getLocalPlayer(),"progress.medik",medik+1)
     end,false) 
   
@@ -427,7 +427,7 @@ return
 	if sniper >= 100 then return end
 --	outputChatBox("click")
 	guiSetText(headline["sniperProgress"],(sniper+1).."/100")
-       reloadATDProgressBar(img3,sniper,sniper+1)
+       reloadEpochZprogress(img3,sniper,sniper+1)
 	   setElementData(getLocalPlayer(),"progress.sniper",sniper+1)
     end,false) 	
 	
@@ -530,7 +530,7 @@ return
 	if enginer >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["enginerProgress"],(enginer+1).."/100")
-       reloadATDProgressBar(img4,enginer,enginer+1)
+       reloadEpochZprogress(img4,enginer,enginer+1)
 	   setElementData(getLocalPlayer(),"progress.enginer",enginer+1)
     end,false)	
 	
@@ -637,7 +637,7 @@ return
 	if economist >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["economistProgress"],(economist+1).."/100")
-       reloadATDProgressBar(img5,economist,economist+1)
+       reloadEpochZprogress(img5,economist,economist+1)
 	   setElementData(getLocalPlayer(),"progress.economist",economist+1)
     end,false)
 	
@@ -742,7 +742,7 @@ return
 	if djagernaut >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["djagernautProgress"],(djagernaut+1).."/100")
-       reloadATDProgressBar(img6,djagernaut,djagernaut+1)
+       reloadEpochZprogress(img6,djagernaut,djagernaut+1)
 	   setElementData(getLocalPlayer(),"progress.djagernaut",djagernaut+1)
     end,false)
 	
@@ -848,7 +848,7 @@ return
 	if boec >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["boecProgress"],(boec+1).."/100")
-       reloadATDProgressBar(img7,boec,boec+1)
+       reloadEpochZprogress(img7,boec,boec+1)
 	   setElementData(getLocalPlayer(),"progress.boec",boec+1)
     end,false)
 	
@@ -948,14 +948,14 @@ return
 	if automech >= 100 then return end
 	--outputChatBox("click")
 	guiSetText(headline["automechProgress"],(automech+1).."/100")
-       reloadATDProgressBar(img8,automech,automech+1)
+       reloadEpochZprogress(img8,automech,automech+1)
 	   setElementData(getLocalPlayer(),"progress.automech",automech+1)
     end,false)
 	
 	
 end)
 
-function reloadATDProgressBar(tableBar,oldDataBar,newdataBar)
+function reloadEpochZprogress(tableBar,oldDataBar,newdataBar)
 
   if oldDataBar >newdataBar then
   

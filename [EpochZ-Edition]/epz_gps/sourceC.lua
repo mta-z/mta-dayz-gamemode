@@ -724,7 +724,7 @@ end
 function setState(state,typeMap,hide)
 local radars = getElementData(localPlayer,"GPS") or 0 
 local maps = getElementData(localPlayer,"Mapa") or 0 
---outputChatBox("'ATD_RADARMAP:setState "..state.." "..typeMap)
+--outputChatBox("'epz_gps:setState "..state.." "..typeMap)
 if state=="show"  then
 	if typeMap=="map" and maps>= 1 then
 		mapShowState= true

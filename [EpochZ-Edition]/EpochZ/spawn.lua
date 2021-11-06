@@ -329,8 +329,8 @@ end
 	----------------------------------
 end
 
-addEvent("spawnATDPlayer",true)
-addEventHandler("spawnATDPlayer",getRootElement(),spawnDayZPlayer)
+addEvent("spawnEpochZPlayer",true)
+addEventHandler("spawnEpochZPlayer",getRootElement(),spawnDayZPlayer)
 
 
 

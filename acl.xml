@@ -20,24 +20,9 @@
         <acl name="SuperModerator"></acl>
         <acl name="Admin"></acl>
         <acl name="RPC"></acl>
-        <object name="resource.admin"></object>
-        <object name="resource.webadmin"></object>
-        <object name="resource.DayZ"></object>
-        <object name="resource.loginATD"></object>
-        <object name="resource.slothbot"></object>
-        <object name="resource.antirelog"></object>
-        <object name="resource.webpanel"></object>
-        <object name="resource.acpanel"></object>
-        <object name="resource.synchronization"></object>
-        <object name="resource.joinKick"></object>
-        <object name="resource.trade"></object>
-        <object name="resource.ATDgroupSystem"></object>
-        <object name="resource.AntiFlood"></object>
-        <object name="resource.runcode"></object>
-        <object name="resource.SiteATDinteR"></object>
-        <object name="resource.antiCheat"></object>
-        <object name="resource.BETAbase"></object>
-        <object name="user.*"></object>
+        <object name="resource.*"></object>
+        <object name="user.D0258967BEFD523676D39D02E35B1444"></object>
+        <object name="user.4FCAF0A0031583BA1F8E81E14F1BC484"></object>
     </group>
     <group name="Console">
         <acl name="Moderator"></acl>
@@ -45,6 +30,8 @@
         <acl name="Admin"></acl>
         <acl name="RPC"></acl>
         <object name="user.Console"></object>
+        <object name="user.D0258967BEFD523676D39D02E35B1444"></object>
+        <object name="user.4FCAF0A0031583BA1F8E81E14F1BC484"></object>
     </group>
     <group name="RPC">
         <acl name="RPC"></acl>

@@ -205,7 +205,7 @@ if not object or not isElement(object) then return false end
 	destroyElement(object)
 	
 	if counter then 
-	local tentData = getAccount("ATDtent_number_"..counter,"ATDtntNmb$Uhjm")
+	local tentData = getAccount("EpochZtent_number_"..counter,"EpochZtntNmb$Uhjm")
 		if tentData then
 	--	outputChatBox("remove tents: "..counter)
 		setAccountData(tentData,"removed",true)
