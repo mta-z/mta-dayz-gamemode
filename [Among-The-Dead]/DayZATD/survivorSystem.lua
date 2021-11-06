@@ -641,12 +641,12 @@ local skinTable = {
 {"Vestuário: Atirador 2",250},
 {"Vestuário: Atirador 3",252},
 {"Vestuário: Atirador 4",253},
-{"Одежда: Бандит 1ур",275},
-{"Одежда: Бандит 2ур",274},
-{"Одежда: Бандит 3ур",264},
-{"Одежда: Бандит 4ур",262},
-{"Одежда: Бандит 5ур",261},
-{"Одежда: Герой",260},
+{"Vestuário: Bandido 1 nível",275},
+{"Vestuário: Bandido nível 2",274},
+{"Vestuário: Bandido nível 3",264},
+{"Vestuário: Bandido nível 4",262},
+{"Vestuário: Bandido nível 5",261},
+{"Vestuário: Hero",260},
 
 }
 
@@ -889,7 +889,7 @@ setTimer( function ()
 		setElementData(tentCol,"PlayerSerial",getPlayerSerial(source)) 
 		setElementData(tentCol,"MAX_Slots",150) --client
 		setElementData(tentCol,"pass",pass) --client
-		outputChatBox("Сейф установлен с паролем: "..pass,source)
+		outputChatBox("Cofre установлен с паролем: "..pass,source)
 		triggerClientEvent(source,"refreshInventoryManual",source)
 end,1500,1)		
 else
@@ -1126,7 +1126,7 @@ addEventHandler("onPlayerBuildASandBags",getRootElement(),onPlayerBuildASandBags
 
 function removeSandBags (object)
 	local x,y,z = getElementPosition(source)
-	local item,itemString = getItemTablePosition("Мешки с песком")
+	local item,itemString = getItemTablePosition("Sacos de Areia")
 	local itemPickup = createItemPickup(item,x,y,z,itemString)
 	destroyElement(getElementData(object,"parent"))
 	destroyElement(object)
@@ -1183,7 +1183,7 @@ if (getElementData(source,"Caixa de Ferramentas") or 0) >= 1 then
 	end
 	
 	local x,y,z = getElementPosition(source)
-	local item,itemString = getItemTablePosition("Сейф")
+	local item,itemString = getItemTablePosition("Cofre")
 	local itemPickup = createItemPickup(item,x,y,z-0.3,itemString)
 	
 	destroyElement(getElementData(object,"parent"))
@@ -1607,7 +1607,7 @@ local id = getElementModel(source)
 local vehType = getVehicleType ( id )
 	if vehType =="BMX" or vehType =="Bike" then
 if isVehicleLocked ( source )  then
-outputChatBox("Это транспортное средство закрыто",enteringPlayer)
+outputChatBox("Este veículo está fechado",enteringPlayer)
 cancelEvent ()
 end
 end
@@ -1674,7 +1674,7 @@ if curslots+3 >= maxslots+PlusSlots() then
 triggerClientEvent (www,"displayClientInfo",www,"Lenha","В рюкзаке не хватает места!",255,0,0)
 return
 end			
-				setElementData(www,"Мешок с частями зомби",(getElementData(www,"Мешок с частями зомби") or 0)+1) --client
+				setElementData(www,"Saco de Peças de Zumbi",(getElementData(www,"Saco de Peças de Zumbi") or 0)+1) --client
 				
 else
 triggerClientEvent (www,"displayClientInfo",www,"Lenha","Для этого действия требуется Machado!",255,0,0)

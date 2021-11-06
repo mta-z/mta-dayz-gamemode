@@ -418,8 +418,8 @@ setElementData(getRootElement(),"serverName",getServerName ())
 			setElementData(tent,"parent",tentCol) --client
 			setElementData(tentCol,"tent",true) --client
 			setElementData(tentCol,"counterT",i) --client
-			setElementData(tentCol,"PlayerNick",getAccountData(tentData,"PlayerNick") or "старая палатка")
-			setElementData(tentCol,"PlayerSerial",getAccountData(tentData,"PlayerSerial") or "старая палатка")
+			setElementData(tentCol,"PlayerNick",getAccountData(tentData,"PlayerNick") or "старая Tenda")
+			setElementData(tentCol,"PlayerSerial",getAccountData(tentData,"PlayerSerial") or "старая Tenda")
 			setElementData(tentCol,"lastOpen",getAccountData(tentData,"lastOpen") or false)
 			--setElementData(tentCol,"MAX_Slots",getAccountData(tentData,"MAX_Slots") or 0)
 			

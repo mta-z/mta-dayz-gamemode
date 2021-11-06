@@ -29,12 +29,12 @@ local spawnPlayerDataTable = {
 
 
 local murdersSkinTable={
-{"Одежда: Бандит 1ур",275},
-{"Одежда: Бандит 2ур",274},
-{"Одежда: Бандит 3ур",264},
-{"Одежда: Бандит 4ур",262},
-{"Одежда: Бандит 5ур",261},
-{"Одежда: Герой",260},
+{"Vestuário: Bandido 1 nível",275},
+{"Vestuário: Bandido nível 2",274},
+{"Vestuário: Bandido nível 3",264},
+{"Vestuário: Bandido nível 4",262},
+{"Vestuário: Bandido nível 5",261},
+{"Vestuário: Hero",260},
 }
 
 local spawnPositions = {
@@ -368,7 +368,7 @@ local acc = getPlayerAccount(source)
 	local banditskilled = getElementData(source,'banditskilled') 
 	local alivetime = getElementData(source,"alivetime")
 
--- статистика игрока за все время	
+-- статистика игрOKа за все время	
 	local accMurders = getElementData ( source, "stat.murders") or 0
 	local accZombieskilled = getElementData ( source, "stat.zombieskilled") or 0
 	local accBanditskilled = getElementData ( source, "stat.banditskilled") or 0
@@ -383,7 +383,7 @@ local acc = getPlayerAccount(source)
 
 
 
--- максимально достигнутая статистика игрока 
+-- максимально достигнутая статистика игрOKа 
 		local accMurdersMax = getElementData ( source, "stat.murdersMax") or 0
 	local accZombieskilledMax = getElementData ( source, "stat.zombieskilledMax") or 0
 	local accBanditskilledMax = getElementData ( source, "stat.banditskilledMax") or 0
@@ -398,7 +398,7 @@ local acc = getPlayerAccount(source)
 	
 	
 	
--- запись общей статистики игроков за все время 
+-- запись общей статистики игрOKов за все время 
 
 local USERnick = getPlayerName (source)
 
@@ -697,7 +697,7 @@ killPed(source)
 		end
 		
 		if (killer and weapon) then
-		killer="игроком #FF0000"..getPlayerName (killer).."#FFFFFF"
+		killer="игрOKом #FF0000"..getPlayerName (killer).."#FFFFFF"
 		else
 		killer=false
 		end

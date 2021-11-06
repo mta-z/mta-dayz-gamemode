@@ -86,7 +86,7 @@ function exchangeCompleted()
         outputConsole ( k .. ": " .. tostring ( v ) )
 		
 		local datas = getElementData(source,tostring(k)) 
-		setElementData(source,tostring(k),datas+v) -- добавляем в инвентарь из Coca-Colaпса партнера по обмену
+		setElementData(source,tostring(k),datas+v) -- добавляем в Inventário из Coca-Colaпса партнера по обмену
 		
 		--local datas = getElementData(exchangePartner,tostring(k))
 		--setElementData(exchangePartner,tostring(k),datas-v) -- удаляем из инвентаря партнера по обмену

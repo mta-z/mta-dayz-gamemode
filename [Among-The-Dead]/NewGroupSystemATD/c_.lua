@@ -171,7 +171,7 @@ local closegetGroupInfoWin =	guiCreateButton ( 20, 580, 560, 30, "Close", false,
 guiSetEnabled ( getGroupInfo, true )
 
 addEventHandler ( "onClientGUIClick", closePlayerStatisticWin, function()
- guiSetText(playerStatisticWin,"Статистика игрока")
+ guiSetText(playerStatisticWin,"Статистика игрOKа")
 guiSetVisible(playerStatisticWin,false)
 guiSetEnabled ( groupMemberStatistic, true )
 guiMoveToBack( groupWindows )
@@ -811,7 +811,7 @@ local isOwner = getElementData(getLocalPlayer(),"groupUserStatus")
 	guiSetText(skills["SKILL_EXP"]["skillCount"],tostring(groupInfo.SKILL_EXP).."/10")
 	guiSetText(skills["SKILL_HACK"]["skillCount"],tostring(groupInfo.SKILL_HACK).."/10")
 	
-	-- выставляем цвет блокированных кнопок
+	-- выставляем цвет блOKированных кнопOK
 	if tonumber(groupInfo.SKILL_MAXMEMBERS)<10 then
 	guiStaticImageLoadImage ( skills["SKILL_ARMORTS"]["plus"], "plus.false.png" )
 	else

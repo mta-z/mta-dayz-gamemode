@@ -75,7 +75,7 @@ guiSetFont (headline["ochko6_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko6_t"],"right")
 
 headline["ochko7_img"] = guiCreateStaticImage ( 1, 150, 730, 17, "gray.png", false, tab2 )
-headline["ochko7"] = guiCreateLabel(5, 0, 750, 100,"Максимум убито игроков за один раз",false,headline["ochko7_img"])
+headline["ochko7"] = guiCreateLabel(5, 0, 750, 100,"Максимум убито игрOKов за один раз",false,headline["ochko7_img"])
 headline["ochko7_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko7_img"])
 guiSetFont (headline["ochko7"] , "default-bold-small" )
 guiSetFont (headline["ochko7_t"] , "default-bold-small" )
@@ -103,7 +103,7 @@ guiSetFont (headline["ochko10_t"] , "default-bold-small" )
 guiLabelSetHorizontalAlign (headline["ochko10_t"],"right")
 
 headline["ochko11_img"] = guiCreateStaticImage ( 1, 240, 730, 17, "gray.png", false, tab2 )
-headline["ochko11"] = guiCreateLabel(5, 0, 750, 100,"Убито игроков за все время игры",false,headline["ochko11_img"])
+headline["ochko11"] = guiCreateLabel(5, 0, 750, 100,"Убито игрOKов за все время игры",false,headline["ochko11_img"])
 headline["ochko11_t"] = guiCreateLabel(0, 0, 725, 17,"-",false,headline["ochko11_img"])
 guiSetFont (headline["ochko11"] , "default-bold-small" )
 guiSetFont (headline["ochko11_t"] , "default-bold-small" )
@@ -995,7 +995,7 @@ guiSetVisible(inventoryWindows,true )
 showCursor(true)
 end
 local nick = getPlayerName ( getLocalPlayer())
-guiSetText(inventoryWindows,"Игрок:"..nick)
+guiSetText(inventoryWindows,"ИгрOK:"..nick)
 
 	local attack_plane = getElementData(getLocalPlayer(),"progress.attacker") or 0
   for i=1,100,1 do 
