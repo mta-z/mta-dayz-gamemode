@@ -786,7 +786,7 @@ end
 -- , `SKILL_EXP` , `clicks` , `clicksOFF` , `groupExp`
 --createSkill("SKILL_CARTRADE",180,20,"ПОЛЕЗНЫЕ СВЯЗИ",tabGroupSkills)
 
---createSkill("SKILL_ARMORTS",180+70,20,"ЛЕГКАЯ БРОНЯ ТРАНСПОРТА",tabGroupSkills)
+--createSkill("SKILL_ARMORTS",180+70,20,"ЛЕГКАЯ БРОНЯ VeículosА",tabGroupSkills)
 
 --createSkill("SKILL_MAXMEMBERS",250+70,20,"ГРУППОВОЕ РАСШИРЕНИЕ",tabGroupSkills)
 

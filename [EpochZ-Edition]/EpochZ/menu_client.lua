@@ -1846,12 +1846,12 @@ local SELLPRICECAR = {
 --{ "Reefer",453,200000 },
 --{ "Mercedes-Benz E63",950000,516 },
 --{ "Combustível",584,600000 },
---{ "Прицеп",591,650000 },
+--{ "Reboque",591,650000 },
 { "Kenworth W 900L",970000,403 },
 { "Bati MIX",670000,461 },
 { "Malice",940000,504 },
 { "Ambulance",610000,416 },
-{ "БРДМ 2",990000,601 },
+{ "BRDM 2",990000,601 },
 { "Plymouth Roadrunner RM23",980000,536 },
 { "Kawasaki 150 SE",420000,468 },
 { "ATV",380000,471 },
@@ -1889,7 +1889,7 @@ end
  if guiGetVisible (saveWindows) then 
  return
  else  showCursor(not isCursorShowing()) 
-saveWindows = guiCreateWindow(300, 450, 600, 100, "Торговец: транспорт", false) 
+saveWindows = guiCreateWindow(300, 450, 600, 100, "Comerciante: Veículos", false) 
 centerWindow(saveWindows)
 local labl  = guiCreateLabel ( 0, 23, 600, 100, text, false, saveWindows )
 guiLabelSetHorizontalAlign (labl,"center")

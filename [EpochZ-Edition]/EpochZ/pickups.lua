@@ -151,7 +151,7 @@ local itemTable = {
 {"AS50",1915,1,90,1},
 {"KSVK",1919,1,90,1},
 {"M107",1920,1,90,2},
---{"M24 (desert)",1924,1,90,0.1},
+--{"M24 (Deserto)",1924,1,90,0.1},
 {"M40A3",1925,1,90,3},
 {"SVD Camo",1926,1,90,2},
 {"Mochila de Explorador 100",953,1,0,1},
@@ -282,7 +282,7 @@ local itemTable = {
 {"Carne Grelhada",2806,1.5,0},
 {"Galão de Combútivel Completo",1650,1.5,0},
 {"Garrafa de Água Vazia",2683,1.5,0},
--- ,1213,2,0 одежда 
+-- ,1213,2,0 Vestuário 
 
 {"Vestuário: Militar 1",1213,2,0},
 {"Vestuário: Militar 2",1213,2,0},
@@ -356,8 +356,8 @@ local itemTable = {
 {"Mochila do Colorado 120",2410,1,0,0.2},
 {"Mochila Brasileira 140",1641,1,0,0.2},
 {"Mochila de Samurai 160",1575,1,0,0.2},
-{"Рюкзак ВОЕННЫЙ 180",1640,1,0,0.1},
-{"Рюкзак ФАРАОН 200",1602,1,0,0.1},
+{"Mochila Militar 180",1640,1,0,0.1},
+{"Mochila Faraó 200",1602,1,0,0.1},
 
 
 
@@ -413,7 +413,7 @@ local itemTable = {
 {"KSVK",1919,1,90,0},
 {"M107",1920,1,90,0},
 {"M24",1923,1,90,0},
---{"M24 (desert)",1924,1,90,0},
+--{"M24 (Deserto)",1924,1,90,0},
 {"M40A3",1925,1,90,0},
 {"SVD Camo",1926,1,90,0},
 {"Motosserra",341,1,90,0},

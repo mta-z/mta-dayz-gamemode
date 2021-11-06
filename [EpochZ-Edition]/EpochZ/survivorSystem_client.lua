@@ -331,7 +331,7 @@ function playerDamagedFromBot ( hitElement )
 	elseif weapName =="DMR" then
 	damage=9000
 	botWeapon = "#FFFFFF com DMR"
-	botName = "#FF0000Bandido (Atirador)"
+	botName = "#FF0000Bandido (Franco Atirador)"
 	end
 	setElementData(localPlayer,"blood",getElementData(localPlayer,"blood")-damage) --server
 	showWhiteScreen()
@@ -1385,9 +1385,6 @@ setTimer(updatePlayerLvl, 5000, 0)
 local serial = getPlayerSerial (localPlayer)
 local serialLength = string.len (serial)
 local serial = string.sub (serial, serialLength-5)
---serverName = getElementData(getRootElement(),"serverName") or "Among The Dead"
---local serverLength = string.len (serverName)
---local serverName = string.sub (serverName, serverLength-0)
 
 local dayzVersion2 = getRealTime().monthday.."&"..serial.."&"..screenWidth.."x"..screenHeight
 

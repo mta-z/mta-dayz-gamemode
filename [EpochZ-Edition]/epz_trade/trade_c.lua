@@ -1,107 +1,85 @@
 
 inventoryItems = {
-
-
-["Торговец: оружие"] = {
-{"Пистолеты"},
-{"Дробовики"},
-{"Штурмовые винтовки"},
-{"Пулеметы"},
-{"Снайперские винтовки"},
-{"Оружие ближнего боя"},
+["Comerciante: Armas"] = {
+{"Pistola"},
+{"Espingardas"},
+{"Rifles de Assalto"},
+{"Metralhadora"},
+{"Rifles de Precisão"},
+{"Armas Brancas"},
 {"Armas Especiais"},
 },
-
-["Торговец: патроны"] = {
-{"Патроны для пистолетов"},
-{"Патроны для дробовиков"},
-{"Патроны для ружей"},
-{"Патроны для штурмовых винтовOK"},
-{"Патроны для пулеметов"},
-{"Патроны для снайперских винтовOK"},
+["Comerciante: Munições"] = {
+{"Munição para Pistolas"},
+{"Munição para espingardas"},
+{"Munição para Armas"},
+{"Munição para Rifles de Assalto"},
+{"Munição para Metralhadoras"},
+{"Munição para rifles de precisão"},
 },
-
-["Торговец: транспорт"] = {
-{"Грузовой транспорт"},
-{"Легковой транспорт"},
-{"Воздушный транспорт"},
-{"Мото транспорт"},
-{"Другой транспорт"},
+["Comerciante: Veículos"] = {
+{"Veículos de Carga"},
+{"Veículos Comum"},
+{"Veículos Aéreo"},
+{"Moto"},
+{"Bikes"},
 },
-["Торговец: разное"] = {
-{"Caixa de Ferramentas"},
+["Comerciante: Diversos"] = {
+{"Ferramentas"},
 {"Items"},
 },
-["Торговец: одежда"] = {
-{"Рюкзаки"},
-{"Одежда"},
+["Comerciante: Vestuário"] = {
+{"Mochilas"},
+{"Vestuário"},
 },
-["Торговец: Comidas & Bebidas & Mel"] = {
+["Comerciante: Comidas & Bebidas & Mel"] = {
 {"Comida"},
-{"Вода"},
-{"Médicoаменты"},
+{"Bebidas"},
+{"Médicamentos"},
 },
-
-["Торговец: черный рынOK"] = {
-
-
-{"Пулеметы(черный рынOK)"},
-{"Снайперские винтовки(черный рынOK)"},
-
-{"Items(черный рынOK)"},
-{"Одежда(черный рынOK)"},
+["Comerciante: Mercado Negro"] = {
+{"Metralhadora (Mercado Negro)"},
+{"Rifles de Precisão (Mercado Negro)"},
+{"Items (Mercado Negro)"},
+{"Vestuário (Mercado Negro)"},
 },
-
-["Items(черный рынOK)"] = {
+["Items (Mercado Negro)"] = {
 {"Saco de Peças de Zumbi",11000},
 },
-
-["Одежда(черный рынOK)"] = {
+["Vestuário (Mercado Negro)"] = {
 {"Capacete Militar 50%",10000},
 {"Capacete Blindado 70%",12000},
 {"Capacete Blindado 80%",17000},
 {"Colete 20%",25000},
 {"Colete 30%",35000},
-
 },
-
-
-["Грузовой транспорт"]={
+["Veículos de Carga"]={
 { "AM General М-939A2",65000,433 },
---{ "МАЗ 103",81415,431 },
-{ "БРДМ 2",100000,601 },
+{ "BRDM 2",100000,601 },
 { "Kenworth W 900L",70000,403 },
---{ "Burrito",80123,482 },
---{ "Journey",70851,508},
---{ "Chevrolet S-10 Kemper",60711,499 },
---{ "Ford E-350",92588,414 },
 { "Frontline",50000,428 },
 },
-
-["Воздушный транспорт"]={
+["Veículos Aéreo"]={
 { "UH-60 Black Hawk",60000,417 },
 { "Helicóptero turístico",70000,488 },
 { "Police Maverick",84000,497 },
 { "Robinson R44 Clipper",80000,447 },
 { "MH-X Silenthawk",65000,563 },
---{ "Ми-8Т",301485,548 },
 { "Robinson R44 Raven II NC",75000,487 },
 { "MBB Bo-105",67000,469 },
 },
-["Мото транспорт"]={
+["Moto"]={
 { "Zombie chopper",35000,463 },
 { "Bati MIX",50000,461 },
 { "Kawasaki 150 SE",25000,468 },
 { "ATV 50",25000,471 },
 },
-["Другой транспорт"]={
+["Bikes"]={
 { "BMX",7000,481 },
 { "Bike",7000,509 },
 { "Mountain Bike",7000,510 },
 },
-
-
-["Легковой транспорт"] = {
+["Veículos Comum"] = {
 { "Chevrolet Suburban FBI",75000,490 },
 { "Lada Niva 4x4",30000,422 },
 { "Hummer H1",65000,470 },
@@ -109,14 +87,10 @@ inventoryItems = {
 { "Ford Mustang Sandroadster",80000,424 },
 { "Oshkosh Sand Cat GNB",78000,528 },
 { "Chevrolet Camaro IROC-Z 1990",89000,402 },
---{ "Shamal",519,900000 },
 { "Vapid Bullet",180000,541 },
 { "Chevrolet Camaro SS 1968",160000,602 },
 { "Phoenix",99000,603 },
---{ "Reefer",453,200000 },
 { "Mitsubishi Lancer Evolution IX",100000,516 },
---{ "Combustível",584,600000 },
---{ "Прицеп",591,650000 },
 {"Ford Mustang 1967",100000,434},
 { "Honda Civic Si 2012",90000,504 },
 { "Ambulance",60000,416 },
@@ -126,46 +100,35 @@ inventoryItems = {
 { "Nissan GTR R35",200000,411},
 { "Mitsubishi Lancer Evolution",130000,560},
 },
-
-
-
-
-["Пулеметы(черный рынOK)"] = {
+["Metralhadora (Mercado Negro)"] = {
 {"Mk 48 Mod 0",10000},
 },
-["Снайперские винтовки(черный рынOK)"] = {
+["Rifles de Precisão (Mercado Negro)"] = {
 {"AS50",193000},
 {"KSVK",192000},
 {"M107",191000},
-
 },
-
-
-["Барыга"] = {
-{"Пулеметы(барыга)"},
-{"Снайперские винтовки(барыга)"},
-
-{"Одежда(барыга)"},
+["Comerciante: Ambulante"] = {
+{"Metralhadora(Ambulante)"},
+{"Rifles de Precisão(Ambulante)"},
+{"Vestuário(Ambulante)"},
 },
-["Пулеметы(барыга)"] = {
+["Metralhadora(Ambulante)"] = {
 {"Mk 48 Mod 0",15000},
 },
-["Снайперские винтовки(барыга)"] = {
+["Rifles de Precisão(Ambulante)"] = {
 {"AS50",230000},
 {"KSVK",240000},
 {"M107",220000},
-
-
 },
-["Одежда(барыга)"] = {
+["Vestuário(Ambulante)"] = {
 {"Capacete Militar 50%",17000},
 {"Capacete Blindado 70%",20000},
 {"Capacete Blindado 80%",25000},
 {"Colete 20%",30000},
 {"Colete 30%",45000},
 },
-
-["Пистолеты"] = {
+["Pistola"] = {
 {"G17",1000},
 {"M1911",1500},
 {"M9",2000},
@@ -173,94 +136,75 @@ inventoryItems = {
 {"Makarov PM",900},
 {"Revolver",2700},
 },
-["Дробовики"] = {
+["Espingardas"] = {
 {"M1014",5000},
 {"Remington 870",4000},
---{"Remington 870 (Com Lanterna)",4213},
 {"Saiga 12K",6500},
 },
-
-["Штурмовые винтовки"] = {
+["Rifles de Assalto"] = {
 {"AK-107",7000},
---{"AK-107 PSO",7062},
 {"AK-74",5700},
 {"AKM",6100},
---{"AKS",6021},
 {"AKS (gold)",7500},
---{"AKS-74 Kobra",6835},
---{"AKS-74 PSO",7101},
 {"AKS-74U",5700},
 {"G36",6400},
 {"G36C-SD",6600},
---{"G36K",6474},
 {"M4A1",15000},
 {"M4A1 SD",18000}, 
 {"FN SCAR",23000}, 
-
 {"MP5",4000},
 },
-["Пулеметы"] = {
+["Metralhadora"] = {
 {"M240",9500},
 {"M249 Saw",9600},
 {"MG36",9900},
 {"PKM",9000},
---{"PKP",9835},
 },
-["Снайперские винтовки"] = {
+["Rifles de Precisão"] = {
 {"CZ550",6300},
 {"ВСС Vintorez",21000},
 {"DMR",24000},
 {"M24",23000},
---{"M24 (desert)",17342},
 {"M40A3",23500},
 {"SVD Camo",23500},
 },
-
-
-["Оружие ближнего боя"] = {
+["Armas Brancas"] = {
 {"Machado",2000},
 {"Taco de beisebol",300},
 {"Machete",1500},
 {"Motosserra",5000},
 {"Pé-de-Cabra",900},
 },
-
 ["Armas Especiais"] = {
 {"Pára-Quedas",5000},
 {"Gás Lacrimogêneo",2421},
---{"Granada",3765},
 {"Binóculos",500},
 },
-
-["Патроны для пистолетов"] = {
+["Munição para Pistolas"] = {
 {"G17 mag",700,10},
 {"M1911 mag",600,10},
 {"M9 mag",800,10},
 {"Makarov mag",500,10},
 {".45 ACP",600,6},
 },
-["Патроны для дробовиков"] = {
+["Munição para espingardas"] = {
 {"M1014 Pellet",550,8},
 {"Saiga mag",650,8},
 },
-["Патроны для ружей"] = {
---{"Lee mag",1524,10},
-},
-["Патроны для штурмовых винтовOK"] = {
+["Munição para Rifles de Assalto"] = {
 {"AK mag",1100,30},
---{"MP5 mag",1001,25},
 {"AKM mag",1400,30},
 {"FN mag",2200,30},
 {"G36 mag",1200,30},
 {"M4A1 mag",2000,30},
 },
-["Патроны для пулеметов"] = {
+["Munição para Metralhadoras"] = {
 {"M240 Belt",3000,100},
 {"M249 Belt",3100,100},
 {"MG36 mag",3500,100},
 {"PKM mag",2900,100},
 },
-["Патроны для снайперских винтовOK"] = {
+["Munição para rifles de precisão"] = {
 {"AS50 mag",2500,5}, 
 {"CZ550 mag",550,5},
 {"ВСС mag",2050,30},
@@ -271,48 +215,33 @@ inventoryItems = {
 {"M40A3 mag",700,5},
 {"SVD mag",650,5},
 },
-
-
-
-
-
-
 ["Comida"] = {
-
 {"Lata de Macarrão",700},
 {"Lata de Feijão",800},
 {"Peixe Frito",7000},
---{"Pizza",1524},
 {"Ração Seca Grande",5000},
 {"Ração Seca Pequena",4000},
-
 },
-["Вода"] = {
+["Bebidas"] = {
 {"Garrafa de Água Vazia",1000}, 
 {"Garrafa de Água Com Gás Completo",500},
 {"Coca-Cola",650},
 },
-["Médicoаменты"] = {
-
+["Médicamentos"] = {
 {"Bolsa de Sangue",3500},
 {"Antibiótico",600},
 {"Morfina",1000},
 {"Analgésico",500},
 {"Kit de Primeiros Socorros",3000},
 {"Ataduras",100}, 
-
 },
 ["Items"] = {
 {"Sinal de Fogo",350},
 {"Galão de Combútivel Vazio",700},
---{"Arame Farpado",184},
---{"Sacos de Areia",30000},
 {"Pneu",2200},
 {"Motor",3300},
 {"Lenha",150},
 {"Vara de Pesca",20000},
-{"Снасти",2000},
-{"Наживка",1000},
 {"Mangueira",300},
 {"Walkie-Talkie",10},
 {"Lenha",200},
@@ -321,8 +250,7 @@ inventoryItems = {
 {"Placa de Metal 2",12000},
 {"Chapa de Aço",5000},
 },
-["Одежда"] ={
-
+["Vestuário"] ={
 {"Vestuário: Militar 1",5000},
 {"Vestuário: Militar 2",5300},
 {"Vestuário: Militar 3",5600},
@@ -342,16 +270,12 @@ inventoryItems = {
 {"Vestuário: Atirador 2",7600},
 {"Vestuário: Atirador 3",7100},
 {"Vestuário: Atirador 4",7200},
-
 {"Capacete de Motocicleta 10%",2800},
 {"Máscara de Soldador 10%",2600},
 {"Capacete de Mineiro 5%",1800},
-
 {"Colete 10%",6000},
-
 },
-
-["Рюкзаки"] = {
+["Mochilas"] = {
 {"Mochila de SATURNO 20",8000},
 {"Mochila de ASSALTO 40",10000},
 {"Mochila de Montanha 60",12000},
@@ -359,12 +283,8 @@ inventoryItems = {
 {"Mochila de Explorador 100",16000},
 {"Mochila do Colorado 120",18000},
 {"Mochila Brasileira 140",20000},
---{"Mochila de Samurai 160",25000},
---{"Рюкзак ВОЕННЫЙ 180",35000},
---{"Рюкзак ФАРАОН 200",45000},
-
 },
-["Caixa de Ferramentas"] = {
+["Ferramentas"] = {
 {"Ôculos de Visão Noturna",1500},
 {"Ôculos de Infravermelho",2000},
 {"Mapa",521},
@@ -372,11 +292,8 @@ inventoryItems = {
 {"Relôgio",100},
 {"GPS",1000},
 {"Caixa de Ferramentas",2000},
-{"GPS",3000,}
+{"GPS",3000},
 },
-
-
-
 }
 
 function rectMoney()
@@ -430,33 +347,33 @@ end
 local W,H = guiGetScreenSize()
 
 showCursor(true)
-myWindow = guiCreateWindow ( W/2-400, H/2-250, 750, 540, "Торговец", false )  
+myWindow = guiCreateWindow ( W/2-400, H/2-250, 750, 540, "Comerciante", false )  
 guiSetAlpha(myWindow,0.7)
 guiWindowSetSizable ( myWindow, false )         
 
 
 
 tabs = guiCreateTabPanel ( 10, 20, 750-10, 540-20, false, myWindow )
-targ = guiCreateTab( "Торговля", tabs )
+targ = guiCreateTab( "Comércio", tabs )
 --sess = guiCreateTab( "Задания", tabs )
 --info = guiCreateTab( "Информация", tabs )
 aaa1= guiCreateGridList(10, 26, 250, 300, false, targ)
- aaa2= guiGridListAddColumn( aaa1, "Категория", 0.90 )
+ aaa2= guiGridListAddColumn( aaa1, "Ordem", 0.90 )
 
 -- zadan= guiCreateGridList(10, 26, 200, 300, false, sess)
  --zadan1= guiGridListAddColumn( zadan, "Задания", 0.85 )
  
  scrollpane = guiCreateStaticImage(10,340,250,115, "scrollmenu_1.png", false, targ) 
  
-  local YouMoney =guiCreateLabel(40, 10, 100, 20, "Ваши Dinheiro:", false, scrollpane)
+  local YouMoney =guiCreateLabel(40, 10, 100, 20, "Seu Dinheiro:", false, scrollpane)
 guiSetFont (YouMoney, "default-bold-small" )
  YourMoneyText =guiCreateLabel(120, 10, 100, 20, "N/A", false, scrollpane)
  
-local YouSlotsText =guiCreateLabel(40, 30, 250, 20, "Рюкзак:", false, scrollpane)
+local YouSlotsText =guiCreateLabel(40, 30, 250, 20, "Mochila:", false, scrollpane)
 guiSetFont (YouSlotsText, "default-bold-small" )
  YouSlots =guiCreateLabel(90, 30, 100, 20, "N/A", false, scrollpane)
  
- local YouItemsText =guiCreateLabel(40, 50, 161, 20, "Предметов в рюкзаке:", false, scrollpane)
+ local YouItemsText =guiCreateLabel(40, 50, 161, 20, "Itens em uma mochila:", false, scrollpane)
 guiSetFont (YouItemsText, "default-bold-small" )
  YouItems =guiCreateLabel(178, 50, 100, 20, "N/A", false, scrollpane)
  
@@ -465,10 +382,10 @@ guiSetFont (YouItemsText, "default-bold-small" )
 
  
  	aaa3= guiCreateGridList(260, 26, 460, 300, false, targ)
- aaa4= guiGridListAddColumn( aaa3, "Предмет", 0.40 )
-  -- aaa7= guiGridListAddColumn( aaa3, "Торговец/Вы", 0.20 )
- aaa5= guiGridListAddColumn( aaa3, "Цена пOKупки", 0.15 )
- aaa6= guiGridListAddColumn( aaa3, "Цена продажи", 0.15 )
+ aaa4= guiGridListAddColumn( aaa3, "Objeto", 0.40 )
+  -- aaa7= guiGridListAddColumn( aaa3, "Comerciante/Вы", 0.20 )
+ aaa5= guiGridListAddColumn( aaa3, "Preço de compra", 0.15 )
+ aaa6= guiGridListAddColumn( aaa3, "Preço de venda", 0.15 )
  
 
 
@@ -509,19 +426,19 @@ local SKILL_CARTRADE = getElementData(getLocalPlayer(),"SKILL_CARTRADE") or 0
  for i, item in ipairs(inventoryItems[itemList]) do
 		local row = guiGridListAddRow ( aaa3 )
 			guiGridListSetItemText ( aaa3, row, aaa4, item[1] , false, false )
-			 if teri ~= "Торговец: транспорт"  and  getElementData(getLocalPlayer(),item[1]) ~= true and  getElementData(getLocalPlayer(),item[1]) ~= false then
+			 if teri ~= "Comerciante: Veículos"  and  getElementData(getLocalPlayer(),item[1]) ~= true and  getElementData(getLocalPlayer(),item[1]) ~= false then
 			 if getElementData(getLocalPlayer(),item[1]) >= 1  then
 			 guiGridListSetItemColor  (  aaa3, row, aaa4, 0, 255, 0   )
 			end
 			
 			end
-			if teri == "Торговец: транспорт" then
+			if teri == "Comerciante: Veículos" then
 			guiGridListSetItemText ( aaa3, row, aaa5, math.ceil(item[2]-(item[2]/100*(SKILL_CARTRADE*5))) , false, false )
 			else
 			guiGridListSetItemText ( aaa3, row, aaa5, item[2] , false, false )
 			end
-			if teri ~= "Торговец: транспорт"  then
-			if teri ~= "Барыга" then
+			if teri ~= "Comerciante: Veículos"  then
+			if teri ~= "Comerciante: Ambulante" then
 			guiGridListSetItemText ( aaa3, row, aaa6, math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)) , false, false )
 			else
 			guiGridListSetItemText ( aaa3, row, aaa6, math.ceil(math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2) , false, false )
@@ -546,7 +463,7 @@ end, false )
  STMITEM = stm228
    --guiSetEnabled ( closeWin, true )
     guiSetEnabled ( BuyWin, true )
-if teri == "Торговец: транспорт"   or itemList=="Мото транспорт(черный рынOK)" or itemList=="Легковой транспорт(черный рынOK)" or itemList=="Грузовой транспорт(черный рынOK)" or  itemList =="Воздушный транспорт(черный рынOK)" then 
+if teri == "Comerciante: Veículos"   or itemList=="Moto (Mercado Negro)" or itemList=="Veículos Comum (Mercado Negro)" or itemList=="Veículos de Carga (Mercado Negro)" or  itemList =="Veículos Aéreo (Mercado Negro)" then 
 
   guiSetEnabled ( closeWin, false )
 
@@ -563,14 +480,14 @@ end
 
 
 
- BuyWin = guiCreateButton( 350, 340, 280, 30, "Купить",false,targ)
+ BuyWin = guiCreateButton( 350, 340, 280, 30, "Comprar",false,targ)
  addEventHandler ( "onClientGUIClick", BuyWin,function() 
    local row, col = guiGridListGetSelectedItem( aaa3 )
   local stm = guiGridListGetItemText(aaa3,row, col)
    triggerServerEvent ("PlayerBuy", getLocalPlayer(), row,col,stm,itemList,getLocalPlayer(),exports.EpochZ.getPlayerCurrentSlots(),ped,inventoryItems[itemList],teri,bloc)
  end,false)
  
- closeWin = guiCreateButton( 350, 420, 280, 30, "Выход",false,targ)
+ closeWin = guiCreateButton( 350, 420, 280, 30, "Saída",false,targ)
  
  addEventHandler ( "onClientGUIClick", closeWin,function() 
  guiSetVisible(myWindow, false)
@@ -840,7 +757,7 @@ end
 	setPedAnimation (pedTrader7,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker7,"trader",pedTrader7,false)
 	setElementData(pedTrader7,"trader",myMarker7,false)
-	setElementData(pedTrader7,"pedName","Торговец: одежда")
+	setElementData(pedTrader7,"pedName","Comerciante: Vestuário")
 	setElementFrozen  ( pedTrader7, true )
 	
 	
@@ -853,7 +770,7 @@ end
 	--setPedAnimation (pedTrader8,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker8,"trader",pedTrader8,false)
 	setElementData(pedTrader8,"trader",myMarker8,false)
-	setElementData(pedTrader8,"pedName","Торговец: оружие")
+	setElementData(pedTrader8,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader8, true )
 
 	
@@ -863,7 +780,7 @@ end
 	--setPedAnimation (pedTrader9,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker9,"trader",pedTrader9,false)
 	setElementData(pedTrader9,"trader",myMarker9,false)
-	setElementData(pedTrader9,"pedName","Торговец: патроны")
+	setElementData(pedTrader9,"pedName","Comerciante: Munições")
 	setElementFrozen  ( pedTrader9, true )
 	
 
@@ -873,7 +790,7 @@ end
 --	setPedAnimation (pedTrader15,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker16,"trader",pedTrader16,false)
 	setElementData(pedTrader16,"trader",myMarker16,false)
-	setElementData(pedTrader16,"pedName","Торговец: разное")
+	setElementData(pedTrader16,"pedName","Comerciante: Diversos")
 	setElementFrozen  ( pedTrader16, true )
 	
 	
@@ -885,7 +802,7 @@ end
 	setPedAnimation (pedTrader17,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker17,"trader",pedTrader17,false)
 	setElementData(pedTrader17,"trader",myMarker17,false)
-	setElementData(pedTrader17,"pedName","Торговец: оружие")
+	setElementData(pedTrader17,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader17, true )
 	
 	
@@ -895,7 +812,7 @@ end
 	--setPedAnimation (pedTrader18,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker18,"trader",pedTrader18,false)
 	setElementData(pedTrader18,"trader",myMarker18,false)
-	setElementData(pedTrader18,"pedName","Торговец: патроны")
+	setElementData(pedTrader18,"pedName","Comerciante: Munições")
 	setElementFrozen  ( pedTrader18, true )
 
 	pedTrader25 = createPed ( 258, -2434.7971191406,-654.9453125,133.11114501953,00,false) 
@@ -904,7 +821,7 @@ end
 	--setPedAnimation (pedTrader23,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker25,"trader",pedTrader25,false)
 	setElementData(pedTrader25,"trader",myMarker25,false)
-	setElementData(pedTrader25,"pedName","Торговец: одежда")
+	setElementData(pedTrader25,"pedName","Comerciante: Vestuário")
 	setElementFrozen  ( pedTrader25, true )
 	
 	
@@ -914,7 +831,7 @@ end
 	setPedAnimation (pedTrader26,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker26,"trader",pedTrader26,false)
 	setElementData(pedTrader26,"trader",myMarker26,false)
-	setElementData(pedTrader26,"pedName","Торговец: Comidas & Bebidas & Mel")
+	setElementData(pedTrader26,"pedName","Comerciante: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader26, true )
 	
 	pedTrader27 = createPed ( 287, -2431.5227050781,-644.47119140625,132.99859619141,90,false) 
@@ -923,7 +840,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker27,"trader",pedTrader27,false)
 	setElementData(pedTrader27,"trader",myMarker27,false)
-	setElementData(pedTrader27,"pedName","Торговец: разное")
+	setElementData(pedTrader27,"pedName","Comerciante: Diversos")
 	setElementFrozen  ( pedTrader27, true )
 	
 	pedTrader28 = createPed ( 277, -2438.8159179688,-643.24932861328,132.98547363281,-90,false) 
@@ -932,7 +849,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker28,"trader",pedTrader28,false)
 	setElementData(pedTrader28,"trader",myMarker28,false)
-	setElementData(pedTrader28,"pedName","Торговец: оружие")
+	setElementData(pedTrader28,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader28, true )
 	
 	pedTrader29 = createPed ( 255, 658.96008, -576.11548, 16.33594,90,false) 
@@ -941,7 +858,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker29,"trader",pedTrader29,false)
 	setElementData(pedTrader29,"trader",myMarker29,false)
-	setElementData(pedTrader29,"pedName","Торговец: транспорт")
+	setElementData(pedTrader29,"pedName","Comerciante: Veículos")
 	setElementFrozen  ( pedTrader29, true )
 
 	
@@ -952,7 +869,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker1,"trader",pedTrader1,false)
 	setElementData(pedTrader1,"trader",myMarker1,false)
-	setElementData(pedTrader1,"pedName","Торговец: патроны")
+	setElementData(pedTrader1,"pedName","Comerciante: Munições")
 	setElementFrozen  ( pedTrader1, true )
 
 	pedTrader2 = createPed ( 258, 613.23278808594,-597.54473876953,17.233013153076,180,false) 
@@ -961,7 +878,7 @@ end
 	--setPedAnimation (pedTrader23,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker2,"trader",pedTrader2,false)
 	setElementData(pedTrader2,"trader",myMarker2,false)
-	setElementData(pedTrader2,"pedName","Торговец: одежда")
+	setElementData(pedTrader2,"pedName","Comerciante: Vestuário")
 	setElementFrozen  ( pedTrader2, true )
 	
 	pedTrader3 = createPed ( 287, 659.53649902344,-610.48443603516,16.3359375,20,false) 
@@ -970,7 +887,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker3,"trader",pedTrader3,false)
 	setElementData(pedTrader3,"trader",myMarker3,false)
-	setElementData(pedTrader3,"pedName","Торговец: разное")
+	setElementData(pedTrader3,"pedName","Comerciante: Diversos")
 	setElementFrozen  ( pedTrader3, true )
 	
 	pedTrader4 = createPed ( 259, 671.39202880859,-617.23626708984,16.339584350586,-90,false) 
@@ -979,7 +896,7 @@ end
 	--setPedAnimation (pedTrader4,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker4,"trader",pedTrader4,false)
 	setElementData(pedTrader4,"trader",myMarker4,false)
-	setElementData(pedTrader4,"pedName","Торговец: Comidas & Bebidas & Mel")
+	setElementData(pedTrader4,"pedName","Comerciante: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader4, true )
 	
 	pedTrader5 = createPed ( 277, 668.37225341797,-586.22241210938,16.3359375,190,false) 
@@ -988,7 +905,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker5,"trader",pedTrader5,false)
 	setElementData(pedTrader5,"trader",myMarker5,false)
-	setElementData(pedTrader5,"pedName","Торговец: оружие")
+	setElementData(pedTrader5,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader5, true )
 	
 	-------------------------------------------------------BIGlv
@@ -998,7 +915,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker5,"trader",pedTrader5,false)
 	setElementData(pedTrader5,"trader",myMarker5,false)
-	setElementData(pedTrader5,"pedName","Торговец: оружие")
+	setElementData(pedTrader5,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader5, true )
 	
 	pedTrader29 = createPed ( 259, 1628.7967529297,1550.5463867188,10.805704116821,240,false) 
@@ -1007,7 +924,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker29,"trader",pedTrader29,false)
 	setElementData(pedTrader29,"trader",myMarker29,false)
-	setElementData(pedTrader29,"pedName","Торговец: Comidas & Bebidas & Mel")
+	setElementData(pedTrader29,"pedName","Comerciante: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader29, true )
 	
 	pedTrader3 = createPed ( 287, 1621.5806884766,1534.5533447266,10.80073261261,-40,false) 
@@ -1016,7 +933,7 @@ end
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker3,"trader",pedTrader3,false)
 	setElementData(pedTrader3,"trader",myMarker3,false)
-	setElementData(pedTrader3,"pedName","Торговец: разное")
+	setElementData(pedTrader3,"pedName","Comerciante: Diversos")
 	setElementFrozen  ( pedTrader3, true )
 	
 	
@@ -1026,7 +943,7 @@ end
 	--setPedAnimation (pedTrader23,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker2,"trader",pedTrader2,false)
 	setElementData(pedTrader2,"trader",myMarker2,false)
-	setElementData(pedTrader2,"pedName","Торговец: одежда")
+	setElementData(pedTrader2,"pedName","Comerciante: Vestuário")
 	setElementFrozen  ( pedTrader2, true )
 	
 	pedTrader18 = createPed ( 278, 1615.7293701172,1547.7244873047,10.809983253479,210,false) 
@@ -1035,7 +952,7 @@ end
 	--setPedAnimation (pedTrader18,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker18,"trader",pedTrader18,false)
 	setElementData(pedTrader18,"trader",myMarker18,false)
-	setElementData(pedTrader18,"pedName","Торговец: патроны")
+	setElementData(pedTrader18,"pedName","Comerciante: Munições")
 	setElementFrozen  ( pedTrader18, true ) 
 	
 ----------------------------------------------------------------- BIGsf
@@ -1048,7 +965,7 @@ pedTrader18 = createPed ( 278, -1477.8364257813,-402.84918212891,6.875	,50,false
 	--setPedAnimation (pedTrader18,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker18,"trader",pedTrader18,false)
 	setElementData(pedTrader18,"trader",myMarker18,false)
-	setElementData(pedTrader18,"pedName","Торговец: патроны")
+	setElementData(pedTrader18,"pedName","Comerciante: Munições")
 	setElementFrozen  ( pedTrader18, true ) 
 	
 	
@@ -1059,7 +976,7 @@ pedTrader18 = createPed ( 278, -1477.8364257813,-402.84918212891,6.875	,50,false
 	setPedAnimation (pedTrader2,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker2,"trader",pedTrader2,false)
 	setElementData(pedTrader2,"trader",myMarker2,false)
-	setElementData(pedTrader2,"pedName","Торговец: одежда")
+	setElementData(pedTrader2,"pedName","Comerciante: Vestuário")
 	setElementFrozen  ( pedTrader2, true )
 	
 
@@ -1069,7 +986,7 @@ pedTrader18 = createPed ( 278, -1477.8364257813,-402.84918212891,6.875	,50,false
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker3,"trader",pedTrader3,false)
 	setElementData(pedTrader3,"trader",myMarker3,false)
-	setElementData(pedTrader3,"pedName","Торговец: разное")
+	setElementData(pedTrader3,"pedName","Comerciante: Diversos")
 	setElementFrozen  ( pedTrader3, true )
 	
 
@@ -1079,7 +996,7 @@ pedTrader29 = createPed ( 259, -1538.7884521484,-368.83847045898,6.875	,240,fals
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker29,"trader",pedTrader29,false)
 	setElementData(pedTrader29,"trader",myMarker29,false)
-	setElementData(pedTrader29,"pedName","Торговец: Comidas & Bebidas & Mel")
+	setElementData(pedTrader29,"pedName","Comerciante: Comidas & Bebidas & Mel")
 	setElementFrozen  ( pedTrader29, true )
 	
 
@@ -1089,7 +1006,7 @@ pedTrader29 = createPed ( 259, -1538.7884521484,-368.83847045898,6.875	,240,fals
 	--setPedAnimation (pedTrader27,"BEACH","ParkSit_M_loop",nil,true,false,false,false)
 	setElementData(myMarker5,"trader",pedTrader5,false)
 	setElementData(pedTrader5,"trader",myMarker5,false)
-	setElementData(pedTrader5,"pedName","Торговец: оружие")
+	setElementData(pedTrader5,"pedName","Comerciante: Armas")
 	setElementFrozen  ( pedTrader5, true )
 	
 	

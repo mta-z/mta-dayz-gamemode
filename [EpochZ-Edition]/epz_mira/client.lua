@@ -64,7 +64,7 @@ if getPedControlState ( "aim_weapon" ) then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_svd"]);
 	elseif cross == "M24" then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_m24"]);
-	elseif cross == "M24 (desert)" then
+	elseif cross == "M24 (Deserto)" then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_m24"]);
 	elseif cross == "M40A3" then
 	dxDrawImage (u, v, screenw-2*u, screenh-2*v, textures ["cross_m24"]);

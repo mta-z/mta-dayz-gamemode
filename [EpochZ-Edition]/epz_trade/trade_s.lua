@@ -16,7 +16,7 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 	
 	
 	
-	if (teri == "Торговец: транспорт") then
+	if (teri == "Comerciante: Veículos") then
 	local tsBuyTime = getElementData(source,"tsBuyTime") or 0
 		if(tsBuyTime>getRealTime().timestamp) then
 			outputChatBox("Você não pode comprar esse carro no momento",source)
@@ -44,7 +44,7 @@ local enginerSlots = getElementData(source,"progress.enginer") or 0
 
 
 
-if (teri == "Торговец: патроны") then
+if (teri == "Comerciante: Munições") then
 local playerItem = getElementData(source,item[1]) or false
 if playerItem then
 setElementData(source,item[1], playerItem + item[3])
@@ -54,7 +54,7 @@ outputChatBox("Você comprou 1 "..item[1],source)
 setElementData(source,item[1],item[3])
 end
 
-elseif (teri == "Торговец: транспорт") then
+elseif (teri == "Comerciante: Veículos") then
 
 
 	if getVehicleType ( item[3] ) == "Helicopter"  then
@@ -115,7 +115,7 @@ local MyItems = getElementData(source,stm) or 0
 
 	
 	
-	if (teri == "Торговец: патроны") then 
+	if (teri == "Comerciante: Munições") then 
 	local patr = getElementData(source,item[1]) or 0
 	if patr  >= item[3] then
 
@@ -127,7 +127,7 @@ local MyItems = getElementData(source,stm) or 0
 		else
 		outputChatBox("Você não tem este item ou o clipe está incompleto" ,source)
 	end
-	elseif (itemList == "Рюкзаки") then 
+	elseif (itemList == "Mochilas") then 
 
 	if getElementData(source,"backPackUsed") == item[1] then
 	if getElementData(source,item[1]) <= 1 then
@@ -146,7 +146,7 @@ local MyItems = getElementData(source,stm) or 0
 		outputChatBox("Você vendeu 1 "..stm.."e consegui isso "..math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100)).." de dinheiro" ,source)
 	
 	end
-	elseif teri == "Барыга" then
+	elseif teri == "Comerciante: Ambulante" then
 	setElementData(source,stm,MyItems-1)
 		setElementData(source,"Dinheiro",money+math.ceil (math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2))
 		outputChatBox("Você vendeu 1 "..stm.." e consegui isso "..math.ceil ((math.ceil (item[2]/2+((item[2]/2)*(economist*0.5)/100))/2)).." de dinheiro" ,source)
@@ -298,13 +298,13 @@ local location = math.random(1,4)
 	 pedTrader11 = createPed ( 262,blackLocations[location][1],blackLocations[location][2],blackLocations[location][3],-0.0,false) 
 	setElementFrozen  ( pedTrader11, true )
 --setPedAnimation (pedTrader11,"ped","SEAT_idle",nil,true,false,false,false)
-  setElementData(pedTrader11,"pedName","Торговец: черный рынOK")
+  setElementData(pedTrader11,"pedName","Comerciante: Mercado Negro")
   setElementData(pedTrader11,"traderLoc",location)
       local myMarker11 = createMarker ( blackLocations[location][1],blackLocations[location][2],blackLocations[location][3]+0.5, "corona", 1.5, 0, 0, 0, 170 )
 --outputChatBox("ЧР: "..blackLocations[location][1]..","..blackLocations[location][2]..","..blackLocations[location][3])
 function MarkerHitf11(source) 
 if getElementType(source) =="player" then
- triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Торговец: черный рынOK",getElementData(pedTrader11,"traderLoc"))  
+ triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Comerciante: Mercado Negro",getElementData(pedTrader11,"traderLoc"))  
 end
 end
 addEventHandler( "onMarkerHit", myMarker11, MarkerHitf11 )
@@ -336,13 +336,13 @@ local location = math.random(1,3)
 	 pedTRADEROFF = createPed ( 262,traderOFFLocations[location][1],traderOFFLocations[location][2],traderOFFLocations[location][3],traderOFFLocations[location][4],false) 
 	setElementFrozen  ( pedTRADEROFF, true )
 --setPedAnimation (pedTrader11,"ped","SEAT_idle",nil,true,false,false,false)
-  setElementData(pedTRADEROFF,"pedName","Барыга")
+  setElementData(pedTRADEROFF,"pedName","Comerciante: Ambulante")
   setElementData(pedTRADEROFF,"traderLoc",location)
       local myTRADEROFF = createMarker ( traderOFFLocations[location][1],traderOFFLocations[location][2],traderOFFLocations[location][3]+0.5, "corona", 1.5, 0, 0, 0, 170 )
---outputChatBox("Барыга: "..traderOFFLocations[location][1]..","..traderOFFLocations[location][2]..","..traderOFFLocations[location][3])
+--outputChatBox("Comerciante: Ambulante: "..traderOFFLocations[location][1]..","..traderOFFLocations[location][2]..","..traderOFFLocations[location][3])
 function MarkerHitfTRADEROFF(source) 
 if getElementType(source) =="player" then
- triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Барыга",getElementData(pedTRADEROFF,"traderLoc"))  
+ triggerClientEvent ("PlayerInMarker", source,source,pedTrader,"Comerciante: Ambulante",getElementData(pedTRADEROFF,"traderLoc"))  
 end
 end
 addEventHandler( "onMarkerHit", myTRADEROFF, MarkerHitfTRADEROFF )

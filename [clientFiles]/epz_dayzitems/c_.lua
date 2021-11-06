@@ -55,9 +55,9 @@ local items = {
 {1956,"1956.txd","1956.dff",false,lodDistance}, -- Ração Seca Pequena
 {2778,"1956.txd","3437.dff",false,lodDistance}, -- Ração Seca Grande
 {1952,"1952.txd","1952.dff",false,lodDistance}, -- Mangueira
-{1664,"1664.txd","1664.dff",false,lodDistance}, -- Снасти
+--{1664,"1664.txd","1664.dff",false,lodDistance}, -- Снасти
 {1485,"1485.txd","1485.dff",false,lodDistance},
-{1668,"1485.txd","1668.dff",false,lodDistance}, -- Наживка
+--{1668,"1485.txd","1668.dff",false,lodDistance}, -- Наживка
 {1545,"1485.txd","1545.dff",false,lodDistance}, -- Vara de Pesca
 {1512,"1512.txd","1512.dff",false,lodDistance}, -- Peixe Cru
 {1517,"1512.txd","1517.dff",false,lodDistance}, -- Peixe Frito
@@ -68,7 +68,7 @@ local items = {
 {2394,"2394.txd","2394.dff",false,70}, -- Capacete Militar 50%
 {2396,"2396.txd","2396.dff",false,70}, -- Colete 10%
 {936,"936.txd","936.dff",false,70}, -- Colete 30%
---{937,"937.txd","937.dff",false,70}, -- каска с противогазом не используется
+--{937,"937.txd","937.dff",false,70}, -- каска с Máscara antigaом не используется
 --{941,"941.txd","941.dff",false,70}, -- шлем sol не используется
 {1755,"1755.txd","1755.dff",false,70}, -- Capacete de Motocicleta 10%
 {2015,"2015.txd","2015.dff",false,70}, -- Máscara de Soldador 10%

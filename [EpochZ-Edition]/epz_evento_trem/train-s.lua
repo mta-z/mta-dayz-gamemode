@@ -42,7 +42,7 @@ TrainLoot = {
 {"KSVK",3},
 {"M107",1},
 {"M24",1},
-{"M24 (desert)",1},
+{"M24 (Deserto)",1},
 {"M40A3",1},
 {"SVD Camo",1},
 {"ВСС Vintorez",3},

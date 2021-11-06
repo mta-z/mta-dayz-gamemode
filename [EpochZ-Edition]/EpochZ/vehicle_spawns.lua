@@ -308,7 +308,7 @@ local lootItems = {
 {"AS50",1915,1,90,0.01},
 {"KSVK",1919,1,90,0.005},
 {"M107",1920,1,90,0.05},
-{"M24 (desert)",1924,1,90,0.1},
+{"M24 (Deserto)",1924,1,90,0.1},
 {"M40A3",1925,1,90,0.1},
 {"SVD Camo",1926,1,90,0.1},
 {"Mochila de Explorador 100",953,1,0,0.2},
@@ -616,7 +616,7 @@ function onPlayerEnterDayzVehicle(veh,seat)
 	if (getElementData(col,"fuel") or 0) <= 1 then
 	local vehType = getVehicleType ( veh )
 	if vehType ~="BMX" then
-	triggerClientEvent (source, "displayClientInfo", source,"Veículo","В этом транспортном средстве нет бензина!",22,255,0)
+	triggerClientEvent (source, "displayClientInfo", source,"Veículo","В этом Veículosном средстве нет бензина!",22,255,0)
 	setVehicleEngineState ( veh, false )
 	else
 	setVehicleEngineState ( veh, true )

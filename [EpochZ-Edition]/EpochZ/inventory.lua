@@ -178,8 +178,8 @@
 {"Mochila do Colorado 120",5,"Equipar",120},
 {"Mochila Brasileira 140",6,"Equipar",140},
 {"Mochila de Samurai 160",16,"Equipar",160},
---{"Рюкзак ВОЕННЫЙ 180",18,"Equipar",180},
---{"Рюкзак ФАРАОН 200",20,"Equipar",200},
+--{"Mochila Militar 180",18,"Equipar",180},
+--{"Mochila Faraó 200",20,"Equipar",200},
 {"Dinheiro",0.0001},
 {"Cofre",20,"Colocar Cofre"},
 {"Sacos de Areia",10,"Espalhe os Sacos"},
@@ -2105,7 +2105,7 @@ local clotTable={
 }
 --2396 синий броник
 --936 камуфляжный броник с разгрузкой
--- 937 каска с противогазом
+-- 937 каска с Máscara antigaом
 --941 шлем sol
 function ClotElement(clotName,clotType)
 if (getElementData(localPlayer,clotName) or 0) <=0 then
@@ -2324,7 +2324,7 @@ function weaponSwitch (weapon)
 		local ammoName,_ = getWeaponAmmoType2 (weaponSwith)
 		if (getElementData(localPlayer,ammoName) or 0) > 0 then
 			setElementData(localPlayer,ammoName,(getElementData(localPlayer,ammoName) or 0)-1) --server
-			--if weaponSwith == "CZ550" or weaponSwith == "DMR"   or weaponSwith == "M24" or weaponSwith == "M24 (desert)" then
+			--if weaponSwith == "CZ550" or weaponSwith == "DMR"   or weaponSwith == "M24" or weaponSwith == "M24 (Deserto)" then
 			--triggerServerEvent ( "reloadWeaponFromFire", localPlayer)
 			--triggerEvent("setReloadedSniper",localPlayer)
 			--end

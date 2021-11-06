@@ -340,7 +340,7 @@ return
  local pos3 = 70
 local sniper = getElementData(getLocalPlayer(),"progress.sniper") or 0
 --local img3 ={};
-  headline["sniper"] = guiCreateLabel(0, 125, 750, 100,"Franco atirador",false,tab1)
+  headline["sniper"] = guiCreateLabel(0, 125, 750, 100,"Franco Atirador",false,tab1)
 guiSetFont (headline["sniper"] , "default-bold-small" )   
 guiLabelSetHorizontalAlign (headline["sniper"],"center")
 headline["sniperProgress"] = guiCreateLabel(20, 145, 50, 40,"/0100",false,tab1)

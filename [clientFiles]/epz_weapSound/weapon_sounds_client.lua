@@ -77,7 +77,7 @@ local  weapon = getElementData(source or pedWeap,"weaponSwith")
 	sound =	playSound3D ( "sounds/M24.wav",startX, startY, startZ, false )
 	elseif weapon == "M1014" then
 	sound =	playSound3D ( "sounds/M24.wav",startX, startY, startZ, false )
-	elseif weapon == "M24 (desert)" then
+	elseif weapon == "M24 (Deserto)" then
 	sound =	playSound3D ( "sounds/M24.wav",startX, startY, startZ, false )
 	elseif weapon == "M40A3" then
 	sound =	playSound3D ( "sounds/M24.wav",startX, startY, startZ, false )

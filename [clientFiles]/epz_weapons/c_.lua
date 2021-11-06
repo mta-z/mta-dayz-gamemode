@@ -35,7 +35,7 @@ models = {
 {"guns/KSVK",1919},
 {"guns/M107",1920},
 {"guns/M24",1923},
-{"guns/M24 (desert)",1924},
+{"guns/M24 (Deserto)",1924},
 {"guns/M40A3",1925},
 {"guns/SVD Camo",1926},
 {"guns/VSS",1922},

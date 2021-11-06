@@ -128,7 +128,7 @@ damageTable = {
 {"KSVK",15000}, 
 {"M107",15000}, 
 {"M24",8002}, 
---{"M24 (desert)",8002}, 
+--{"M24 (Deserto)",8002}, 
 {"SVD Camo",9000}, 
 {"M40A3",8000}, 
 {"Machado",4500}, 
@@ -183,7 +183,7 @@ weaponAmmoTable = {
 {"KSVK",1919,"KSVK mag",34,5},
 {"M107",1920,"M107 mag",34,5},
 {"M24",1923,"M24 mag",34,5},
-{"M24 (desert)",1924,"M24 mag",34,5},
+{"M24 (Deserto)",1924,"M24 mag",34,5},
 {"M40A3",1925,"M40A3 mag",34,5},
 {"SVD Camo",1926,"SVD mag",34,5},
 {"ВСС Vintorez",1922,"ВСС mag",30,30},
@@ -266,13 +266,13 @@ weaponAmmoTable = {
 --{"Mina"},
 {"Gazua"},
 {"Vara de Pesca"},
-{"Снасти"},
-{"Наживка"},
+--{"Снасти"},
+--{"Наживка"},
 {"Peixe Frito"},
 {"Peixe Cru"},
 --{"Colete"},
 --{"Capacete Militar"},
---{"Противогаз"},
+--{"Máscara antiga"},
 {"Placa de Metal 1"},
 {"Placa de Metal 2"},
 {"Ração Seca Grande"},
@@ -317,7 +317,7 @@ weaponAmmoTable = {
 {"KSVK"},
 {"M107"},
 {"M24"},
-{"M24 (desert)"},
+{"M24 (Deserto)"},
 {"M40A3"},
 {"SVD Camo"},
 {"M4A1 mag"},
@@ -355,8 +355,8 @@ weaponAmmoTable = {
 {"Mochila do Colorado 120"},
 {"Mochila Brasileira 140"},
 {"Mochila de Samurai 160"},
---{"Рюкзак ВОЕННЫЙ 180"},
---{"Рюкзак ФАРАОН 200"},
+--{"Mochila Militar 180"},
+--{"Mochila Faraó 200"},
 {"Saco de Peças de Zumbi"},
 {"Vestuário: Militar 1"},
 {"Vestuário: Militar 2"},
@@ -436,11 +436,11 @@ weaponAmmoTable = {
 {"MAX_Slots"},
 }
 
--- ID,Колеса,Motor,расход топлива,MAX fuel,slots
+-- ID,Pneu,Motor,consumo de combustível,MAX fuel,slots
 vehicleAddonsInfo = {
 {403,6,1,0.50,100,150}, -- грузовик
-{584,0,0,0,0,0}, -- бенз прицеп грузовика
-{591,0,0,0,0,500}, -- простой прицеп грузовика
+{584,0,0,0,0,0}, -- Benz Reboque Caminhão
+{591,0,0,0,0,500}, -- простой Reboque грузовика
 {400,4,1,0.20,100,80}, -- Landstalker
 {401,4,1,0.20,100,50}, -- Bravura
 {402,4,1,0.20,100,50}, -- Buffalo
@@ -680,7 +680,7 @@ return "Mitsubishi Lancer Evolution IX"
 elseif id == 584 then
 return "Combustível"
 elseif id == 591 then
-return "Прицеп"
+return "Reboque"
 elseif id == 403 then
 return "Kenworth W 900L"
 
@@ -691,7 +691,7 @@ return "Honda Civic Si 2012"
 elseif id == 416 then
 return "Ambulance"
 elseif id == 601 then
-return "БРДМ 2"
+return "BRDM 2"
 elseif id == 536 then
 return "Pontiac Firebird Trans Am 1980"
 elseif id == 468 then
