@@ -1665,7 +1665,7 @@ end
 	elseif targetElementType == "player"  then
 	nick = getPlayerName(targetElement)
 	elseif targetElementType == "veh"  then
-	nick = GetRealVehicleName (targetElement) or "Транспортное средство"
+	nick = GetRealVehicleName (targetElement) or "Veículo"
 	
 	end
 	

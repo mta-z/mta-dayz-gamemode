@@ -2189,7 +2189,7 @@ end
 function equipBackPack(itemName,itemInfo,itemData)
 if itemData then
 --if getElementData(localPlayer,"playerlvl") < 100 and itemData > 100  then triggerEvent ("displayClientInfo", localPlayer,"Inventário","У вас недостаточно опыта для использования этого рюкзака",255,22,0) return end
-if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","Вы уже используете этот рюкзак!",255,22,0) return end
+if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","Você já está usando esta mochila!",255,22,0) return end
 	--if getElementData(localPlayer,"MAX_Slots") > itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","В настоящий момент, ваш рюкзак имеет больше пространства!",255,22,0) return end
 	
 	local enginerSlots = getElementData(localPlayer,"progress.enginer") or 0

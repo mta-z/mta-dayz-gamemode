@@ -615,7 +615,7 @@ function onPlayerEnterDayzVehicle(veh,seat)
 	if (getElementData(col,"fuel") or 0) <= 1 then
 	local vehType = getVehicleType ( veh )
 	if vehType ~="BMX" then
-	triggerClientEvent (source, "displayClientInfo", source,"Транспортное средство","В этом транспортном средстве нет бензина!",22,255,0)
+	triggerClientEvent (source, "displayClientInfo", source,"Veículo","В этом транспортном средстве нет бензина!",22,255,0)
 	setVehicleEngineState ( veh, false )
 	else
 	setVehicleEngineState ( veh, true )
@@ -680,7 +680,7 @@ setTimer(setVehiclesFuelPerMinute,20000,0)
 local repairTimer = {}
 function repairVehicle (veh)
 setPedAnimation (source)
-	if repairTimer[veh] then triggerClientEvent (source, "displayClientInfo", source,"Транспортное средство","Т/С в настоящий момент восстанавливается!",255,22,0) return end
+	if repairTimer[veh] then triggerClientEvent (source, "displayClientInfo", source,"Veículo","Т/С в настоящий момент восстанавливается!",255,22,0) return end
 	local health = math.floor(getElementHealth(veh))
 	local progressEnginer = getElementData(source,"progress.enginer") or 0
 	progressEnginer = progressEnginer*500
@@ -697,7 +697,7 @@ setPedAnimation (source)
 	
 	setPedAnimation (source,"SCRATCHING","sclng_r",-1,true,false)
 	triggerClientEvent (source,"rapireVH",source)
-	triggerClientEvent (source, "displayClientInfo", source,"Транспортное средство","Вы начали чинить Т/С",22,255,0)
+	triggerClientEvent (source, "displayClientInfo", source,"Veículo","Вы начали чинить Т/С",22,255,0)
 end
 addEvent("repairVehicle",true)
 addEventHandler("repairVehicle",getRootElement(),repairVehicle)
@@ -712,7 +712,7 @@ function fixVehicleDayZ(veh,player)
 	setElementData(veh,"repairer",nil,false)
 	setElementData(player,"repairingvehicle",nil,false)
 	triggerClientEvent (player,"rapireStopVH",player,player)
-	triggerClientEvent (player, "displayClientInfo", player,"Транспортное средство","Вы починили Т/С",22,255,0)
+	triggerClientEvent (player, "displayClientInfo", player,"Veículo","Вы починили Т/С",22,255,0)
 	local wheels= getElementData(getElementData(veh,"parent"),"Pneu_inVehicle") or false
 	if wheels then
 	triggerEvent ( "setWheelStates2", getRootElement(), veh,wheels,"-" )
@@ -730,7 +730,7 @@ if player then
 	setElementData(veh,"repairer",nil,false)
 	setElementData(player,"repairingvehicle",nil,false)
 	triggerClientEvent (player,"rapireStopVH",player,player)
-	triggerClientEvent (player, "displayClientInfo", player,"Транспортное средство","Вы прекратили чинить Т/C",255,22,0)
+	triggerClientEvent (player, "displayClientInfo", player,"Veículo","Вы прекратили чинить Т/C",255,22,0)
 	killTimer(repairTimer[veh])
 	repairTimer[veh] = nil
 	end
@@ -772,9 +772,9 @@ function setEngineStateByPlayer (playersource)
 	setVehicleEngineState (veh, not getVehicleEngineState(veh))
 	if getElementData(getElementData(veh,"parent"),"fuel") <= 0 then return end
 	if getVehicleEngineState(veh) == true then
-		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Motor заведен!",22,255,0)
+		triggerClientEvent (playersource, "displayClientInfo", playersource,"Veículo","Motor заведен!",22,255,0)
 	else
-		triggerClientEvent (playersource, "displayClientInfo", playersource,"Транспортное средство","Motor заглушен!",255,22,0)
+		triggerClientEvent (playersource, "displayClientInfo", playersource,"Veículo","Motor заглушен!",255,22,0)
 	end
 end
 

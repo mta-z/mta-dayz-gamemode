@@ -197,28 +197,28 @@ end
 
 if arg1 == "autoPatrolStantion" then
 		number = number+1	
-		createMenuItem(number,"Починить ("..(GetRealVehicleName(arg2) or "Транспортное средство" )..")","autoRepVeh")
+		createMenuItem(number,"Consertar ("..(GetRealVehicleName(arg2) or "Veículo" )..")","autoRepVeh")
 		
 		number = number+1
-		createMenuItem(number,"Заправить ("..(GetRealVehicleName(arg2) or "Транспортное средство")..")","autoFulVeh")
+		createMenuItem(number,"Encher ("..(GetRealVehicleName(arg2) or "Veículo")..")","autoFulVeh")
 end
 
 if arg1 == "carMechanic" then
 		number = number+1
-		createMenuItem(number,"Автомеханик ("..(GetRealVehicleName(arg2) or "Транспортное средство" )..")","carMechanic")
+		createMenuItem(number,"Auto-Mecânica ("..(GetRealVehicleName(arg2) or "Veículo" )..")","carMechanic")
 end
 
 if arg1 == "TradeCar" then
 	if getElementData(arg2,"owner") == getElementData(localPlayer,"userAccount") then
 		number = number+1
-		createMenuItem(number,"Продать ("..(GetRealVehicleName(arg2) or "Транспортное средство")..")","tradeCarSell")
+		createMenuItem(number,"Vender ("..(GetRealVehicleName(arg2) or "Veículo")..")","tradeCarSell")
 		end
 end
 
 if arg1 == "startFishing" then
 if getElementData(localPlayer,"fishing") then
 		number = number+1
-		createMenuItem(number,"Начать рыбачить","startFishing")
+		createMenuItem(number,"Começar a Pescar","startFishing")
 else
 return
 end
@@ -228,10 +228,10 @@ if arg1 == "checkFishing" then
 if getElementData(localPlayer,"fishing") then
 
 		number = number+1
-		createMenuItem(number,"Подсечь рыбу","checkFishing")
+		createMenuItem(number,"Fisgar o Peixe","checkFishing")
 		setTimer(function() 
 		if not getElementData(localPlayer,"checkFishing") then
-			outputChatBox("Рыба сорвалась!")
+			outputChatBox("O Peixe Caiu!")
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") or 0 -1)
 			triggerServerEvent("startFishing",localPlayer,localPlayer,"stop")
 			disableMenu()
@@ -245,7 +245,7 @@ end
 if arg1 == "stopFishing" then
 if getElementData(localPlayer,"fishing") then
 		number = number+1
-		createMenuItem(number,"Закончить рыбачить","stopFishing")
+		createMenuItem(number,"Terminar de pescar","stopFishing")
 else
 return
 end
@@ -254,7 +254,7 @@ end
 if arg1 == "baiting" then
 if getElementData(localPlayer,"inbaitZone") then
 		number = number+1
-		createMenuItem(number,"Накопать червей","baiting")
+		createMenuItem(number,"Desenterrar os vermes","baiting")
 
 		
 		number = number+1
@@ -268,30 +268,30 @@ end
 
 if arg1 == "Helicrashsite" then
 	number = number+1
-	createMenuItem(number,"Обыскать: Разбитый вертолёт","helicrashsite")
+	createMenuItem(number,"Procurar: Helicóptero Destruido","helicrashsite")
 
 end
 
 if arg1 == "Aircrashsite" then
 	number = number+1
-	createMenuItem(number,"Обыскать: Разбитый самолет","aircrash")
+	createMenuItem(number,"Procurar: Avião Destruido","aircrash")
 end
 
 
 
-if arg1 == "Осмотреть могилу" then
+if arg1 == "Conteúdo" then
 	number = number+1
-	createMenuItem(number,"Осмотреть могилу","mogilsmtr")
+	createMenuItem(number,"Conteúdo","mogilsmtr")
 end
 
 if arg1 == "Hospitalbox" then
 	number = number+1
-	createMenuItem(number,"Обыскать: Коробка госпиталя","hospitalbox")
+	createMenuItem(number,"Procurar: Caixa de hospital","hospitalbox")
 end
 
 if arg1 == "Yashik" then
 	number = number+1
-	createMenuItem(number,"Обыскать: Военный ящик","yashik")
+	createMenuItem(number,"Procurar: Caixa Militar","yashik")
 
 end
 
@@ -307,7 +307,7 @@ end
 	number = number+1
 	
 	
-	createMenuItem(number,"Обыскать ("..arg2..")","vehicle")
+	createMenuItem(number,"Procurar ("..arg2..")","vehicle")
 	
 	if getElementData(getElementData(arg3,"parent"),"tent") then
 	if getElementData(getElementData(arg3,"parent"),"save") then
@@ -358,7 +358,7 @@ end
 	if getElementModel(arg3) ~= 584 and getElementModel(arg3) ~= 591 then
 	if getElementHealth(arg3) < 1000 and getElementHealth(arg3) >= 50 and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 		number = number+1
-		createMenuItem(number,"Починить ("..arg2..")","repairvehicle")
+		createMenuItem(number,"Consertar ("..arg2..")","repairvehicle")
 	end
 	
 	if getVehicleType (arg3) =="Automobile" then 
@@ -366,7 +366,7 @@ end
 		
 		 if progressMech==100 and not isVehicleLocked(arg3) and (getElementData(localPlayer,"Caixa de Ferramentas") or 0) >= 1 then
 			number = number+1
-			createMenuItem(number,"Автомеханик ("..arg2..")","progressAutoMech")
+			createMenuItem(number,"Auto-Mecânica ("..arg2..")","progressAutoMech")
 			
 		 end
 	 end
@@ -426,7 +426,7 @@ end
 		if 	(getElementData(getElementData(arg3,"parent"),"fuel")+20) < tonumber(maxFuel) then
 
 					number = number+1
-					createMenuItem(number,"Заправить","fuelCar")
+					createMenuItem(number,"Encher","fuelCar")
 			end		
 			end	
 			
@@ -553,7 +553,7 @@ end
 if arg1 == "Dead" then
 
 	number = number+1
-	createMenuItem(number,"Обыскать труп ("..arg2..")","dead")
+	createMenuItem(number,"Procurar труп ("..arg2..")","dead")
 
 	
 	
@@ -636,9 +636,9 @@ if arg1 == "Sacos de Areia" then
 	end	
 end
 
-if arg1 == "Обыскать" then
+if arg1 == "Procurar" then
 	number = number+1
-	createMenuItem(number,"Обыскать","itemloot")
+	createMenuItem(number,"Procurar","itemloot")
 end
 end
 addEvent("showClientMenuItem",true)
@@ -727,16 +727,16 @@ if getElementData(source,"parent") == localPlayer then return end
 
 		
 		if getElementData(source,"itemloot") then
-			showClientMenuItem("Обыскать")
+			showClientMenuItem("Procurar")
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Обыскать",false)
+			setElementData(localPlayer,"lootname","Procurar",false)
 			setElementData(localPlayer,"currentCol",source,false)
 			setShowItemIcon (true,source)
 			return
 		end
 
 	if getElementData(source,"deadbury") then
-			showClientMenuItem("Осмотреть могилу")
+			showClientMenuItem("Conteúdo")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",false,false)
 			return
@@ -814,7 +814,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Aircrashsite","aircrash")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Разбитый самолет",false)
+			setElementData(localPlayer,"lootname","Avião Destruido",false)
 			return
 		end
 		
@@ -824,7 +824,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Hospitalbox","hospitalbox")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Коробка госпиталя",false)
+			setElementData(localPlayer,"lootname","Caixa de hospital",false)
 			setShowItemIcon (true,source)
 			return
 		end
@@ -832,7 +832,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Yashik","yashik")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Военный ящик",false)
+			setElementData(localPlayer,"lootname","Caixa Militar",false)
 			setShowItemIcon (true,source)
 			return
 		end
@@ -869,7 +869,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			if isTent then
 			 name = "Tenda"
 			else
-			 name = "Транспортное средство"
+			 name = "Veículo"
 			end
 			 
 			end
@@ -903,7 +903,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			local maxFuel= getElementData(getElementData(source,"parent"),"maxfuel") or 0
 			local needtires = getElementData(getElementData(source,"parent"),"needtires") or 0 
 		local needengines= getElementData(getElementData(source,"parent"),"needengines") or 0 
-			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Транспортное средство" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nPneu: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nMotor: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
+			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Veículo" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nPneu: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nMotor: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
 			else
 			--
 			end
@@ -1168,7 +1168,7 @@ if ( keyState == "down" ) then
 		
 		
 		if itemName == "helicrashsite" then
-			local gearName = "Обыскать (Разбитый вертолёт)"
+			local gearName = "Procurar (Helicóptero Destruido)"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1177,7 +1177,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "aircrash" then
-			local gearName = "Обыскать (Разбитый самолет)"
+			local gearName = "Procurar (Avião Destruido)"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1186,7 +1186,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "itemloot" then
-			local gearName = "Обыскать"
+			local gearName = "Procurar"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1394,7 +1394,7 @@ if ( keyState == "down" ) then
 		end	
 		
 		if itemName == "hospitalbox" then
-			local gearName = "Обыскать (Коробка госпиталя)"
+			local gearName = "Procurar (Caixa de hospital)"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1403,7 +1403,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "yashik" then
-			local gearName = "Обыскать ящик"
+			local gearName = "Procurar ящик"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1422,13 +1422,13 @@ if ( keyState == "down" ) then
 			local isBigTent = getElementData(col,"bigTent") or false
 			if isBigTent then 
 			
-			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda Grande")..")"
+			local gearName = "Procurar ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda Grande")..")"
 			else
 			local smalltent = getElementData(col,"tent") or false
 			if smalltent then
-			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda")..")"
+			local gearName = "Procurar ("..(GetRealVehicleName(getElementData(col,"parent")) or "Tenda")..")"
 			else
-			local gearName = "Обыскать ("..(GetRealVehicleName(getElementData(col,"parent")) or "Транспортное средство")..")"
+			local gearName = "Procurar ("..(GetRealVehicleName(getElementData(col,"parent")) or "Veículo")..")"
 			end
 			end
 			refreshLoot(col,gearName)
@@ -1545,7 +1545,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "dead" then
-			local gearName = "Обыскать ("..getElementData(col,"playername")..")"
+			local gearName = "Procurar ("..getElementData(col,"playername")..")"
 			refreshLoot(col,gearName)
 			playerInCol = getElementData(col,"PlayerInCol")
 			if playerInCol then
@@ -1754,13 +1754,13 @@ if act ==1 then
 local cena = math.floor((1000-health)*3)
  local cena1 = cena - cena*(economist*0.9)/100
  
-text = "Вы действительно хотите починить "..( GetRealVehicleName(veh) or "транспортное средство").." ? \nЦена:"..math.floor(cena1)
+text = "Вы действительно хотите Consertar "..( GetRealVehicleName(veh) or "Veículo").." ? \nЦена:"..math.floor(cena1)
 elseif act ==2 then
 maxfuel = getElementData(veh,"maxfuel") or 0 
 fuel = getElementData(getElementData(veh,"parent"),"fuel") or 0 
 local cena = math.floor((maxfuel-fuel)*10)
  local cena1 = cena - cena*(economist*0.9)/100
-text = "Вы действительно хотите полностью заправить "..(GetRealVehicleName(veh) or "транспортное средство" ).." ? \nЦена:"..math.floor(cena1)..""
+text = "Вы действительно хотите полностью Encher "..(GetRealVehicleName(veh) or "Veículo" ).." ? \nЦена:"..math.floor(cena1)..""
 end
 
 
@@ -1792,7 +1792,7 @@ local economist = getElementData(localPlayer,"progress.economist") or 0
  if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
  setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((1000-health)*3))
  setElementHealth(veh,1000)
- outputChatBox(""..(GetRealVehicleName(veh) or "Транспортное средство").." был  поолностью восстановлен!")
+ outputChatBox(""..(GetRealVehicleName(veh) or "Veículo").." был  поолностью восстановлен!")
  else
  outputChatBox("У вас не хватает денег!")
  end
@@ -1804,7 +1804,7 @@ local economist = getElementData(localPlayer,"progress.economist") or 0
  if (getElementData(localPlayer,"Dinheiro") or 0) >= cena then 
  setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)-math.floor((maxfuel-fuel)*10))
  setElementData(getElementData(veh,"parent"),"fuel",maxfuel)
- outputChatBox(""..( GetRealVehicleName(veh) or "Транспортное средство").." был  поолностью заправлен!")
+ outputChatBox(""..( GetRealVehicleName(veh) or "Veículo").." был  поолностью заправлен!")
  else
  outputChatBox("У вас не хватает денег!")
  end
@@ -1881,7 +1881,7 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
 	end
  
  
-text = "Вы действительно хотите продать "..(GetRealVehicleName(veh) or "Транспортное средство").." ? \nЦена продажи:"..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100)
+text = "Вы действительно хотите Vender "..(GetRealVehicleName(veh) or "Veículo").." ? \nЦена продажи:"..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100)
 end
 end
 
@@ -1919,7 +1919,7 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
  setElementData(veh,"traded",true,false)
 triggerServerEvent("sellCar",localPlayer,veh)
 setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
- outputChatBox("Вы продали "..(GetRealVehicleName(veh) or "транспортное средство").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
+ outputChatBox("Вы продали "..(GetRealVehicleName(veh) or "Veículo").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
 else
 startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 		end
@@ -2120,10 +2120,10 @@ if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
 	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
 	setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)+1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Бензин был залит в Tanque de Combustível!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Veículo","Бензин был залит в Tanque de Combustível!",0,255,0)
 
 else
-triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Tanque de Combustível заполнен!",255,0,0)
+triggerEvent ("displayClientInfo", localPlayer,"Veículo","Tanque de Combustível заполнен!",255,0,0)
 end
 
 end
@@ -2139,7 +2139,7 @@ if steelList<1000 then
 	setElementData(car,"steelList",1000) --server
 	end
 	setElementData(localPlayer,"Chapa de Aço",(getElementData(localPlayer,"Chapa de Aço") or 0)-1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Транспортное средство","Chapa de Aço был установлен!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Veículo","Chapa de Aço был установлен!",0,255,0)
 
 else
 return
@@ -2205,7 +2205,7 @@ end
 			--setElementData(localPlayer,"Снасти",getElementData(localPlayer,"Снасти") -1)
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") -1)
 			elseif matFsh == 4 or matFsh == 5 then 
-			outputChatBox("Рыба сорвалась!")
+			outputChatBox("O Peixe Caiu!")
 			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка")-1)
 			end
 

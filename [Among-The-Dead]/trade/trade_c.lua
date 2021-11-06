@@ -581,7 +581,7 @@ removeEventHandler("onClientRender", root, rectMoney)
 end
  end,false)
  
- closeWin = guiCreateButton( 350, 380, 280, 30, "Продать",false,targ)
+ closeWin = guiCreateButton( 350, 380, 280, 30, "Vender",false,targ)
  
  addEventHandler ( "onClientGUIClick", closeWin,function() 
     local row, col = guiGridListGetSelectedItem( aaa3 )
@@ -590,11 +590,11 @@ end
   local clot2 = getElementData(getLocalPlayer(),"clotType_2")
   if clot1 and clot1~=0 and clot1==stm  then
   local clot1IN = getElementData(getLocalPlayer(),clot1)
-  if clot1IN<=1 then outputChatBox("Нельзя продать используемую вещь") return end
+  if clot1IN<=1 then outputChatBox("Нельзя Vender используемую вещь") return end
   end
   if clot2 and clot1~=0 and clot2==stm then
   local clot2IN = getElementData(getLocalPlayer(),clot2)
-  if clot2IN<=1 then outputChatBox("Нельзя продать используемую вещь") return end
+  if clot2IN<=1 then outputChatBox("Нельзя Vender используемую вещь") return end
   end
   
   if getElementData(getLocalPlayer(),stm) or 0 -1 <=0 then
