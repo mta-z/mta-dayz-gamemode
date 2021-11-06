@@ -85,7 +85,7 @@ end
 		end
 		
 		else
-outputChatBox("В рюкзаке не хватает места",source)
+outputChatBox("Não há espaço suficiente na mochila",source)
 	end
 	
 

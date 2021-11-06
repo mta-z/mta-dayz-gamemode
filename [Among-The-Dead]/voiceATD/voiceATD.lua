@@ -16,7 +16,7 @@ addEventHandler("onClientPlayerVoiceStart",root,function()
 	local RaciaPlayer =getElementData(source,"Walkie-Talkie") or false
 	if RaciaPlayer and RaciaPlayer<=0 then
 	if source == localPlayer then
-	outputChatBox("У вас нет рации!")
+	outputChatBox("Você não tem Walkie-Talkie!")
 	end
 	cancelEvent()
 	return

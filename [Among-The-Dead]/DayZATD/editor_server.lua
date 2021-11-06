@@ -1,11 +1,11 @@
 ﻿--SERVER OUTPUTS
 shownInfos = {}
 
-	shownInfos["nomag"] = "У вас нет патронов для этого оружия!"
-	shownInfos["youconsumed"] = "Употребляю"
-	shownInfos["needwatersource"] = "Для наполнения фляги требуется источник воды!"
-	shownInfos["filledup"] = "Фляга была полностью наполнена!"
-	shownInfos["noradio"] = "У вас нет Рации!"
+	shownInfos["nomag"] = "Você não tem munição para esta arma!"
+	shownInfos["youconsumed"] = "Consumiu"
+	shownInfos["needwatersource"] = "É necessária uma fonte de água para encher o frasco!"
+	shownInfos["filledup"] = "O frasco estava completamente cheio!"
+	shownInfos["noradio"] = "Você não tem Walkie-Talkie!"
 	
 --GAMEPLAY SETUP
 gameplayVariables = {}
