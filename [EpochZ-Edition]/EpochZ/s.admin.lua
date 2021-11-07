@@ -32,7 +32,7 @@ local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(sour
 if isAdmin then
 	if getPlayerFromName(pName) then
 		if isCar then
-		exports.CarSpawner:CarSpawner ( getPlayerFromName(pName), "spawnCar", item )
+		exports.epz_carspawner:CarSpawner ( getPlayerFromName(pName), "spawnCar", item )
 		else
 			setElementData(getPlayerFromName(pName), item, tonumber(quantity))
 			outputChatBox(""..quantity.." "..item.." emitido para "..pName, source, 255, 255, 0)

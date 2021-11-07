@@ -336,7 +336,7 @@ weaponAmmoTable = {
 {"Gazua"},
 {"Vara de Pesca"},
 --{"Снасти"},
--{"Наживка"},
+--{"Наживка"},
 {"Peixe Frito"},
 {"Peixe Cru"},
 --{"Colete"},

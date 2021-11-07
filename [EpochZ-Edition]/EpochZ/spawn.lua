@@ -121,7 +121,7 @@ function spawnDayZPlayer(player,location,unbug)
 
 
 if unbug then
-exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( player ) ).." Serial:"..getPlayerSerial ( player ).." IP:"..getPlayerIP ( player ).." ) "..getPlayerName(player).." function: spawnDayZPlayer type: unbug","log")	
+exports.epz_logs:setLog("( Conta:"..getAccountName ( getPlayerAccount ( player ) ).." Serial:"..getPlayerSerial ( player ).." IP:"..getPlayerIP ( player ).." ) "..getPlayerName(player).." function: spawnDayZPlayer type: unbug","log")	
 end
 
 	if location then
@@ -511,9 +511,9 @@ if not account then return end
 
 local timeAlive = getElementData(source,"alivetime") or 0 
 if killer then
-exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer:"..getPlayerName (killer).." killer serial: "..getPlayerSerial (killer).." aliveTime: "..timeAlive.."","log")	
+exports.epz_logs:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer:"..getPlayerName (killer).." killer serial: "..getPlayerSerial (killer).." aliveTime: "..timeAlive.."","log")	
 else
-exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer: none aliveTime: "..timeAlive.."","log")
+exports.epz_logs:setLog("( Conta:"..getAccountName ( getPlayerAccount ( source ) ).." Serial:"..getPlayerSerial ( source ).." IP:"..getPlayerIP ( source ).." ) "..getPlayerName(source).." function: kilLDayZPlayer killer: none aliveTime: "..timeAlive.."","log")
 end
 local  x,y,z = getElementPosition(source)
 

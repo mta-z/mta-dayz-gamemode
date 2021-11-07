@@ -50,7 +50,7 @@ local elementsInPlayer= getElementData(player,item[1]) or 0
 setElementData(player,item[1],elementsInPlayer+item[2])
 outputChatBox("Feliz Ano Novo!Presente: "..item[2].."Pacotes "..item[1],player)
 end
-local sanki = exports.CarSpawner:CarSpawner ( player, "spawnCar", 571 )
+local sanki = exports.epz_carspawner:CarSpawner ( player, "spawnCar", 571 )
 
 setElementData(sanki,"owner",getAccountName(getPlayerAccount ( player )))
 setElementData(sanki,"ownerNick",getPlayerName(player))

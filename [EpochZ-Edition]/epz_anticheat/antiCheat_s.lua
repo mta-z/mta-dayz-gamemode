@@ -14,7 +14,7 @@ if not isAdmin(source) then
 addBan( nil, nil, cheaterSerial, nil, "Trapaceiro("..reasonId.."), Para sempre, sem uma pausa" )
 end
 outputDebugString("BanCheater("..reason.."): "..cheaterSerial)
-exports.logger:setLog("BanCheater("..reason.."): "..cheaterSerial)
+exports.epz_logs:setLog("BanCheater("..reason.."): "..cheaterSerial)
 end
 addEvent( "cheaterBan", true )
 addEventHandler( "cheaterBan", getRootElement(), cheaterBan )

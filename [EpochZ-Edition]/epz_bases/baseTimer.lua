@@ -76,7 +76,7 @@ function checkBaseTimer()
 			local removedTents = removeTentsWeb ("base"..i)
 			local debud = "Base №"..(i+1).." terminou e foi substituído na data: "..date.." "..removedTents.." carros explodidos : "..carsRemoved.."\r\n"
 			outputDebugString(debud)
-			exports.logger:setLog(debud,"bases")
+			exports.epz_logs:setLog(debud,"bases")
 			end
 
 

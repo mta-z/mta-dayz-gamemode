@@ -50,7 +50,7 @@ if getElementData(playersource,"logedin") then
 		
 		local msg = table.concat ( {...} , " " ) --concat the arguments from table to a string seperated by spaces
 		local msg = string.gsub ( msg, '#', '' ) --remove color-codes
-			exports.logger:setLog("( Conta:"..getAccountName ( getPlayerAccount ( playersource ) ).." Serial:"..getPlayerSerial ( playersource ).." IP:"..getPlayerIP ( playersource ).." ) "..getPlayerName(playersource).."escreveu para o chat global :"..msg.."","chat")	
+			exports.epz_logs:setLog("( Conta:"..getAccountName ( getPlayerAccount ( playersource ) ).." Serial:"..getPlayerSerial ( playersource ).." IP:"..getPlayerIP ( playersource ).." ) "..getPlayerName(playersource).."escreveu para o chat global :"..msg.."","chat")	
 		local message = messagePrefix .. colorCodes.colorcode2 .. string.gsub ( ( getPlayerName ( playersource ) .. " : " ), '#', '' ) .. colorCodes.colorcode3 .. msg --precreate the message string
 		local message = string.sub ( message, 1, outputLimit ) --since the chatbox won't display messages with more than 128 characters we just drop the ones at the end
 		local r, g, b = getColorFromString ( colorCodes.colorcode1 )		

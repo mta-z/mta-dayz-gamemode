@@ -58,9 +58,9 @@ elseif (teri == "Comerciante: Veículos") then
 
 
 	if getVehicleType ( item[3] ) == "Helicopter"  then
-		car = exports.CarSpawner:CarSpawner ( source, "spawnCar", item[3],655.94763, -565.12958, 22.14782 ) -- работает  
+		car = exports.epz_carspawner:CarSpawner ( source, "spawnCar", item[3],655.94763, -565.12958, 22.14782 ) -- работает  
 	else
-		car = exports.CarSpawner:CarSpawner ( source, "spawnCar", item[3],641.57477, -567.07770, 16.18750 ) --  не работает 
+		car = exports.epz_carspawner:CarSpawner ( source, "spawnCar", item[3],641.57477, -567.07770, 16.18750 ) --  не работает 
 	end
 
 setElementData(car,"owner",getAccountName(getPlayerAccount ( source )))

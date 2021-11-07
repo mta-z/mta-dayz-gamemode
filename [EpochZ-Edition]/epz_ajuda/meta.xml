@@ -2,11 +2,11 @@
 <download_priority_group> 1 </download_priority_group>
 	<script src="CEF/browser.lua" type="client" cache="false" />
 	<script src="CEF/s.lua" type="server" />
-	<file src="CEF/pagesLoader.html"  type="cluent"/>
-	<file src="CEF/help.html"  type="cluent"/>
-	<file src="CEF/rules.html"  type="cluent"/>
-	<file src="CEF/bans_muts.html"  type="cluent"/>
-	<file src="CEF/settings.html"  type="cluent"/>
+	<file src="CEF/pagesLoader.html"  type="client"/>
+	<file src="CEF/help.html"  type="client"/>
+	<file src="CEF/rules.html"  type="client"/>
+	<file src="CEF/bans_muts.html"  type="client"/>
+	<file src="CEF/settings.html"  type="client"/>
 	<file src="CEF/css/style.css" type="client" />
 	<file src="CEF/js/jquery-3.2.1.min.js" type="client" />
 	<file src="CEF/js/script.js" type="client" />

@@ -248,9 +248,9 @@ end
 	function selectColor()
 	
 	if source == colorOne then
-	exports.cpicker: openPicker ("#1", RGBToHex(settings["color1"][1], settings["color1"][2], settings["color1"][3] ) , "Цвет #1") 
+	exports.epz_cpicker: openPicker ("#1", RGBToHex(settings["color1"][1], settings["color1"][2], settings["color1"][3] ) , "Цвет #1") 
 	elseif source == colorTwo then
-	exports.cpicker: openPicker ("#2", RGBToHex(settings["color2"][1], settings["color2"][2], settings["color2"][3] ), "Цвет #2") 
+	exports.epz_cpicker: openPicker ("#2", RGBToHex(settings["color2"][1], settings["color2"][2], settings["color2"][3] ), "Цвет #2") 
 	end
 	
 end
