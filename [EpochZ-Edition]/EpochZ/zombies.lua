@@ -160,7 +160,7 @@ function createZomieForPlayer (x,y,z,zombieType)
 			
 		if gameplayVariables["playerzombies"]  > getElementData(source,"spawnedzombies") then
 		
-		  zombie = call (getResourceFromName("zombie"),"createZombie",x,y,z,randomZskin,source) -- !!!
+		  zombie = call (getResourceFromName("epz_zombie"),"createZombie",x,y,z,randomZskin,source) -- !!!
 		
 		 
 		  
@@ -184,11 +184,11 @@ local isAdmin = isObjectInACLGroup("user."..getAccountName(getPlayerAccount(play
 if isAdmin then
 local x,y,z = getElementPosition(playerSource)
 if skin then
-zombie = call (getResourceFromName("zombie"),"createZombie",x,y,z,skin,false)
+zombie = call (getResourceFromName("epz_zombie"),"createZombie",x,y,z,skin,false)
 setElementData(zombie,"blood",gameplayVariables["zombieblood"]) -- [ID:0000009 - Zombie menace] //L --client
 else
 randomZskin = math.random ( 1, table.getn ( ZombiePedSkins ) )	
-zombie = call (getResourceFromName("zombie"),"createZombie",x,y,z,ZombiePedSkins[randomZskin],false)
+zombie = call (getResourceFromName("epz_zombie"),"createZombie",x,y,z,ZombiePedSkins[randomZskin],false)
 setElementData(zombie,"blood",gameplayVariables["zombieblood"]) -- [ID:0000009 - Zombie menace] //L --client
 end
 end

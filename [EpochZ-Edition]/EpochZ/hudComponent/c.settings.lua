@@ -28,7 +28,7 @@ end
 
 function loadSettings()
 
-	settingsFile  = xmlLoadFile ( ":DayZ/interfaceSettings.xml" )
+	settingsFile  = xmlLoadFile ( ":EpochZ/interfaceSettings.xml" )
 
 	local settings = xmlNodeGetChildren(settingsFile)
 	for i,node in ipairs(settings) do 
@@ -45,8 +45,8 @@ function loadSettings()
 		elseif nodeName == "invSize" then
 		exports.EpochZ:setInvSize(tonumber(nodeValue))
 		
-		--elseif nodeName == "worldTextureQ" then
-		--exports.WS:setTextureQ(tonumber(nodeValue))
+		elseif nodeName == "worldTextureQ" then
+		exports.epz_WS:setTextureQ(tonumber(nodeValue))
 		elseif nodeName == "aim" then
 		selectAIM(nodeValue)
 		
@@ -86,7 +86,7 @@ end
 
 
 addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()), function() 
-if not fileExists ( ":DayZ/interfaceSettings.xml" ) then
+if not fileExists ( ":EpochZ/interfaceSettings.xml" ) then
 	createSettings()
 	else
 	loadSettings()

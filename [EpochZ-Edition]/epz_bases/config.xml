@@ -9,8 +9,8 @@
     </base0>
     
     <base1>
-        <DATE></DATE>
-        <GANG>ADMIN</GANG>
+        <DATE>2021-11-30</DATE>
+        <GANG>Teste</GANG>
         <OP>8e214YxKg8OP</OP>
         <CL>8e214YxKg8CL</CL>
         <vOP>8e214YxKg8vOP</vOP>
@@ -20,10 +20,10 @@
     <base2>
         <DATE>пустая чистая</DATE>
         <GANG>ADMIN</GANG>
-        <OP>4cZHPd8z42OP</OP>
-        <CL>4cZHPd8z42CL</CL>
-        <vOP>4cZHPd8z42vOP</vOP>
-        <vCL>4cZHPd8z42vCL</vCL>
+        <OP>123</OP>
+        <CL>321</CL>
+        <vOP>1234</vOP>
+        <vCL>4321</vCL>
     </base2>
     
     <base3>

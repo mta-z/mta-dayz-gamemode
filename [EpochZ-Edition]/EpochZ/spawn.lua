@@ -620,7 +620,7 @@ killPed(source)
 		setTimer(destroyDeadPlayer,3600000,1,ped,pedCol)
 		else
 		if pdistance < 60 then
-	local playerZomb = call (getResourceFromName("zombie"),"createZombiePlayer",x,y,z,rotX,rotY,rotZ,skin,pedCol,source)
+	local playerZomb = call (getResourceFromName("epz_zombie"),"createZombiePlayer",x,y,z,rotX,rotY,rotZ,skin,pedCol,source)
 	setElementData(playerZomb,"blood",gameplayVariables["zombieblood"])
 		end
 		end
@@ -637,7 +637,7 @@ killPed(source)
 		if not getElementData(source,"bandit") then
 		local huma = math.random(-2500,-1000)
 			addPlayerStats (killer,"humanity",huma)
-			triggerClientEvent (killer, "drawingAlphaText",killer,killer,"Карма: "..huma.."",200,0,0,"down",false,true)
+			triggerClientEvent (killer, "drawingAlphaText",killer,killer,"Karma: "..huma.."",200,0,0,"down",false,true)
 		else
 		local playerExp = getElementData(killer,"playerexp") or 0
 		if playerExp > 0 then 
@@ -674,7 +674,7 @@ killPed(source)
 		end
 		local huma = math.random(1000,2500)
 			addPlayerStats (killer,"humanity",huma)
-			triggerClientEvent ( killer,"drawingAlphaText",killer,killer,"Карма: +"..huma.."",200,0,0,"down",false,true)
+			triggerClientEvent ( killer,"drawingAlphaText",killer,killer,"Karma: +"..huma.."",200,0,0,"down",false,true)
 		end
 		setElementData(killer,"murders",getElementData(killer,"murders")+1) --client
 		if getElementData(killer,"humanity") < 0 then

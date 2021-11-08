@@ -481,7 +481,7 @@ if data == "food" then
 		 blood = blood
 		end
 	
-	triggerClientEvent (source, "drawingAlphaText",source,source,"Кровь: +"..(blood or 0).."",200,0,0,"down",false,true)
+	triggerClientEvent (source, "drawingAlphaText",source,source,"Sangue: +"..(blood or 0).."",200,0,0,"down",false,true)
 	addPlayerStats (source,"blood",blood)
 	
 	local  restorefood = gameplayVariables["foodrestore"]
@@ -496,7 +496,7 @@ if data == "food" then
 		 restorefood = restorefood
 		end
 		
-	triggerClientEvent ( chinpockemon,"drawingAlphaText",chinpockemon,chinpockemon,"Голод: -"..math.floor(restorefood).."%",0,200,0,"down",false,true)
+	triggerClientEvent ( chinpockemon,"drawingAlphaText",chinpockemon,chinpockemon,"Fome: -"..math.floor(restorefood).."%",0,200,0,"down",false,true)
 	addPlayerStats (chinpockemon,data,restorefood)
 	
 	end,3000,1)
@@ -514,7 +514,7 @@ if data == "food" then
 		end
 		
 	
-	triggerClientEvent ( source,"drawingAlphaText",source,source,"Жажда: -"..math.floor(thirstrestore).."%",0,200,0,"down",false,true)
+	triggerClientEvent ( source,"drawingAlphaText",source,source,"Sede: -"..math.floor(thirstrestore).."%",0,200,0,"down",false,true)
 	addPlayerStats (source,data,thirstrestore) -- Restores a random amount between 40-100 (thirst) default: 100
 	
 	setPedAnimation (source,"VENDING","VEND_Drink2_P",-1,false,false,false,false) 
@@ -552,7 +552,7 @@ setTimer( function ()
 		 else
 		 bloodplus = 7000
 		end
-		triggerClientEvent ( playersource,"drawingAlphaText",playersource,playersource,"Кровь: +"..(bloodplus or 7000).."",200,0,0,"down",false,true)
+		triggerClientEvent ( playersource,"drawingAlphaText",playersource,playersource,"Sangue: +"..(bloodplus or 7000).."",200,0,0,"down",false,true)
 	addPlayerStats (playersource,"blood",7000)
 	setElementData(playersource,"brokenbone",false) --client
 	setElementData(playersource,"pain",false) --client
@@ -583,7 +583,7 @@ setTimer( function ()
 		 else
 		 bloodplus = 12000
 		end
-		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Кровь: +"..(bloodplus or 12000).."",200,0,0,"down",false,true)
+		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Sangue: +"..(bloodplus or 12000).."",200,0,0,"down",false,true)
 		addPlayerStats (playersource,"blood",12000)
 	end
 end,1500,1)	
@@ -602,7 +602,7 @@ setTimer( function ()
 		setElementData(player,"bleeding",0) --client
 		setElementData(playersource,"Ataduras",getElementData(playersource,"Ataduras")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Bandage",0,3)
-		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +40",0,200,0,"down",false,true)
+		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Karma: +40",0,200,0,"down",false,true)
 		addPlayerStats (playersource,"humanity",40)
 	end
 	elseif itemName == "giveblood" then
@@ -610,7 +610,7 @@ setTimer( function ()
 		addPlayerStats (player,"blood",12000)
 		setElementData(playersource,"Bolsa de Sangue",getElementData(playersource,"Bolsa de Sangue")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Bloodbag",0,0)
-		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
+		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Karma: +250",0,200,0,"down",false,true)
 		addPlayerStats (playersource,"humanity",250)
 end
 	elseif itemName == "givemorph" then
@@ -619,7 +619,7 @@ end
 		setElementData(playersource,"Morfina",getElementData(playersource,"Morfina")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Morphine",0,0)	
 		addPlayerStats (playersource,"humanity",250)
-		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
+		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Karma: +250",0,200,0,"down",false,true)
 end
 		elseif itemName == "giveobezb" then
 		if (getElementData(playersource,"Analgésico") or 0) >= 1 then
@@ -627,7 +627,7 @@ end
 		setElementData(playersource,"Analgésico",getElementData(playersource,"Analgésico")-1) --client
 		triggerClientEvent(player,"PlaySoundDayZ",player,"Painkiller",0,3)
 		addPlayerStats (playersource,"humanity",250)
-		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Карма: +250",0,200,0,"down",false,true)
+		triggerClientEvent (playersource, "drawingAlphaText",playersource,playersource,"Karma: +250",0,200,0,"down",false,true)
 end
 	end
 end,1500,1)	
@@ -712,10 +712,10 @@ function onPlayerRefillWaterBottle (itemName)
 		setElementData(source,"Garrafa de Água Completo",getElementData(source,"Garrafa de Água Completo")+1) --client
 		setElementData(source,itemName,getElementData(source,itemName)-1) --client
 		triggerClientEvent(source,"refreshInventoryManual",source)
-		triggerClientEvent (source, "displayClientInfo", source,"Фляга",shownInfos["filledup"],22,255,0)
+		triggerClientEvent (source, "displayClientInfo", source,"Garrafa de Água Completo",shownInfos["filledup"],22,255,0)
 		triggerClientEvent(source,"PlaySoundDayZ",source,"RefillWaterBottle",0,0)
 	else
-		triggerClientEvent (source, "displayClientInfo", source,"Фляга",shownInfos["needwatersource"],255,22,0)
+		triggerClientEvent (source, "displayClientInfo", source,"Garrafa de Água Completo",shownInfos["needwatersource"],255,22,0)
 	end	
 end
 addEvent("onPlayerRefillWaterBottle",true)

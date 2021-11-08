@@ -20,7 +20,7 @@ if gangOK ~= "false" then
 
 if  gang ==gangOK  then
 if groupUserStatus and groupUserStatus~="BEGGINER" then
-	outputChatBox("Você entrou em uma BASE de um grupo: "..gangOK,hitPlayer)
+	outputChatBox("Você entrou em uma BASE do grupo: "..gangOK,hitPlayer)
 	exports.epz_logs:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." вошел в базу группы :"..gangOK.."","log")	
 	setElementData(hitPlayer,"inBase",true)
 else

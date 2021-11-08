@@ -873,7 +873,7 @@ end
 		end
 	end
 				if not headshot then
-	--	drawingAlphaText(source,"Кровь: -"..damage,200,0,0,"down",10)
+	--	drawingAlphaText(source,"Sangue: -"..damage,200,0,0,"down",10)
 		end
 		setElementData(source,"blood",getElementData(source,"blood")-damage) --server
 		
