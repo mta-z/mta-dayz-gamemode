@@ -12,7 +12,7 @@ setElementData(getRootElement(),"MAXmessagesInResendBuffer",20)
 
 setTrafficLightState("disabled") -- desligando semáforos
 
-setFPSLimit ( 80 )     
+setFPSLimit ( 65 )     
 
 setModelHandling ( 481, "maxVelocity", 50 ) -- BMX
 setModelHandling ( 510, "maxVelocity", 50 ) -- montanha 

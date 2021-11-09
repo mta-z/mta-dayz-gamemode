@@ -58,7 +58,7 @@ function aReport ( )
 	guiBringToFront ( aReportForm )
 	showCursor ( true )
 end
-addCommandHandler ( "report", aReport )
+addCommandHandler ( "reportar", aReport )
 
 
 function aReportClose ( )
