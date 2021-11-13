@@ -312,7 +312,7 @@ end
 	if getElementData(getElementData(arg3,"parent"),"tent") then
 	if getElementData(getElementData(arg3,"parent"),"save") then
 		number = number+1
-			createMenuItem(number,"Выкопать Cofre","removesave")
+			createMenuItem(number,"Remover Cofre","removesave")
 			
 			
 		if  not getElementData(getElementData(arg3,"parent"),"hackSave")  then
@@ -520,12 +520,7 @@ local progressMedik = getElementData(localPlayer,"progress.medik") or 0
 		end
 		end
 	end	
-	--[[
-	if not getElementData(arg2,"isDead") and not getElementData(arg2,"offerExc") and not getElementData(localPlayer,"offerExc") and not getElementData(localPlayer,"exchange") and not getElementData(arg2,"exchange")   then
-		number = number+1
-		createMenuItem(number,"Предложить обмен","offerExc")
-	end
-	]]
+	end	
 	if getElementData(arg2,"bleeding") > 0 and (getElementData(localPlayer,"Ataduras") or 0) >= 1 then
 		number = number+1
 		createMenuItem(number,"Parar Sangramento","bandage")
@@ -807,7 +802,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			showClientMenuItem("Helicrashsite","helicrash")
 			setElementData(localPlayer,"currentCol",source,false)
 			setElementData(localPlayer,"loot",true,false)
-			setElementData(localPlayer,"lootname","Разбитый вертолет",false)
+			setElementData(localPlayer,"lootname","Helicóptero Destruido",false)
 			return
 		end
 		if getElementData(source,"aircrash") then
@@ -855,7 +850,7 @@ if getElementData(source,"parent") == localPlayer then return end
 			setElementData(localPlayer,"loot",true,false)
 			setElementData(localPlayer,"lootname","Cofre",false)
 			
-			setNewbieInfo (true,"Cofre", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..( string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+			setNewbieInfo (true,"Cofre", "Peso: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nProprietário: "..( string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Não"),source)
 
 			return
 		else
@@ -880,13 +875,13 @@ if getElementData(source,"parent") == localPlayer then return end
 			if getElementData(source,"tent") then
 			local bigTent = getElementData(source,"bigTent") or false
 			if bigTent then
-			setNewbieInfo (true,"Tenda Grande", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+			setNewbieInfo (true,"Tenda Grande", "Peso: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nProprietário: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Não"),source)
 			else
 				local ADMINTent = getElementData(source,"ADMINTent") or false
 				if ADMINTent then
-					setNewbieInfo (true,"Caixa Enorme", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+					setNewbieInfo (true,"Caixa Enorme", "Peso: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nProprietário: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Não"),source)
 				else
-					setNewbieInfo (true,"Tenda", "Вес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nВладелец: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Нет"),source)
+					setNewbieInfo (true,"Tenda", "Peso: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0).."\nProprietário: "..(string.gsub ( getElementData(source,"PlayerNick"), '#', '' ) or "Não"),source)
 				end
 			end
 			
@@ -896,14 +891,14 @@ if getElementData(source,"parent") == localPlayer then return end
 			
 			local ownerCar = getElementData(getElementData(source,"parent"),"ownerNick")
 			if ownerCar then
-			 carOwner = "\nВладелец: "..ownerCar
+			 carOwner = "\nProprietário: "..ownerCar
 			else
 			 carOwner=""
 			end
 			local maxFuel= getElementData(getElementData(source,"parent"),"maxfuel") or 0
 			local needtires = getElementData(getElementData(source,"parent"),"needtires") or 0 
 		local needengines= getElementData(getElementData(source,"parent"),"needengines") or 0 
-			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Veículo" ).."", "Бензин: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nPneu: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nMotor: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nСостояние:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nВес: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
+			setNewbieInfo (true,""..(GetRealVehicleName(getElementData(source,"parent")) or "Veículo" ).."", "Gasolina: "..math.floor(getElementData(source,"fuel")).."/"..tonumber(maxFuel).."\nPneu: "..getElementData(source,"Pneu_inVehicle").."/"..needtires.."\nMotor: "..getElementData(source,"Motor_inVehicle").."/"..needengines.."\nEstado:"..( math.floor(getElementHealth ( getElementData(source,"parent") )) or "-").."/1000\nPeso: "..getLootCurrentSlots(source).."/"..(getLootMaxAviableSlots(source)or 0)..""..carOwner,source)
 			else
 			--
 			end
@@ -1142,19 +1137,19 @@ if ( keyState == "down" ) then
 		end
 			
 		if getElementData(getRootElement(),"checkPacketlossLastSecond") and getNetworkStats().packetlossLastSecond > gameplayVariables["MAXpacketlossLastSecond"]  then
-		startRollMessage2("Inventário", "PLLS: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "PLLS: Ping acima do normal!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
 		
 		if getElementData(getRootElement(),"checkMessagesInResendBuffer") and getNetworkStats().messagesInResendBuffer >gameplayVariables["MAXmessagesInResendBuffer"] then
-		startRollMessage2("Inventário", "MIRB: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "MIRB: Ping acima do normal!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
 		
 		if getElementData(getRootElement(),"checkPing") and getPlayerPing(localPlayer)  > gameplayVariables["pingMAX"] then
-		startRollMessage2("Inventário", "PP: пинг выше нормы!", 255, 22, 0 )
+		startRollMessage2("Inventário", "PP: Ping acima do normal!", 255, 22, 0 )
 		disableMenu()
 		return
 		end
@@ -1374,14 +1369,14 @@ if ( keyState == "down" ) then
 		
 		
 		if itemName == "wirefence" then
-			local gearName = "Разобрать колючую проволку"
+			local gearName = "Desmontar Cerca de Arame Farpado"
 			triggerServerEvent("removeWirefence",localPlayer,parent)
 			disableMenu()
 			return
 		end
 		
 		if itemName == "sandbags" then
-			local gearName = "Разобрать Sacos de Areia"
+			local gearName = "Desmontar Sacos de Areia"
 			triggerServerEvent("removeSandBags",localPlayer,parent)
 			disableMenu()
 			return
@@ -1403,7 +1398,7 @@ if ( keyState == "down" ) then
 		end
 		
 		if itemName == "yashik" then
-			local gearName = "Procurar ящик"
+			local gearName = "Procurar Caixa"
 			refreshLoot(col,gearName)
 			showInventoryManual()
 			triggerEvent("PlaySoundDayZ",localPlayer,"InventoryOpen",0,4)
@@ -1593,7 +1588,7 @@ if ( keyState == "down" ) then
 		if itemName == "upwater" then
 			setElementData(localPlayer,"Garrafa de Água Vazia",(getElementData(localPlayer,"Garrafa de Água Vazia") or 0)-1) --server
 			setElementData(localPlayer,"Garrafa de Água Completo",(getElementData(localPlayer,"Garrafa de Água Completo") or 0)+1) --server
-			triggerEvent ("displayClientInfo",localPlayer,"Станция заправки","Вы наполнили флягу!",22,255,0)
+			triggerEvent ("displayClientInfo",localPlayer,"Estação de Reabastecimento","Você encheu a Garrafa de Água!",22,255,0)
 			disableMenu()
 			return
 		end
@@ -1893,7 +1888,7 @@ saveWindows = guiCreateWindow(300, 450, 600, 100, "Comerciante: Veículos", fals
 centerWindow(saveWindows)
 local labl  = guiCreateLabel ( 0, 23, 600, 100, text, false, saveWindows )
 guiLabelSetHorizontalAlign (labl,"center")
-    buttonOK = guiCreateButton(200, 70, 60, 20, "Да", false,saveWindows)
+    buttonOK = guiCreateButton(200, 70, 60, 20, "Sim", false,saveWindows)
 buttonCANCEL = guiCreateButton(350, 70, 60, 20, "Cancelar", false,saveWindows)
 end
 
@@ -2120,10 +2115,10 @@ if getElementData(col,"fuel")+20 < tonumber(maxFuel) then
 	setElementData(col,"fuel",getElementData(col,"fuel")+20) --server
 	setElementData(localPlayer,"Galão de Combútivel Completo",(getElementData(localPlayer,"Galão de Combútivel Completo") or 0)-1) --server
 	setElementData(localPlayer,"Galão de Combútivel Vazio",(getElementData(localPlayer,"Galão de Combútivel Vazio") or 0)+1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Veículo","Бензин был залит в Tanque de Combustível!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Veículo","A gasolina foi derramada em Tanque de Combustível!",0,255,0)
 
 else
-triggerEvent ("displayClientInfo", localPlayer,"Veículo","Tanque de Combustível заполнен!",255,0,0)
+triggerEvent ("displayClientInfo", localPlayer,"Veículo","Tanque de Combustível cheio!",255,0,0)
 end
 
 end
@@ -2139,7 +2134,7 @@ if steelList<1000 then
 	setElementData(car,"steelList",1000) --server
 	end
 	setElementData(localPlayer,"Chapa de Aço",(getElementData(localPlayer,"Chapa de Aço") or 0)-1) --server
-	triggerEvent ("displayClientInfo", localPlayer,"Veículo","Chapa de Aço был установлен!",0,255,0)
+	triggerEvent ("displayClientInfo", localPlayer,"Veículo","Chapa de Aço foi instalado!",0,255,0)
 
 else
 return

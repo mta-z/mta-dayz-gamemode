@@ -615,7 +615,7 @@ killPed(source)
 		local time = getRealTime()
 		local hours = time.hour
 		local minutes = time.minute
-		setElementData(pedCol,"deadreason",getPlayerName(source)..": Был убит : "..(weapon or "Unknown")..". Время смерти: "..hours..":"..minutes.." часов.")--client
+		setElementData(pedCol,"deadreason",getPlayerName(source)..": Foi morto : "..(weapon or "Unknown")..". Hora da morte: "..hours..":"..minutes.." часов.")--client
 		
 		setTimer(destroyDeadPlayer,3600000,1,ped,pedCol)
 		else

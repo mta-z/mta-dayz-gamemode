@@ -124,7 +124,7 @@
 {"Saco de Peças de Zumbi",3},
 {"Tenda",4,"Colocar Tenda"},
 {"Tenda Grande",6,"Colocar Tenda"},
-{"Caixa Enorme",2,"Instalar ящик"},
+{"Caixa Enorme",2,"Instalar Caixa"},
 
 {"Vestuário: Militar 1",1,"Vestir-se",288},
 {"Vestuário: Militar 2",1,"Vestir-se",286},
@@ -167,7 +167,7 @@
 
 
 
-{"Garrafa de Água Vazia",1,"Наполнить"}, 
+{"Garrafa de Água Vazia",1,"Encher"}, 
 {"Garrafa de Água Vaziaа",1},
 {"Hambúrguer não Comestível",1},
 {"Mochila de SATURNO 20",1,"Equipar",20},
@@ -1807,7 +1807,7 @@ triggerEvent("PlaySoundDayZ",localPlayer,"Morphine",0,0)
 	if isOnGround then
 		triggerServerEvent("onPlayerBuildASandBags",localPlayer,itemName)
 		end
-	elseif itemInfo == "Instalar мину" then
+	elseif itemInfo == "Instalar Mina" then
 		triggerServerEvent("onPlayerBuildAMine",localPlayer,itemName)
 	elseif itemInfo == "Abrir Ração Seca Grande" then
 		SyxPay(itemName,1)
@@ -2188,9 +2188,7 @@ end
 end
 function equipBackPack(itemName,itemInfo,itemData)
 if itemData then
---if getElementData(localPlayer,"playerlvl") < 100 and itemData > 100  then triggerEvent ("displayClientInfo", localPlayer,"Inventário","У вас недостаточно опыта для использования этого рюкзака",255,22,0) return end
 if getElementData(localPlayer,"MAX_Slots") == itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","Você já está usando esta mochila!",255,22,0) return end
-	--if getElementData(localPlayer,"MAX_Slots") > itemData then triggerEvent ("displayClientInfo", localPlayer,"Inventário","В настоящий момент, ваш рюкзак имеет больше пространства!",255,22,0) return end
 	
 	local enginerSlots = getElementData(localPlayer,"progress.enginer") or 0
 	local attackerSlots = getElementData(localPlayer,"progress.attacker") or 0

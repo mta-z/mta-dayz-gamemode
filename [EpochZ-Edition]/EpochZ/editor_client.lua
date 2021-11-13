@@ -29,7 +29,7 @@ gameplayVariables["screenSize"] = {guiGetScreenSize()}
 
 if gameplayVariables["screenSize"][1]<800 then
 
-triggerServerEvent("kickPlayerOnHighPing",localPlayer,localPlayer,"Увеличьте разрешение экрана") 
+triggerServerEvent("kickPlayerOnHighPing",localPlayer,localPlayer,"Aumente a resolução da tela") 
 
 end
 

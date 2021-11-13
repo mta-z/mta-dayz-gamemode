@@ -40,8 +40,8 @@ gameplayVariables = {}
  heliCrashs = createElement ( "heliCrashsTable" ) -- РАЗБИТЫЕ ВЕРТОЛЕТЫ
  lootsInGround = createElement ( "lootsInGroundTable" ) -- ВЫБРОШЕННЫЙ ЛУТ
  deadPlayers = createElement ( "deadPlayersTable" ) -- МЕРТВЫЕ ИГРOKИ
- deadZombies = createElement ( "deadZombiesTable" ) -- МЕРТВЫЕ ЗОМБИ
--- aliveZombies = createElement ( "aliveZombiesTable" ) -- ЖИВЫЕ ЗОМБИ !ЭТО ССЫЛКА
+ deadZombies = createElement ( "deadZombiesTable" ) -- МЕРТВЫЕ Zumbi
+-- aliveZombies = createElement ( "aliveZombiesTable" ) -- ЖИВЫЕ Zumbi !ЭТО ССЫЛКА
  playerMapObjects = createElement ( "playerMapObjectsTable" ) -- ДРУГИЕ УСТАНАВЛИВАЕМЫЕ ОБЬЕКТЫ
  playersObjects = createElement ( "playerObjectsTable" ) -- ОБЬЕКТЫ НА ИГРOKАХ(Оружие,Mochilas,Coca-Colaпсы)
 	--- GLOBAL FUNCTIONS ---

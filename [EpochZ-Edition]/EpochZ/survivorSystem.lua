@@ -30,7 +30,7 @@ if elementWeapon[source] then
 end	
 
 local ammoData,weapID,modelID,ammoAmout = getWeaponAmmoType (weaponName)
-if (getElementData(source,ammoData) or 0) <= 0 then triggerClientEvent (source, "displayClientInfo", source,"Оружие",shownInfos["nomag"],255,22,0) return end
+if (getElementData(source,ammoData) or 0) <= 0 then triggerClientEvent (source, "displayClientInfo", source,"Arma",shownInfos["nomag"],255,22,0) return end
 setElementData(source,"currentweapon_"..slot,weaponName)
 
 
@@ -1225,7 +1225,7 @@ if act ==1 then
 			setElementData(player,"Carne Crua",smeat-1) --client
 	local zmeat = getElementData(player,"Carne Grelhada") or 0
 			setElementData(player,"Carne Grelhada",zmeat+1) --client
-			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Carne Crua.",22,255,0)
+			triggerClientEvent (player, "displayClientInfo", player,"Fogueira","Você cozinhou 1 Carne Crua.",22,255,0)
 	end,5000,1)
 	elseif act ==2 then
 	setTimer(function()
@@ -1233,7 +1233,7 @@ if act ==1 then
 			setElementData(player,"Peixe Cru",srib-1) --client
 	local zrib = getElementData(player,"Peixe Frito") or 0
 			setElementData(player,"Peixe Frito",zrib+1) --client
-			triggerClientEvent (player, "displayClientInfo", player,"Костёр","Вы приготовили 1 Peixe Cru.",22,255,0)
+			triggerClientEvent (player, "displayClientInfo", player,"Fogueira","Você cozinhou 1 Peixe Cru.",22,255,0)
 	end,5000,1)
 end
 end
@@ -1246,22 +1246,6 @@ addEventHandler("addPlayerCookMeat",getRootElement(),addPlayerCookMeat)
 
 
 
-
-
-
-function addPlayerGoold ()
-	local playersource = source
-	setPedAnimation (playersource,"BOMBER","BOM_Plant",-1,false,false,false,false)
-
-	local ornamentation = getElementData(playersource,"Украшения") or 0
-	setTimer(function()
-			setElementData(playersource,"Carne Crua",0) --client
-			setElementData(playersource,"Золото",getElementData(playersource,"Золото")+ornamentation/3) --client
-			triggerClientEvent (playersource, "displayClientInfo", playersource,"Вы переплавили "..ornamentation.." украшений в "..getElementData(playersource,"Золото")  or (0) .." золото",22,255,0)
-	end,10000,1)
-end
-addEvent("addPlayerGoold",true)
-addEventHandler("addPlayerGoold",getRootElement(),addPlayerGoold)
 
 
 
@@ -1656,11 +1640,11 @@ setElementRotation ( source, x, y, z )
 setTimer( function ()
 local woods = getElementData(player,"Lenha") or 0
 setElementData(player,"Lenha",woods+1) --client 
-triggerClientEvent (player,"displayClientInfo",player,"Lenha","Вы нарубили дров!",22,255,0)
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","Você cortou lenha!",22,255,0)
 end,1500,1)	
 
 else
-triggerClientEvent (player,"displayClientInfo",player,"Lenha","Это дерево уже не пригодно для рубки дров!",255,0,0)
+triggerClientEvent (player,"displayClientInfo",player,"Lenha","Esta árvore não é mais adequada para cortar lenha!",255,0,0)
 end
 end
 addEvent("firewood",true)
@@ -1670,9 +1654,9 @@ addEventHandler("firewood", getRootElement(),firewood)
 function setBandit(player,model,lvl,skin)
 
 if lvl then
-triggerClientEvent ("onRollMessageStart", player, "#FF0000"..getPlayerName(player).." #FFFFFFтеперь мародёр "..lvl.."го уровня",0,255,255, "Login")
+triggerClientEvent ("onRollMessageStart", player, "#FF0000"..getPlayerName(player).." #FFFFFFEvoluiu para o Nível "..lvl,0,255,255, "Login")
 else
-triggerClientEvent ("onRollMessageStart", player, "#FF0000"..getPlayerName(player).." #FFFFFFтеперь герой",0,255,0, "Login")
+triggerClientEvent ("onRollMessageStart", player, "#FF0000"..getPlayerName(player).." #FFFFFFEvoluiu o herói",0,255,0, "Login")
 end
 
 end
@@ -1695,7 +1679,7 @@ end
 				setElementData(www,"Saco de Peças de Zumbi",(getElementData(www,"Saco de Peças de Zumbi") or 0)+1) --client
 				
 else
-triggerClientEvent (www,"displayClientInfo",www,"Lenha","Для этого действия Necessário Machado!",255,0,0)
+triggerClientEvent (www,"displayClientInfo",www,"Lenha","Para esta ação Necessário Machado!",255,0,0)
 return
 
 				end
@@ -1771,10 +1755,10 @@ local crest = createObject(2392,x,y,z-0.9)
 		setElementParent(cols,crest)
 		
 		setElementData(cols,"deadbury",true) --client
-		if  getElementData(deadplayer,"playername") == "Зомби" then
-		setElementData(cols,"deadtext","Похоже тут закопан зомби...")
+		if  getElementData(deadplayer,"playername") == "Zumbi" then
+		setElementData(cols,"deadtext","Parece que há um zombie enterrado aqui...")
 		else
-		setElementData(cols,"deadtext","Похоже тут закопан человек...")
+		setElementData(cols,"deadtext","Parece que há um Jogador enterrado aqui....")
 		end
 		
 		

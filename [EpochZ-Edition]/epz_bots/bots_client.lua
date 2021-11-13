@@ -253,7 +253,7 @@ botStopFire(ped,false,false,false)
 end
 
 
-setTimer ( checkClear, 1000, 1, ped, weapon,player,"игрOK за препядствием" )
+setTimer ( checkClear, 1000, 1, ped, weapon,player,"jogador por trás do obstáculo" )
 end
 
 end
@@ -314,7 +314,7 @@ end
 if x then
 setElementPosition(weapon,x,y,z+.1)
 end
-setTimer ( checkClear, 100, 1, ped, weapon,player,"изменение ротации и прицеливание" )
+setTimer ( checkClear, 100, 1, ped, weapon,player,"mudança de rotação e mira" )
 local botType = getElementData(ped,"type")
 local car = getPedOccupiedVehicle(player) 
 

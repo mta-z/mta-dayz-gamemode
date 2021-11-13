@@ -465,9 +465,9 @@ addEventHandler("removeGroup", getRootElement(), removeGroup)
 --executeSQLQuery("DELETE FROM players WHERE name=?", playerName)
 
 local userStatusTable = {
-{"Заместитель","MODER"},
-{"Участник","PARTY"},
-{"НовичOK","BEGGINER"},
+{"Moderador do Grupo","MODER"},
+{"Participante do Grupo","PARTY"},
+{"Novato","BEGGINER"},
 }
 
 function setUserSatatus(owner,userAcc,nick,group,role)
@@ -928,7 +928,7 @@ end
 addEventHandler("onPlayerChangeNick", getRootElement(), nickChangeHandler)
    
    
-   -- добавили в группу - вышел - зашел - в группе - удалили из группы - вышел - в группе в которой был? 
+   -- добавили в группу - вышел - зашел - в группе - удалили do grupo - вышел - в группе в которой был? 
  function quitPlayer (  quitType,  reason,  responsibleElement )
  local group = getElementData(source,"group") or false
  local accountPlayer = getPlayerAccount ( source )

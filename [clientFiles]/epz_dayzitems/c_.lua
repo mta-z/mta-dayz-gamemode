@@ -18,11 +18,8 @@ local items = {
 {14785,"BT.txd","BT.dff","BT.col",lodDistance},
 {1271,"assault_ammo.txd","assault_ammo.dff",false,lodDistance},
 {1248,"backpack_alice.txd","backpack_alice.dff",false,lodDistance}, -- абрис 60
-{1252,"backpack_coyote.txd","backpack_coyote.dff",false,lodDistance}, -- коммандер 80 
---{2782,"gun.txd","gun.dff",false,lodDistance}, -- штойта
---{2406,"backpack_patrol.txd","backpack_patrol.dff",false,lodDistance}, -- штойта 
+{1252,"backpack_coyote.txd","backpack_coyote.dff",false,lodDistance}, -- коммандер 80
 {2405,"backpack_survival.txd","backpack_survival.dff",false,lodDistance}, -- штурмовой 40
---{2404,"backpack_british.txd","backpack_british.dff",false,lodDistance}, -- штойта
 {1640,"backpack_vega.txd","backpack_vega.dff",false,lodDistance}, -- ВОЕННЫЙ 180
 {1641,"backpack_army.txd","backpack_army.dff",false,lodDistance},
 {2410,"backpack_br.txd","backpack_br.dff",false,lodDistance}, -- КОЛОРАДО 120

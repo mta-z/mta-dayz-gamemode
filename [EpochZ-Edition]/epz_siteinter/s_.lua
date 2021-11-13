@@ -246,9 +246,9 @@ function getBestPlayers()
 	local zombieskilledMAX = getAccountData(statMaganer,'allstats.zombieskilledMAX') or 0
 	local alivetimeMAX = getAccountData(statMaganer,'allstats.alivetimeMAX') or 0
 	
-	local murdersMAXNICK = getAccountData(statMaganer,'allstats.murdersMAXNICK') or "Нет лидера" 
-	local zombieskilledMAXNICK = getAccountData(statMaganer,'allstats.zombieskilledMAXNICK') or "Нет лидера"
-	local alivetimeMAXNICK = getAccountData(statMaganer,'allstats.alivetimeMAXNICK') or "Нет лидера"
+	local murdersMAXNICK = getAccountData(statMaganer,'allstats.murdersMAXNICK') or "Nenhum líder" 
+	local zombieskilledMAXNICK = getAccountData(statMaganer,'allstats.zombieskilledMAXNICK') or "Nenhum líder"
+	local alivetimeMAXNICK = getAccountData(statMaganer,'allstats.alivetimeMAXNICK') or "Nenhum líder"
 	
 	murdersMAX=murdersMAXNICK.." - "..murdersMAX
 	zombieskilledMAX=zombieskilledMAXNICK.." - "..zombieskilledMAX
