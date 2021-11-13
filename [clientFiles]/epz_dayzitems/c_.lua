@@ -38,35 +38,30 @@ local items = {
 {1580,"blood_bag.txd","blood_bag.dff",false,lodDistance},
 {1579,"morphine.txd","morphine.dff",false,lodDistance},
 {1463,"Wood_Pile.txd","Wood_Pile.dff",false,lodDistance},
-{1279,"Camping_Tent.txd","Camping_Tent.dff",false,lodDistance}, -- Tenda на земле
+{1279,"Camping_Tent.txd","Camping_Tent.dff",false,lodDistance}, -- Tenda
 {1073,"Tire.txd","Tire.dff",false,lodDistance},
 {929,"Engine.txd","Engine.dff",false,lodDistance},
 {1650,"Jerry_Can.txd","Jerry_Can.dff",false,lodDistance},
 {1908,"money.txd","money.dff",false,lodDistance},
 {1906,"shovel.txd","shovel.dff",false,lodDistance},
 {1862,"mine.txd","mine.dff","mine.col",lodDistance},
-{1876,"sandbags.txd","sandbags_pol.dff",false,lodDistance}, -- мешки на земле
+{1876,"sandbags.txd","sandbags_pol.dff",false,lodDistance},
 {1875,"sandbags.txd","sandbags.dff","sandbags.col",lodDistance},
 {1907,"save.txd","save.dff","save.col",lodDistance},
 {1548,"1548.txd","1548.dff",false,lodDistance}, -- Saco de Peças de Zumbi
 {1956,"1956.txd","1956.dff",false,lodDistance}, -- Ração Seca Pequena
 {2778,"1956.txd","3437.dff",false,lodDistance}, -- Ração Seca Grande
 {1952,"1952.txd","1952.dff",false,lodDistance}, -- Mangueira
---{1664,"1664.txd","1664.dff",false,lodDistance}, -- Снасти
 {1485,"1485.txd","1485.dff",false,lodDistance},
---{1668,"1485.txd","1668.dff",false,lodDistance}, -- Наживка
 {1545,"1485.txd","1545.dff",false,lodDistance}, -- Vara de Pesca
 {1512,"1512.txd","1512.dff",false,lodDistance}, -- Peixe Cru
 {1517,"1512.txd","1517.dff",false,lodDistance}, -- Peixe Frito
-{2392,"2392.txd","2392.dff","2392.col",lodDistance}, -- могила
+{2392,"2392.txd","2392.dff","2392.col",lodDistance}, -- 
 {2704,"2704.txd","2704.dff","2704.col",lodDistance}, -- Placa de Metal 1
 {2705,"2705.txd","2705.dff","2705.col",lodDistance}, -- Placa de Metal 2
---{2706,"2706.txd","2706.dff","2706.col",lodDistance}, -- кусOK железки для машины лучше закомментировать 
 {2394,"2394.txd","2394.dff",false,70}, -- Capacete Militar 50%
 {2396,"2396.txd","2396.dff",false,70}, -- Colete 10%
 {936,"936.txd","936.dff",false,70}, -- Colete 30%
---{937,"937.txd","937.dff",false,70}, -- каска с Máscara antigaом не используется
---{941,"941.txd","941.dff",false,70}, -- шлем sol не используется
 {1755,"1755.txd","1755.dff",false,70}, -- Capacete de Motocicleta 10%
 {2015,"2015.txd","2015.dff",false,70}, -- Máscara de Soldador 10%
 {2016,"2016.txd","2016.dff",false,70}, -- Capacete de Mineiro 5%

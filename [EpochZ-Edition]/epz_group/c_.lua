@@ -65,7 +65,7 @@ guiLabelSetHorizontalAlign ( groupInviteText, "center" )
 
 --guiSetSize ( groupInviteText, 100, 100, false )
 
---\n Лидер группы:1234567890123456789012\nУровень группы:123
+--\n Лидер группы:1234567890123456789012\nNível группы:123
 local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Informação do Grupo:1234567890", false, groupInviteClient )
 local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "confirme", false, groupInviteClient )
 local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Rejeitar", false, groupInviteClient )

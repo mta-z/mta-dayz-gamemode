@@ -96,7 +96,7 @@ if isElement(invitedPlayer) and playerNick then
 local groupInfo = executeSQLQuery("SELECT * FROM `groups` WHERE `groupName` =?",tostring(groupName))
 if groupInfo[1] then 
 if groupInfo[1].groupMembers>=groupInfo[1].groupMaxMembers then
-outputChatBox("Группа переполнена!",source)
+outputChatBox("Grupo lotado!",source)
 return
 end
 end
@@ -204,7 +204,7 @@ local ownerNick = getPlayerName(owner)
 local ownerAccount = getPlayerAccount ( owner )
 local ownerAccountName = getAccountName ( ownerAccount )
 
-executeSQLQuery("INSERT INTO `group_users`(`groupName`,`userProfit`,`userLvl`,userRole,`userNick`,`userAccount`) VALUES(?,?,?,?,?,?)", tostring(groupName), 0, tonumber(ownerlvl),"Основатель",tostring(ownerNick),tostring(ownerAccountName) )
+executeSQLQuery("INSERT INTO `group_users`(`groupName`,`userProfit`,`userLvl`,userRole,`userNick`,`userAccount`) VALUES(?,?,?,?,?,?)", tostring(groupName), 0, tonumber(ownerlvl),"Fundador",tostring(ownerNick),tostring(ownerAccountName) )
 
 
 
@@ -230,10 +230,10 @@ playerLvl=tonumber(playerLvl)
 if not playerLvl or playerLvl ==nil then return end
 local playerNick= getPlayerName(player)
 local playerAccountName = getAccountName(getPlayerAccount(player))
-local playerStatus = "НовичOK"
+local playerStatus = "Novato"
 local invOwner  = getElementData(player,"groupInviteOwnerSTATUS") or false
 if invOwner then
-playerStatus = "Участник"
+playerStatus = "Participante"
 end
 
 

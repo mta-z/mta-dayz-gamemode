@@ -1179,7 +1179,7 @@ if getElementData(localPlayer,"isDead") then return end
 					
 					 local sx,sy = getScreenFromWorldPosition ( px, py, pz+0.4, 0.06 )
 					if sx and sy then
-						text = "Уровень: "..getElementData(player,"playerlvl")
+						text = "Nível: "..getElementData(player,"playerlvl")
 						
 						local w = dxGetTextWidth(text,1.02,"default-bold")
 					dxDrawText (text, sx-(w/2), sy, sx-(w/2), sy, tocolor ( 255,255,255 ), 1.02, "default-bold" )

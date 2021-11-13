@@ -35,7 +35,7 @@ local attackerNick=false
 		if attacker then
 		 attackerNick=getPlayerName(attacker)
 		end
-				triggerClientEvent(player,"showAntirelog",player,player,attackerNick or "Арена")
+				triggerClientEvent(player,"showAntirelog",player,player,attackerNick or "Besta")
 			end
 
 		end

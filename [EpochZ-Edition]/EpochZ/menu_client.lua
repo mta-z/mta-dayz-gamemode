@@ -1914,7 +1914,7 @@ if getElementData(veh,"owner") == getElementData(localPlayer,"userAccount") then
  setElementData(veh,"traded",true,false)
 triggerServerEvent("sellCar",localPlayer,veh)
 setElementData(localPlayer,"Dinheiro",(getElementData(localPlayer,"Dinheiro") or 0)+math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
- outputChatBox("Você vendeu "..(GetRealVehicleName(veh) or "Veículo").." за "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
+ outputChatBox("Você vendeu "..(GetRealVehicleName(veh) or "Veículo").." por "..math.floor(carSellPrice/2+(carSellPrice/2)*(economist*0.5)/100))
 else
 startRollMessage2("Inventário", "Ping excede a Normal!", 255, 22, 0 )
 		end
@@ -2194,21 +2194,14 @@ end
 			outputChatBox("Você pegou 1 peixe")
 			local riba = getElementData(localPlayer,"Peixe Cru") or 0 
 			setElementData(localPlayer,"Peixe Cru",riba+1)
-			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") -1)
-			--elseif matFsh == 4 then
-			--outputChatBox("Снасти порвались!")
-			--setElementData(localPlayer,"Снасти",getElementData(localPlayer,"Снасти") -1)
-			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка") -1)
 			elseif matFsh == 4 or matFsh == 5 then 
 			outputChatBox("O Peixe Caiu!")
-			--setElementData(localPlayer,"Наживка",getElementData(localPlayer,"Наживка")-1)
 			end
 
 
 end
 else
 return
-end
 end
 
 

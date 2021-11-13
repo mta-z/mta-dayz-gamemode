@@ -664,7 +664,7 @@ return "Ford Mustang Sandroadster"
 elseif id == 528 then
 return "Oshkosh Sand Cat GNB"
 elseif id == 402 then
-return "Chevrolet Camaro IROC-Z 1990" -- новая
+return "Chevrolet Camaro IROC-Z 1990"
 elseif id == 519 then
 return "Shamal"
 elseif id == 541 then

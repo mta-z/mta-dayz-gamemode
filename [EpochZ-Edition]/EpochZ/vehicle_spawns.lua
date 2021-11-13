@@ -488,9 +488,6 @@ function notifyAboutExplosion()
 	createExplosion (x1+2,y1-4,z1,4)
 	createExplosion (x1-1,y1+5,z1,4)
 	createExplosion (x1-4,y1,z1-2,4)
-	
-	--triggerEvent("saveVehOnExit",source,false,0,0,source) нельзя сохранять при взрыве, потому что сейчас на большинстве машин записан isExploded
-	--- !!! ИСПРАВИТЬ ПРИ ВАЙПЕ ТС
 end
 addEventHandler("onVehicleExplode", getRootElement(), notifyAboutExplosion)
 

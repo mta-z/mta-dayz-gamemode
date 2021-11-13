@@ -44,8 +44,6 @@ local weapon =getElementData(source or ped,"weapon")
 if not weapon then
 weapon = createBotWeapon(source or ped)  
 end
-    --outputChatBox("botStart: игрOK: "..getPlayerName(player).." Вошел в Coca-Colaпс бота: "..tostring(source or ped))
-	
 	setElementData(source or ped,"attackPlayer",player)
 --setElementFrozen ( source or ped,true)
 	setTimer ( checkClear, 100, 1, source or ped, weapon,player,"игрOK в Coca-Colaпсе бота" )
@@ -64,7 +62,6 @@ function botFire(player,ped)
 local playerAtt = getElementData(ped,"attackPlayer")
 if player~=playerAtt then return end
 local weapon =getElementData(source or ped,"weapon")
-   -- outputChatBox("botFire: бот стреляет в игрOKа "..getPlayerName(player))
     setWeaponState(weapon, "firing")
 	
 		local randFire = math.random(0,3)
@@ -263,7 +260,7 @@ local patrol = getElementData(bot,"patrol") or false
 if not patrol then return end
 local playerAtt = getElementData(bot,"attackPlayer")
 if player~=playerAtt then return end
-outputDebugString("бот бежит на игрOKа")
+outputDebugString("bot corre para o jogador")
 setElementFrozen ( bot,false)
 		
 
