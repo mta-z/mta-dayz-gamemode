@@ -234,102 +234,6 @@ end
 addEvent("loadGroupPlayers", true)
 addEventHandler("loadGroupPlayers", getRootElement(), loadGroupPlayers)
 
---[[
-function kickPlayer(owner,accountName,groupName)
---outputChatBox("!!")
-local player = getPlayerFromName ( tostring(playerNick) )
-if player  then
-local playerGroup = getElementData(player,"group") or false
-
-if playerGroup then
-
-if playerGroup == groupName  then
-local isOwner = getElementData(owner,"groupUserStatus") or false
-if isOwner =="OWNER" or isOwner =="MODER" then
-local playerAccount = getPlayerAccount  ( player )
-if  playerAccount then
-local playerAccountName = getAccountName  ( playerAccount)
-local groupInfo = executeSQLQuery("SELECT * FROM `groups` WHERE `groupName` =?",tostring(groupName))
-local membersInGrup = tonumber(groupInfo[1].groupMembers)
-executeSQLQuery("UPDATE `groups` SET `groupMembers`=? WHERE `groupName`=?", tonumber(membersInGrup-1), tostring(groupName) )
-local delte = executeSQLQuery("DELETE FROM `group_users` WHERE `userAccount`=? AND `groupName`=? ",tostring(playerAccountName),tostring(groupName))
-setElementData(player,"group",false)
-setElementData(player,"groupUserStatus",false)
-setElementData(player,"groupProfit",0)
-clearSKILLToPlayer(player,false)
-setInvited(false,groupName)
-local ownerNick = getPlayerName(owner)
-outputChatBox("#FF0000"..ownerNick.." #FFFFFFвыгнал #FF0000"..playerNick.." #FFFFFFиз группы #FFFF00"..groupName,getRootElement(),255,255,255,true)
-getGroupInfoSettings(groupName,owner)
-triggerClientEvent(player, "groupRemoved", player)
-else
-
-outputChatBox("Аккаунт не найден!",owner)
-return
-end
-else
-outputChatBox("У вас нет доступа к этой функции!",owner)
-return
-
-end
-else
-outputChatBox("Этот игрOK в другой группе!",owner)
-return
-end
-
-
-else
-outputChatBox("Этого игрOKа нет в вашей группе!",owner)
-return
-end
-
-else
-
-
-local isOwner = getElementData(owner,"groupUserStatus") or false
-if isOwner =="OWNER" or isOwner =="MODER" then
-local groupMember = executeSQLQuery("SELECT * FROM `group_users` WHERE `groupName` =? AND `userNick`=?",tostring(groupName),tostring(playerNick))
-if not groupMember[1] or not groupMember[1].userAccount then
-getGroupInfoSettings(groupName,owner)
-return
-end
-local memberAccount = getAccount ( tostring(groupMember[1].userAccount))
-
-if memberAccount then
-local groupInfo = executeSQLQuery("SELECT * FROM `groups` WHERE `groupName` =?",tostring(groupName))
-
-local membersInGrup = tonumber(groupInfo[1].groupMembers)
-
-executeSQLQuery("UPDATE `groups` SET `groupMembers`=? WHERE `groupName`=?", tonumber(membersInGrup-1), tostring(groupName) )
-local delte = executeSQLQuery("DELETE FROM `group_users` WHERE `userAccount`=? AND `groupName`=? ",tostring(groupMember[1].userAccount),tostring(groupName))
-
-local memberAccount = getAccount ( tostring(groupMember[1].userAccount))
-setAccountData ( memberAccount, "group", false )
-setAccountData ( memberAccount, "groupUserStatus", false )
-setAccountData ( memberAccount, "groupMessage", "Вы были исключены из группы #FFFF00"..tostring(groupName) )
-setInvited(false,groupName)
-local ownerNick = getPlayerName(owner)
-outputChatBox("#FF0000"..ownerNick.." #FFFFFFвыгнал #FF0000"..playerNick.." из группы #FFFF00"..groupName,getRootElement(),255,255,255,true)
-getGroupInfoSettings(groupName,owner)
-else
-outputChatBox("Conta não encontrada!",owner)
-end
-
-
-
-
-end
-
-end
-
-
-
-end
-
-addEvent("kickPlayer", true)
-addEventHandler("kickPlayer", getRootElement(), kickPlayer)
-
-]]
 
 function adminRemoveGroup(groupName)
 
@@ -352,7 +256,7 @@ local accountPlayer  = getAccount ( playerData.userAccount )
 if accountPlayer then
 setAccountData ( accountPlayer, "group", false )
 setAccountData ( accountPlayer, "groupUserStatus", false )
-setAccountData ( accountPlayer, "groupMessage", "Você foi expulso do grupo #FFFF00"..tostring(groupName).." #FFFFFFпо причине: #DCDCDCАadmin excluiu o grupo" )
+setAccountData ( accountPlayer, "groupMessage", "Você foi expulso do grupo #FFFF00"..tostring(groupName).." #FFFFFFpor motivos de: #DCDCDCАadmin excluiu o grupo" )
 end
 end
 

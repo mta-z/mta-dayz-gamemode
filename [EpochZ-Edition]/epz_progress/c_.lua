@@ -166,27 +166,27 @@ addEventHandler( "onClientMouseEnter", img[i],
 		guiMoveToBack(inventoryWindows)
 		guiSetText(headline["toolTipText"],i.."/100")
 		
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."кг\nMachado")
+		guiSetText(headline["toolTipTextT"],"Dano de arma de assalto +"..(i*30).."\nCarregar peso +"..(i*0.2).."Kg\nMachado")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -271,27 +271,27 @@ guiLabelSetHorizontalAlign (headline["medikProgress"],"center")
 			guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nPossibilidade de dar Morfina e Analgésico")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto\nPossibilidade de dar Morfina e Analgésico")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nKit de Primeiros Socorros")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto\nKit de Primeiros Socorros")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ед\nRegeneração +"..(i*3).."por minuto\nA capacidade de transferir sangue para si mesmo")
+		guiSetText(headline["toolTipTextT"],"Sangue aumentado +"..(i*60).."ml\nRegeneração +"..(i*3).."por minuto\nA capacidade de transferir sangue para si mesmo")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -469,27 +469,27 @@ guiLabelSetHorizontalAlign (headline["enginerProgress"],"center")
 	guiMoveToBack(inventoryWindows)
 		
 		
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."кг")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg")
 		if i==10 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==20 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg\nInstalação de peças sem Caixa de ferramentas")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg\nInstalação de peças sem Caixa de ferramentas")
 		elseif i ==30 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==40 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg\nRemovendo peças sem Caixa de ferramentas")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg\nRemovendo peças sem Caixa de ferramentas")
 		elseif i ==50 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."Kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."Kg")
 		elseif i ==60 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==70 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==80 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==90 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."kg")
 		elseif i ==100 then
-		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."сек\nCarregar peso +"..(i*0.2).."kg")
+		guiSetText(headline["toolTipTextT"],"Velocidade de reparo de veículos -"..(i*0.5).."s\nCarregar peso +"..(i*0.2).."kg")
 		end
 		local Theight = getTextHeight(guiGetText(headline["toolTipTextT"]))
 		guiSetSize(toolTip,250,20+(Theight+1)*19,false)
@@ -1146,11 +1146,11 @@ end
 addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()),
     function ( startedRes )
 	toolTip = guiCreateStaticImage ( 0, 0, 250, 100, "black.png", false )
-headline["toolTipText"] = guiCreateLabel(0, 0, 250, 20,"ТЕКСТ",false,toolTip)
+headline["toolTipText"] = guiCreateLabel(0, 0, 250, 20,"TEXTO",false,toolTip)
 guiSetFont (headline["toolTipText"] , "default-bold-small" ) 
 guiLabelSetHorizontalAlign (headline["toolTipText"],"center")
 
-headline["toolTipTextT"] = guiCreateLabel(0, 20, 250, 80,"ТЕКСТ",false,toolTip)
+headline["toolTipTextT"] = guiCreateLabel(0, 20, 250, 80,"TEXTO",false,toolTip)
 guiSetFont (headline["toolTipTextT"] , "default-bold" ) 
 guiLabelSetHorizontalAlign (headline["toolTipTextT"],"center")
 guiSetVisible(toolTip,false )

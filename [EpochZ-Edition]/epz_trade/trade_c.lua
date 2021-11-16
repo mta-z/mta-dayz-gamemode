@@ -355,13 +355,8 @@ guiWindowSetSizable ( myWindow, false )
 
 tabs = guiCreateTabPanel ( 10, 20, 750-10, 540-20, false, myWindow )
 targ = guiCreateTab( "Comércio", tabs )
---sess = guiCreateTab( "Задания", tabs )
---info = guiCreateTab( "Информация", tabs )
 aaa1= guiCreateGridList(10, 26, 250, 300, false, targ)
  aaa2= guiGridListAddColumn( aaa1, "Ordem", 0.90 )
-
--- zadan= guiCreateGridList(10, 26, 200, 300, false, sess)
- --zadan1= guiGridListAddColumn( zadan, "Задания", 0.85 )
  
  scrollpane = guiCreateStaticImage(10,340,250,115, "scrollmenu_1.png", false, targ) 
  
@@ -383,7 +378,6 @@ guiSetFont (YouItemsText, "default-bold-small" )
  
  	aaa3= guiCreateGridList(260, 26, 460, 300, false, targ)
  aaa4= guiGridListAddColumn( aaa3, "Objeto", 0.40 )
-  -- aaa7= guiGridListAddColumn( aaa3, "Comerciante/Вы", 0.20 )
  aaa5= guiGridListAddColumn( aaa3, "Preço de compra", 0.15 )
  aaa6= guiGridListAddColumn( aaa3, "Preço de venda", 0.15 )
  

@@ -126,12 +126,12 @@ local array = getBans ()
 	local serial = getBanSerial(ban) or "-"
 	local reason = getBanReason(ban) or "-"
 	local admin = getBanAdmin(ban) or "-" 
-	--local nick = getBanNick(ban) or "Нет"
+	--local nick = getBanNick(ban) or "Não"
 	local unbanTime = getUnbanTime ( ban ) or 0
 	local realUnbanTime =getRealTime(unbanTime)
  local realBanTime = getRealTime(btime)
  if unbanTime<=0 then
- unbanTime1 = "Нет"
+ unbanTime1 = "Não"
  else
  realUnbanTime.month= realUnbanTime.month+1
   if realUnbanTime.month < 9 then
@@ -152,7 +152,7 @@ end
 if realBanTime.monthday < 9 then
 realBanTime.monthday= "0"..realBanTime.monthday
 end
-	bansTable=bansTable.." <tr><td>"..serial.."</td><td>"..unbanTime1.."</td><td><button onclick=\"unbanThis('"..serial.."')\">Разбанить</button></td></tr>"
+	bansTable=bansTable.." <tr><td>"..serial.."</td><td>"..unbanTime1.."</td><td><button onclick=\"unbanThis('"..serial.."')\">Retirar Ban</button></td></tr>"
 			
 
 	end
@@ -202,9 +202,9 @@ local muteTimeTstmp= tonumber(mute.timestmap)
 local unmuteTime = {getDateFromTimeStmap(muteTimeTstmp,true)}
 unmuteTime= unmuteTime[1].."."..unmuteTime[2].."."..unmuteTime[3].." | "..unmuteTime[4]..":"..unmuteTime[5]
 --else
---local unmuteTime="нет"
+--local unmuteTime="Não"
 --end
-muteTable=muteTable.."<tr><td>"..mute.serial.."</td><td>"..unmuteTime.."</td><td><button onclick=\"unmutThis('"..mute.serial.."')\">Размутить</button></td></tr>"
+muteTable=muteTable.."<tr><td>"..mute.serial.."</td><td>"..unmuteTime.."</td><td><button onclick=\"unmutThis('"..mute.serial.."')\">Retirar Ban</button></td></tr>"
 end
 
 end
@@ -246,9 +246,9 @@ function getBestPlayers()
 	local zombieskilledMAX = getAccountData(statMaganer,'allstats.zombieskilledMAX') or 0
 	local alivetimeMAX = getAccountData(statMaganer,'allstats.alivetimeMAX') or 0
 	
-	local murdersMAXNICK = getAccountData(statMaganer,'allstats.murdersMAXNICK') or "Нет лидера" 
-	local zombieskilledMAXNICK = getAccountData(statMaganer,'allstats.zombieskilledMAXNICK') or "Нет лидера"
-	local alivetimeMAXNICK = getAccountData(statMaganer,'allstats.alivetimeMAXNICK') or "Нет лидера"
+	local murdersMAXNICK = getAccountData(statMaganer,'allstats.murdersMAXNICK') or "Nenhum líder" 
+	local zombieskilledMAXNICK = getAccountData(statMaganer,'allstats.zombieskilledMAXNICK') or "Nenhum líder"
+	local alivetimeMAXNICK = getAccountData(statMaganer,'allstats.alivetimeMAXNICK') or "Nenhum líder"
 	
 	murdersMAX=murdersMAXNICK.." - "..murdersMAX
 	zombieskilledMAX=zombieskilledMAXNICK.." - "..zombieskilledMAX

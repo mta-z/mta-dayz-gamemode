@@ -87,7 +87,7 @@ addEventHandler( 'onPlayerQuit', root,
         local time = getRealTime();
         local hours = time.hour;
         local minutes = time.minute;
-        setElementData( pedCol, "deadreason", getPlayerName(source).."  Он мертв. Причина смерти: Антирелог. Время смерти: "..hours..":"..minutes.." часов." );
+        setElementData( pedCol, "deadreason", getPlayerName(source).."  Ele está morto. Causa da morte: Antirelog. Hora da morte: "..hours..":"..minutes.." horas." );
         
       for i,data in ipairs(lootData) do
 			local plusData = getElementData(source,data[1]) or 0

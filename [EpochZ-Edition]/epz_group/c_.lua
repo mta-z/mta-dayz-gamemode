@@ -65,7 +65,7 @@ guiLabelSetHorizontalAlign ( groupInviteText, "center" )
 
 --guiSetSize ( groupInviteText, 100, 100, false )
 
---\n Лидер группы:1234567890123456789012\nУровень группы:123
+--\n Лидер группы:1234567890123456789012\nNível группы:123
 local groupInviteClientINFOGROUP = 	guiCreateButton ( 10, 250-40*3, 280, 30, "Informação do Grupo:1234567890", false, groupInviteClient )
 local groupInviteClientOK = 	guiCreateButton ( 10, 250-40*2, 280, 30, "confirme", false, groupInviteClient )
 local groupInviteClientCANCEL = 	guiCreateButton ( 10, 250-40, 280, 30, "Rejeitar", false, groupInviteClient )
@@ -728,15 +728,15 @@ else
  
 end
 
-createSkill("SKILL_MAXMEMBERS",180,20,"GROUP EXPANSION","Максимальное кол-во участников группы +",1,"",tabGroupSkills)
+createSkill("SKILL_MAXMEMBERS",180,20,"GROUP EXPANSION","Número máximo de membros do grupo +",1,"",tabGroupSkills)
 
-createSkill("SKILL_ARMORTS",180+70,20,"LIGHT TRANSPORT BOOKING","Damage taken by the vehicle -",2.5,"%",tabGroupSkills)
+createSkill("SKILL_ARMORTS",180+70,20,"LIGHT TRANSPORT BOOKING","Danos sofridos pelo veículo -",2.5,"%",tabGroupSkills)
 
-createSkill("SKILL_CARTRADE",250+70,20,"USEFUL LINKS","Purchase price of the vehicle -",5,"%",tabGroupSkills)
+createSkill("SKILL_CARTRADE",250+70,20,"USEFUL LINKS","Preço de compra do veículo -",5,"%",tabGroupSkills)
 
-createSkill("SKILL_EXP",320+70,20,"COMBAT TRAINING","Group experience +",3,"%",tabGroupSkills)
+createSkill("SKILL_EXP",320+70,20,"COMBAT TRAINING","Experiência de grupo +",3,"%",tabGroupSkills)
 
-createSkill("SKILL_HACK",390+70,20,"Hacks","The probability of breaking the safe +",2,"%",tabGroupSkills)
+createSkill("SKILL_HACK",390+70,20,"Hacks","A probabilidade de quebrar o cofre +",2,"%",tabGroupSkills)
 
 
 
@@ -781,24 +781,12 @@ function hideToolTip()
 	
 end
 
---`groupName` , `groupLvl` , `groupMembers` , `groupMaxMembers` , `GroupAGR` ,
--- `groupCreatedDate` , `SKILL_EMBLEM` , `SKILL_ARMORTS` , `SKILL_CARTRADE` , `SKILL_MAXMEMBERS`
--- , `SKILL_EXP` , `clicks` , `clicksOFF` , `groupExp`
---createSkill("SKILL_CARTRADE",180,20,"ПОЛЕЗНЫЕ СВЯЗИ",tabGroupSkills)
-
---createSkill("SKILL_ARMORTS",180+70,20,"ЛЕГКАЯ БРОНЯ VeículosА",tabGroupSkills)
-
---createSkill("SKILL_MAXMEMBERS",250+70,20,"ГРУППОВОЕ РАСШИРЕНИЕ",tabGroupSkills)
-
---createSkill("SKILL_EXP",320+70,20,"БОЕВАЯ ПОДГОТОВКА",tabGroupSkills)
-
 function setSKILLSinfo(groupData)
 if not groupData then return end
 
 local isOwner = getElementData(getLocalPlayer(),"groupUserStatus")
 
 	for i,groupInfo in pairs(groupData) do 
-	--outputChatBox(groupInfo.groupLvl)
 	setLineText("groupProgress",1,tostring(groupInfo.groupLvl))
 	setLineText("groupProgress",2,tostring(groupInfo.clicks))
 	setLineText("groupProgress",3,tostring(groupInfo.clicksOFF))

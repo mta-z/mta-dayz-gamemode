@@ -488,7 +488,7 @@ showWhiteScreen()
 		if number == 2 then
 			
 			if not getElementData(hitElement,"pain")  then
-				drawingAlphaText(hitElement,"Боль",200,200,0,"up",false,true)
+				drawingAlphaText(hitElement,"Dor",200,200,0,"up",false,true)
 				setElementData(hitElement,"pain",true)
 			end
 			
@@ -499,7 +499,7 @@ showWhiteScreen()
 		if bodypart == "LEGS" then
 
 		if not getElementData(hitElement,"brokenbone")  then
-				drawingAlphaText(hitElement,"ПереPé-de-Cabra",200,200,0,"up",false,true)
+				drawingAlphaText(hitElement,"Osso Quebrado",200,200,0,"up",false,true)
 				setElementData(hitElement,"brokenbone",true)
 			end
 
@@ -509,7 +509,7 @@ showWhiteScreen()
 		if  number <= 15 then
 		
 			if getElementData(hitElement,"bleeding") == 0  then
-				drawingAlphaText(hitElement,"Кровотечение",200,10,0,"up",false,true)
+				drawingAlphaText(hitElement,"Hemorragia",200,10,0,"up",false,true)
 				setElementData(hitElement,"bleeding",getElementData(hitElement,"bleeding") +math.random(50,600)) 
 			end
 		
@@ -549,7 +549,7 @@ end
 			local x, y, z = getElementPosition (hitElement)
 			local zoneName = exports.epz_gps:getSquareFromMapPosition(x, y)
 			if zoneName ~="" then
-			zoneName = "в квадрате: #FFFF00"..zoneName
+			zoneName = "Zona: #FFFF00"..zoneName
 			end
 			
 			
@@ -621,7 +621,7 @@ end
 			
 			
 			setElementData(hitElement,"blood",getElementData(hitElement,"blood")-damage) --server
-			outputConsole ( "Урон по игрOKу: "..getPlayerName(hitElement).." с учетом навыков/брони = "..damage..". ОстатOK: "..getElementData(hitElement,"blood") )
+			outputConsole ( "Dano por jogador: "..getPlayerName(hitElement).." com habilidade/armadura em mente = "..damage..". remanescente: "..getElementData(hitElement,"blood") )
 			
 			
 			
@@ -692,10 +692,10 @@ end
 		local x, y, z = getElementPosition (localPlayer)
 			local zoneName = exports.epz_gps:getSquareFromMapPosition(x, y)
 			if zoneName ~="" then
-			zoneName = "в квадрате: #FFFF00"..zoneName
+			zoneName = "Zona: #FFFF00"..zoneName
 			end
 			if weapon == 0 then
-				weapName = "Рук"
+				weapName = "Mão"
 				damage = 100
 			else
 				weapName = getElementData(attacker,"weaponSwith") or false
@@ -796,7 +796,7 @@ end
 		if  number <= 15 then
 		
 			if getElementData(source,"bleeding") == 0 and source == localPlayer then
-				drawingAlphaText(source,"Кровотечение",200,10,0,"up",false,true)
+				drawingAlphaText(source,"Hemorragia",200,10,0,"up",false,true)
 				setElementData(source,"bleeding",getElementData(source,"bleeding") +math.random(50,600)) 
 			end
 			
@@ -1179,7 +1179,7 @@ if getElementData(localPlayer,"isDead") then return end
 					
 					 local sx,sy = getScreenFromWorldPosition ( px, py, pz+0.4, 0.06 )
 					if sx and sy then
-						text = "Уровень: "..getElementData(player,"playerlvl")
+						text = "Nível: "..getElementData(player,"playerlvl")
 						
 						local w = dxGetTextWidth(text,1.02,"default-bold")
 					dxDrawText (text, sx-(w/2), sy, sx-(w/2), sy, tocolor ( 255,255,255 ), 1.02, "default-bold" )
@@ -1881,7 +1881,7 @@ end
 setTimer(regenerationMedick,60000,0)
 
 local screenWidth, screenHeight = gameplayVariables["screenSize"][1],gameplayVariables["screenSize"][2]
- closeConnectBtn = guiCreateButton(0, 0, screenWidth, screenWidth, "ПИНГ ВЫШЕ НОРМЫ", false)
+ closeConnectBtn = guiCreateButton(0, 0, screenWidth, screenWidth, "Ping acima do normal", false)
 guiSetVisible ( closeConnectBtn, false )
 pingLost = 0
 function kickOnPacketLost()
@@ -1890,7 +1890,7 @@ if getElementData(getRootElement(),"checkPing") then
 
 if getPlayerPing(localPlayer)  > gameplayVariables["pingMAX"] then
 pingLost = pingLost+1
-outputConsole ("Пинг больше нормы:"..pingLost.."/"..5)
+outputConsole ("Ping é maior que a normal:"..pingLost.."/"..5)
 
 setTimer(function() 
 pingLost = 0

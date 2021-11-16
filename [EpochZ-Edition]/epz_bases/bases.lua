@@ -21,7 +21,7 @@ if gangOK ~= "false" then
 if  gang ==gangOK  then
 if groupUserStatus and groupUserStatus~="BEGGINER" then
 	outputChatBox("Você entrou em uma BASE do grupo: "..gangOK,hitPlayer)
-	exports.epz_logs:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." вошел в базу группы :"..gangOK.."","log")	
+	exports.epz_logs:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." entrou na base do grupo :"..gangOK.."","log")	
 	setElementData(hitPlayer,"inBase",true)
 else
 local skin = getElementModel(hitPlayer) or 170
@@ -34,7 +34,7 @@ end
 	local skin = getElementModel(hitPlayer) or 170
 	spawnPlayer(hitPlayer,spawnToPos[1], spawnToPos[2],spawnToPos[3],0,skin)
 	outputChatBox("Você entrou em uma na base de um grupo de sobreviventes: "..gangOK.." Você não está neste grupo!",hitPlayer)
-	exports.epz_logs:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." из группы "..gang.." попытался войти в базу группы :"..gangOK.."","log")	
+	exports.epz_logs:setLog("( Account:"..getAccountName ( getPlayerAccount ( hitPlayer ) ).." Serial:"..getPlayerSerial ( hitPlayer ).." IP:"..getPlayerIP ( hitPlayer ).." ) "..getPlayerName(hitPlayer).." do grupo "..gang.." tentou entrar na base do grupo :"..gangOK.."","log")	
 	
 	else
 	outputChatBox("Você entrou em uma base de um grup : "..gangOK,hitPlayer)

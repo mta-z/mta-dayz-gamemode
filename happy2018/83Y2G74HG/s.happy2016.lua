@@ -81,7 +81,7 @@ end
 function checkSerial()
 local serial = getPlayerSerial(source)
 local serialOK = executeSQLQuery("SELECT * FROM `happySerials` WHERE `serial` =?",tostring(serial))
-if table.size(serialOK) >0 then -- такой сериал уже есть в базе
+if table.size(serialOK) >0 then -- esse serial já está na database
 outputChatBox("Você já recebeu seu presente!",source,255,0,0)
 else
 setGift(source)

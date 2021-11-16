@@ -142,7 +142,7 @@ function createZombie ( x, y, z, skin,owner )
 			attachElements(newnodecol,zomb)
 			setElementData(newnodecol,"parentCOL11",zomb)
 			setElementData(zomb,"parentCOL11",newnodecol)
-			setElementData(zomb,"pedName","Зомби")
+			setElementData(zomb,"pedName","Zumbi")
 			--setElementData(zomb,"playername","Zombie")
 			setElementData(newnodecol,"zombie",true)
 			--setElementData(newnodecol,"playername","Zombie")
@@ -194,7 +194,7 @@ function createZombiePlayer ( x, y, z, rx, ry, rz, skin,loot,owner )
 			setElementData(newnodecol,"parentCOL11",zomb)
 			setElementData(zomb,"parentCOL11",newnodecol)
 			setElementData(newnodecol,"zombie",true)
-			setElementData(zomb,"pedName",getPlayerName(owner).."(Зомби)" )
+			setElementData(zomb,"pedName",getPlayerName(owner).."(Zumbi)" )
 			setElementData(newnodecol,"zombiePlayer",true)
 
 		setPedWalkingStyle ( zomb, 120)
@@ -207,7 +207,7 @@ function createZombiePlayer ( x, y, z, rx, ry, rz, skin,loot,owner )
 			setElementData ( zomb, "playerLoot", loot  )
 			setElementData ( loot, "playerLoot", zomb  )
 			attachElements(loot,zomb)
-			setElementData(loot,"playername"," "..getPlayerName(owner).."(Зомби)") --client
+			setElementData(loot,"playername"," "..getPlayerName(owner).."(Zumbi)") --client
 			end
 			
 			

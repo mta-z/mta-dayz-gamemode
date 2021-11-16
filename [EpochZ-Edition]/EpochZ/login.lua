@@ -657,8 +657,8 @@ function saveTentOnClose (col,counterTent)
 		setAccountData(account,"ADMINTent",true)
 	end
 	
-		local PlayerNick = (getElementData(col,"PlayerNick") or "Нет")
-		local PlayerSerial = (getElementData(col,"PlayerSerial") or "Нет")
+		local PlayerNick = (getElementData(col,"PlayerNick") or "Não")
+		local PlayerSerial = (getElementData(col,"PlayerSerial") or "Não")
 		local MAXSlots = (getElementData(col,"MAX_Slots") or 0) 
 		
 	local lastLoginTime = getRealTime(  )
