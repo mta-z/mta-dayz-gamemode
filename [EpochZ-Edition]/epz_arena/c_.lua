@@ -28,8 +28,8 @@ closeWin = guiCreateButton( 10, 410, 290, 30, "Feche uma janela",false,myWindow)
 guiSetEnabled(unregButton,false)
 centerWindow(myWindow)
 
-local myStavka = guiCreateWindow ( 0, 0, 250, 150, "Avaliar", false ) 
-local myStavkaEdit = guiCreateEdit ( 10, 30, 230, 30, "25000",false,myStavka )
+local myStavka = guiCreateWindow ( 0, 0, 250, 150, "Apostar", false ) 
+local myStavkaEdit = guiCreateEdit ( 10, 30, 230, 30, "2500",false,myStavka )
 
 local myStavkaBtnOk = guiCreateButton( 10, 70, 240, 30, "OK",false,myStavka)
 local myStavkaBtnCancel = guiCreateButton( 10, 110, 240, 30, "Cancelar",false,myStavka)
@@ -47,9 +47,9 @@ addEventHandler ( "onClientGUIClick", myStavkaBtnOk,function()
 local editStavka = tonumber(guiGetText(myStavkaEdit))
 
 if  type(editStavka)~="number" then return end
-if editStavka<25000 then outputChatBox("Aposta Minima: 25000") return end
+if editStavka<2500 then outputChatBox("Aposta Minima: 2500") return end
 editStavka = math.ceil(editStavka)
-local playerMoney = getElementData(localPlayer,"Money") or 0
+local playerMoney = getElementData(localPlayer,"Dinheiro") or 0
 if playerMoney<editStavka then outputChatBox("Dinheiro insuficiente") guiSetVisible(myStavka, false) return end
 
 		guiSetVisible(myStavka, false)
